@@ -2608,10 +2608,6 @@ resolve@^1.12.0, resolve@^1.3.2:
     path-parse "^1.0.7"
     supports-preserve-symlinks-flag "^1.0.0"
 
-"roland.checkout-ui-settings@https://sel2277--roland.myvtex.com/_v/private/typings/linked/v1/roland.checkout-ui-settings@0.0.1+build1720542845/public/@types/roland.checkout-ui-settings":
-  version "0.0.1"
-  resolved "https://sel2277--roland.myvtex.com/_v/private/typings/linked/v1/roland.checkout-ui-settings@0.0.1+build1720542845/public/@types/roland.checkout-ui-settings#05080bb6b81c547c0436ceda30f67466fa04fe3b"
-
 rwlock@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/rwlock/-/rwlock-5.0.0.tgz#888d6a77a3351cc1a209204ef2ee1722093836cf"
