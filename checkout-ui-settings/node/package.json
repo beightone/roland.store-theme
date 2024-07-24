@@ -16,7 +16,6 @@
     "@vtex/api": "6.47.0",
     "@vtex/prettier-config": "^0.3.1",
     "@vtex/tsconfig": "^0.6.0",
-    "roland.checkout-ui-settings": "https://sel2277--roland.myvtex.com/_v/private/typings/linked/v1/roland.checkout-ui-settings@0.0.1+build1720542845/public/@types/roland.checkout-ui-settings",
     "tslint": "^5.12.0",
     "tslint-config-prettier": "^1.18.0",
     "tslint-config-vtex": "^2.1.0",
