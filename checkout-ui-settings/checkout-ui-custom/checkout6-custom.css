@@ -1014,12 +1014,12 @@ body .header.new .header-wrapper .seal-safe-environment span {
 }
 
 .table.cart-items thead tr th.product {
-  width: 52.6% !important
+  width: 48.6% !important
 }
 
 .table.cart-items thead tr th.quantity {
   min-width: 62px;
-  margin-right: 12.47%
+  margin-right: 10.4%
 }
 
 @media screen and (max-width: 1070px) {
@@ -1190,7 +1190,14 @@ body .header.new .header-wrapper .seal-safe-environment span {
 
 
 .table.cart-items tbody tr td.product-price .list-price {
-  display: none !important
+  text-align: left;
+  color: #71717A;
+  font-family: "Proxima Nova";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem;
+  letter-spacing: -0.0075rem;
 }
 
 .table.cart-items tbody tr td.product-price .best-price {
@@ -1414,14 +1421,7 @@ body .header.new .header-wrapper .seal-safe-environment span {
 }
 
 .summary-template-holder .summary-coupon fieldset.coupon-fieldset::after {
-  content: "Use apenas 1 código por pedido";
-  color: #71717a;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16px;
-  letter-spacing: -0.12px;
-  margin-top: 16px;
+  margin-top: 8px;
   display: block;
   text-align: left
 }
@@ -1432,13 +1432,18 @@ body .header.new .header-wrapper .seal-safe-environment span {
   width: 100%
 }
 
+.orderform-template .cart-template.mini-cart .summary-template-holder .summary-coupon p.coupon-fields {
+  padding-top: 16px !important;
+}
+
 .summary-template-holder .summary-coupon fieldset.coupon-fieldset p .info {
-  border-radius: var(--radius-rounded-sm, 2px);
-  border: 1px solid var(--border-input-base, #D4D4D8);
-  background: var(--bg-neutral-subtlest-base, #FFF);
+  border-radius: 2px;
+  border: 1px solid #D4D4D8;
+  background: #FFF;
   width: 100%;
   padding: 12px 16px !important;
-  box-sizing: border-box
+  box-sizing: border-box;
+  max-height: 2.5rem;
 }
 
 .summary-template-holder .summary-coupon fieldset.coupon-fieldset p .info span[data-bind="text: value"] {
@@ -1456,7 +1461,7 @@ body .header.new .header-wrapper .seal-safe-environment span {
 }
 
 .summary-template-holder .summary-coupon p.coupon-fields span.info>span {
-  color: #fdf2ec !important;
+  color: #18181B !important;
 }
 
 .summary-template-holder .summary-coupon p.coupon-fields span input {
@@ -1701,11 +1706,6 @@ body .header.new .header-wrapper .seal-safe-environment span {
   margin: 0
 }
 
-.cart-more-options .srp-container .srp-delivery-info .srp-delivery-current-many,
-.cart-more-options .srp-container .srp-delivery-info .srp-delivery-select {
-  display: none !important
-}
-
 .cart-more-options .srp-container .srp-delivery-info .b--light-gray {
   border-radius: 2px !important;
   border: none
@@ -1869,6 +1869,11 @@ body .header.new .header-wrapper .seal-safe-environment span {
   height: 20px
 }
 
+.coupon-form .coupon-fieldset .coupon-label,
+.coupon-form .coupon-fieldset .coupon-label label {
+  cursor: pointer !important;
+}
+
 .cart-template.full-cart.active .totalizers.summary-totalizers.cart-totalizers .summary-coupon-wrap .coupon-label::before {
   content: url('data:image/svg+xml,<svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.40048 5.42453L1.40049 5.42453C2.1866 5.52861 2.77988 6.20607 2.77988 7.00002C2.77988 7.79397 2.18661 8.47139 1.40049 8.57546L1.41361 8.6746L1.40048 8.57547C1.11415 8.61339 0.9 8.85734 0.9 9.14612V12.4298C0.9 13.0753 1.42551 13.6 2.07143 13.6H19.9286C20.5745 13.6 21.1 13.0753 21.1 12.4298V9.14612C21.1 8.85734 20.8859 8.61339 20.5995 8.57547L20.5864 8.6746L20.5995 8.57546C19.8134 8.47139 19.2201 7.79393 19.2201 7.00002C19.2201 6.20611 19.8134 5.52861 20.5995 5.42453C20.8859 5.38661 21.1 5.14266 21.1 4.85388V1.5702C21.1 0.924746 20.5745 0.4 19.9286 0.4H2.07143C1.42551 0.4 0.9 0.924746 0.9 1.5702V4.85388C0.9 5.14266 1.11415 5.38661 1.40048 5.42453ZM11.4781 10.1009L11.4781 10.1009C11.5769 10.1677 11.6893 10.1998 11.8005 10.1998C11.9849 10.1998 12.1667 10.1112 12.2781 9.9467L15.8815 4.62627C16.0599 4.36287 15.9907 4.00497 15.7272 3.82684L15.7272 3.82683C15.4636 3.64874 15.1055 3.71775 14.9271 3.98104L14.9271 3.98104L11.3237 9.30147C11.1453 9.56487 11.2145 9.92278 11.4781 10.1009ZM18.0677 7.00002C18.0677 8.19526 18.8472 9.23659 19.9476 9.60179V12.4298C19.9476 12.4334 19.9461 12.4382 19.9416 12.4427C19.9372 12.4471 19.9323 12.4487 19.9286 12.4487H8.07655V11.6102C8.07655 11.2922 7.81845 11.0346 7.50036 11.0346C7.18226 11.0346 6.92417 11.2922 6.92417 11.6102V12.4487H2.07143C2.06772 12.4487 2.06283 12.4471 2.05838 12.4427C2.05393 12.4382 2.05238 12.4334 2.05238 12.4298V9.60179C3.15278 9.23659 3.93226 8.19526 3.93226 7.00002C3.93226 5.80478 3.15279 4.76341 2.05238 4.39824V1.57024C2.05238 1.56664 2.05393 1.56181 2.05838 1.55736C2.06283 1.55292 2.06772 1.55133 2.07143 1.55133H6.92417V2.38985C6.92417 2.70786 7.18226 2.96549 7.50036 2.96549C7.81845 2.96549 8.07655 2.70786 8.07655 2.38985V1.55133H19.9286C19.9323 1.55133 19.9372 1.55292 19.9416 1.55736C19.9461 1.56181 19.9476 1.56664 19.9476 1.57024V4.39825C18.8472 4.76345 18.0677 5.80478 18.0677 7.00002ZM8.07655 5.93466V4.52053C8.07655 4.20248 7.81845 3.94489 7.50036 3.94489C7.18226 3.94489 6.92417 4.20252 6.92417 4.52053V5.93466C6.92417 6.25267 7.18226 6.5103 7.50036 6.5103C7.81845 6.5103 8.07655 6.25267 8.07655 5.93466ZM8.07655 9.47951V8.06538C8.07655 7.74732 7.81845 7.48974 7.50036 7.48974C7.18226 7.48974 6.92417 7.74737 6.92417 8.06538V9.47951C6.92417 9.79752 7.18226 10.0552 7.50036 10.0552C7.81845 10.0552 8.07655 9.79752 8.07655 9.47951ZM13.1479 5.19912C13.1479 4.29349 12.4104 3.55708 11.504 3.55708C10.5977 3.55708 9.86024 4.29349 9.86024 5.19912C9.86024 6.10474 10.5977 6.84115 11.504 6.84115C12.4104 6.84115 13.1479 6.10474 13.1479 5.19912ZM11.0126 5.19912C11.0126 4.92872 11.2331 4.70837 11.504 4.70837C11.775 4.70837 11.9955 4.92872 11.9955 5.19912C11.9955 5.46952 11.775 5.68986 11.504 5.68986C11.2331 5.68986 11.0126 5.46952 11.0126 5.19912ZM15.718 7.15889C14.8116 7.15889 14.0742 7.8953 14.0742 8.80092C14.0742 9.70655 14.8116 10.443 15.718 10.443C16.6244 10.443 17.3618 9.70655 17.3618 8.80092C17.3618 7.8953 16.6244 7.15889 15.718 7.15889ZM15.718 9.29167C15.447 9.29167 15.2266 9.07132 15.2266 8.80092C15.2266 8.53053 15.447 8.31017 15.718 8.31017C15.989 8.31017 16.2094 8.53053 16.2094 8.80092C16.2094 9.07132 15.989 9.29167 15.718 9.29167Z" fill="%23FF5A00" stroke="%23FF5A00" stroke-width="0.2"/></svg>');
   height: 14px
@@ -1889,12 +1894,30 @@ body .header.new .header-wrapper .seal-safe-environment span {
   font-size: 14px
 }
 
+.orderform-template .cart-template.mini-cart .summary-template-holder input[type=text]#cart-coupon {
+  max-height: inherit !important;
+}
+
+.orderform-template .cart-template.mini-cart .summary-template-holder input[type=text]#cart-coupon:focus {
+  border: 1.5px solid #EE8146 !important;
+}
+
 .cart-template.full-cart.active .totalizers.summary-totalizers.cart-totalizers .summary-coupon-wrap #cart-coupon-add {
   border: none !important;
   font-size: 0;
   padding: 10px 13.5px;
   min-width: 43px;
   height: 40px;
+  border-radius: 0.125rem !important;
+  background: #E4E4E7 !important;
+  color: #71717A !important;
+  box-shadow: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.cart-template.full-cart.active .totalizers.summary-totalizers.cart-totalizers .summary-coupon-wrap #cart-coupon-add:hover {
+  background: #fdf2ec !important;
+  color: #ff5a00 !important;
 }
 
 .cart-template.full-cart.active .totalizers.summary-totalizers.cart-totalizers .summary-coupon-wrap #cart-coupon-add::before {
@@ -3171,7 +3194,8 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 
 .orderform-template .orderform-template-holder {
   max-width: 930px;
-  box-sizing: border-box
+  box-sizing: border-box;
+  padding: 0 !important;
 }
 
 .orderform-template .cart-template.mini-cart {
@@ -3236,7 +3260,6 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   align-items: center;
   gap: 8px;
   justify-content: flex-start;
-  margin-bottom: 16px;
   height: 20px
 }
 
@@ -3266,6 +3289,8 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   padding: 10px 13.5px;
   min-width: 43px;
   height: 2.5rem;
+  background-color: #E4E4E7 !important;
+  color: #71717A !important;
 }
 
 .orderform-template .cart-template.mini-cart .summary-template-holder .summary>.summary-coupon-wrap #cart-coupon-add::before {
@@ -3381,11 +3406,11 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   margin-left: auto;
   float: right;
   color: #000;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: -0.14px;
+  font-weight: 600;
+  line-height: 1.25rem;
+  letter-spacing: -0.00875rem;
   padding: 0
 }
 
@@ -3410,19 +3435,17 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 
 .orderform-template .cart-template.mini-cart .summary-totalizers tfoot tr td.monetary {
   color: #000;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: -0.14px;
+  font-weight: 600;
+  line-height: 1.25rem;
+  letter-spacing: -0.00875rem;
   padding: 0 0 1rem !important;
 }
 
 
 .orderform-template .cart-template.mini-cart .cart {
   margin-bottom: 0;
-  scrollbar-color: #d4d4d8 rgba(0, 0, 0, 0);
-  scrollbar-width: thin;
   max-height: 12rem;
 }
 
@@ -3892,6 +3915,7 @@ body .cart-template.full-cart>* {
 .clearfix.cart-links.cart-links-bottom {
   grid-area: 2 / 3 / 3 / 4;
   width: 99.5%;
+  margin: 0 !important
 }
 
 .table.cart-items tbody tr.product-item {
@@ -3899,8 +3923,6 @@ body .cart-template.full-cart>* {
   display: flex;
   align-items: center;
   position: relative;
-  padding: 24px;
-  gap: 7.26%;
   box-sizing: border-box;
 }
 
@@ -4027,6 +4049,7 @@ body .client-pre-email h3.client-pre-email-h span:before {
 .orderform-template .cart-template.mini-cart .summary-template-holder input#cart-coupon[type=text],
 .orderform-template .cart-template.mini-cart .summary-template-holder button#cart-coupon-add[type=submit] {
   height: 40px !important;
+  box-shadow: none;
 }
 
 .orderform-template .cart-template.mini-cart .cart .cart-items:not(.v-loaded) {
@@ -4036,15 +4059,15 @@ body .client-pre-email h3.client-pre-email-h span:before {
   overflow-y: scroll !important;
 }
 
-.orderform-template .cart-template.mini-cart .cart .cart-items::-webkit-scrollbar {
+.orderform-template .cart-template.mini-cart .cart::-webkit-scrollbar {
   width: 4px;
 }
 
-.orderform-template .cart-template.mini-cart .cart .cart-items::-webkit-scrollbar-track {
+.orderform-template .cart-template.mini-cart .cart::-webkit-scrollbar-track {
   background: rgba(0, 0, 0, 0);
 }
 
-.orderform-template .cart-template.mini-cart .cart .cart-items::-webkit-scrollbar-thumb {
+.orderform-template .cart-template.mini-cart .cart::-webkit-scrollbar-thumb {
   background: #d4d4d8;
   border-radius: 9999px;
 }
@@ -4105,4 +4128,10 @@ body .client-pre-email h3.client-pre-email-h span:before {
   .btn-go-to-payment-wrapper .custom-button {
     background: #2B2B3A;
   }
+}
+
+.coupon.summary-coupon.hideElement .coupon-form .coupon-fieldset .coupon-fields,
+.coupon.summary-coupon.hideElement .coupon-form .coupon-fieldset .vcustom-showCustomMsgCoupon,
+.coupon.summary-coupon.hideElement .coupon-form .coupon-fieldset::after {
+  display: none !important;
 }

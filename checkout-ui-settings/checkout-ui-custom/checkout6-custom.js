@@ -403,8 +403,31 @@ function handleCouponSuccess() {
   })
 }
 
+function settingCupomToggle() {
+  console.log('entrou')
+  const couponTitleArray = document.querySelectorAll('.coupon-form .coupon-fieldset .coupon-label');
+  const couponElementArray = document.querySelectorAll('.coupon.summary-coupon');
+  console.log(couponElementArray, couponTitleArray)
+
+  function toggleFieldsDisplay() {
+    console.log('clicou')
+    couponElementArray.forEach(field => {
+      console.log('here', field.classList)
+      field.classList.toggle('hideElement');
+      console.log('here depois do toggle ', field.classList)
+    });
+  }
+
+  couponTitleArray.forEach(title => {
+    title.addEventListener('click', toggleFieldsDisplay);
+  });
+
+}
 $(window).on('load', function () {
-  updateBreadcrumb()
+  setTimeout(() => {
+    updateBreadcrumb()
+    settingCupomToggle()
+  }, 1500);
 })
 
 $(window).on('hashchange', function () {
