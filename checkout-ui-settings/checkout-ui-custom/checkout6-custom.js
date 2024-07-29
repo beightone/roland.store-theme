@@ -131,10 +131,8 @@ function buildShippingOptions() {
   observer.observe(document.body, config)
 }
 function updateBreadcrumb() {
-  console.log('entrou no update breadcrumb')
   const currentURL = window.location.href
   const orderForm = vtexjs.checkout.orderForm
-  console.log(orderForm, 'orderForm')
   const { items } = orderForm
   if (items.length === 0) {
     const stepElement = document.querySelector('.checkout-steps')
@@ -236,8 +234,7 @@ function updateBreadcrumb() {
 
 function updateShippingBar() {
   const minValue = 200
-  const orderForm = vtexjs.checkout.getOrderForm()
-  console.log(orderForm, 'orderForm')
+  const orderForm = vtexjs.checkout.orderForm
   const itemsValue = orderForm.totalizers.find(({ id }) => id === 'Items')?.value || 0
   const differenceToMinValue = (itemsValue - minValue * 100) / 100
   const progressPercentage = Math.min(
@@ -412,7 +409,7 @@ $(window).on('load', function () {
 
 $(window).on('hashchange', function () {
   updateBreadcrumb()
-  const orderForm = vtexjs.checkout.getOrderForm();
+  const orderForm = vtexjs.checkout.orderForm;
   if (orderForm) {
     validatePostalCode()
   }
