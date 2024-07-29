@@ -30,7 +30,7 @@ const CustomBanner: StorefrontFunctionComponent<BannerProps> = ({ items }) => {
       phone: 1,
     },
 
-    infinite: false,
+    infinite: true,
     autoplay: {
       timeout: 5000,
     },
