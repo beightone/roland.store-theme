@@ -323,8 +323,8 @@ body a:hover {
 }
 
 .vtex-omnishipping-1-x-leanShippingOption.shp-lean-option-active {
-  border: 1px solid var(--border-selected-base, #EE8146);
-  background: var(--bg-selected-subtle-base, #FDF2EC)
+  border: 1px solid #EE8146 !important;
+  background: #FDF2EC !important;
 }
 
 .vtex-omnishipping-1-x-leanShippingOption.shp-lean-option-active .vtex-omnishipping-1-x-optionPrice {
@@ -999,6 +999,7 @@ body .header.new .header-wrapper .seal-safe-environment span {
 
 .table.cart-items thead tr {
   padding: 16px 24px 0;
+  justify-content: flex-end !important;
 }
 
 .table.cart-items thead tr th {
@@ -1018,8 +1019,13 @@ body .header.new .header-wrapper .seal-safe-environment span {
 }
 
 .table.cart-items thead tr th.quantity {
-  min-width: 62px;
-  margin-right: 10.4%
+  width: 10.875rem;
+  text-align: left;
+}
+
+.table.cart-items thead tr th.product-price {
+  width: 211px !important;
+  text-align: left;
 }
 
 @media screen and (max-width: 1070px) {
@@ -1101,13 +1107,6 @@ body .header.new .header-wrapper .seal-safe-environment span {
   padding: 24px !important;
   gap: 7.26%;
   box-sizing: border-box
-}
-
-@media screen and (max-width: 1125px) {
-  .table.cart-items tbody tr .v-custom-product-item-wrap {
-    gap: 0;
-    justify-content: space-between
-  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -1296,7 +1295,7 @@ body .header.new .header-wrapper .seal-safe-environment span {
 }
 
 .table.cart-items td.product-image a {
-  margin-right: 24px !important;
+  margin-right: 0 !important;
 }
 
 .table.cart-items td.product-image a,
@@ -1305,7 +1304,7 @@ body .header.new .header-wrapper .seal-safe-environment span {
 }
 
 .table.cart-items td.product-name {
-  margin-left: -7.26%;
+  margin-left: -1%;
   display: flex;
   flex-direction: column;
   padding: 0;
@@ -1492,13 +1491,17 @@ body .header.new .header-wrapper .seal-safe-environment span {
 }
 
 .summary-template-holder .cart-links-bottom .link-choose-more-products-wrapper {
-  order: 2;
-  width: 100%
+  width: 100%;
+  display: block !important;
+
 }
 
 .summary-template-holder .cart-links-bottom .btn-place-order-wrapper {
-  order: 1;
   width: 100%
+}
+
+.summary-template-holder .cart-links-bottom {
+  flex-direction: column-reverse !important;
 }
 
 .cart-links-bottom a {
@@ -1600,7 +1603,7 @@ body .header.new .header-wrapper .seal-safe-environment span {
   color: #000;
   font-size: 14px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 20px;
   letter-spacing: -0.14px
 }
@@ -1619,7 +1622,7 @@ body .header.new .header-wrapper .seal-safe-environment span {
   color: #000 !important;
   font-size: 14px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 20px;
   letter-spacing: -0.14px;
   padding: 0 !important
@@ -2011,7 +2014,8 @@ body .header.new .header-wrapper .seal-safe-environment span {
 
 .cart-template.full-cart.active .totalizers.summary-totalizers.cart-totalizers div[data-bind="template: { name: 'totalizers-template', afterRender: vtex.i18n.translateHtml }"] .accordion-heading span::before {
   content: "Resumo";
-  font-size: 14px
+  font-size: 14px;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 1300px) {
@@ -2044,6 +2048,10 @@ body .header.new .header-wrapper .seal-safe-environment span {
   line-height: 20px;
   letter-spacing: -0.14px;
   margin: 0 0 8px !important;
+}
+
+.shipping-data .box-step label::after {
+  content: '*';
 }
 
 svg.pickup-marker-blue,
@@ -2297,10 +2305,6 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   border: 1px solid #d4d4d8 !important;
 }
 
-#payment-group-PagalevePixAVistaTransparentePaymentGroup {
-  order: 2;
-}
-
 .orderform-template-holder #payment-data p.link.link-gift-card h3[data-i18n="paymentData.paymentMethod"],
 .orderform-template-holder #payment-data fieldset.payment-group h3[data-i18n="paymentData.paymentMethod"] {
   display: block;
@@ -2344,7 +2348,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   display: flex;
   margin-bottom: 24px;
   flex-wrap: wrap;
-  gap: 12px
+  gap: 8px;
 }
 
 .orderform-template-holder #payment-data .payment-group-item {
@@ -2712,6 +2716,26 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   width: 100% !important;
 }
 
+.orderform-template-holder .step .form-step fieldset p.client-last-name label,
+.orderform-template-holder .step .form-step fieldset p.client-first-name label {
+  font-size: 0;
+}
+
+.box-client-info p label:not(.newsletter-label)::after {
+  content: '*';
+}
+
+.orderform-template-holder .step .form-step fieldset p.client-last-name label::after {
+  content: 'Sobrenome*';
+  font-size: 0.875rem;
+}
+
+.orderform-template-holder .step .form-step fieldset p.client-first-name label::after {
+  content: 'Nome*';
+  font-size: 0.875rem;
+}
+
+
 
 .orderform-template-holder .step .form-step fieldset.box-client-info-pj .corporate-hide-link a {
   max-width: 263px;
@@ -2829,7 +2853,6 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 .orderform-template-holder .step.shipping-data .box-step {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 24px
 }
 
 .orderform-template-holder .step.shipping-data .box-step .vtex-omnishipping-1-x-SummaryItemGroup {
@@ -2866,7 +2889,8 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 }
 
 .orderform-template-holder .step.shipping-data .box-step>*.vtex-omnishipping-1-x-addressFormPart1 .ship-postalCode {
-  max-width: 274px
+  max-width: 274px;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 499px) {
@@ -2882,7 +2906,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 }
 
 .orderform-template-holder .step.shipping-data .box-step>*.vtex-omnishipping-1-x-addressFormPart1 .ship-postalCode small a {
-  color: var(--text-link-primary-default-base, #FF5A00);
+  color: #FF5A00 !important;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -2935,8 +2959,8 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 }
 
 .orderform-template-holder .step.shipping-data .box-step>*.vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-leanShippingOption.shp-lean-option-active {
-  border: 1px solid var(--border-selected-base, #EE8146);
-  background: var(--bg-selected-subtle-base, #FDF2EC)
+  border: 1px solid #EE8146 !important;
+  background: #FDF2EC !important;
 }
 
 .orderform-template-holder .step.shipping-data .box-step>*.vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-leanShippingOption.shp-lean-option-active .vtex-omnishipping-1-x-optionPrice {
@@ -3598,17 +3622,48 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   width: 100%
 }
 
+@media screen and (max-width: 64rem) {
+  #app-container .CardForm>div.BillingAddress {
+    margin: 2rem 0 0;
+  }
+
+  .ChangeNumberOfPayments {
+    margin-top: 2rem;
+  }
+
+  .BillingAddress .payment-billing-address-postalCode.input-small {
+    margin-bottom: 0.5rem !important;
+  }
+}
+
+#app-container .CardForm>div.BillingAddress #address-toggle-0 {
+  opacity: 0;
+  margin-left: -1.25rem;
+}
+
 #app-container .CardForm>div.BillingAddress label {
   color: var(--text-neutral-bold, #18181B);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  letter-spacing: -0.14px
+  letter-spacing: -0.14px;
 }
 
 #app-container .CardForm>div.BillingAddress label strong {
   font-weight: 400
+}
+
+#app-container .CardForm>div.BillingAddress label::after {
+  content: "Alterar";
+  color: #FF5A00;
+  font-family: "Proxima Nova";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: -0.00875rem;
+  padding-left: 1.5rem;
 }
 
 #app-container .CardForm>div:nth-child(3):not(.PaymentInstallments) {
@@ -3644,12 +3699,41 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   line-height: 24px;
   letter-spacing: -0.16px;
   height: 48px;
-  moz-appearance: none;
+  -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   background-image: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 7.5L10 12.5L15 7.5" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   background-repeat: no-repeat;
-  background-position: right 16px center
+  background-position: right 16px center;
+  box-shadow: none;
+}
+
+#app-container .CardForm select option {
+  color: #3F3F46;
+  font-family: "Proxima Nova";
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: -0.00875rem;
+  padding: 0.625rem 0.75rem !important;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+#app-container .CardForm select option:hover,
+#app-container .CardForm select option:checked {
+  color: #FF5A00 !important;
+}
+
+#app-container .CardForm select option:checked::after {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.3337 4L6.00033 11.3333L2.66699 8" stroke="%23EE8146" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  font-size: 14px;
 }
 
 #app-container .CardForm .PaymentCardCVV {
@@ -3661,19 +3745,28 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 }
 
 #app-container .CardForm .PaymentCardCVV label,
-#app-container .CardForm .PaymentCardCVV input {
-  width: 100%;
+#app-container .CardForm .PaymentCardCVV input#creditCardpayment-card-0Code,
+#app-container .CardForm .PaymentCardCVV input#creditCardpayment-card-1Code {
+  width: 100% !important;
   margin-left: 32px
+}
+
+#app-container .CardForm .PaymentCardCVV input {
+  min-width: 17.125rem;
+}
+
+@media screen and (max-width: 48rem) {
+
+  #app-container .CardForm .PaymentCardCVV label,
+  #app-container .CardForm .PaymentCardCVV input#creditCardpayment-card-0Code,
+  #app-container .CardForm .PaymentCardCVV input#creditCardpayment-card-1Code {
+    margin-left: 0 !important;
+  }
 }
 
 @media screen and (max-width: 659px) {
   #app-container .CardForm .PaymentCardCVV {
     width: 100%
-  }
-
-  #app-container .CardForm .PaymentCardCVV label,
-  #app-container .CardForm .PaymentCardCVV input {
-    margin-left: 0
   }
 }
 
@@ -3719,12 +3812,21 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 }
 
 #app-container .ChangeNumberOfPayments a {
-  color: var(--text-link-primary-default-base, #FF5A00);
-  font-size: 14px;
+  color: #FF5A00 !important;
+  font-size: 0.875rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 20px;
-  letter-spacing: -0.14px
+  line-height: 1.25rem;
+  letter-spacing: -0.00875rem
+}
+
+.DontKnowPostalCode a {
+  color: #FF5A00 !important;
+}
+
+#app-container .ChangeNumberOfPayments a:hover {
+  color: #FF5A00 !important;
+  text-decoration: underline;
 }
 
 #app-container .PaymentCardFlags {
@@ -3732,9 +3834,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 }
 
 #app-container .PaymentCardFlags .card-flags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px
+  display: none;
 }
 
 #app-container .PaymentCardFlags .card-flag {
@@ -3752,30 +3852,6 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 
 #app-container .PaymentCardFlags .card-flag:hover {
   border: 1px solid var(--border-selected-base, #EE8146)
-}
-
-#app-container .PaymentCardFlags .card-flag.Visa {
-  background-image: url('data:image/svg+xml,<svg width="40" height="28" viewBox="0 0 40 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 6.4C0 4.15979 0 3.03969 0.435974 2.18404C0.819467 1.43139 1.43139 0.819467 2.18404 0.435974C3.03969 0 4.15979 0 6.4 0H33.6C35.8402 0 36.9603 0 37.816 0.435974C38.5686 0.819467 39.1805 1.43139 39.564 2.18404C40 3.03969 40 4.15979 40 6.4V21.6C40 23.8402 40 24.9603 39.564 25.816C39.1805 26.5686 38.5686 27.1805 37.816 27.564C36.9603 28 35.8402 28 33.6 28H6.4C4.15979 28 3.03969 28 2.18404 27.564C1.43139 27.1805 0.819467 26.5686 0.435974 25.816C0 24.9603 0 23.8402 0 21.6V6.4Z" fill="%23F4F4F5"/><path d="M31.2513 10.1143H29.6168C29.1226 10.1143 28.7425 10.2666 28.5144 10.7619L25.3975 17.8857H27.6021C27.6021 17.8857 27.9823 16.9333 28.0583 16.7047C28.2863 16.7047 30.453 16.7047 30.7571 16.7047C30.8331 16.9714 31.0232 17.8476 31.0232 17.8476H32.9998L31.2513 10.1143ZM28.6665 15.1047C28.8565 14.6476 29.5027 12.9333 29.5027 12.9333C29.5027 12.9714 29.6928 12.4762 29.7688 12.2095L29.9209 12.8952C29.9209 12.8952 30.339 14.7619 30.415 15.1428H28.6665V15.1047Z" fill="%233362AB"/><path d="M25.5497 15.3333C25.5497 16.9333 24.1053 18 21.8626 18C20.9123 18 20 17.8095 19.5059 17.581L19.81 15.8286L20.076 15.9429C20.7602 16.2476 21.2164 16.3619 22.0526 16.3619C22.6608 16.3619 23.307 16.1333 23.307 15.6C23.307 15.2571 23.0409 15.0286 22.2047 14.6476C21.4064 14.2667 20.3421 13.6571 20.3421 12.5524C20.3421 11.0286 21.8246 10 23.9152 10C24.7135 10 25.3977 10.1524 25.8158 10.3429L25.5117 12.019L25.3597 11.8667C24.9795 11.7143 24.4854 11.5619 23.7632 11.5619C22.9649 11.6 22.5848 11.9429 22.5848 12.2476C22.5848 12.5905 23.0409 12.8571 23.7632 13.2C24.9795 13.7714 25.5497 14.419 25.5497 15.3333Z" fill="%233362AB"/><path d="M7 10.1905L7.03801 10.0381H10.307C10.7632 10.0381 11.1053 10.1905 11.2193 10.6857L11.9415 14.1143C11.2193 12.2857 9.54678 10.8 7 10.1905Z" fill="%23F9B50B"/><path d="M16.5411 10.1143L13.2341 17.8476H10.9914L9.09082 11.3714C10.4592 12.2476 11.5996 13.619 12.0177 14.5714L12.2458 15.3714L14.2984 10.0762H16.5411V10.1143Z" fill="%233362AB"/><path d="M17.4154 10.0762H19.506L18.1756 17.8476H16.085L17.4154 10.0762Z" fill="%233362AB"/></svg>')
-}
-
-#app-container .PaymentCardFlags .card-flag.American.Express {
-  background-image: url('data:image/svg+xml,<svg width="41" height="28" viewBox="0 0 41 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.706055 6.4C0.706055 4.15979 0.706055 3.03969 1.14203 2.18404C1.52552 1.43139 2.13744 0.819467 2.89009 0.435974C3.74574 0 4.86584 0 7.10605 0H34.3061C36.5463 0 37.6664 0 38.522 0.435974C39.2747 0.819467 39.8866 1.43139 40.2701 2.18404C40.7061 3.03969 40.7061 4.15979 40.7061 6.4V21.6C40.7061 23.8402 40.7061 24.9603 40.2701 25.816C39.8866 26.5686 39.2747 27.1805 38.522 27.564C37.6664 28 36.5463 28 34.3061 28H7.10606C4.86585 28 3.74574 28 2.89009 27.564C2.13744 27.1805 1.52552 26.5686 1.14203 25.816C0.706055 24.9603 0.706055 23.8402 0.706055 21.6V6.4Z" fill="%23F4F4F5"/><path d="M27.8453 10.1692L27.2648 11.4488H28.4289L27.8453 10.1692ZM21.147 10.9622C21.2565 10.9102 21.3209 10.7973 21.3209 10.657C21.3209 10.5196 21.2532 10.42 21.1438 10.3732C21.0442 10.3214 20.8908 10.3154 20.7438 10.3154H19.7054V11.0284H20.7299C20.894 11.0284 21.0311 11.0262 21.147 10.9622ZM7.84022 10.1692L7.26632 11.4488H8.41758L7.84022 10.1692ZM34.56 18.3669H32.9314V17.6784H34.5534C34.7143 17.6784 34.8269 17.6592 34.8947 17.5988C34.9588 17.545 34.995 17.469 34.9944 17.3895C34.9944 17.2959 34.9535 17.2217 34.8913 17.1772C34.8302 17.1282 34.741 17.1059 34.5941 17.1059C33.8023 17.0814 32.8144 17.1281 32.8144 16.1121C32.8144 15.6465 33.1394 15.1563 34.0244 15.1563H35.7044V14.5175H34.1436C33.6725 14.5175 33.3303 14.6202 33.088 14.7798V14.5175H30.7794C30.4103 14.5175 29.977 14.6008 29.7721 14.7798V14.5175H25.6493V14.7798C25.3213 14.5644 24.7675 14.5175 24.5122 14.5175H21.7928V14.7798C21.5333 14.5511 20.9559 14.5175 20.6042 14.5175H17.5608L16.8645 15.2032L16.2122 14.5175H11.666V18.9978H16.1264L16.844 18.3012L17.5199 18.9978L20.2694 19V17.9461H20.5398C20.9045 17.9514 21.3348 17.9379 21.7145 17.7886V18.9977H23.9823V17.8299H24.0917C24.2312 17.8299 24.2451 17.8352 24.2451 17.9621V18.9974H31.1345C31.5718 18.9974 32.0291 18.8957 32.2822 18.7106V18.9974H34.4675C34.9222 18.9974 35.3664 18.9394 35.7042 18.791V17.9564C35.4995 18.2289 35.1001 18.367 34.56 18.367L34.56 18.3669ZM20.5759 17.309H19.5235V18.3859H17.8844L16.8459 17.3231L15.7667 18.3859H12.4261V15.1753H15.8181L16.8556 16.2277L17.9284 15.1753H20.6232C21.2925 15.1753 22.0444 15.3439 22.0444 16.233C22.0444 17.1249 21.313 17.309 20.5759 17.309ZM25.636 17.1634C25.7551 17.3201 25.7723 17.4664 25.7758 17.7494V18.3859H24.929V17.9843C24.929 17.7911 24.9495 17.5051 24.7927 17.3558C24.6696 17.2408 24.4817 17.2134 24.1739 17.2134H23.2726V18.3859H22.4253V15.1753H24.3722C24.7994 15.1753 25.1102 15.1926 25.387 15.3268C25.6532 15.4731 25.8207 15.6735 25.8207 16.0398C25.8206 16.5522 25.4449 16.8136 25.2229 16.8939C25.4106 16.9569 25.5639 17.0699 25.636 17.1634ZM29.1197 15.8393H27.1448V16.4229H29.0714V17.078H27.1448V17.7168L29.1197 17.7197V18.3859H26.305V15.1753H29.1197V15.8393ZM31.2868 18.3858H29.6443V17.6974H31.2803C31.4403 17.6974 31.5537 17.6781 31.6248 17.6178C31.6828 17.5682 31.7245 17.496 31.7245 17.4086C31.7245 17.3149 31.6793 17.2407 31.6215 17.1961C31.557 17.1472 31.468 17.125 31.3212 17.125C30.5325 17.1004 29.5448 17.1471 29.5448 16.1312C29.5448 15.6655 29.8664 15.1753 30.7506 15.1753H32.4414V15.8586H30.8942C30.7409 15.8586 30.6412 15.8639 30.5564 15.9167C30.4639 15.9687 30.4297 16.0458 30.4297 16.1476C30.4297 16.2687 30.5081 16.3511 30.6142 16.3867C30.7032 16.4149 30.7987 16.4231 30.9424 16.4231L31.3964 16.4344C31.8541 16.4444 32.1685 16.5166 32.3595 16.6925C32.5236 16.8471 32.6118 17.0423 32.6118 17.3727C32.6117 18.0634 32.1374 18.3858 31.2868 18.3858ZM24.7459 15.8911C24.644 15.836 24.4937 15.8331 24.3436 15.8331H23.3051V16.5541H24.3297C24.4937 16.5541 24.6332 16.5488 24.7459 16.4879C24.8552 16.4278 24.9207 16.3171 24.9207 16.1798C24.9207 16.0425 24.8552 15.9431 24.7459 15.8911ZM34.1688 15.833C34.0154 15.833 33.9134 15.8383 33.8276 15.891C33.7385 15.9431 33.7044 16.0202 33.7044 16.122C33.7044 16.243 33.7795 16.3255 33.8888 16.3612C33.9778 16.3893 34.0732 16.3976 34.2137 16.3976L34.6709 16.4086C35.1321 16.419 35.4401 16.4912 35.6278 16.6672C35.662 16.6916 35.6826 16.719 35.7061 16.7466V15.8331H34.1689L34.1688 15.833ZM20.6051 15.833H19.5054V16.6507H20.5953C20.9193 16.6507 21.1208 16.5044 21.121 16.2267C21.1208 15.9459 20.9095 15.833 20.6051 15.833ZM13.2661 15.833V16.4167H15.1175V17.0718H13.2661V17.7106H15.3395L16.3029 16.7687L15.3805 15.833H13.2661ZM18.6804 18.0782V15.5042L17.3856 16.7705L18.6804 18.0782ZM13.3368 12.9234V13.4766H20.3828L20.3795 12.3063H20.5158C20.6113 12.3093 20.6391 12.3173 20.6391 12.4607V13.4767H24.2833V13.2042C24.5773 13.3475 25.0344 13.4767 25.636 13.4767H27.1691L27.4972 12.7637H28.2247L28.5455 13.4767H31.4998V12.7994L31.9471 13.4766H34.3147V9H31.9717V9.5287L31.6437 9H29.2395V9.5287L28.9382 9H25.6907C25.147 9 24.6693 9.06902 24.2833 9.26141V9H22.0422V9.26141C21.7965 9.06311 21.4618 9 21.0898 9H12.9023L12.353 10.1563L11.7888 9H9.21002V9.5287L8.92666 9H6.72738L5.70609 11.1285V12.8311L7.21628 9.62124H8.46935L9.90361 12.6603V9.62124H11.2801L12.3838 11.7987L13.3978 9.62124H14.8019V12.8311H13.9375L13.9343 10.3172L12.7114 12.8311H11.9709L10.7448 10.315V12.8311H9.0294L8.70535 12.1152H6.94939L6.622 12.8311H5.70605V13.4769H7.14709L7.47198 12.7639H8.19946L8.5235 13.4769H11.3587V12.9317L11.6117 13.4791H13.0835L13.3366 12.9235L13.3368 12.9234ZM24.4398 9.99539C24.7123 9.7392 25.1393 9.62106 25.7205 9.62106H26.5369V10.3088H25.7376C25.43 10.3088 25.256 10.3505 25.0887 10.499C24.9449 10.6342 24.8462 10.8897 24.8462 11.2261C24.8462 11.57 24.9214 11.8179 25.0781 11.9799C25.2079 12.1069 25.444 12.1454 25.6659 12.1454H26.0448L27.2334 9.62117H28.497L29.9249 12.6572V9.6212H31.209L32.6914 11.8567V9.6212H33.5553V12.831H32.3602L30.7616 10.4218V12.831H29.044L28.7159 12.115H26.9639L26.6455 12.831H25.6586C25.2487 12.831 24.7297 12.7485 24.4357 12.4759C24.1393 12.2034 23.9852 11.8342 23.9852 11.2506C23.9851 10.7745 24.0771 10.3393 24.4398 9.99539ZM22.7051 9.62109H23.5656V12.831H22.7051V9.62109ZM18.8254 9.62109H20.7651C21.196 9.62109 21.5137 9.6315 21.7864 9.77484C22.0532 9.91822 22.2131 10.1276 22.2131 10.4855C22.2131 10.9973 21.8376 11.2617 21.619 11.3411C21.8034 11.4051 21.9611 11.5179 22.0363 11.6114C22.1553 11.7711 22.1758 11.9137 22.1758 12.2004V12.8309H21.3252L21.322 12.4262C21.322 12.233 21.3424 11.9552 21.1889 11.8009C21.0657 11.688 20.8778 11.6634 20.5742 11.6634H19.6689V12.831H18.8255L18.8254 9.62109ZM15.4256 9.62109H18.2429V10.2895H16.269V10.8681H18.1955V11.5261H16.269V12.1671H18.2429V12.8309H15.4256V9.62109Z" fill="%232557D6"/></svg>')
-}
-
-#app-container .PaymentCardFlags .card-flag.Hipercard {
-  background-position: unset
-}
-
-#app-container .PaymentCardFlags .card-flag.Diners {
-  background-image: url('data:image/svg+xml,<svg width="41" height="28" viewBox="0 0 41 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.0585938 6.4C0.0585938 4.15979 0.0585938 3.03969 0.494568 2.18404C0.878061 1.43139 1.48998 0.819467 2.24263 0.435974C3.09828 0 4.21838 0 6.45859 0H33.6586C35.8988 0 37.0189 0 37.8746 0.435974C38.6272 0.819467 39.2391 1.43139 39.6226 2.18404C40.0586 3.03969 40.0586 4.15979 40.0586 6.4V21.6C40.0586 23.8402 40.0586 24.9603 39.6226 25.816C39.2391 26.5686 38.6272 27.1805 37.8746 27.564C37.0189 28 35.8988 28 33.6586 28H6.45859C4.21838 28 3.09828 28 2.24263 27.564C1.48998 27.1805 0.878061 26.5686 0.494568 25.816C0.0585938 24.9603 0.0585938 23.8402 0.0585938 21.6V6.4Z" fill="%23F4F4F5"/><path d="M30.2143 14.0696C30.2143 9.29714 26.2309 5.99856 21.8663 6H18.1104C13.6938 5.99842 10.0586 9.29815 10.0586 14.0696C10.0586 18.4347 13.6939 22.021 18.1104 21.9999H21.8663C26.2305 22.0209 30.2143 18.4335 30.2143 14.0696Z" fill="%230079BE"/><path d="M18.1339 6.67603C14.0982 6.67727 10.8281 9.95512 10.8267 14.0006C10.8277 18.0453 14.0979 21.3227 18.1339 21.3241C22.1705 21.3229 25.4416 18.0454 25.4421 14.0006C25.4416 9.95502 22.1706 6.67747 18.1339 6.67603Z" fill="white"/><path d="M13.5156 13.9808C13.5195 12.0039 14.7516 10.3182 16.489 9.64835V18.3122C14.7516 17.6427 13.5194 15.9579 13.5156 13.9808V13.9808ZM19.8042 18.3144V9.64859C21.5424 10.3169 22.7764 12.0035 22.7795 13.9813C22.7764 15.9596 21.5424 17.6451 19.8042 18.3146V18.3144Z" fill="%230079BE"/></svg>')
-}
-
-#app-container .PaymentCardFlags .card-flag.Mastercard {
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="41" height="28" viewBox="0 0 41 28" fill="none"><path d="M0.353027 6.4C0.353027 4.15979 0.353027 3.03969 0.789001 2.18404C1.17249 1.43139 1.78442 0.819467 2.53707 0.435974C3.39271 0 4.51282 0 6.75303 0H33.953C36.1932 0 37.3133 0 38.169 0.435974C38.9216 0.819467 39.5336 1.43139 39.9171 2.18404C40.353 3.03969 40.353 4.15979 40.353 6.4V21.6C40.353 23.8402 40.353 24.9603 39.9171 25.816C39.5336 26.5686 38.9216 27.1805 38.169 27.564C37.3133 28 36.1932 28 33.953 28H6.75303C4.51282 28 3.39271 28 2.53707 27.564C1.78442 27.1805 1.17249 26.5686 0.789001 25.816C0.353027 24.9603 0.353027 23.8402 0.353027 21.6V6.4Z" fill="%23F4F4F5"/><path d="M32.353 14.4163C32.353 18.5159 29.0363 21.8326 24.9367 21.8326C23.2063 21.8326 21.62 21.2352 20.3633 20.2464C22.0938 18.8867 23.1857 16.7854 23.1857 14.4163C23.1857 12.0472 22.0732 9.94593 20.3633 8.58627C21.62 7.59743 23.2063 7 24.9367 7C29.0363 7 32.353 10.3373 32.353 14.4163Z" fill="%23F79E1B"/><path d="M20.3633 8.58627C20.3633 8.58627 20.3633 8.58627 20.3633 8.58627C22.0732 9.94593 23.1857 12.0472 23.1857 14.4163C23.1857 16.7854 22.0938 18.8867 20.3633 20.2464L20.3427 20.2464C18.6328 18.9073 17.5204 16.7854 17.5204 14.4164C17.5204 12.0473 18.6328 9.94597 20.3427 8.58631C20.3427 8.5863 20.3427 8.58633 20.3427 8.58631L20.3633 8.58627Z" fill="%23FF5F00"/><path d="M17.5204 14.4164C17.5204 12.0473 18.6328 9.94597 20.3427 8.58631C19.0861 7.59747 17.4998 7.00003 15.7693 7.00003C11.6698 7.00003 8.35303 10.3168 8.35303 14.4163C8.35303 18.5159 11.6698 21.8327 15.7693 21.8327C17.4998 21.8327 19.086 21.2352 20.3427 20.2464C18.6328 18.9073 17.5204 16.7854 17.5204 14.4164Z" fill="%23EB001B"/></svg>')
-}
-
-#app-container .PaymentCardFlags .card-flag.Elo {
-  background-image: url('data:image/svg+xml,<svg width="41" height="28" viewBox="0 0 41 28" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.411621 6.4C0.411621 4.15979 0.411621 3.03969 0.847595 2.18404C1.23109 1.43139 1.84301 0.819467 2.59566 0.435974C3.45131 0 4.57141 0 6.81162 0H34.0116C36.2518 0 37.3719 0 38.2276 0.435974C38.9802 0.819467 39.5922 1.43139 39.9756 2.18404C40.4116 3.03969 40.4116 4.15979 40.4116 6.4V21.6C40.4116 23.8402 40.4116 24.9603 39.9756 25.816C39.5922 26.5686 38.9802 27.1805 38.2276 27.564C37.3719 28 36.2518 28 34.0116 28H6.81162C4.57141 28 3.45131 28 2.59566 27.564C1.84301 27.1805 1.23109 26.5686 0.847595 25.816C0.411621 24.9603 0.411621 23.8402 0.411621 21.6V6.4Z" fill="%23F4F4F5"/><path d="M10.5812 11.2651C10.8802 11.164 11.2013 11.1112 11.5356 11.1112C12.9959 11.1112 14.2142 12.1492 14.4913 13.5259L16.5585 13.1037C16.0835 10.7637 14.0163 8.99997 11.5356 8.99997C10.9682 8.99997 10.4228 9.09234 9.9126 9.26387L10.5812 11.2651Z" fill="%23FFF100"/><path d="M8.14019 17.9683L9.53888 16.3849C8.9143 15.8307 8.52285 15.0258 8.52285 14.1241C8.52285 13.2268 8.9143 12.4175 9.53888 11.8677L8.14019 10.2887C7.08018 11.23 6.41162 12.5979 6.41162 14.1285C6.41162 15.6548 7.08018 17.027 8.14019 17.9683Z" fill="%2300A3DF"/><path d="M14.4913 14.7311C14.2098 16.1078 12.9959 17.1414 11.5356 17.1414C11.2013 17.1414 10.8802 17.0886 10.5768 16.9875L9.9082 18.9887C10.4184 19.1602 10.9682 19.2526 11.5356 19.2526C14.0163 19.2526 16.0835 17.4933 16.5585 15.1533L14.4913 14.7311Z" fill="%23EE4023"/><path d="M23.4465 16.1474C23.1035 16.4817 22.6417 16.684 22.1314 16.6752C21.7796 16.6708 21.4542 16.5652 21.1814 16.3893L20.4952 17.4801C20.9658 17.7748 21.5156 17.9507 22.1139 17.9595C22.9803 17.9727 23.772 17.6296 24.3483 17.071L23.4465 16.1474ZM22.2062 11.7006C20.482 11.6742 19.057 13.0553 19.0306 14.7795C19.0218 15.4261 19.2065 16.033 19.5364 16.5344L25.2015 14.1109C24.8849 12.7518 23.6709 11.727 22.2063 11.7006H22.2062ZM20.3281 15.0258C20.3193 14.9554 20.3149 14.8806 20.3149 14.8058C20.3325 13.7898 21.1683 12.9761 22.1843 12.9937C22.7384 13.0025 23.231 13.2532 23.5609 13.6491L20.3281 15.0258ZM26.9829 10.2931V16.3321L28.0297 16.7675L27.5327 17.9595L26.4947 17.5284C26.2616 17.4273 26.1032 17.2733 25.9844 17.0974C25.8701 16.9215 25.7821 16.6751 25.7821 16.3497V10.2931H26.9829ZM30.7611 13.0861C30.9459 13.0245 31.1394 12.9937 31.3462 12.9937C32.239 12.9937 32.978 13.6271 33.1495 14.4672L34.4118 14.2077C34.1215 12.7782 32.8592 11.705 31.3462 11.705C30.9987 11.705 30.6644 11.7622 30.3565 11.8633L30.7611 13.0861ZM29.27 17.1722L30.1233 16.2089C29.7407 15.8702 29.5031 15.3776 29.5031 14.8278C29.5031 14.278 29.7451 13.7854 30.1233 13.4511L29.27 12.4879C28.6235 13.0597 28.2144 13.8998 28.2144 14.8322C28.2144 15.7647 28.6235 16.6004 29.27 17.1722ZM33.1495 15.2016C32.978 16.0418 32.2346 16.6751 31.3462 16.6751C31.1438 16.6751 30.9459 16.6399 30.7611 16.5784L30.3521 17.8011C30.6644 17.9067 30.9986 17.9639 31.3462 17.9639C32.8592 17.9639 34.1215 16.8907 34.4118 15.4612L33.1495 15.2016Z" fill="%23231F20"/></svg>')
 }
 
 #app-container .PaymentCardFlags .card-flag-label input {
@@ -4134,4 +4210,31 @@ body .client-pre-email h3.client-pre-email-h span:before {
 .coupon.summary-coupon.hideElement .coupon-form .coupon-fieldset .vcustom-showCustomMsgCoupon,
 .coupon.summary-coupon.hideElement .coupon-form .coupon-fieldset::after {
   display: none !important;
+}
+
+.summary-totalizers tbody {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-totalizers .Items .monetary {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+.summary-totalizers .Items .monetary::after {
+  content: 'no pix ou boleto';
+  color: #71717A;
+  font-family: "Proxima Nova";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1rem;
+  letter-spacing: -0.0075rem;
+}
+
+.summary-totalizers tbody .srp-summary-result {
+  order: 1;
 }
