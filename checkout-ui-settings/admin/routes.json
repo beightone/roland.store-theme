@@ -1,6 +1,0 @@
-{
-  "admin.app.checkout-ui": {
-    "component": "Admin",
-    "path": "/admin/app/vtex-checkout-ui-custom"
-  }
-}
