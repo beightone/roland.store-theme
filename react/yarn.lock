@@ -4898,9 +4898,9 @@ rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
-"roland.store-theme@http://roland.vtexassets.com/_v/public/typings/v1/roland.store-theme@1.0.5/public/@types/roland.store-theme":
-  version "1.0.5"
-  resolved "http://roland.vtexassets.com/_v/public/typings/v1/roland.store-theme@1.0.5/public/@types/roland.store-theme#f229d97c7cc8e5501948618081b6da7a815d9a5d"
+"roland.store-theme@http://roland.vtexassets.com/_v/public/typings/v1/roland.store-theme@1.0.7/public/@types/roland.store-theme":
+  version "1.0.7"
+  resolved "http://roland.vtexassets.com/_v/public/typings/v1/roland.store-theme@1.0.7/public/@types/roland.store-theme#17e76493863ca569eb8b82f79873dac59bcc8ab1"
 
 rsvp@^4.8.4:
   version "4.8.5"
@@ -5686,9 +5686,9 @@ verror@1.10.0:
   version "2.89.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-summary@2.89.0/public/@types/vtex.product-summary#7ab43385439c520bfb7db6c1d073fdb069776960"
 
-"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.2/public/@types/vtex.render-runtime":
-  version "8.134.2"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.2/public/@types/vtex.render-runtime#ae69e2b2a471291c6c6b155e17510150fbfc2d0e"
+"vtex.render-runtime@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.4/public/@types/vtex.render-runtime":
+  version "8.134.4"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.134.4/public/@types/vtex.render-runtime#4f329e03a66bdc0297ef608c5745f3cfdc151abe"
 
 "vtex.responsive-layout@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.responsive-layout@0.1.4/public/@types/vtex.responsive-layout":
   version "0.1.4"
@@ -5698,9 +5698,9 @@ verror@1.10.0:
   version "0.16.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.rich-text@0.16.0/public/@types/vtex.rich-text#0cdcaccffb37ae0d025894ba7055f69bc3c9aa30"
 
-"vtex.search-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.61.0/public/@types/vtex.search-graphql":
-  version "0.61.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.61.0/public/@types/vtex.search-graphql#f0a3f360f0a74fd380363e1565a9c1efb86aa03c"
+"vtex.search-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.62.0/public/@types/vtex.search-graphql":
+  version "0.62.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.62.0/public/@types/vtex.search-graphql#1278452f23ac497cda55dabe88d1021a551d29f3"
 
 "vtex.search-result@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-result@3.132.2/public/@types/vtex.search-result":
   version "3.132.2"
