@@ -290,10 +290,6 @@ body a:hover {
   display: none
 }
 
-.v-custom-step-cart .cart-more-options {
-  display: block
-}
-
 .radio-options-container {
   display: flex;
   flex-direction: column;
@@ -378,7 +374,11 @@ body a:hover {
   font-style: normal;
   font-weight: 500;
   line-height: 16px;
-  letter-spacing: -0.12px
+  letter-spacing: -0.12px;
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding-top: 1rem;
 }
 
 .loading-bg,
@@ -1676,11 +1676,11 @@ body .header.new .header-wrapper .seal-safe-environment span {
 }
 
 #shipping-preview-container.srp-container .srp-data #cart-shipping-calculate {
-  border-radius: 0 2px 2px 0;
-  background: #2B2B3A;
+  border-radius: 0 2px 2px 0 !important;
+  background: #2B2B3A !important;
   border: 1px solid #D4D4D8;
   border-left: 0;
-  color: #FFF;
+  color: #FFF !important;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -1702,7 +1702,7 @@ body .header.new .header-wrapper .seal-safe-environment span {
 #shipping-preview-container.srp-container .srp-data #shipping-calculate-link {
   border-radius: 2px;
   background: #fdf2ec;
-  color: #ff5a00;
+  color: #ff5a00 !important;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -1796,7 +1796,7 @@ body .header.new .header-wrapper .seal-safe-environment span {
 }
 
 .cart-more-options .srp-container .ship-postalCode small a {
-  color: var(--text-link-primary-default-base, #FF5A00);
+  color: #FF5A00 !important;
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -2179,6 +2179,10 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   .orderform-template-holder #shipping-data,
   .orderform-template-holder #payment-data {
     padding: 1rem;
+  }
+
+  .orderform-template-holder #payment-data {
+    padding-bottom: 0 !important;
   }
 }
 
@@ -3685,9 +3689,15 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   width: 100%
 }
 
+@media screen and (min-width: 64rem) {
+  #payment-data .box-step .box-step-content .form-step {
+    margin-bottom: 2rem;
+  }
+}
+
 @media screen and (max-width: 64rem) {
   #app-container .CardForm>div.BillingAddress {
-    margin: 2rem 0 0;
+    margin: 0;
   }
 
   .ChangeNumberOfPayments {
@@ -4324,4 +4334,17 @@ body .client-pre-email h3.client-pre-email-h span:before {
 
 .summary-template-holder .summary-totalizers .cart-more-options {
   display: flex !important;
+}
+
+.summary-template-holder .summary-coupon p.coupon-fields::after {
+  content: 'Use apenas 1 código por pedido';
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding-top: 1rem;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  color: #71717A;
 }

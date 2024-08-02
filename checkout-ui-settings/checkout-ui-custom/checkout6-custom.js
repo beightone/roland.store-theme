@@ -128,30 +128,119 @@ function updateBreadcrumb() {
   updateClasses(config.uncompleted || [], [], ['completed'])
   updateClasses(config.inactive || [], [], ['active'])
 }
-
-function showDeliveryOptions() {
+function showDeliveryOptionsElement() {
   const { hash } = window.location
 
   if (hash !== '#/cart') return
 
-  const observer = new MutationObserver((mutations, obs) => {
-    const shippingCalculatorElement = document.querySelector('.cart-template .cart-more-options')
+  function addingShippingSearchAction(calculateShippingLinkElements, mainObserver) {
+    const parentShippingInput0 = calculateShippingLinkElements[0].closest('.cart-more-options #shipping-preview-container.srp-container')
+    const parentShippingInput1 = calculateShippingLinkElements[1].closest('.cart-more-options #shipping-preview-container.srp-container')
 
+    if (!parentShippingInput0 || !parentShippingInput1) {
+      return
+    }
+
+    function updatePostalCode() {
+      calculateShippingLinkElements[0].click()
+      calculateShippingLinkElements[0].dispatchEvent(new CustomEvent('change', { bubbles: true }))
+    }
+
+    function copyContent() {
+      parentShippingInput1.innerHTML = parentShippingInput0.innerHTML
+
+      const submitButton = parentShippingInput1.querySelector('#cart-shipping-calculate')
+      const postalCodeInput = parentShippingInput1.querySelector('#ship-postalCode')
+
+      if (submitButton && postalCodeInput) {
+        submitButton.addEventListener('click', async (event) => {
+          event.preventDefault()
+          const postalCode = postalCodeInput.value
+          const orderFormId = vtexjs.checkout.orderFormId
+          const endpoint = `/api/checkout/pub/orderForm/${orderFormId}/attachments/shippingData`
+
+          const payload = ({
+            selectedAddresses: [
+              {
+                addressType: 'residential',
+                receiverName: null,
+                isDisposable: true,
+                postalCode: postalCode,
+                city: null,
+                state: null,
+                country: 'BRA',
+                geoCoordinates: [],
+                street: null,
+                number: null,
+                neighborhood: null,
+                complement: null,
+                reference: null,
+                addressQuery: "",
+              },
+            ],
+            clearAddressIfPostalCodeNotFound: !1,
+          })
+
+          try {
+            const response = await fetch(endpoint, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json'
+              },
+              body: JSON.stringify(payload)
+            })
+
+            if (!response.ok) {
+              throw new Error(`Erro na requisição: ${response.statusText}`)
+            }
+
+            const data = await response.json()
+            console.log('Resposta da VTEX:', data)
+            location.reload()
+          } catch (error) {
+            console.error('Erro ao enviar o CEP:', error)
+          }
+        })
+
+      }
+
+      mutationObserver.disconnect()
+    }
+
+    const mutationObserver = new MutationObserver((mutations, obs) => {
+      copyContent()
+    })
+
+    const config = { childList: true, subtree: true }
+
+    calculateShippingLinkElements[1].addEventListener('click', function () {
+      updatePostalCode()
+      mutationObserver.observe(parentShippingInput0, config)
+    })
+
+    mainObserver.disconnect()
+  }
+
+  const observer = new MutationObserver((mutations, obs) => {
+
+    const shippingCalculatorElement = document.querySelector('.cart-template .cart-more-options')
     const alreadyAppended = !!document.querySelector('.cart-template.active .summary-totalizers .cart-more-options')
     const summaryTotalizersElement = document.querySelector('.summary-totalizers')
 
-    if (!shippingCalculatorElement || alreadyAppended) {
-
+    if (!shippingCalculatorElement || !summaryTotalizersElement || alreadyAppended) {
       return
     }
 
-    if (!summaryTotalizersElement) {
-      return
-    }
     summaryTotalizersElement.insertAdjacentHTML('beforeend', shippingCalculatorElement.outerHTML)
-    buildShippingBar()
-    buildShippingOptions()
-    obs.disconnect()
+    const calculateShippingLinkElements = document.querySelectorAll('#shipping-preview-container.srp-container .srp-data #shipping-calculate-link')
+
+    if (calculateShippingLinkElements.length >= 2) {
+      addingShippingSearchAction(calculateShippingLinkElements, obs)
+    } else {
+      buildShippingBar()
+      buildShippingOptions()
+      handlePostalCodeChange()
+    }
   })
 
   const config = {
@@ -161,10 +250,23 @@ function showDeliveryOptions() {
 
   observer.observe(document.body, config)
 }
+function handlePostalCodeChange() {
+  const allChangeLinkShippingPostalCodeElements = document.querySelectorAll('.srp-address-title')
+
+  if (allChangeLinkShippingPostalCodeElements.length === 2) {
+    allChangeLinkShippingPostalCodeElements[1].addEventListener('click', () => {
+      allChangeLinkShippingPostalCodeElements[0].click()
+      const cloneShippingElement = document.querySelector('.cart-template.active .summary-totalizers .cart-more-options')
+      cloneShippingElement.remove()
+      showDeliveryOptionsElement()
+    })
+  }
+}
 function buildShippingOptions() {
-  const observer = new MutationObserver((mutations, obs) => {
+  const observerOptions = new MutationObserver((mutations, obs) => {
     const deliverySelect = document.querySelector('.summary-totalizers .srp-delivery-select')
     const originalDeliverySelect = document.querySelector('.srp-delivery-select')
+
     if (deliverySelect) {
       const createdRadioOptionsElement = document.querySelector('.radio-options-container')
       if (createdRadioOptionsElement) {
@@ -237,7 +339,7 @@ function buildShippingOptions() {
     childList: true,
     subtree: true,
   }
-  observer.observe(document.body, config)
+  observerOptions.observe(document.body, config)
 }
 
 function updateShippingBar() {
@@ -448,8 +550,8 @@ function addingPixPriceIntoSummaryTotalizers() {
 }
 
 $(window).on('load', function () {
-  showDeliveryOptions()
   setTimeout(() => {
+    showDeliveryOptionsElement()
     updateBreadcrumb()
     settingCupomToggle()
     addingPixPriceIntoSummaryTotalizers()
