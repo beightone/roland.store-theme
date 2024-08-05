@@ -132,7 +132,6 @@ function showDeliveryOptionsElement() {
   const { hash } = window.location
 
   if (hash !== '#/cart') return
-
   function addingShippingSearchAction(calculateShippingLinkElements, mainObserver) {
     const parentShippingInput0 = calculateShippingLinkElements[0].closest('.cart-more-options #shipping-preview-container.srp-container')
     const parentShippingInput1 = calculateShippingLinkElements[1].closest('.cart-more-options #shipping-preview-container.srp-container')
@@ -222,23 +221,26 @@ function showDeliveryOptionsElement() {
   }
 
   const observer = new MutationObserver((mutations, obs) => {
-
+    if (window.location.hash !== '#/cart') {
+      observer.disconnect()
+    }
     const shippingCalculatorElement = document.querySelector('.cart-template .cart-more-options')
     const alreadyAppended = !!document.querySelector('.cart-template.active .summary-totalizers .cart-more-options')
     const summaryTotalizersElement = document.querySelector('.summary-totalizers')
+    const elementIsLoading = !!document.querySelector('.cart-template .cart-more-options .srp-container .srp-skeleton')
+    const elementNotLoaded = document.querySelector('.cart-template .cart-more-options .srp-container .srp-content')
 
-    if (!shippingCalculatorElement || !summaryTotalizersElement || alreadyAppended) {
+    if (!shippingCalculatorElement || !summaryTotalizersElement || alreadyAppended || elementIsLoading) {
       return
     }
 
     summaryTotalizersElement.insertAdjacentHTML('beforeend', shippingCalculatorElement.outerHTML)
     const calculateShippingLinkElements = document.querySelectorAll('#shipping-preview-container.srp-container .srp-data #shipping-calculate-link')
-
     if (calculateShippingLinkElements.length >= 2) {
       addingShippingSearchAction(calculateShippingLinkElements, obs)
     } else {
-      buildShippingBar()
       buildShippingOptions()
+      buildShippingBar()
       handlePostalCodeChange()
     }
   })
@@ -266,7 +268,6 @@ function buildShippingOptions() {
   const observerOptions = new MutationObserver((mutations, obs) => {
     const deliverySelect = document.querySelector('.summary-totalizers .srp-delivery-select')
     const originalDeliverySelect = document.querySelector('.srp-delivery-select')
-
     if (deliverySelect) {
       const createdRadioOptionsElement = document.querySelector('.radio-options-container')
       if (createdRadioOptionsElement) {
@@ -274,20 +275,33 @@ function buildShippingOptions() {
         return
       }
       const optionsElements = deliverySelect.querySelectorAll('option')
+      const selectedOptionValue = document.querySelector('.srp-delivery-current-many__price').innerText
       const radioContainer = document.createElement('div')
       radioContainer.classList.add('radio-options-container')
-      function updateSelect(value) {
+      function updateSelect(radio) {
         originalDeliverySelect
-          .querySelector(`option[value="${value}"]`)
+          .querySelector(`option[value="${radio.value}"]`)
           .parentNode.click()
-        deliverySelect.value = value
-        originalDeliverySelect.value = value
+        deliverySelect.value = radio.value
+        originalDeliverySelect.value = radio.value
         deliverySelect.dispatchEvent(
           new CustomEvent('change', { bubbles: true })
         )
         originalDeliverySelect.dispatchEvent(
           new CustomEvent('change', { bubbles: true })
         )
+        document
+          .querySelectorAll('.radio-option-input')
+          .forEach(input => {
+            const parentElement = input.closest('.vtex-omnishipping-1-x-leanShippingOption')
+            const priceSpan = parentElement.querySelector('.vtex-omnishipping-1-x-optionPrice').innerHTML
+
+            const actualOptionValue = document.querySelector('.srp-delivery-current-many__price').innerText
+            if (priceSpan === actualOptionValue) {
+              input.removeAttribute('checked')
+              parentElement.classList.add('shp-lean-option-active')
+            }
+          })
       }
       function extractText(optionText) {
         const parts = optionText.split(' - ')
@@ -300,7 +314,7 @@ function buildShippingOptions() {
         const labelHtml = `
             <label class="vtex-omnishipping-1-x-leanShippingOption">
               <input type="radio" name="delivery-option" value="${option.value
-          }" class="radio-option-input" ${option.selected ? 'checked' : ''}>
+          }" class="radio-option-input" ${price === selectedOptionValue ? 'checked' : ''}>
               <div class="vtex-omnishipping-1-x-leanShippingIcon"></div>
               <div class="vtex-omnishipping-1-x-leanShippingText">
                 <span>${text}</span>
@@ -314,18 +328,19 @@ function buildShippingOptions() {
         .querySelectorAll('input[type="radio"]')
         .forEach(radio => {
           radio.addEventListener('change', function (evt) {
-            updateSelect(radio.value)
             document
               .querySelectorAll('.vtex-omnishipping-1-x-leanShippingOption')
               .forEach(label =>
                 label.classList.remove('shp-lean-option-active')
               )
-            radio
-              .closest('.vtex-omnishipping-1-x-leanShippingOption')
-              .classList.add('shp-lean-option-active')
+            document
+              .querySelectorAll('.radio-option-input')
+              .forEach(input =>
+                input.removeAttribute('checked')
+              )
+            updateSelect(radio)
           })
-          if (radio.value === deliverySelect.value) {
-            radio.checked = true
+          if (radio.checked) {
             radio
               .closest('.vtex-omnishipping-1-x-leanShippingOption')
               .classList.add('shp-lean-option-active')
@@ -536,13 +551,20 @@ function addingPixPriceIntoSummaryTotalizers() {
     const pixPriceElement = document.querySelector('.valueOfSubtotal')
 
     if (pixPriceElement) return
-    const subtotalHTML = priceWithDiscountsElement.innerHTML
+    const isntallmentsInfo = vtexjs.checkout.orderForm.paymentData.installmentOptions
+    const priceCreditInfos = isntallmentsInfo.find((item) => item.paymentSystem === "2")
+    const pricePixInfos = isntallmentsInfo.find((item) => item.paymentSystem === "713")
+    const priceCredit = priceCreditInfos.installments[0].value
+    const pricePix = pricePixInfos.installments[0].value
+    const priceCreditFormatted = (priceCredit / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+    const pricePixFormatted = (pricePix / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
+    if (priceCredit <= pricePix) return
     subtotalElements.forEach((element) => {
       element.innerHTML = `
-        <span class="valueOfSubtotal">${subtotalHTML}</span>
+        <span class="valueOfSubtotal">${pricePixFormatted}</span>
         <span class="valueText">no pix ou boleto</span>
-        <p class="valueOfSubtotal subtotalCardValue">${element.innerHTML} <span class="valueText">no cartão</span> </p>
+        <p class="valueOfSubtotal subtotalCardValue">${priceCreditFormatted} <span class="valueText">no cartão</span> </p>
 
       `
     })
@@ -550,18 +572,19 @@ function addingPixPriceIntoSummaryTotalizers() {
 }
 
 $(window).on('load', function () {
+  showDeliveryOptionsElement()
   setTimeout(() => {
-    showDeliveryOptionsElement()
     updateBreadcrumb()
     settingCupomToggle()
     addingPixPriceIntoSummaryTotalizers()
-  }, 4000)
+  }, 2000)
 })
 
 $(window).on('hashchange', function () {
-  showDeliveryOptions()
   updateBreadcrumb()
   addingPixPriceIntoSummaryTotalizers()
+  const { hash } = window.location
+  if (hash === '#/cart') location.reload()
   setTimeout(() => {
     settingCupomToggle()
   }, 1000)
@@ -577,6 +600,7 @@ $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
   handleCouponSuccess()
   setTimeout(() => {
     settingCupomToggle()
+    addingPixPriceIntoSummaryTotalizers()
   }, 1000)
 })
 
