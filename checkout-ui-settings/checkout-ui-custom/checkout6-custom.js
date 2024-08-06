@@ -128,120 +128,159 @@ function updateBreadcrumb() {
   updateClasses(config.uncompleted || [], [], ['completed'])
   updateClasses(config.inactive || [], [], ['active'])
 }
-function showDeliveryOptionsElement() {
+// function showDeliveryOptionsElement() {
+//   const { hash } = window.location
+
+//   if (hash !== '#/cart') return
+//   function addingShippingSearchAction(calculateShippingLinkElements, mainObserver) {
+//     const parentShippingInput0 = calculateShippingLinkElements[0].closest('.cart-more-options #shipping-preview-container.srp-container')
+//     const parentShippingInput1 = calculateShippingLinkElements[1].closest('.cart-more-options #shipping-preview-container.srp-container')
+
+//     if (!parentShippingInput0 || !parentShippingInput1) {
+//       return
+//     }
+
+//     function updatePostalCode() {
+//       calculateShippingLinkElements[0].click()
+//       calculateShippingLinkElements[0].dispatchEvent(new CustomEvent('change', { bubbles: true }))
+//     }
+
+//     function copyContent() {
+//       parentShippingInput1.innerHTML = parentShippingInput0.innerHTML
+
+//       const submitButton = parentShippingInput1.querySelector('#cart-shipping-calculate')
+//       const postalCodeInput = parentShippingInput1.querySelector('#ship-postalCode')
+
+//       if (submitButton && postalCodeInput) {
+//         submitButton.addEventListener('click', async (event) => {
+//           event.preventDefault()
+//           const postalCode = postalCodeInput.value
+//           const orderFormId = vtexjs.checkout.orderFormId
+//           const endpoint = `/api/checkout/pub/orderForm/${orderFormId}/attachments/shippingData`
+
+//           const payload = ({
+//             selectedAddresses: [
+//               {
+//                 addressType: 'residential',
+//                 receiverName: null,
+//                 isDisposable: true,
+//                 postalCode: postalCode,
+//                 city: null,
+//                 state: null,
+//                 country: 'BRA',
+//                 geoCoordinates: [],
+//                 street: null,
+//                 number: null,
+//                 neighborhood: null,
+//                 complement: null,
+//                 reference: null,
+//                 addressQuery: "",
+//               },
+//             ],
+//             clearAddressIfPostalCodeNotFound: !1,
+//           })
+
+//           try {
+//             const response = await fetch(endpoint, {
+//               method: 'POST',
+//               headers: {
+//                 'Content-Type': 'application/json'
+//               },
+//               body: JSON.stringify(payload)
+//             })
+
+//             if (!response.ok) {
+//               throw new Error(`Erro na requisição: ${response.statusText}`)
+//             }
+
+//             const data = await response.json()
+//             console.log('Resposta da VTEX:', data)
+//             location.reload()
+//           } catch (error) {
+//             console.error('Erro ao enviar o CEP:', error)
+//           }
+//         })
+
+//       }
+
+//       mutationObserver.disconnect()
+//     }
+
+//     const mutationObserver = new MutationObserver((mutations, obs) => {
+//       copyContent()
+//     })
+
+//     const config = { childList: true, subtree: true }
+
+//     calculateShippingLinkElements[1].addEventListener('click', function () {
+//       updatePostalCode()
+//       mutationObserver.observe(parentShippingInput0, config)
+//     })
+
+//     mainObserver.disconnect()
+//   }
+
+//   const observer = new MutationObserver((mutations, obs) => {
+//     if (window.location.hash !== '#/cart') {
+//       observer.disconnect()
+//     }
+//     const shippingCalculatorElement = document.querySelector('.cart-template .cart-more-options')
+//     const alreadyAppended = !!document.querySelector('.cart-template.active .summary-totalizers .cart-more-options')
+//     const summaryTotalizersElement = document.querySelector('.summary-totalizers')
+//     const elementIsLoading = !!document.querySelector('.cart-template .cart-more-options .srp-container .srp-skeleton')
+//     const elementNotLoaded = document.querySelector('.cart-template .cart-more-options .srp-container .srp-content')
+
+//     if (!shippingCalculatorElement || !summaryTotalizersElement || alreadyAppended || elementIsLoading) {
+//       return
+//     }
+
+//     summaryTotalizersElement.insertAdjacentHTML('beforeend', shippingCalculatorElement.outerHTML)
+//     const calculateShippingLinkElements = document.querySelectorAll('#shipping-preview-container.srp-container .srp-data #shipping-calculate-link')
+//     if (calculateShippingLinkElements.length >= 2) {
+//       addingShippingSearchAction(calculateShippingLinkElements, obs)
+//     } else {
+//       buildShippingOptions()
+//       buildShippingBar()
+//       handlePostalCodeChange()
+//     }
+//   })
+
+//   const config = {
+//     childList: true,
+//     subtree: true,
+//   }
+
+//   observer.observe(document.body, config)
+// }
+// function handlePostalCodeChange() {
+//   const allChangeLinkShippingPostalCodeElements = document.querySelectorAll('.srp-address-title')
+
+//   if (allChangeLinkShippingPostalCodeElements.length === 2) {
+//     allChangeLinkShippingPostalCodeElements[1].addEventListener('click', () => {
+//       allChangeLinkShippingPostalCodeElements[0].click()
+//       const cloneShippingElement = document.querySelector('.cart-template.active .summary-totalizers .cart-more-options')
+//       cloneShippingElement.remove()
+//       // showDeliveryOptionsElement()
+//     })
+//   }
+// }
+
+function showDeliveryOptions() {
   const { hash } = window.location
-
   if (hash !== '#/cart') return
-  function addingShippingSearchAction(calculateShippingLinkElements, mainObserver) {
-    const parentShippingInput0 = calculateShippingLinkElements[0].closest('.cart-more-options #shipping-preview-container.srp-container')
-    const parentShippingInput1 = calculateShippingLinkElements[1].closest('.cart-more-options #shipping-preview-container.srp-container')
-
-    if (!parentShippingInput0 || !parentShippingInput1) {
-      return
-    }
-
-    function updatePostalCode() {
-      calculateShippingLinkElements[0].click()
-      calculateShippingLinkElements[0].dispatchEvent(new CustomEvent('change', { bubbles: true }))
-    }
-
-    function copyContent() {
-      parentShippingInput1.innerHTML = parentShippingInput0.innerHTML
-
-      const submitButton = parentShippingInput1.querySelector('#cart-shipping-calculate')
-      const postalCodeInput = parentShippingInput1.querySelector('#ship-postalCode')
-
-      if (submitButton && postalCodeInput) {
-        submitButton.addEventListener('click', async (event) => {
-          event.preventDefault()
-          const postalCode = postalCodeInput.value
-          const orderFormId = vtexjs.checkout.orderFormId
-          const endpoint = `/api/checkout/pub/orderForm/${orderFormId}/attachments/shippingData`
-
-          const payload = ({
-            selectedAddresses: [
-              {
-                addressType: 'residential',
-                receiverName: null,
-                isDisposable: true,
-                postalCode: postalCode,
-                city: null,
-                state: null,
-                country: 'BRA',
-                geoCoordinates: [],
-                street: null,
-                number: null,
-                neighborhood: null,
-                complement: null,
-                reference: null,
-                addressQuery: "",
-              },
-            ],
-            clearAddressIfPostalCodeNotFound: !1,
-          })
-
-          try {
-            const response = await fetch(endpoint, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json'
-              },
-              body: JSON.stringify(payload)
-            })
-
-            if (!response.ok) {
-              throw new Error(`Erro na requisição: ${response.statusText}`)
-            }
-
-            const data = await response.json()
-            console.log('Resposta da VTEX:', data)
-            location.reload()
-          } catch (error) {
-            console.error('Erro ao enviar o CEP:', error)
-          }
-        })
-
-      }
-
-      mutationObserver.disconnect()
-    }
-
-    const mutationObserver = new MutationObserver((mutations, obs) => {
-      copyContent()
-    })
-
-    const config = { childList: true, subtree: true }
-
-    calculateShippingLinkElements[1].addEventListener('click', function () {
-      updatePostalCode()
-      mutationObserver.observe(parentShippingInput0, config)
-    })
-
-    mainObserver.disconnect()
-  }
 
   const observer = new MutationObserver((mutations, obs) => {
-    if (window.location.hash !== '#/cart') {
-      observer.disconnect()
-    }
-    const shippingCalculatorElement = document.querySelector('.cart-template .cart-more-options')
-    const alreadyAppended = !!document.querySelector('.cart-template.active .summary-totalizers .cart-more-options')
-    const summaryTotalizersElement = document.querySelector('.summary-totalizers')
-    const elementIsLoading = !!document.querySelector('.cart-template .cart-more-options .srp-container .srp-skeleton')
-    const elementNotLoaded = document.querySelector('.cart-template .cart-more-options .srp-container .srp-content')
+    const shippingCalculator = $('.cart-template .cart-more-options').eq(0)
+    const alreadyAppended = !!document.querySelector(
+      '.cart-template.active .summary-totalizers .cart-more-options'
+    )
 
-    if (!shippingCalculatorElement || !summaryTotalizersElement || alreadyAppended || elementIsLoading) {
-      return
-    }
-
-    summaryTotalizersElement.insertAdjacentHTML('beforeend', shippingCalculatorElement.outerHTML)
-    const calculateShippingLinkElements = document.querySelectorAll('#shipping-preview-container.srp-container .srp-data #shipping-calculate-link')
-    if (calculateShippingLinkElements.length >= 2) {
-      addingShippingSearchAction(calculateShippingLinkElements, obs)
-    } else {
-      buildShippingOptions()
+    if (shippingCalculator.length && !alreadyAppended) {
+      shippingCalculator.appendTo('.summary-totalizers')
+      console.log('appended')
       buildShippingBar()
-      handlePostalCodeChange()
+      buildShippingOptions()
+      obs.disconnect()
     }
   })
 
@@ -252,109 +291,87 @@ function showDeliveryOptionsElement() {
 
   observer.observe(document.body, config)
 }
-function handlePostalCodeChange() {
-  const allChangeLinkShippingPostalCodeElements = document.querySelectorAll('.srp-address-title')
 
-  if (allChangeLinkShippingPostalCodeElements.length === 2) {
-    allChangeLinkShippingPostalCodeElements[1].addEventListener('click', () => {
-      allChangeLinkShippingPostalCodeElements[0].click()
-      const cloneShippingElement = document.querySelector('.cart-template.active .summary-totalizers .cart-more-options')
-      cloneShippingElement.remove()
-      showDeliveryOptionsElement()
-    })
-  }
-}
 function buildShippingOptions() {
-  const observerOptions = new MutationObserver((mutations, obs) => {
-    const deliverySelect = document.querySelector('.summary-totalizers .srp-delivery-select')
-    const originalDeliverySelect = document.querySelector('.srp-delivery-select')
+  const observer = new MutationObserver((mutations, obs) => {
+    const deliverySelect = document.querySelector('.srp-delivery-select')
+
     if (deliverySelect) {
-      const createdRadioOptionsElement = document.querySelector('.radio-options-container')
-      if (createdRadioOptionsElement) {
+      if (document.querySelector('.radio-options-container')) {
         obs.disconnect()
+
         return
       }
-      const optionsElements = deliverySelect.querySelectorAll('option')
-      const selectedOptionValue = document.querySelector('.srp-delivery-current-many__price').innerText
-      const radioContainer = document.createElement('div')
-      radioContainer.classList.add('radio-options-container')
-      function updateSelect(radio) {
-        originalDeliverySelect
-          .querySelector(`option[value="${radio.value}"]`)
-          .parentNode.click()
-        deliverySelect.value = radio.value
-        originalDeliverySelect.value = radio.value
-        deliverySelect.dispatchEvent(
-          new CustomEvent('change', { bubbles: true })
-        )
-        originalDeliverySelect.dispatchEvent(
-          new CustomEvent('change', { bubbles: true })
-        )
-        document
-          .querySelectorAll('.radio-option-input')
-          .forEach(input => {
-            const parentElement = input.closest('.vtex-omnishipping-1-x-leanShippingOption')
-            const priceSpan = parentElement.querySelector('.vtex-omnishipping-1-x-optionPrice').innerHTML
 
-            const actualOptionValue = document.querySelector('.srp-delivery-current-many__price').innerText
-            if (priceSpan === actualOptionValue) {
-              input.removeAttribute('checked')
-              parentElement.classList.add('shp-lean-option-active')
-            }
-          })
+      const options = deliverySelect.querySelectorAll('option')
+
+      const radioContainer = document.createElement('div')
+
+      radioContainer.classList.add('radio-options-container')
+
+      function updateSelect(value) {
+        deliverySelect.querySelector(`option[value="${value}"]`).parentNode.click()
+
+        deliverySelect.value = value
+        deliverySelect.dispatchEvent(new CustomEvent('change', { bubbles: true }))
       }
+
       function extractText(optionText) {
         const parts = optionText.split(' - ')
         const text = parts[0]
         const price = parts[1] || ''
+
         return { text, price }
       }
-      optionsElements.forEach(option => {
+
+      options.forEach((option) => {
         const { text, price } = extractText(option.textContent)
+
         const labelHtml = `
-            <label class="vtex-omnishipping-1-x-leanShippingOption">
-              <input type="radio" name="delivery-option" value="${option.value
-          }" class="radio-option-input" ${price === selectedOptionValue ? 'checked' : ''}>
-              <div class="vtex-omnishipping-1-x-leanShippingIcon"></div>
-              <div class="vtex-omnishipping-1-x-leanShippingText">
-                <span>${text}</span>
-              </div>
-              <span class="vtex-omnishipping-1-x-optionPrice">${price}</span>
-            </label>
-          `
+        <label class="vtex-omnishipping-1-x-leanShippingOption">
+          <input type="radio" name="delivery-option" value="${option.value}" class="radio-option-input" ${
+          option.selected ? 'checked' : ''
+        }>
+          <div class="vtex-omnishipping-1-x-leanShippingIcon"></div>
+          <div class="vtex-omnishipping-1-x-leanShippingText">
+            <span>${text}</span>
+          </div>
+          <span class="vtex-omnishipping-1-x-optionPrice">${price}</span>
+        </label>
+      `
+
         radioContainer.innerHTML += labelHtml
       })
-      radioContainer
-        .querySelectorAll('input[type="radio"]')
-        .forEach(radio => {
-          radio.addEventListener('change', function (evt) {
-            document
-              .querySelectorAll('.vtex-omnishipping-1-x-leanShippingOption')
-              .forEach(label =>
-                label.classList.remove('shp-lean-option-active')
-              )
-            document
-              .querySelectorAll('.radio-option-input')
-              .forEach(input =>
-                input.removeAttribute('checked')
-              )
-            updateSelect(radio)
-          })
-          if (radio.checked) {
-            radio
-              .closest('.vtex-omnishipping-1-x-leanShippingOption')
-              .classList.add('shp-lean-option-active')
-          }
+
+      radioContainer.querySelectorAll('input[type="radio"]').forEach((radio) => {
+        radio.addEventListener('change', function (evt) {
+          updateSelect(radio.value)
+
+          document
+            .querySelectorAll('.vtex-omnishipping-1-x-leanShippingOption')
+            .forEach((label) => label.classList.remove('shp-lean-option-active'))
+
+          radio.closest('.vtex-omnishipping-1-x-leanShippingOption').classList.add('shp-lean-option-active')
         })
+
+        if (radio.value === deliverySelect.value) {
+          radio.checked = true
+          radio.closest('.vtex-omnishipping-1-x-leanShippingOption').classList.add('shp-lean-option-active')
+        }
+      })
+
       deliverySelect.parentNode.insertBefore(radioContainer, deliverySelect)
+
       obs.disconnect()
     }
   })
+
   const config = {
     childList: true,
     subtree: true,
   }
-  observerOptions.observe(document.body, config)
+
+  observer.observe(document.body, config)
 }
 
 function updateShippingBar() {
@@ -398,6 +415,9 @@ function buildShippingBar() {
 
   if (hash !== '#/cart') return null
   const shippingBarElement = $('.shipping-bar-wrapper')
+  const alreadyAppended = !!document.querySelector('.cart-more-options .shipping-bar-wrapper')
+
+  if (alreadyAppended) return
 
   shippingBarElement.appendTo('.cart-template.active .summary-totalizers .cart-more-options')
   updateShippingBar()
@@ -572,7 +592,8 @@ function addingPixPriceIntoSummaryTotalizers() {
 }
 
 $(window).on('load', function () {
-  showDeliveryOptionsElement()
+  // showDeliveryOptionsElement()
+  showDeliveryOptions()
   setTimeout(() => {
     updateBreadcrumb()
     settingCupomToggle()
@@ -598,6 +619,7 @@ $(window).on('hashchange', function () {
 $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
   validatePostalCode()
   handleCouponSuccess()
+  showDeliveryOptions()
   setTimeout(() => {
     settingCupomToggle()
     addingPixPriceIntoSummaryTotalizers()
