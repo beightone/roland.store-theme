@@ -270,17 +270,20 @@ function showDeliveryOptions() {
   if (hash !== '#/cart') return
 
   const observer = new MutationObserver((mutations, obs) => {
-    const shippingCalculator = $('.cart-template .cart-more-options').eq(0)
+    const shippingCalculator = $('.cart-template .cart-template-holder .cart-more-options')
     const alreadyAppended = !!document.querySelector(
       '.cart-template.active .summary-totalizers .cart-more-options'
     )
 
     if (shippingCalculator.length && !alreadyAppended) {
-      shippingCalculator.appendTo('.summary-totalizers')
-      console.log('appended')
-      buildShippingBar()
-      buildShippingOptions()
       obs.disconnect()
+      setTimeout(() => {
+         shippingCalculator.appendTo('.cart-template.full-cart.active .summary-totalizers')
+          buildShippingBar()
+          buildShippingOptions()
+      }, 1000)
+      console.log('appended')
+
     }
   })
 
@@ -571,15 +574,24 @@ function addingPixPriceIntoSummaryTotalizers() {
     const pixPriceElement = document.querySelector('.valueOfSubtotal')
 
     if (pixPriceElement) return
-    const isntallmentsInfo = vtexjs.checkout.orderForm.paymentData.installmentOptions
-    const priceCreditInfos = isntallmentsInfo.find((item) => item.paymentSystem === "2")
-    const pricePixInfos = isntallmentsInfo.find((item) => item.paymentSystem === "713")
-    const priceCredit = priceCreditInfos.installments[0].value
-    const pricePix = pricePixInfos.installments[0].value
-    const priceCreditFormatted = (priceCredit / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-    const pricePixFormatted = (pricePix / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
-    if (priceCredit <= pricePix) return
+    const { items, totalizers } = vtexjs.checkout.orderForm
+    const totalWithoudDiscount = totalizers.find((item) => item.id === 'Items').value
+    const pricePixInfos = items.reduce((acc, item) => acc + item.sellingPrice, 0)
+    const priceCreditFormatted = (totalWithoudDiscount / 100).toLocaleString('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+    })
+    const pricePixFormatted = (pricePixInfos / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+
+    console.log('totalWithoudDiscount', {
+      totalWithoudDiscount,
+      pricePixInfos
+    })
+
+
+    if (totalWithoudDiscount === pricePixInfos) return
+
     subtotalElements.forEach((element) => {
       element.innerHTML = `
         <span class="valueOfSubtotal">${pricePixFormatted}</span>
@@ -620,6 +632,7 @@ $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
   validatePostalCode()
   handleCouponSuccess()
   showDeliveryOptions()
+  console.log('orderFormUpdated.vtex', orderForm)
   setTimeout(() => {
     settingCupomToggle()
     addingPixPriceIntoSummaryTotalizers()

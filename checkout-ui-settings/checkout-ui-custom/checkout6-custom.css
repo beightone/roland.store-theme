@@ -407,7 +407,7 @@ body a:hover {
   animation: prixClipFix 2s linear infinite
 }
 
-.v-custom-step-shipping #shipping-data .step .accordion-inner {
+/* .v-custom-step-shipping #shipping-data .step .accordion-inner {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -416,13 +416,13 @@ body a:hover {
   opacity: 1;
   align-self: center;
   margin: 0 auto
-}
+} */
 
-.v-custom-step-shipping #shipping-data .step .accordion-inner .box-step {
+/* .v-custom-step-shipping #shipping-data .step .accordion-inner .box-step {
   display: none
-}
+} */
 
-.v-custom-step-shipping #shipping-data .step .accordion-inner::before {
+/* .v-custom-step-shipping #shipping-data .step .accordion-inner::before {
   content: "";
   box-sizing: border-box;
   position: absolute;
@@ -430,7 +430,7 @@ body a:hover {
   border-radius: 50%;
   border: 5px solid #ff5a00;
   animation: prixClipFix 2s linear infinite
-}
+} */
 
 .container {
   max-width: 1248px;
