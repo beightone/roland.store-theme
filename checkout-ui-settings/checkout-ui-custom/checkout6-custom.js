@@ -32,6 +32,34 @@ const getAddressByViaCep = async (postalCode) => {
     return { erro: true }
   }
 }
+async function isOnPostalCodeRange(postalCode) {
+    return await validateRangePostalCode(postalCode)
+  }
+async function validateRangePostalCode(postalCode) {
+  try {
+    const response = await fetch(
+      `/api/dataentities/CR/search?isActive=true&_fields=FinalRange,initialRange`
+    )
+
+    if (!response.ok)
+      throw new Error('Erro ao buscar intervalos de CEP na VTEX')
+    const addressRanges = await response.json()
+
+    const isWithinRange = addressRanges.some(range => {
+      const initialRange = parseInt(range.initialRange, 10)
+      const finalRange = parseInt(range.FinalRange, 10)
+      const code = parseInt(postalCode.replace('-', ''), 10)
+
+      return code >= initialRange && code <= finalRange
+    })
+
+    return isWithinRange
+  } catch (error) {
+    console.error('Error getting VTEX address', error)
+
+    return false
+  }
+}
 
 function updateBreadcrumb() {
   const currentURL = window.location.href
@@ -282,7 +310,6 @@ function showDeliveryOptions() {
           buildShippingBar()
           buildShippingOptions()
       }, 1000)
-      console.log('appended')
 
     }
   })
@@ -435,7 +462,6 @@ function validatePostalCode() {
     try {
       removeExistingErrors()
       await handleVtexAddress(postalCode)
-      showShippingStep()
     } catch (error) {
       console.error('Erro ao validar o código postal:', error)
     }
@@ -455,7 +481,6 @@ function validatePostalCode() {
       attributeFilter: ['value'],
     })
 
-    console.log('Observando mudanças no código postal:', postalCodeInput.value)
     await handlePostalCodeChange(postalCodeInput.value)
   }
 
@@ -472,16 +497,39 @@ function validatePostalCode() {
   waitForPostalCodeInput()
 }
 
+function displayError() {
+  removeExistingErrors()
+  const shippingContainer = document.getElementById('shipping-data')
+  shippingContainer.classList.add('postal-code-error')
+  shippingContainer.classList.remove('visible')
+}
+
+function removeExistingErrors() {
+  const errorClass = document.querySelector('postal-code-error')
+  if (errorClass) {
+    errorClass.classList.remove('postal-code-error')
+  }
+}
+
 async function handleVtexAddress(postalCode) {
   const existOnVtex = await getVtexAddress(postalCode)
 
+
+
   if (!existOnVtex) {
     const addressViaCep = await getAddressByViaCep(postalCode)
+    const isOnRange = await isOnPostalCodeRange(postalCode)
+
 
     if (!addressViaCep.erro) {
       fillAddressForm(addressViaCep)
+      showShippingStep()
+      removeExistingErrors()
+    } else if (!isOnRange) {
+      displayError()
     } else {
-      console.error('CEP não encontrado')
+      showShippingStep()
+      removeExistingErrors()
     }
   }
 }
@@ -584,12 +632,6 @@ function addingPixPriceIntoSummaryTotalizers() {
     })
     const pricePixFormatted = (pricePixInfos / 100).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
 
-    console.log('totalWithoudDiscount', {
-      totalWithoudDiscount,
-      pricePixInfos
-    })
-
-
     if (totalWithoudDiscount === pricePixInfos) return
 
     subtotalElements.forEach((element) => {
@@ -632,7 +674,6 @@ $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
   validatePostalCode()
   handleCouponSuccess()
   showDeliveryOptions()
-  console.log('orderFormUpdated.vtex', orderForm)
   setTimeout(() => {
     settingCupomToggle()
     addingPixPriceIntoSummaryTotalizers()

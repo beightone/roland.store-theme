@@ -2152,7 +2152,8 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 }
 
 .orderform-template-holder #shipping-data.postal-code-error .vtex-omnishipping-1-x-addressForm,
-.orderform-template-holder #shipping-data.postal-code-error .vtex-omnishipping-1-x-deliveryGroup {
+.orderform-template-holder #shipping-data.postal-code-error .vtex-omnishipping-1-x-deliveryGroup,
+.orderform-template-holder #shipping-data.postal-code-error .vtex-omnishipping-1-x-submitPaymentButton {
   display: none !important
 }
 
@@ -2170,7 +2171,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 }
 
 .orderform-template-holder #shipping-data.postal-code-error small::after {
-  content: "CEP n\E3o dispon\EDvel";
+  content: "CEP não disponível";
   color: #dd4b39;
   font-size: 12px
 }
