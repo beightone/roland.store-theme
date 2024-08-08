@@ -603,19 +603,75 @@ function addingPixPriceIntoSummaryTotalizers() {
   }
 }
 
+function checkProductPrice() {
+  const { items } = vtexjs?.checkout?.orderForm
+  const products = [...document.querySelectorAll('.cart-template .cart-template-holder .product-item')]
+
+  products?.map((product, index) => {
+    const item = items[index]
+    const hasPixPrice = item.sellingPrice !== item.price
+    const alreadyAppended = !!product.querySelector('.hide-pix-price')
+
+    if (!hasPixPrice && !alreadyAppended) {
+      product.classList.add('hide-pix-price')
+    } else if (hasPixPrice && alreadyAppended) {
+      product.classList.remove('hide-pix-price')
+    }
+  })
+}
+
+
+function observeElement(nodeElement, action) {
+  const { hash } = window.location
+  if (hash !== '#/cart') return
+
+  const targetNode = document.querySelector('body')
+
+  if (!targetNode) {
+    return
+  }
+
+  const config = { childList: true, subtree: true }
+
+  const callback = function (mutationsList, observer) {
+    for (let mutation of mutationsList) {
+      if (mutation.type === 'childList') {
+        const elements = nodeElement
+        if (elements) {
+          console.log('Elemento encontrado:', elements)
+          action()
+          observer.disconnect()
+          break
+        }
+      }
+    }
+  }
+
+  const observer = new MutationObserver(callback)
+  observer.observe(targetNode, config)
+}
+
 $(window).on('load', function () {
   // showDeliveryOptionsElement()
   showDeliveryOptions()
+  observeElement(document.querySelectorAll('.cart-template .cart-template-holder .product-item'), checkProductPrice)
+  observeElement(
+    document.querySelector('.summary-totalizers tfoot tr td.monetary'),
+    addingPixPriceIntoSummaryTotalizers
+  )
   setTimeout(() => {
     updateBreadcrumb()
     settingCupomToggle()
-    addingPixPriceIntoSummaryTotalizers()
   }, 2000)
 })
 
 $(window).on('hashchange', function () {
   updateBreadcrumb()
-  addingPixPriceIntoSummaryTotalizers()
+  observeElement(document.querySelectorAll('.cart-template .cart-template-holder .product-item'), checkProductPrice)
+   observeElement(
+     document.querySelector('.summary-totalizers tfoot tr td.monetary'),
+     addingPixPriceIntoSummaryTotalizers
+   )
   const { hash } = window.location
   if (hash === '#/cart') location.reload()
   setTimeout(() => {
@@ -632,10 +688,13 @@ $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
   validatePostalCode()
   handleCouponSuccess()
   showDeliveryOptions()
-  console.log('orderFormUpdated.vtex', orderForm)
+  observeElement(document.querySelectorAll('.cart-template .cart-template-holder .product-item'), checkProductPrice)
+  observeElement(
+    document.querySelector('.summary-totalizers tfoot tr td.monetary'),
+    addingPixPriceIntoSummaryTotalizers
+  )
   setTimeout(() => {
     settingCupomToggle()
-    addingPixPriceIntoSummaryTotalizers()
   }, 1000)
 })
 
