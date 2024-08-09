@@ -128,142 +128,6 @@ function updateBreadcrumb() {
   updateClasses(config.uncompleted || [], [], ['completed'])
   updateClasses(config.inactive || [], [], ['active'])
 }
-// function showDeliveryOptionsElement() {
-//   const { hash } = window.location
-
-//   if (hash !== '#/cart') return
-//   function addingShippingSearchAction(calculateShippingLinkElements, mainObserver) {
-//     const parentShippingInput0 = calculateShippingLinkElements[0].closest('.cart-more-options #shipping-preview-container.srp-container')
-//     const parentShippingInput1 = calculateShippingLinkElements[1].closest('.cart-more-options #shipping-preview-container.srp-container')
-
-//     if (!parentShippingInput0 || !parentShippingInput1) {
-//       return
-//     }
-
-//     function updatePostalCode() {
-//       calculateShippingLinkElements[0].click()
-//       calculateShippingLinkElements[0].dispatchEvent(new CustomEvent('change', { bubbles: true }))
-//     }
-
-//     function copyContent() {
-//       parentShippingInput1.innerHTML = parentShippingInput0.innerHTML
-
-//       const submitButton = parentShippingInput1.querySelector('#cart-shipping-calculate')
-//       const postalCodeInput = parentShippingInput1.querySelector('#ship-postalCode')
-
-//       if (submitButton && postalCodeInput) {
-//         submitButton.addEventListener('click', async (event) => {
-//           event.preventDefault()
-//           const postalCode = postalCodeInput.value
-//           const orderFormId = vtexjs.checkout.orderFormId
-//           const endpoint = `/api/checkout/pub/orderForm/${orderFormId}/attachments/shippingData`
-
-//           const payload = ({
-//             selectedAddresses: [
-//               {
-//                 addressType: 'residential',
-//                 receiverName: null,
-//                 isDisposable: true,
-//                 postalCode: postalCode,
-//                 city: null,
-//                 state: null,
-//                 country: 'BRA',
-//                 geoCoordinates: [],
-//                 street: null,
-//                 number: null,
-//                 neighborhood: null,
-//                 complement: null,
-//                 reference: null,
-//                 addressQuery: "",
-//               },
-//             ],
-//             clearAddressIfPostalCodeNotFound: !1,
-//           })
-
-//           try {
-//             const response = await fetch(endpoint, {
-//               method: 'POST',
-//               headers: {
-//                 'Content-Type': 'application/json'
-//               },
-//               body: JSON.stringify(payload)
-//             })
-
-//             if (!response.ok) {
-//               throw new Error(`Erro na requisição: ${response.statusText}`)
-//             }
-
-//             const data = await response.json()
-//             console.log('Resposta da VTEX:', data)
-//             location.reload()
-//           } catch (error) {
-//             console.error('Erro ao enviar o CEP:', error)
-//           }
-//         })
-
-//       }
-
-//       mutationObserver.disconnect()
-//     }
-
-//     const mutationObserver = new MutationObserver((mutations, obs) => {
-//       copyContent()
-//     })
-
-//     const config = { childList: true, subtree: true }
-
-//     calculateShippingLinkElements[1].addEventListener('click', function () {
-//       updatePostalCode()
-//       mutationObserver.observe(parentShippingInput0, config)
-//     })
-
-//     mainObserver.disconnect()
-//   }
-
-//   const observer = new MutationObserver((mutations, obs) => {
-//     if (window.location.hash !== '#/cart') {
-//       observer.disconnect()
-//     }
-//     const shippingCalculatorElement = document.querySelector('.cart-template .cart-more-options')
-//     const alreadyAppended = !!document.querySelector('.cart-template.active .summary-totalizers .cart-more-options')
-//     const summaryTotalizersElement = document.querySelector('.summary-totalizers')
-//     const elementIsLoading = !!document.querySelector('.cart-template .cart-more-options .srp-container .srp-skeleton')
-//     const elementNotLoaded = document.querySelector('.cart-template .cart-more-options .srp-container .srp-content')
-
-//     if (!shippingCalculatorElement || !summaryTotalizersElement || alreadyAppended || elementIsLoading) {
-//       return
-//     }
-
-//     summaryTotalizersElement.insertAdjacentHTML('beforeend', shippingCalculatorElement.outerHTML)
-//     const calculateShippingLinkElements = document.querySelectorAll('#shipping-preview-container.srp-container .srp-data #shipping-calculate-link')
-//     if (calculateShippingLinkElements.length >= 2) {
-//       addingShippingSearchAction(calculateShippingLinkElements, obs)
-//     } else {
-//       buildShippingOptions()
-//       buildShippingBar()
-//       handlePostalCodeChange()
-//     }
-//   })
-
-//   const config = {
-//     childList: true,
-//     subtree: true,
-//   }
-
-//   observer.observe(document.body, config)
-// }
-// function handlePostalCodeChange() {
-//   const allChangeLinkShippingPostalCodeElements = document.querySelectorAll('.srp-address-title')
-
-//   if (allChangeLinkShippingPostalCodeElements.length === 2) {
-//     allChangeLinkShippingPostalCodeElements[1].addEventListener('click', () => {
-//       allChangeLinkShippingPostalCodeElements[0].click()
-//       const cloneShippingElement = document.querySelector('.cart-template.active .summary-totalizers .cart-more-options')
-//       cloneShippingElement.remove()
-//       // showDeliveryOptionsElement()
-//     })
-//   }
-// }
 
 function showDeliveryOptions() {
   const { hash } = window.location
@@ -620,6 +484,31 @@ function checkProductPrice() {
   })
 }
 
+function checkSharedCart() {
+  const {hash} = window.location
+
+  if ( hash !== '#/payment') return null
+
+  const inStoreParams = new URLSearchParams(window.location.search)
+  const orderId = inStoreParams.get('orderFormId')
+  const code = inStoreParams.get('code')
+
+  const isSharedCart = orderId && code
+
+  if (isSharedCart) {
+    document.querySelector("body").classList.add('shared-cart')
+    observeElement(document.querySelector('#payment-group-PagalevePixAVistaTransparentePaymentGroup'), setDefaultPayment)
+  }
+
+}
+
+function setDefaultPayment() {
+  const element = document.querySelector('#payment-group-PagalevePixAVistaTransparentePaymentGroup')
+
+  if (element) {
+    element.click()
+  }
+}
 
 function observeElement(nodeElement, action) {
   const { hash } = window.location
@@ -638,7 +527,6 @@ function observeElement(nodeElement, action) {
       if (mutation.type === 'childList') {
         const elements = nodeElement
         if (elements) {
-          console.log('Elemento encontrado:', elements)
           action()
           observer.disconnect()
           break
@@ -652,8 +540,8 @@ function observeElement(nodeElement, action) {
 }
 
 $(window).on('load', function () {
-  // showDeliveryOptionsElement()
   showDeliveryOptions()
+  checkSharedCart()
   observeElement(document.querySelectorAll('.cart-template .cart-template-holder .product-item'), checkProductPrice)
   observeElement(
     document.querySelector('.summary-totalizers tfoot tr td.monetary'),
@@ -667,6 +555,7 @@ $(window).on('load', function () {
 
 $(window).on('hashchange', function () {
   updateBreadcrumb()
+  checkSharedCart()
   observeElement(document.querySelectorAll('.cart-template .cart-template-holder .product-item'), checkProductPrice)
    observeElement(
      document.querySelector('.summary-totalizers tfoot tr td.monetary'),
@@ -688,6 +577,7 @@ $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
   validatePostalCode()
   handleCouponSuccess()
   showDeliveryOptions()
+  checkSharedCart()
   observeElement(document.querySelectorAll('.cart-template .cart-template-holder .product-item'), checkProductPrice)
   observeElement(
     document.querySelector('.summary-totalizers tfoot tr td.monetary'),

@@ -139,6 +139,12 @@
   color: #f1f7ff !important;
 }
 
+body.shared-cart .pg-cartao-fisico,
+body.shared-cart #payment-group-creditDirectSalePaymentGroup,
+body.shared-cart #payment-group-debitDirectSalePaymentGroup {
+  display: none!important;
+}
+
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active {
