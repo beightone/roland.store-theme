@@ -3047,7 +3047,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
 }
 
 #shipping-preview-container.srp-container .srp-delivery-info .srp-shipping-current-single .srp-shipping-current-single__bullet::before,
-.vtex-omnishipping-1-x-addressItemIcon::before,
+.vtex-omnishipping-1-x-active .vtex-omnishipping-1-x-addressItemIcon::before,
 .orderform-template-holder .step.shipping-data .box-step>*.vtex-omnishipping-1-x-deliveryGroup .vtex-omnishipping-1-x-leanShippingGroupList .vtex-omnishipping-1-x-leanShippingOption.shp-lean-option-active .vtex-omnishipping-1-x-leanShippingIcon::before {
   content: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C3.58172 16 0 12.4183 0 8Z" fill="%23FF5A00"/><circle cx="8" cy="8" r="3" fill="%23F4F4F5"/></svg>');
   width: 16px;
