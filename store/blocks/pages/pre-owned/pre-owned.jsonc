@@ -1,0 +1,43 @@
+{
+  "store.custom#pre-owned": {
+    "blocks": [
+      "flex-layout.row#pre-owned-main-banner",
+      "flex-layout.row#pre-owned-benefits"
+    ],
+    "props": {
+      "blockClass": "pre-owned"
+    },
+    "parent": {
+      "header": "header#pre-owned",
+      "footer": "flex-layout.row#footer-roland"
+    }
+  },
+  "flex-layout.row#pre-owned-main-banner": {
+    "title": "Banner Principal",
+    "props": {
+      "blockClass": "pre-owned-main-banner",
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#pre-owned-main-text-banner",
+      "flex-layout.row#pre-owned-main-banner-image"
+    ]
+  },
+  "flex-layout.row#pre-owned-benefits": {
+    "title": "Vantagens",
+    "props": {
+      "blockClass": "pre-owned-benefits",
+      "fullWidth": true
+      // "preventHorizontalStretch": true,
+      // "preventVerticalStretch": true
+    },
+    "children": [
+      "info-card#pre-owned-benefits-1",
+      "info-card#pre-owned-benefits-2",
+      "info-card#pre-owned-benefits-3",
+      "info-card#pre-owned-benefits-4"
+    ]
+  }
+}

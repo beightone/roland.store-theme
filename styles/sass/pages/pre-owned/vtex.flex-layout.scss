@@ -1,0 +1,24 @@
+.flexRow--pre-owned-main-banner {
+  background:#000;
+  padding: 28px 0;
+
+  .flexRowContent--pre-owned-main-banner {
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-left: 51px;
+  }
+
+}
+
+.flexRow--pre-owned-benefits {
+  background: #F4F4F5;
+  padding: 32px;
+
+  .flexRowContent--pre-owned-benefits {
+    max-width: 1440px;
+    gap: 16px;
+    margin: 0 auto;
+    width: 100%;
+  }
+}

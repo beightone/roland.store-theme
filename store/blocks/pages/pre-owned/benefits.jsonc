@@ -1,0 +1,58 @@
+{
+  "info-card#pre-owned-benefits-1": {
+    "title": "Vantagem 1",
+    "props": {
+      "id": "info-card-example",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/svgs/quality.svg",
+      "headline": "Qualidade",
+      "callToActionMode": "none",
+      "bodyText": "Garantimos a funcionalidade\n100% do produto ",
+      "blockClass": "info-card-pre-owned-benefits",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#pre-owned-benefits-2": {
+    "title": "Vantagem 2",
+    "props": {
+      "id": "info-card-example",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/svgs/quality.svg",
+      "headline": "Entrega expressa",
+      "callToActionMode": "none",
+      "bodyText": "Entrega expressa\nem até 48 horas",
+      "blockClass": "info-card-pre-owned-benefits",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#pre-owned-benefits-3": {
+    "title": "Vantagem 3",
+    "props": {
+      "id": "info-card-example",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/svgs/quality.svg",
+      "headline": "Qualidade",
+      "callToActionMode": "none",
+      "bodyText": "Garantimos a funcionalidade\n100% do produto ",
+      "blockClass": "info-card-pre-owned-benefits",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#pre-owned-benefits-4": {
+    "title": "Vantagem 4",
+    "props": {
+      "id": "info-card-example",
+      "isFullModeStyle": false,
+      "textPosition": "left",
+      "imageUrl": "assets/svgs/garantia.svg",
+      "headline": "Com nota fiscal",
+      "callToActionMode": "none",
+      "bodyText": "A nota fiscal acompanha\ntodos os produtos",
+      "blockClass": "info-card-pre-owned-benefits",
+      "textAlignment": "left"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.wrapper--pre-owned-main-text-banner {
+  color: var(--Secondary-50, #EAEAEB);
+  font-family: "Proxima Nova";
+  font-style: normal;
+  max-width: 395px;
+  
+  .heading--pre-owned-main-text-banner {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -0.4px;
+    margin: 0 {
+      bottom: 16px;
+    };
+  }
+
+  .paragraph--pre-owned-main-text-banner {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.18px;
+  }
+}
