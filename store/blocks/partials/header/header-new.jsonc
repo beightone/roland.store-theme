@@ -2,5 +2,9 @@
   "header": {
     "title": "ROLAND - Header",
     "blocks": ["header-layout.desktop#roland", "header-layout.mobile#roland"]
+  },
+  "header#pre-owned": {
+    "title": "ROLAND - Header",
+    "blocks": ["header-layout.desktop#pre-owned", "header-layout.mobile#roland"]
   }
 }

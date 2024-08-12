@@ -1,7 +1,20 @@
 {
   "header-layout.desktop#roland": {
     "title": "Header Desktop",
-    "children": ["header-row#topbar-desktop", "header-row#main-desktop", "menu", "add-to-cart-event"]
+    "children": [
+      "header-row#topbar-desktop",
+      "header-row#main-desktop",
+      "menu",
+      "add-to-cart-event"
+    ]
+  },
+  "header-layout.desktop#pre-owned": {
+    "title": "Header Desktop",
+    "children": [
+      "header-row#topbar-desktop",
+      "header-row#main-desktop",
+      "add-to-cart-event"
+    ]
   },
   "menu": {
     "title": "Menu Customizado - Desktop"
