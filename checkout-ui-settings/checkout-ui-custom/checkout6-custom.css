@@ -265,13 +265,10 @@ body input.success:not([invalid=true]) {
   background-position: right 16px center
 }
 
-/* body a {
-  color: #fdf2ec !important;
-} */
-
-body a:hover {
-  color: #fbe5d8 !important;
+body a {
+  color: #ee8146;
 }
+
 
 .onda-v1 .br-pill,
 .step,
