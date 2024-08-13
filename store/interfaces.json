@@ -32,5 +32,9 @@
   },
   "custom-banner": {
     "component": "CustomBanner"
+  },
+  "collapsible-content": {
+    "component": "CollapsibleContent",
+    "composition": "children"
   }
 }
