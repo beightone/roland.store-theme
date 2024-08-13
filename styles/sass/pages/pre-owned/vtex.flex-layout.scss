@@ -51,3 +51,18 @@
   flex-direction: column;
   gap: 12px;
 }
+
+.flexRow--pre-owned-seo {
+  padding: 32px;
+  background: var(--Brand-Primary-Black, #000);
+
+  .flexRowContent--pre-owned-seo {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.flexRowContent--pre-owned-seo {
+  justify-content: space-between;
+  align-tracks: center;
+}

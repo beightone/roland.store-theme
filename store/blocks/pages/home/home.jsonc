@@ -57,16 +57,5 @@
       "fullWidth": true
     },
     "children": ["flex-layout.col#blog-posts-content"]
-  },
-  "flex-layout.row#newsletter": {
-    "title": "Newsletter",
-    "props": {
-      "blockClass": ["newsletter", "home-content-container"],
-      "fullWidth": true
-    },
-    "children": [
-      "responsive-layout.desktop#newsletter-content",
-      "responsive-layout.mobile#newsletter-content"
-    ]
   }
 }
