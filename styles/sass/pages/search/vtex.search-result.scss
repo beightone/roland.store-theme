@@ -1,0 +1,113 @@
+.searchResultContainer {
+  padding: 0;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.galleryTitle--layout {
+  margin: 0;
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+}
+
+.totalProducts--layout,
+.totalProductsMessage {
+  padding: 0;
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  text-transform: math-auto;
+}
+
+.orderByDropdown {
+  padding: 0;
+}
+
+.orderByButton {
+  padding: 0;
+  width: 100%;
+  float: right;
+}
+
+.orderByText {
+  color: var(--text-neutral-subtle, #3F3F46);
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.filtersWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter__container:not(.filter__container--title) {
+  border-radius: var(--radius-rounded-sm, 2px);
+  padding: 20px 24px;
+  border: 1px solid var(--border-input-base, #D4D4D8);
+
+  .filter {
+    padding: 0;
+  }
+}
+
+.filterTitle {
+  .filterTitleSpan {
+    color: var(--text-neutral-subtle, #3F3F46);
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+  }
+}
+
+.filterContent {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  .filterItem {
+    :global(.vtex-checkbox__label) {
+      color: var(--text-neutral-subtle, #3F3F46);
+      font-family: "Proxima Nova";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+    }
+  }
+}
+
+.filter__container--title {
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  margin-bottom: 16px;
+  border: none4;
+}
+
+.gallery--grid {
+  padding: 0;
+}

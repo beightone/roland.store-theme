@@ -329,6 +329,40 @@
   }
 }
 
+.flexRow--pre-owned-main-banner {
+  background: #000;
+  padding: 28px 0;
+}
+.flexRow--pre-owned-main-banner .flexRowContent--pre-owned-main-banner {
+  max-width: 1440px;
+  margin: 0 auto;
+  justify-content: space-between;
+  padding-left: 51px;
+}
+
+.flexRow--pre-owned-benefits {
+  background: #F4F4F5;
+  padding: 32px;
+}
+.flexRow--pre-owned-benefits .flexRowContent--pre-owned-benefits {
+  max-width: 1440px;
+  gap: 16px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.flexRow--search-header {
+  padding: 24px 0;
+}
+.flexRow--search-header :global(.vtex-store-components-3-x-container) {
+  padding: 0;
+}
+
+.flexRowContent--search-info {
+  align-items: center;
+  gap: 24px;
+}
+
 .flexRow--footer {
   background: #000;
   padding: 32px 0;

@@ -2,7 +2,8 @@
   "store.custom#pre-owned": {
     "blocks": [
       "flex-layout.row#pre-owned-main-banner",
-      "flex-layout.row#pre-owned-benefits"
+      "flex-layout.row#pre-owned-benefits",
+      "search-result-layout.customQuery#pre-owned"
     ],
     "props": {
       "blockClass": "pre-owned"
@@ -38,6 +39,21 @@
       "info-card#pre-owned-benefits-2",
       "info-card#pre-owned-benefits-3",
       "info-card#pre-owned-benefits-4"
+    ]
+  },
+  "search-result-layout.customQuery#pre-owned": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "default",
+        "queryField": "169",
+        "mapField": "productClusterIds"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#pre-owned"
+      // "search-result-layout.mobile",
+      // "search-not-found-layout"
     ]
   }
 }

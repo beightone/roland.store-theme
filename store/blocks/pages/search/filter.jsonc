@@ -1,0 +1,17 @@
+{
+  "filter-navigator.v3#new": {
+    "props": {
+      "layout": "desktop",
+      "initiallyCollapsed": false,
+      "truncateFilters": true,
+      "showClearByFilter": true,
+      "scrollToTop": "auto",
+      "fullWidthOnMobile": true,
+      "navigationTypeOnMobile": "collapsible",
+      "appliedFiltersOverview": "show",
+      "totalProductsOnMobile": "show",
+      "updateOnFilterSelectionOnMobile": true,
+      "filtersTitleHtmlTag": "span"
+    }
+  }
+}

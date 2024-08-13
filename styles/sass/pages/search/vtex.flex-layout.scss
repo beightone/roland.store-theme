@@ -1,0 +1,13 @@
+.flexRow--search-header {
+  padding: 24px 0;
+  :global(.vtex-store-components-3-x-container) {
+    padding: 0;
+  }
+}
+
+.flexRowContent--search-info {
+  align-items: center;
+  gap: 24px;
+}
+
+
