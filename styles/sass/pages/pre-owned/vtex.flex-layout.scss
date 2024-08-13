@@ -22,3 +22,32 @@
     width: 100%;
   }
 }
+
+.container--pre-owned-faq-title,
+.container--pre-owned-faq-subtitle {
+  align-items: center;
+}
+
+.flexRow--pre-owned-faq {
+  padding: 32px;
+  width: 100%;
+  margin-top: 32px;
+  background: #FFF6F2;
+}
+
+.flexColChild--pre-owned-faq-content {
+  width: 100%;
+}
+
+.flexCol--pre-owned-faq-content {
+  max-width: 648px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.flexColChild--pre-owned-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
