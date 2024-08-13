@@ -2,11 +2,11 @@
 .bannerContent,
 .bannerImage,
 .slideChildrenContainer {
-  max-width: 100%!important;
-  max-height: 100%!important;
+  max-width: 100% !important;
+  max-height: 100% !important;
   height: 100%;
   width: 100%;
-  margin: 0!important;
+  margin: 0 !important;
 }
 
 .bannerWrapper {
@@ -31,11 +31,12 @@
       width: 6px !important;
       height: 6px !important;
       border-radius: 9999px !important;
-      background: var(--bg-accent-brand-secondary-subtle, #71717C);
+      background: #71717C;
 
-      &--isActive {
-        background: var(--bg-brand-primary-bold-base, #FF5A00);
-      }
+    }
+
+    .paginationDot--isActive {
+      background: #FF5A00 !important;
     }
   }
 
