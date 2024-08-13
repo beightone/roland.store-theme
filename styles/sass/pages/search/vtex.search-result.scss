@@ -65,6 +65,33 @@
   }
 }
 
+.filterAvailable {
+
+  .filterIcon {
+    &::before {
+      content: url('data:image/svg+xml,<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.00004 4.24451V13.5778M3.33337 8.91117H12.6667" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    
+      width: 16px;
+      height: 16px;
+      display: block;
+      padding: 4px;
+    }
+  }
+
+  &.filterIsOpen {
+    .filterIcon {
+      &::before {
+        content: url('data:image/svg+xml,<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.33337 8.91113H12.6667" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      }
+    }
+  }
+
+  .caretIcon {
+    display: none;
+  }
+  
+}
+
 .filterTitle {
   .filterTitleSpan {
     color: var(--text-neutral-subtle, #3F3F46);
@@ -74,6 +101,10 @@
     font-weight: 500;
     line-height: 24px;
     letter-spacing: -0.16px;
+  }
+
+  .filterIcon {
+    padding: 0;
   }
 }
 
@@ -93,6 +124,19 @@
       line-height: 20px;
       letter-spacing: -0.14px;
     }
+
+    :global(.vtex-checkbox__line-container) {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    :global(.vtex-checkbox__inner-container) {
+      border-radius: var(--radius-rounded-sm, 2px);
+      border: 1px solid var(--border-input-base, #D4D4D8);
+      background: var(--bg-neutral-subtlest-base, #FFF);
+    }
+
   }
 }
 
@@ -105,9 +149,42 @@
   line-height: 28px;
   letter-spacing: -0.2px;
   margin-bottom: 16px;
-  border: none4;
+  border: none;
 }
 
 .gallery--grid {
   padding: 0;
+}
+
+.filterPopupTitle {
+  color: var(--text-neutral-subtle, #3F3F46);
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  text-transform: lowercase;
+
+  .orderByText {
+  font-weight: 500;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.filterPopupArrowIcon {
+  padding: 0;
+  &::before {
+    content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 7.5L10 12.5L15 7.5" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  .caretIcon {
+    display: none;
+  }
 }

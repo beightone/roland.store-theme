@@ -1,16 +1,16 @@
 {
   "search-result-layout.desktop#pre-owned": {
-    "children": ["flex-layout.row#search-header", "flex-layout.row#search.gallery"],
+    "children": [
+      "flex-layout.row#search-header",
+      "flex-layout.row#search.gallery"
+    ],
     "props": {
       "pagination": "show-more",
       "preventRouteChange": false
     }
   },
   "flex-layout.row#search-header": {
-    "children": [
-      "flex-layout.row#search-info",
-      "order-by.v2"
-     ],
+    "children": ["flex-layout.row#search-info", "order-by.v2"],
     "props": {
       "blockClass": "search-header"
     }
@@ -21,6 +21,10 @@
       "blockClass": "search-info",
       "preventHorizontalStretch": true
     }
+  },
+  "total-products.v2": {
+    "props": {
+      "message": "{recordsFiltered} {recordsFiltered, plural, one {produto} other {produtos}} <span>{recordsFiltered, plural, one {encontrado} other {encontrados}}</span>"
+    }
   }
-   
 }
