@@ -12,6 +12,7 @@
     margin: 0 {
       bottom: 16px;
     };
+
   }
 
   .paragraph--pre-owned-main-text-banner {
@@ -19,6 +20,23 @@
     font-weight: 500;
     line-height: 28px;
     letter-spacing: -0.18px;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 144px;
+    .heading--pre-owned-main-text-banner {
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: -0.18px;
+      margin-bottom: 8px;
+    }
+
+    .paragraph--pre-owned-main-text-banner {
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: -0.12px;
+      margin: 0;
+    }
   }
 }
 

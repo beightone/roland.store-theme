@@ -9,6 +9,16 @@
     padding-left: 51px;
   }
 
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  
+    .flexRowContent--pre-owned-main-banner {
+      padding-left: 16px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
 }
 
 .flexRow--pre-owned-benefits {
