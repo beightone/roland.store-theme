@@ -17,6 +17,15 @@
       "blockClass": ["topbar-container"]
     }
   },
+  "header-row#topbar-desktop.pre-owned": {
+    "children": [
+      "flex-layout.row#topbar-interactions.pre-owned",
+      "flex-layout.row#topbar"
+    ],
+    "props": {
+      "blockClass": ["topbar-container"]
+    }
+  },
   "flex-layout.row#topbar-interactions": {
     "props": {
       "blockClass": "topbar-interactions",
@@ -24,10 +33,24 @@
     },
     "children": ["flex-layout.row#brand-switcher", "link#help-center"]
   },
+  "flex-layout.row#topbar-interactions.pre-owned": {
+    "props": {
+      "blockClass": ["topbar-interactions", "pre-owned"],
+      "preventHorizontalStretch": true
+    },
+    "children": ["flex-layout.row#brand-switcher.pre-owned", "link#help-center"]
+  },
   "flex-layout.row#brand-switcher": {
     "children": ["link#roland", "link#boss"],
     "props": {
       "blockClass": ["brand-switcher-container"]
+    }
+  },
+  "flex-layout.row#brand-switcher.pre-owned": {
+    "children": ["link#roland", "link#boss", "link#pre-owned"],
+    "props": {
+      "blockClass": ["brand-switcher-container", "pre-owned"],
+      "preventHorizontalStretch": true
     }
   },
   "link#roland": {
@@ -52,6 +75,14 @@
       "blockClass": ["topbar-wrapper"]
     }
   },
+  "link#pre-owned": {
+    "title": "Link para BOSS",
+    "props": {
+      "href": "/seminovos",
+      "label": "Você está em Seminovos",
+      "blockClass": ["link-pre-owned"]
+    }
+  },
   "flex-layout.row#topbar-mobile": {
     "children": ["list-context.topbar#mobile"],
     "props": {
@@ -67,7 +98,7 @@
     }
   },
   "list-context.topbar": {
-    "title":  "Lista de opções do Topbar - Desktop",
+    "title": "Lista de opções do Topbar - Desktop",
     "children": ["slider-layout#topbar"],
     "props": {
       "items": [

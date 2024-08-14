@@ -34,12 +34,33 @@
 
 .orderByDropdown {
   padding: 0;
+
+  width: fit-content;
+  align-items: center;
+  display: flex;
+  &::before {
+    content: "Ordenar produtos por";
+    color: var(--text-neutral-subtle, #3F3F46);
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    margin-right: 24px;
+  }
 }
 
 .orderByButton {
-  padding: 0;
-  width: 100%;
+  padding: 12px 20px;
+  width: fit-content;
   float: right;
+  display: flex;
+  gap: 8px;
+  border-radius: var(--radius-rounded-sm, 2px);
+  border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
+  background: #FFF;
 }
 
 .orderByText {
@@ -163,6 +184,7 @@
 .gallery--grid {
   padding: 0;
   margin: 0;
+  gap: 16px;
 
   @media screen and (max-width: 768px) {
     gap: 8px;
@@ -175,13 +197,14 @@
   font-family: "Proxima Nova";
   font-size: 14px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.14px;
   text-transform: lowercase;
 
   .orderByText {
-  font-weight: 500;
+    font-weight: 500;
+    display: none;
 
     &::first-letter {
       text-transform: uppercase;

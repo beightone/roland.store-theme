@@ -11,12 +11,41 @@
   "header-layout.desktop#pre-owned": {
     "title": "Header Desktop",
     "children": [
-      "header-row#topbar-desktop",
+      "header-row#topbar-desktop.pre-owned",
       "header-row#main-desktop",
+      "flex-layout.row#breadcrumb.pre-owned",
       "add-to-cart-event"
     ]
   },
   "menu": {
     "title": "Menu Customizado - Desktop"
+  },
+  "flex-layout.row#breadcrumb.pre-owned": {
+    "title": "Breadcrumb - Seminovos",
+    "props": {
+      "blockClass": ["breadcrumb--pre-owned"],
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "link#breadcrumb.home",
+      "link#breadcrumb.pre-owned"
+    ]
+  },
+  "link#breadcrumb.home": {
+    "title": "Link para Home",
+    "props": {
+      "href": "/",
+      "label": "Home",
+      "blockClass": ["breadcrumb--home"]
+    }
+  },
+  "link#breadcrumb.pre-owned": {
+    "title": "Link para Seminovos",
+    "props": {
+      "href": "/seminovos",
+      "label": "Seminovos",
+      "blockClass": ["breadcrumb--pre-owned"]
+    }
   }
 }

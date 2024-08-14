@@ -312,4 +312,19 @@
   box-shadow: 0 0 1em #222;
 }
 
+// CUSTOM BREADCRUMB FOR PRE-OWNED PAGE
+
+.flexRow--breadcrumb--pre-owned {
+  display: flex;
+  width: 1440px;
+  padding: 16px 32px;
+
+  margin: 0 auto;
+
+  :global(.vtex-store-components-3-x-container) {
+    padding: 0;
+    margin: 0;
+  }
+}
+
 
