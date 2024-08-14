@@ -5,6 +5,7 @@
   padding: 16px 32px;
   align-items: flex-start;
   gap: 16px;
+  width: 100%;
 
   .infoCardTextContainer {
     width: 100%;
@@ -38,5 +39,11 @@
     padding: 8px 16px;
     display: flex;
     height: 100%;
+  }
+}
+
+.imageElement--pre-owned-seo-image {
+  @media screen and (max-width: 768px) {
+    display: none;
   }
 }

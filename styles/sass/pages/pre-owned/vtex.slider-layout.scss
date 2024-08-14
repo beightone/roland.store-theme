@@ -1,7 +1,9 @@
 .sliderTrack--pre-owned-benefits-slider {
-  gap: 8px;
+  gap: 16px;
 
-  
+  @media screen and (max-width: 768px) {
+    gap: 8px;
+  }
 }
 
 .paginationDotsContainer--pre-owned-benefits-slider {

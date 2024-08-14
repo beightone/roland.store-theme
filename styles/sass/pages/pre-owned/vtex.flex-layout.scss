@@ -49,6 +49,10 @@
   width: 100%;
   margin-top: 32px;
   background: #FFF6F2;
+  
+  @media screen and (max-width: 768px) {
+    padding: 16px 32px;
+  }
 }
 
 .flexColChild--pre-owned-faq-content {

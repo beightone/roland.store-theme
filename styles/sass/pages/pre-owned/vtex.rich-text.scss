@@ -41,6 +41,10 @@
 }
 
 .container--pre-owned-faq-title {
+
+  .wrapper--pre-owned-faq-title {
+    width: 100%;
+  }
  
 
   .paragraph--pre-owned-faq-title {
@@ -53,7 +57,18 @@
     font-weight: 500;
     line-height: 48px;
     letter-spacing: -0.4px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: -0.24px;
+      text-align: center4;
+    }
   }
+}
+
+.wrapper--pre-owned-faq-subtitle {
+  width: 100%;
 }
 
 .paragraph--pre-owned-faq-subtitle {
@@ -69,6 +84,7 @@
     top: 16px;
     bottom: 32px;
   };
+   
 }
 
 .paragraph--pre-owned-faq-item {
@@ -80,6 +96,19 @@
   line-height: 24px;
   margin: 0;
   letter-spacing: -0.16px;
+}
+
+.paragraph--pre-owned-faq-item--answer {
+  color: var(--greyscale-100, #1A1413);
+
+  /* text-sm/medium */
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: -0.14px;
 }
 
 .wrapper--pre-owned-seo-text--content {
@@ -103,5 +132,17 @@
     line-height: 24px;
     letter-spacing: -0.16px;
     margin: 0;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+    }
+  }
+}
+
+.container--pre-owned-faq-item {
+  @media screen and (max-width: 768px) {
+    width: 90%;
   }
 }
