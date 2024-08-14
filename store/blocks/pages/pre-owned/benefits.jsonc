@@ -1,4 +1,36 @@
 {
+  "flex-layout.row#pre-owned-benefits": {
+    "title": "Vantagens",
+    "props": {
+      "blockClass": "pre-owned-benefits",
+      "fullWidth": true
+    },
+    "children": [
+      "slider-layout#pre-owned-benefits"
+    ]
+  },
+  "slider-layout#pre-owned-benefits": {
+    "title": "Slider de Vantagens",
+    "props": {
+      "blockClass": "pre-owned-benefits-slider",
+      "showNavigationArrows": false,
+      "showPaginationDots": "mobileOnly",
+      "infinite": true,
+      "fullWidth": true,
+      "itemsPerPage": {
+        "desktop": 4,
+        "tablet": 2,
+        "phone": 2
+      }
+    },
+    "children": [
+      "info-card#pre-owned-benefits-1",
+      "info-card#pre-owned-benefits-2",
+      "info-card#pre-owned-benefits-3",
+      "info-card#pre-owned-benefits-4"
+    ]
+    
+  },
   "info-card#pre-owned-benefits-1": {
     "title": "Vantagem 1",
     "props": {

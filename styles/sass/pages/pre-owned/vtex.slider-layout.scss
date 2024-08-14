@@ -1,0 +1,19 @@
+.sliderTrack--pre-owned-benefits-slider {
+  gap: 8px;
+
+  
+}
+
+.paginationDotsContainer--pre-owned-benefits-slider {
+  bottom: -23px;
+  .paginationDot {
+    width: 6px!important;
+    height: 6px !important;
+    border-radius: var(--radius-rounded-full, 9999px) !important;
+    background: var(--bg-accent-zinc-subtle, #A1A1AA);
+
+    &--isActive {
+      background: #FF5A00;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "search-result-layout.mobile#pre-owned": {
+    "props": {
+
+    },
+    "children": [
+      "flex-layout.row#search-header",
+      "flex-layout.row#search.gallery"
+    ]
+  }
+}

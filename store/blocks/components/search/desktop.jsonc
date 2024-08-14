@@ -6,7 +6,7 @@
     ],
     "props": {
       "pagination": "show-more",
-      "preventRouteChange": false
+      "preventRouteChange": true
     }
   },
   "flex-layout.row#search-header": {
