@@ -15,6 +15,10 @@
   letter-spacing: -0.24px;
 }
 
+.totalProducts--layout {
+  border: none;
+}
+
 .totalProducts--layout,
 .totalProductsMessage {
   padding: 0;
@@ -66,18 +70,6 @@
 }
 
 .filterAvailable {
-
-  .filterIcon {
-    &::before {
-      content: url('data:image/svg+xml,<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.00004 4.24451V13.5778M3.33337 8.91117H12.6667" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-    
-      width: 16px;
-      height: 16px;
-      display: block;
-      padding: 4px;
-    }
-  }
-
   &.filterIsOpen {
     .filterIcon {
       &::before {
@@ -86,26 +78,38 @@
     }
   }
 
-  .caretIcon {
-    display: none;
-  }
-  
 }
 
-.filterTitle {
-  .filterTitleSpan {
-    color: var(--text-neutral-subtle, #3F3F46);
-    font-family: "Proxima Nova";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.16px;
-  }
+.filterIcon,
+.accordionFilterItemIcon {
+  &::before {
+    content: url('data:image/svg+xml,<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.00004 4.24451V13.5778M3.33337 8.91117H12.6667" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
 
-  .filterIcon {
-    padding: 0;
+    width: 16px;
+    height: 16px;
+    display: block;
+    padding: 4px;
   }
+}
+
+
+.caretIcon {
+  display: none;
+}
+
+.filterTitleSpan,
+.accordionFilterItemTitle {
+  color: var(--text-neutral-subtle, #3F3F46);
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+
+.filterIcon {
+  padding: 0;
 }
 
 .filterContent {
@@ -114,33 +118,37 @@
   flex-direction: column;
   gap: 8px;
 
-  .filterItem {
-    :global(.vtex-checkbox__label) {
-      color: var(--text-neutral-subtle, #3F3F46);
-      font-family: "Proxima Nova";
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 20px;
-      letter-spacing: -0.14px;
-    }
-
-    :global(.vtex-checkbox__line-container) {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    :global(.vtex-checkbox__inner-container) {
-      border-radius: var(--radius-rounded-sm, 2px);
-      border: 1px solid var(--border-input-base, #D4D4D8);
-      background: var(--bg-neutral-subtlest-base, #FFF);
-    }
-
-  }
+  
 }
 
-.filter__container--title {
+.filterItem,
+.filterAccordionItemBox {
+  :global(.vtex-checkbox__label) {
+    color: var(--text-neutral-subtle, #3F3F46);
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+  }
+
+  :global(.vtex-checkbox__line-container) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  :global(.vtex-checkbox__inner-container) {
+    border-radius: var(--radius-rounded-sm, 2px);
+    border: 1px solid var(--border-input-base, #D4D4D8);
+    background: var(--bg-neutral-subtlest-base, #FFF);
+  }
+
+}
+
+.filter__container--title,
+.filterBreadcrumbsText {
   color: var(--text-neutral-bold, #18181B);
   font-family: "Proxima Nova";
   font-size: 20px;
@@ -154,6 +162,11 @@
 
 .gallery--grid {
   padding: 0;
+  margin: 0;
+
+  @media screen and (max-width: 768px) {
+    gap: 8px;
+  }
 }
 
 .filterPopupTitle {
@@ -187,4 +200,241 @@
   .caretIcon {
     display: none;
   }
+}
+
+.container--layout {
+  padding: 16px;
+}
+
+// FILTER DRAWER
+.filterAccordionBreadcrumbs {
+  padding: 24px 16px 0 16px;
+  border: none;
+  height: fit-content;
+  margin-bottom: 16px;
+
+  .filterBreadcrumbsContent {
+    padding: 0;
+
+    .filterBreadcrumbsText {
+      margin: 0;
+    }
+  }
+}
+
+:global(.vtex-slider__left-value),
+:global(.vtex-slider__right-value) {
+  color: var(--text-neutral-subtle, #3F3F46);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.closeIconButton {
+  padding: 0;
+  right: 16px;
+  top: 24px;
+  &::before {
+    content: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.25 3.75L3.75 20.25" stroke="black" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.75 3.75L20.25 20.25" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 24px;
+    height: 24px;
+    display: block;
+    
+  }
+  .closeIcon {
+    display: none;
+  }
+}
+
+
+
+.sidebar {
+  .accordionFilterContainer {
+    padding: 0 16px;
+    border: none;
+
+    .accordionFilterItem {
+      padding: 20px 24px;
+      border-radius: var(--radius-rounded-sm, 2px);
+      border: 1px solid var(--border-input-base, #D4D4D8);
+
+      .accordionFilterContent {
+        padding: 0;
+      }
+    }
+  }
+
+  .filter__container--priceRange {
+    border: none;
+    padding: 0;
+
+    .filterTitleSpan {
+      display: none;
+    }
+  }
+
+  .accordionFilterItemOptions {
+    padding: 20px 24px;
+    padding-top: 0;
+    border-radius: var(--radius-rounded-sm, 2px);
+    border: 1px solid var(--border-input-base, #D4D4D8);
+    position: relative;
+    top: -1px;
+    background-color: white;
+    z-index: 99999;
+    border-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .filterAccordionItemBox {
+      padding: 0;
+      border: none;
+      min-height: unset;
+    }
+  }
+
+  .filterButtonsBox {
+    background: var(--bg-neutral-subtle-base, #F4F4F5);
+    padding: 8px;
+    display: flex;
+    gap: 16px;
+    border: none;
+
+    .filterClearButtonWrapper {
+      :global(.vtex-button) {
+        border-color: var(--border-neutral-subtle, #D4D4D8);
+        background: #FFF;
+
+        :global(.vtex-button__label) {
+          color: var(--text-neutral-subtle, #3F3F46);
+        }
+      }
+      
+    }
+
+    .filterApplyButtonWrapper {
+      :global(.vtex-button) {
+        background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+
+        :global(.vtex-button__label) {
+          color: #FFF;
+
+          &::after {
+            content:" filtro" ;
+            margin-left: 5px;
+          }
+        }
+      }
+
+    }
+
+    .filterClearButtonWrapper,
+    .filterApplyButtonWrapper {
+      width: 148px;
+      padding: 0;
+
+      :global(.vtex-button) {
+         border-radius: var(--radius-rounded-sm, 2px);
+        border: 1.25px solid;
+
+      }
+
+      :global(.vtex-button__label) {
+        font-family: "Proxima Nova";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.16px;
+        text-transform: math-auto;
+      }
+    }
+
+    .filterTotalProducts {
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .orderByButton {
+    .filterPopupTitle {
+      font-size: 0;
+
+      &::before {
+        content: "Ordenar por";
+        color: var(--text-neutral-subtle, #3F3F46);
+        font-family: "Proxima Nova";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.16px;
+        text-transform: math-auto;
+      }
+    }
+  }
+
+  .galleryItem {
+    padding: 0;
+    margin: 0 {
+      top: 32px
+    };
+
+    @media screen and (max-width: 768px) {
+      max-width: 160px!important;
+    }
+  }
+
+  .orderByOptionsContainer {
+    right: 0;
+  }
+  .filterPopupButton {
+    background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+    
+    .filterPopupTitle {
+      color: var(--text-inverse-bold, #FFF);
+      font-family: "Proxima Nova";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.16px;
+      text-transform: capitalize;
+      margin: 0 auto;
+    }
+
+    .filterPopupArrowIcon {
+      display: none;
+    }
+  }
+
+  .orderByButton {
+    border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
+    background: #FFF;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+  }
+
+  .filterPopupButton,
+  .orderByButton {
+    border-radius: var(--radius-rounded-sm, 2px);
+    padding: 12px 20px;
+    width: 100%;
+    height: 48px;
+  }
+
+  .sidebar {
+    max-width: 328px;
+    width: 100%;
+  }
+
 }

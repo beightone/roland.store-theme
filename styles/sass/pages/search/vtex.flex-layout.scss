@@ -3,6 +3,10 @@
   :global(.vtex-store-components-3-x-container) {
     padding: 0;
   }
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
 }
 
 .flexRowContent--search-gallery {
@@ -14,4 +18,11 @@
   gap: 24px;
 }
 
+.flexRowContent--filters-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  gap: 16px;
+}
 

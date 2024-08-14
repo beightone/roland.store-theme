@@ -1,7 +1,7 @@
 {
   "search-result-layout.desktop#pre-owned": {
     "children": [
-      "flex-layout.row#search-header",
+      "flex-layout.row#search.header",
       "flex-layout.row#search.gallery"
     ],
     "props": {
@@ -9,7 +9,7 @@
       "preventRouteChange": true
     }
   },
-  "flex-layout.row#search-header": {
+  "flex-layout.row#search.header": {
     "children": ["flex-layout.row#search-info", "order-by.v2"],
     "props": {
       "blockClass": "search-header"

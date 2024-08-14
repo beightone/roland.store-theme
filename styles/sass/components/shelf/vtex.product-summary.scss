@@ -5,8 +5,8 @@
   max-width: 332px!important;
   width: 100%;
   margin-left: 0;
-    border: 1px solid transparent;
-    transition: border 0.1s ease-in-out;
+  border: 1px solid transparent;
+  transition: border 0.1s ease-in-out;
 
 
   &:hover {
@@ -16,7 +16,11 @@
   @media screen and (max-width: 768px) {
     padding: 12px;
     margin-right: 8px;
+    border-color:#E4E4E7;
+    max-width: 160px!important;
   }
+
+
  }
 
 .imageWrapper--product-summary-image {

@@ -3,7 +3,7 @@
     "children": ["filter-navigator.v3#new"],
     "blocks": ["drawer-trigger#filter"],
     "props": {
-      "blockClass": "filter"
+      "blockClass": "filter-drawer"
     }
   },
   "drawer-trigger#filter": {
@@ -16,18 +16,20 @@
     }
   },
   "filter-navigator.v3#new": {
+    "blocks": ["sidebar-close-button"],
     "props": {
-      "layout": "desktop",
       "initiallyCollapsed": false,
       "truncateFilters": true,
       "showClearByFilter": true,
-      "scrollToTop": "auto",
+      "scrollToTop": "smooth",
       "fullWidthOnMobile": true,
       "navigationTypeOnMobile": "collapsible",
       "appliedFiltersOverview": "show",
       "totalProductsOnMobile": "show",
       "updateOnFilterSelectionOnMobile": true,
-      "filtersTitleHtmlTag": "span"
+      "filtersTitleHtmlTag": "span",
+      "showClearAllFiltersOnDesktop": true
+      // "closeOnOutsideClick": true
     }
   }
 }

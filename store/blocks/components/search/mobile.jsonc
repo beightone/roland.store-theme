@@ -1,11 +1,26 @@
 {
   "search-result-layout.mobile#pre-owned": {
     "props": {
-
+      "pagination": "show-more",
+      "preventRouteChange": true
     },
     "children": [
-      "flex-layout.row#search-header",
-      "flex-layout.row#search.gallery"
+      "flex-layout.row#search-info",
+      "flex-layout.row#filters",
+      "search-fetch-previous",
+      "search-content#new",
+      "search-fetch-more"
+    ]
+  },
+  "flex-layout.row#filters": {
+    "title": "Filtros",
+    "props": {
+      "blockClass": "filters-mobile",
+      "fullWidth": true
+    },
+    "children": [
+      "filter-navigator.v3#new",
+      "order-by.v2"
     ]
   }
 }

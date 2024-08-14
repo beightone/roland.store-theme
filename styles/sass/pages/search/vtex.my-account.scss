@@ -1,0 +1,23 @@
+:global(.vtex-search-result-3-x-sidebar) {
+  :global(.ReactCollapse--collapse) {
+    margin: 0 1rem 1rem;
+  }
+
+  :global(.vtex-search-result-3-x-accordionFilter) {
+    :global(.pl8) {
+      padding: 0;
+
+      :global(.vtex-checkbox__inner-container.b--action-primary.bg-action-primary) {
+        border-color: #947c4e !important;
+        background-color: #947c4e !important;
+      }
+    }
+  }
+}
+
+:global(.vtex-search-result-3-x-filters--layout) {
+  :global(.vtex-checkbox__inner-container.b--action-primary.bg-action-primary) {
+    border-color: #947c4e !important;
+    background-color: #947c4e !important;
+  }
+}
