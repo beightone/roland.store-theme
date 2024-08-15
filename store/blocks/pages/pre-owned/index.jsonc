@@ -1,6 +1,7 @@
 {
   "store.custom#pre-owned": {
     "blocks": [
+      "pre-owned-popup-alert",
       "flex-layout.row#pre-owned-main-banner",
       "flex-layout.row#pre-owned-benefits",
       "search-result-layout.customQuery#pre-owned",

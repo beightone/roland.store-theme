@@ -9,6 +9,78 @@
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
 /* Grid breakpoints */
+.link--myOrders,
+.link--continueShopping {
+  border-radius: var(--radius-rounded-sm, 2px);
+  padding: 16px 32px;
+  box-sizing: border-box;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+@media screen and (max-width: 886px) {
+  .link--myOrders,
+  .link--continueShopping {
+    width: 100%;
+  }
+  .link--myOrders .label,
+  .link--continueShopping .label {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+.link--myOrders .label,
+.link--continueShopping .label {
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+
+.link--myOrders {
+  background: var(--bg-brand-primary-subtle-base, #FDF2EC);
+}
+.link--myOrders .label {
+  color: var(--text-brand-primary-base, #FF5A00);
+}
+.link--myOrders:hover {
+  background: var(--bg-brand-primary-subtle-hover, #FBE5D8);
+}
+
+.link--continueShopping {
+  background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+}
+.link--continueShopping .label {
+  color: var(--text-inverse-bold, #FFF);
+}
+.link--continueShopping:hover {
+  background: var(--bg-brand-secondary-bold-hover, #424250);
+}
+
+.link--section-title {
+  text-decoration: none;
+  margin-right: 17px;
+}
+@media screen and (max-width: 768px) {
+  .link--section-title {
+    margin-right: 8px;
+  }
+}
+
+.label--section-title {
+  color: #000;
+  text-align: right;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+
 .link--talk-to-us-link {
   display: flex;
   align-items: center;
@@ -80,10 +152,29 @@
   align-items: center;
 }
 
+:global(.vtex-flex-layout-0-x-flexRow--pre-owned) .label--link-roland {
+  background-image: url("assets/svgs/roland-inactive.svg") !important;
+}
+
 .link--link-roland .label, .link--link-boss .label {
   width: 48px;
   height: 24px;
   display: block;
+}
+.link--link-pre-owned {
+  border-radius: var(--radius-rounded-sm, 2px) var(--radius-rounded-sm, 2px) var(--radius-rounded-none, 0px) var(--radius-rounded-none, 0px);
+  background: var(--icon-feedback-information-base, #FFF);
+  padding: 0 16px;
+  text-decoration: none;
+}
+.link--link-pre-owned .label--link-pre-owned {
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.16px;
 }
 .link--link-roland .label--link-roland {
   font-size: 0;
@@ -118,74 +209,43 @@
   display: block;
 }
 
-.link--myOrders,
-.link--continueShopping {
-  border-radius: var(--radius-rounded-sm, 2px);
-  padding: 16px 32px;
-  box-sizing: border-box;
+.link--breadcrumb--home {
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  display: flex;
+  gap: 8px;
 }
-@media screen and (max-width: 886px) {
-  .link--myOrders,
-  .link--continueShopping {
-    width: 100%;
-  }
-  .link--myOrders .label,
-  .link--continueShopping .label {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
+.link--breadcrumb--home::before {
+  content: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 10.6667C9.10457 10.6667 10 9.77123 10 8.66666C10 7.56209 9.10457 6.66666 8 6.66666C6.89543 6.66666 6 7.56209 6 8.66666C6 9.77123 6.89543 10.6667 8 10.6667Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 7.04337C2 6.66046 2 6.46901 2.04935 6.2927C2.09307 6.13652 2.16491 5.98963 2.26135 5.85924C2.37022 5.71204 2.52135 5.5945 2.82359 5.35942L7.34513 1.84267C7.57935 1.6605 7.69646 1.56941 7.82577 1.5344C7.93987 1.50351 8.06013 1.50351 8.17423 1.5344C8.30354 1.56941 8.42065 1.6605 8.65487 1.84267L13.1764 5.35942C13.4787 5.5945 13.6298 5.71204 13.7386 5.85924C13.8351 5.98963 13.9069 6.13652 13.9506 6.2927C14 6.46901 14 6.66046 14 7.04337V11.8667C14 12.6134 14 12.9868 13.8547 13.272C13.7268 13.5229 13.5229 13.7268 13.272 13.8547C12.9868 14 12.6134 14 11.8667 14H4.13333C3.3866 14 3.01323 14 2.72801 13.8547C2.47713 13.7268 2.27316 13.5229 2.14532 13.272C2 12.9868 2 12.6134 2 11.8667V7.04337Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  width: 16px;
+  height: 16px;
+  display: block;
 }
-.link--myOrders .label,
-.link--continueShopping .label {
-  text-align: center;
+.link--breadcrumb--home::after {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.5 9L7.5 6L4.5 3" stroke="%23A1A1AA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  width: 12px;
+  height: 12px;
+  display: block;
+  margin-right: 8px;
+}
+.link--breadcrumb--home .label {
+  color: var(--text-neutral-subtlest, #71717A);
   font-family: "Proxima Nova";
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: -0.12px;
 }
 
-.link--myOrders {
-  background: var(--bg-brand-primary-subtle-base, #FDF2EC);
-}
-.link--myOrders .label {
-  color: var(--text-brand-primary-base, #FF5A00);
-}
-.link--myOrders:hover {
-  background: var(--bg-brand-primary-subtle-hover, #FBE5D8);
-}
-
-.link--continueShopping {
-  background: var(--bg-brand-secondary-bold-base, #2B2B3A);
-}
-.link--continueShopping .label {
-  color: var(--text-inverse-bold, #FFF);
-}
-.link--continueShopping:hover {
-  background: var(--bg-brand-secondary-bold-hover, #424250);
-}
-
-.link--section-title {
+.link--breadcrumb--pre-owned {
   text-decoration: none;
-  margin-right: 17px;
 }
-@media screen and (max-width: 768px) {
-  .link--section-title {
-    margin-right: 8px;
-  }
-}
-
-.label--section-title {
-  color: #000;
-  text-align: right;
+.link--breadcrumb--pre-owned .label {
+  color: var(--text-neutral-subtle, #3F3F46);
   font-family: "Proxima Nova";
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: -0.16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: -0.12px;
 }

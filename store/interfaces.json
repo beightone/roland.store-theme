@@ -36,5 +36,8 @@
   "collapsible-content": {
     "component": "CollapsibleContent",
     "composition": "children"
+  },
+  "pre-owned-popup-alert": {
+    "component": "PreOwnedPopupAlert"
   }
 }

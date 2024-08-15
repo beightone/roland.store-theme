@@ -1,0 +1,10 @@
+mutation removeAllProductsFromCart($orderFormId: ID, $orderItems: [ItemInput]) {
+  updateItems(orderFormId: $orderFormId, orderItems: $orderItems)
+    @context(provider: "vtex.checkout-graphql") {
+    id
+    items {
+      id
+      quantity
+    }
+  }
+}

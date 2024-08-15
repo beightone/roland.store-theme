@@ -65,7 +65,8 @@
     "vtex.pixel-manager": "1.x",
     "vtex.store-newsletter": "1.x",
     "vtex.native-types": "0.x",
-    "vtex.disclosure-layout": "1.x"
+    "vtex.disclosure-layout": "1.x",
+    "vtex.checkout-graphql": "0.x"
   },
   "peerDependencies": {
     "vtex.wish-list": "1.x",
