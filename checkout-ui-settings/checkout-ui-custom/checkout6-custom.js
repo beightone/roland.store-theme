@@ -1,4 +1,5 @@
-/* eslint-disable no-undef */
+let isPostalCodeBeingValidated = false
+
 const getVtexAddress = async (postalCode) => {
   try {
     const response = await fetch(`/api/checkout/pub/postal-code/BRA/${postalCode}`)
@@ -13,9 +14,17 @@ const getVtexAddress = async (postalCode) => {
 
     return address
   } catch (error) {
-    console.error('Error getting VTEX address', error)
+    // console.error('Error getting VTEX address', error)
 
     return null
+  }
+}
+
+function debounce(func, wait) {
+  let timeout
+  return function (...args) {
+    clearTimeout(timeout)
+    timeout = setTimeout(() => func.apply(this, args), wait)
   }
 }
 
@@ -33,19 +42,16 @@ const getAddressByViaCep = async (postalCode) => {
   }
 }
 async function isOnPostalCodeRange(postalCode) {
-    return await validateRangePostalCode(postalCode)
-  }
+  return await validateRangePostalCode(postalCode)
+}
 async function validateRangePostalCode(postalCode) {
   try {
-    const response = await fetch(
-      `/api/dataentities/CR/search?isActive=true&_fields=FinalRange,initialRange`
-    )
+    const response = await fetch(`/api/dataentities/CR/search?isActive=true&_fields=FinalRange,initialRange`)
 
-    if (!response.ok)
-      throw new Error('Erro ao buscar intervalos de CEP na VTEX')
+    if (!response.ok) throw new Error('Erro ao buscar intervalos de CEP na VTEX')
     const addressRanges = await response.json()
 
-    const isWithinRange = addressRanges.some(range => {
+    const isWithinRange = addressRanges.some((range) => {
       const initialRange = parseInt(range.initialRange, 10)
       const finalRange = parseInt(range.FinalRange, 10)
       const code = parseInt(postalCode.replace('-', ''), 10)
@@ -222,7 +228,6 @@ function updateBreadcrumb() {
 //             }
 
 //             const data = await response.json()
-//             console.log('Resposta da VTEX:', data)
 //             location.reload()
 //           } catch (error) {
 //             console.error('Erro ao enviar o CEP:', error)
@@ -299,18 +304,16 @@ function showDeliveryOptions() {
 
   const observer = new MutationObserver((mutations, obs) => {
     const shippingCalculator = $('.cart-template .cart-template-holder .cart-more-options')
-    const alreadyAppended = !!document.querySelector(
-      '.cart-template.active .summary-totalizers .cart-more-options'
-    )
+    const targetContainer = document.querySelector('.cart-template.full-cart.active .summary-totalizers')
+    const alreadyAppended = !!targetContainer.querySelector('.cart-more-options')
 
     if (shippingCalculator.length && !alreadyAppended) {
-      obs.disconnect()
       setTimeout(() => {
-         shippingCalculator.appendTo('.cart-template.full-cart.active .summary-totalizers')
-          buildShippingBar()
-          buildShippingOptions()
+        shippingCalculator.appendTo(targetContainer)
+        buildShippingBar()
+        buildShippingOptions()
+        debouncedValidatePostalCode()
       }, 1000)
-
     }
   })
 
@@ -409,28 +412,17 @@ function updateShippingBar() {
   const orderForm = vtexjs.checkout.orderForm
   const itemsValue = orderForm.totalizers.find(({ id }) => id === 'Items')?.value || 0
   const differenceToMinValue = (itemsValue - minValue * 100) / 100
-  const progressPercentage = Math.min(
-    100,
-    (itemsValue / (minValue * 100)) * 100
-  )
-  const textWrapperElement = document.querySelector(
-    '.shipping-bar-wrapper .shipping-bar-text'
-  )
+  const progressPercentage = Math.min(100, (itemsValue / (minValue * 100)) * 100)
+  const textWrapperElement = document.querySelector('.shipping-bar-wrapper .shipping-bar-text')
   if (!textWrapperElement) return
   const textContentElement = textWrapperElement.querySelector('p')
   const valueElement = textContentElement?.querySelector('.value')
-  const fullBarTextElement = textWrapperElement.querySelector(
-    '.value-reached'
-  )
+  const fullBarTextElement = textWrapperElement.querySelector('.value-reached')
   const progressBarElement = document.querySelector('.shipping-bar-progress')
 
   if (differenceToMinValue < 0) {
-    if (valueElement)
-      valueElement.textContent = `R$ ${Math.abs(differenceToMinValue).toFixed(
-        2
-      )}`
-    if (progressBarElement)
-      progressBarElement.style.width = `${progressPercentage}%`
+    if (valueElement) valueElement.textContent = `R$ ${Math.abs(differenceToMinValue).toFixed(2)}`
+    if (progressBarElement) progressBarElement.style.width = `${progressPercentage}%`
     fullBarTextElement.style.display = 'none'
     textContentElement.style.display = 'block'
   } else {
@@ -456,70 +448,92 @@ function buildShippingBar() {
 function validatePostalCode() {
   const { hash } = window.location
 
-  if (hash !== '#/shipping') return
+  if (hash === '#/shipping' || hash === '#/cart') {
+    async function handlePostalCodeChange(postalCode) {
+      if (isPostalCodeBeingValidated) return
+      isPostalCodeBeingValidated = true
 
-  async function handlePostalCodeChange(postalCode) {
-    try {
-      removeExistingErrors()
-      await handleVtexAddress(postalCode)
-    } catch (error) {
-      console.error('Erro ao validar o código postal:', error)
-    }
-  }
-
-  async function initObserver(postalCodeInput) {
-    const observer = new MutationObserver(async (mutationsList) => {
-      for (const mutation of mutationsList) {
-        if (mutation.type === 'attributes' && mutation.attributeName === 'value' && postalCodeInput.value.length >= 8) {
-          await handlePostalCodeChange(postalCodeInput.value)
-        }
+      try {
+        removeExistingErrors()
+        await handleVtexAddress(postalCode)
+      } catch (error) {
+        console.error('Erro ao validar o código postal:', error)
+      } finally {
+        isPostalCodeBeingValidated = false
       }
-    })
-
-    observer.observe(postalCodeInput, {
-      attributes: true,
-      attributeFilter: ['value'],
-    })
-
-    await handlePostalCodeChange(postalCodeInput.value)
-  }
-
-  function waitForPostalCodeInput() {
-    const postalCodeInput = document.getElementById('ship-postalCode')
-
-    if (postalCodeInput) {
-      initObserver(postalCodeInput)
-    } else {
-      setTimeout(waitForPostalCodeInput, 500)
     }
-  }
 
-  waitForPostalCodeInput()
+    async function initObserver(postalCodeInput) {
+      const observer = new MutationObserver(async (mutationsList) => {
+        for (const mutation of mutationsList) {
+          if (
+            mutation.type === 'attributes' &&
+            mutation.attributeName === 'value' &&
+            postalCodeInput.value.length >= 8
+          ) {
+            await handlePostalCodeChange(postalCodeInput.value)
+            observer.disconnect() // Desconecta após a primeira execução
+          }
+        }
+      })
+
+      observer.observe(postalCodeInput, {
+        attributes: true,
+        attributeFilter: ['value'],
+      })
+    }
+
+    function waitForPostalCodeInput() {
+      const postalCodeInput = document.getElementById('ship-postalCode')
+
+      if (postalCodeInput) {
+        initObserver(postalCodeInput)
+      } else {
+        setTimeout(waitForPostalCodeInput, 500)
+      }
+    }
+
+    waitForPostalCodeInput()
+  }
 }
 
 function displayError() {
+  const { hash } = window.location
   removeExistingErrors()
-  const shippingContainer = document.getElementById('shipping-data')
+
+  const shippingContainer =
+    hash === '#/cart' ? document.querySelector('.cart-template') : document.getElementById('shipping-data')
+
+  if (!shippingContainer) return
+
   shippingContainer.classList.add('postal-code-error')
   shippingContainer.classList.remove('visible')
+
+  if (hash === '#/cart') {
+    const elementExist = setInterval(() => {
+      const resetPostalCodeButton = document.querySelector('#deliver-at-text .srp-address-title')
+      if (resetPostalCodeButton) {
+        clearInterval(elementExist)
+        resetPostalCodeButton.click()
+      }
+    }, 1000)
+  }
 }
 
 function removeExistingErrors() {
-  const errorClass = document.querySelector('postal-code-error')
+  const errorClass = document.querySelector('.postal-code-error')
   if (errorClass) {
     errorClass.classList.remove('postal-code-error')
   }
 }
 
+// TODO: MELHORAR LÓGICA DESTA FUNÇÃO
 async function handleVtexAddress(postalCode) {
   const existOnVtex = await getVtexAddress(postalCode)
 
-
-
-  if (!existOnVtex) {
+  if (existOnVtex === null) {
     const addressViaCep = await getAddressByViaCep(postalCode)
     const isOnRange = await isOnPostalCodeRange(postalCode)
-
 
     if (!addressViaCep.erro) {
       fillAddressForm(addressViaCep)
@@ -534,8 +548,6 @@ async function handleVtexAddress(postalCode) {
   } else {
     removeExistingErrors()
   }
-
-
 }
 
 function fillAddressForm(address) {
@@ -550,23 +562,17 @@ function fillAddressForm(address) {
     neighborhoodInput.value = bairro || ''
     cityInput.value = localidade || ''
     stateSelect.value = uf || ''
-
   }
 }
 
 function showShippingStep() {
-  const shippingContainer = document.getElementById('shipping-data')
+  const { hash } = window.location
+
+  const shippingContainer =
+    hash === '#/cart' ? document.querySelector('.cart-template') : document.getElementById('shipping-data')
 
   shippingContainer.classList.remove('postal-code-error')
   shippingContainer.classList.add('visible')
-}
-
-function removeExistingErrors() {
-  const errorClass = document.querySelector('postal-code-error')
-
-  if (errorClass) {
-    errorClass.classList.remove('postal-code-error')
-  }
 }
 
 function handleCouponSuccess() {
@@ -649,6 +655,8 @@ function addingPixPriceIntoSummaryTotalizers() {
   }
 }
 
+const debouncedValidatePostalCode = debounce(validatePostalCode, 300)
+
 $(window).on('load', function () {
   // showDeliveryOptionsElement()
   showDeliveryOptions()
@@ -670,16 +678,16 @@ $(window).on('hashchange', function () {
   const { orderForm } = vtexjs.checkout
 
   if (orderForm) {
-    validatePostalCode()
+    debouncedValidatePostalCode()
   }
 })
 
 $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
-  validatePostalCode()
+  debouncedValidatePostalCode()
   handleCouponSuccess()
-  showDeliveryOptions()
   setTimeout(() => {
     settingCupomToggle()
+    showDeliveryOptions()
     addingPixPriceIntoSummaryTotalizers()
   }, 1000)
 })

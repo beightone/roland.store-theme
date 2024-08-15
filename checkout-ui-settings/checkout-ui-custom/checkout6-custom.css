@@ -2159,16 +2159,19 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   background-position: right 16px center
 }
 
-.orderform-template-holder #shipping-data.postal-code-error small {
+.postal-code-error .ship-postalCode small {
   display: flex;
   flex-direction: column;
   position: relative
 }
 
-.orderform-template-holder #shipping-data.postal-code-error small::after {
+.postal-code-error .ship-postalCode small::after {
   content: "CEP não disponível";
   color: #dd4b39;
-  font-size: 12px
+  font-size: 12px;
+  position: absolute;
+  top: 17px;
+  left: 0;
 }
 
 .orderform-template-holder #client-profile-data {
