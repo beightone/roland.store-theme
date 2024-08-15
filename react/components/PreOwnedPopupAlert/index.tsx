@@ -46,12 +46,12 @@ const PreOwnedPopupAlert = () => {
       })
     } catch (err) {
       console.error('Error while removing items from order form', err)
-    } finally {
       setIsLoading(false)
-      setIsModalOpen(false)
     }
   }
 
+  setIsLoading(false)
+  setIsModalOpen(false)
   if (!isModalOpen) return null
 
   return (
