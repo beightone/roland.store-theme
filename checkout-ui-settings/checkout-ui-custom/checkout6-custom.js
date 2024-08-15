@@ -531,7 +531,11 @@ async function handleVtexAddress(postalCode) {
       showShippingStep()
       removeExistingErrors()
     }
+  } else {
+    removeExistingErrors()
   }
+
+
 }
 
 function fillAddressForm(address) {
@@ -665,13 +669,13 @@ $(window).on('hashchange', function () {
   }, 1000)
   const { orderForm } = vtexjs.checkout
 
-  // if (orderForm) {
-  //   validatePostalCode()
-  // }
+  if (orderForm) {
+    validatePostalCode()
+  }
 })
 
 $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
-  // validatePostalCode()
+  validatePostalCode()
   handleCouponSuccess()
   showDeliveryOptions()
   setTimeout(() => {
