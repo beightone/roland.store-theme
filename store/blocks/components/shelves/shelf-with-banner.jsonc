@@ -1,0 +1,35 @@
+{
+  "flex-layout.col#pre-owned-section.content": {
+    "title": "Conteúdo",
+    "props": {
+      "blockClass": "pre-owned-wrapper"
+    },
+    "children": [
+      "flex-layout.row#shelf-title-container-1",
+      "flex-layout.row#shelf-with-banner"
+    ]
+  },
+  "flex-layout.row#shelf-with-banner": {
+    "title": "Prateleira com banner",
+    "props": {
+      "blockClass": "shelf-with-banner"
+    },
+    "children": [
+      "list-context.product-list#pre-owned-products",
+      "flex-layout.row#pre-owned-banner.content"
+
+    ]
+  },
+   "flex-layout.row#pre-owned-banner.content": {
+    "title": "Conteúdo do Banner",
+    "props": {
+    }
+   },
+  "list-context.product-list#pre-owned-products": {
+    "title": "Container da shelf",
+    "children": ["list-context.product-list#pre-owned-products"],
+    "props": {
+      "blockClass": ["shelf-container", "pre-owned-shelf-container"]
+    }
+  }
+}

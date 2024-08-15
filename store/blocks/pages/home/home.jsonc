@@ -6,6 +6,7 @@
       "flex-layout.row#simple-shelf-container-1",
       "flex-layout.row#explore-our-categories",
       "flex-layout.row#simple-shelf-container-2",
+      "flex-layput.row#pre-owned-section",
       "flex-layout.row#simple-double-banner",
       "flex-layout.row#blog-posts",
       "flex-layout.row#back-to-top-button",
@@ -18,6 +19,15 @@
       "header": "header",
       "footer": "flex-layout.row#footer-roland"
     }
+  },
+  "flex-laoput.row#pre-owned-section": {
+    "title": "Seção - Seminovos",
+    "props": {
+      "blockClass": "pre-owned-section"
+    },
+    "children": [
+      "flex-layout.col#pre-owned-section.content"
+    ]
   },
   "flex-layout.row#back-to-top-button": {
     "title": "Back to Top Button",
