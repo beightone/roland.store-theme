@@ -20,15 +20,15 @@
       "footer": "flex-layout.row#footer-roland"
     }
   },
-  // "flex-layout.row#pre-owned-section": {
-  //   "title": "Seção - Seminovos",
-  //   "props": {
-  //     "blockClass": "pre-owned-section"
-  //   },
-  //   "children": [
-  //     "flex-layout.col#pre-owned-section.content"
-  //   ]
-  // },
+  "flex-layout.row#pre-owned-section": {
+    "title": "Seção - Seminovos",
+    "props": {
+      "blockClass": "pre-owned-section"
+    },
+    "children": [
+      "flex-layout.col#pre-owned-section.content"
+    ]
+  },
   "flex-layout.row#back-to-top-button": {
     "title": "Back to Top Button",
     "props": {

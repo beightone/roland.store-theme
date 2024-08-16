@@ -14,6 +14,19 @@
       "flex-layout.row#product-card-actions"
     ]
   },
+  "product-summary.shelf#pre-owned": {
+    "title": "Card: Sumário de Produto",
+    "props": {
+      "blockClass": "product-summary-general"
+    },
+    "children": [
+      "add-to-list-btn#product-card",
+      "product-summary-image#product-card",
+      "product-summary-brand#product-card",
+      "product-summary-name#product-card",
+      "flex-layout.row#product-card-stars"
+    ]
+  },
   "flex-layout.row#product-card-stars": {
     "title": "Linha: Estrelas do Produto",
     "children": ["trust-vox-stars"],
@@ -82,7 +95,10 @@
   },
   "flex-layout.row#product-card-actions": {
     "title": "Linha: Ações do Produto",
-    "children": ["product-summary-quantity#product-card", "add-to-cart-button#product-card"],
+    "children": [
+      "product-summary-quantity#product-card",
+      "add-to-cart-button#product-card"
+    ],
     "props": {
       "blockClass": "product-card-actions",
       "preventHorizontalStretch": true
