@@ -15,3 +15,45 @@
     padding: 0!important;
   }
 }
+
+.flexRow--pre-owned-section {
+  background: var(--bg-neutral-subtle-base, #F4F4F5);
+  padding: 48px 32px 56px 32px;
+
+  @media screen and (max-width: 768px) {
+    padding: {
+      left: 16px;
+      right: 8px;
+      top: 15px;
+    }
+
+    .flexRowContent--shelf-with-banner {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+.flexRowContent--pre-owned-section {
+  max-width: 1376px;
+  margin: 0 auto;
+}
+
+.flexRow--pre-owned-banner {
+  background: #000;
+  max-width: 680px;
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    margin-right: 8px;
+  }
+}
+
+.flexRowContent--pre-owned-banner {
+  height: 100%;
+    align-items: center;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    margin-bottom: 26px;
+  }
+}

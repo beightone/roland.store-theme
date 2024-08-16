@@ -17,9 +17,10 @@ import REMOVE_ALL_PRODUCTS_MUTATION from '../../graphql/mutations/removeAllProdu
 const { useOrderForm } = OrderForm
 
 const PreOwnedPopupAlert = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true)
-  const [isLoading, setIsLoading] = useState(false)
   const { orderForm } = useOrderForm()
+
+  const [isModalOpen, setIsModalOpen] = useState(orderForm.items.length > 0)
+  const [isLoading, setIsLoading] = useState(false)
 
   const [removeAllProductsFromCart] = useMutation(REMOVE_ALL_PRODUCTS_MUTATION)
   const handleDecline = () => {
@@ -44,14 +45,14 @@ const PreOwnedPopupAlert = () => {
           orderItems: itemsToRemove,
         },
       })
+      setIsLoading(false)
+      setIsModalOpen(false)
     } catch (err) {
       console.error('Error while removing items from order form', err)
       setIsLoading(false)
     }
   }
 
-  setIsLoading(false)
-  setIsModalOpen(false)
   if (!isModalOpen) return null
 
   return (

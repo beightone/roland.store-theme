@@ -39,5 +39,9 @@
   },
   "pre-owned-popup-alert": {
     "component": "PreOwnedPopupAlert"
+  },
+  "pre-owned-section-condition": {
+    "component": "PreOwnedSectionCondition",
+    "composition": "children"
   }
 }
