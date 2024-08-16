@@ -27,7 +27,8 @@
    },
   "list-context.product-list#pre-owned-products": {
     "title": "Container da shelf",
-    "children": ["product-summary.shelf#pre-owned"],
+    "blocks": ["product-summary.shelf#s"],
+    "children": ["slider-layout#double-shelf"],
     "props": {
       "blockClass": ["shelf-container", "pre-owned-shelf-container"],
       "collection": "169"
