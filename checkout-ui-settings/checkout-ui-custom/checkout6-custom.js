@@ -466,13 +466,10 @@ function validatePostalCode() {
     async function initObserver(postalCodeInput) {
       const observer = new MutationObserver(async (mutationsList) => {
         for (const mutation of mutationsList) {
-          if (
-            mutation.type === 'attributes' &&
-            mutation.attributeName === 'value' &&
-            postalCodeInput.value.length >= 8
-          ) {
+          const formattedValue = postalCodeInput.value.replace(/\D/g, '')
+          if (mutation.type === 'attributes' && mutation.attributeName === 'value' && formattedValue.length >= 8) {
             await handlePostalCodeChange(postalCodeInput.value)
-            observer.disconnect() // Desconecta após a primeira execução
+            observer.disconnect()
           }
         }
       })
