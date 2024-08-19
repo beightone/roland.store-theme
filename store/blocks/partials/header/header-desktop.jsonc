@@ -8,12 +8,20 @@
       "add-to-cart-event"
     ]
   },
-  "header-layout.desktop#pre-owned": {
+  "header-layout.desktop#pre-owned-page": {
     "title": "Header Desktop",
     "children": [
       "header-row#topbar-desktop.pre-owned",
       "header-row#main-desktop",
       "flex-layout.row#breadcrumb.pre-owned",
+      "add-to-cart-event"
+    ]
+  },
+  "header-layout.desktop#pre-owned-product": {
+    "title": "Header Desktop",
+    "children": [
+      "header-row#topbar-desktop.pre-owned",
+      "header-row#main-desktop",
       "add-to-cart-event"
     ]
   },
@@ -27,10 +35,7 @@
       "preventVerticalStretch": true,
       "preventHorizontalStretch": true
     },
-    "children": [
-      "link#breadcrumb.home",
-      "link#breadcrumb.pre-owned"
-    ]
+    "children": ["link#breadcrumb.home", "link#breadcrumb.pre-owned"]
   },
   "link#breadcrumb.home": {
     "title": "Link para Home",

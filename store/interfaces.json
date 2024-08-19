@@ -43,5 +43,9 @@
   "pre-owned-section-condition": {
     "component": "PreOwnedSectionCondition",
     "composition": "children"
+  },
+  "sales-channel-trigger-condition": {
+    "component": "SalesChannelriggerCondition",
+    "composition": "children"
   }
 }

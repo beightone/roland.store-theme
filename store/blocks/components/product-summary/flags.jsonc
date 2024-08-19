@@ -1,0 +1,18 @@
+{
+  "vtex.product-highlights@2.x:product-highlights#pre-owned": {
+    "props": {
+      "type": "collection",
+      "filter": {
+        "type": "show",
+        "highlightNames": ["Semi novos"]
+      }
+    },
+    "children": ["product-highlight-text#pre-owned"]
+  },
+  "product-highlight-text#pre-owned": {
+    "props": {
+      "message": "{highlightName}",
+      "blockClass": "pre-owned-product-highlight"
+    }
+  }
+}

@@ -47,16 +47,67 @@
     }
   },
   "flex-layout.row#brand-switcher.pre-owned": {
-    "children": ["link#roland", "link#boss", "link#pre-owned"],
+    "children": [
+      "sales-channel-trigger-condition#link-roland",
+      "sales-channel-trigger-condition#link-boss",
+      "flex-layout.row#pre-owned-tab"
+    ],
     "props": {
       "blockClass": ["brand-switcher-container", "pre-owned"],
       "preventHorizontalStretch": true
     }
   },
+  "sales-channel-trigger-condition#link-roland": {
+    "children": ["link#roland"]
+  },
+  "sales-channel-trigger-condition#link-boss": {
+    "children": ["link#boss"]
+  },
+  "flex-layout.row#pre-owned-tab": {
+    "title": "Tab de produtos semi-novos",
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "pre-owned-tab"
+    },
+    "children": ["rich-text#pre-owned-tab", "modal-trigger#pre-owned-tooltip"]
+  },
+  "rich-text#pre-owned-tab": {
+    "props": {
+      "text": "Você está em seminovos",
+      "blockClass": "pre-owned-tab"
+    }
+  },
+  "modal-trigger#pre-owned-tooltip": {
+    "children": ["rich-text#tooltip", "modal-layout#tooltip-content"]
+  },
+  "rich-text#tooltip": {
+    "props": {
+      "text": "tooltip",
+      "blockClass": "tooltip"
+    }
+  },
+  "modal-layout#tooltip-content": {
+    "props": {
+      "blockClass": "modal-tooltip-content"
+    },
+    "children": ["rich-text#tooltip-content", "modal-actions.close#tooltip-close"]
+  },
+  "rich-text#tooltip-content": {
+    "props": {
+      "text": "Seção exclusiva para produtos seminovos. \n Para ver outros produtos, acesse a aba ao lado. ",
+      "blockClass": "tooltip-content"
+    }
+  },
+  "modal-actions.close#tooltip-close": {
+    "props": {
+      "label": "Fechar",
+      "blockClass": "tooltip-close"
+    }
+  },
   "link#roland": {
     "title": "Link para ROLAND",
     "props": {
-      "href": "/",
+      "href": "/?sc=1",
       "label": "roland",
       "blockClass": ["link-roland"]
     }
@@ -64,7 +115,7 @@
   "link#boss": {
     "title": "Link para BOSS",
     "props": {
-      "href": "/loja/boss",
+      "href": "/loja/boss?sc=1",
       "label": "boss",
       "blockClass": ["link-boss"]
     }
@@ -73,14 +124,6 @@
     "children": ["list-context.topbar"],
     "props": {
       "blockClass": ["topbar-wrapper"]
-    }
-  },
-  "link#pre-owned": {
-    "title": "Link para BOSS",
-    "props": {
-      "href": "/seminovos",
-      "label": "Você está em Seminovos",
-      "blockClass": ["link-pre-owned"]
     }
   },
   "flex-layout.row#topbar-mobile": {

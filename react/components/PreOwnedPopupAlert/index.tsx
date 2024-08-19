@@ -10,21 +10,36 @@ import { Spinner } from 'vtex.styleguide'
 // Hooks
 import { OrderForm } from 'vtex.order-manager'
 import { useMutation } from 'react-apollo'
+import { useRuntime } from 'vtex.render-runtime'
 
 // Mutations
 import REMOVE_ALL_PRODUCTS_MUTATION from '../../graphql/mutations/removeAllProductsFromCart.gql'
 
 const { useOrderForm } = OrderForm
 
-const PreOwnedPopupAlert = () => {
-  const { orderForm } = useOrderForm()
+// Props
 
+const PreOwnedPopupAlert = ({
+  action = null,
+  hasPreOwnedProductsOnCart = false,
+}: {
+  action: any
+  hasPreOwnedProductsOnCart: boolean
+}) => {
+  const { orderForm } = useOrderForm()
+  const runtime = useRuntime()
   const [isModalOpen, setIsModalOpen] = useState(orderForm.items.length > 0)
   const [isLoading, setIsLoading] = useState(false)
 
   const [removeAllProductsFromCart] = useMutation(REMOVE_ALL_PRODUCTS_MUTATION)
   const handleDecline = () => {
-    window.location.href = '/?sc=1'
+    if (runtime.page === 'store.home') {
+      setIsModalOpen(false)
+      action(false)
+    } else if (hasPreOwnedProductsOnCart) {
+      setIsModalOpen(false)
+      action(false)
+    }
   }
 
   const handleAccept = async () => {
@@ -47,6 +62,12 @@ const PreOwnedPopupAlert = () => {
       })
       setIsLoading(false)
       setIsModalOpen(false)
+
+      if (runtime.page === 'store.home') {
+        window.location.href = '/seminovos?sc=2'
+      } else {
+        window.location.href = '/?sc=1'
+      }
     } catch (err) {
       console.error('Error while removing items from order form', err)
       setIsLoading(false)

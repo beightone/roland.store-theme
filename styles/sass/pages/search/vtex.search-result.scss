@@ -33,22 +33,25 @@
 }
 
 .orderByDropdown {
-  padding: 0;
+  @media screen and (min-width: 768px) {
+    padding: 0;
 
-  width: fit-content;
-  align-items: center;
-  display: flex;
-  &::before {
-    content: "Ordenar produtos por";
-    color: var(--text-neutral-subtle, #3F3F46);
-    text-align: center;
-    font-family: "Proxima Nova";
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: -0.14px;
-    margin-right: 24px;
+    width: fit-content;
+    align-items: center;
+    display: flex;
+
+    &::before {
+      content: "Ordenar produtos por";
+      color: var(--text-neutral-subtle, #3F3F46);
+      text-align: center;
+      font-family: "Proxima Nova";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+      margin-right: 24px;
+    }
   }
 }
 
@@ -326,6 +329,9 @@
     display: flex;
     gap: 16px;
     border: none;
+    
+    position: relative;
+    z-index: 1;
 
     .filterClearButtonWrapper {
       :global(.vtex-button) {
@@ -383,6 +389,17 @@
   }
 }
 
+.galleryItem {
+  padding: 0;
+
+  margin: 0 {
+    top: 32px
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 160px !important;
+  }
+}
 
 @media screen and (max-width: 768px) {
 
@@ -404,16 +421,7 @@
     }
   }
 
-  .galleryItem {
-    padding: 0;
-    margin: 0 {
-      top: 32px
-    };
-
-    @media screen and (max-width: 768px) {
-      max-width: 160px!important;
-    }
-  }
+  
 
   .orderByOptionsContainer {
     right: 0;

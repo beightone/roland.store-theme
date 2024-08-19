@@ -1,0 +1,3 @@
+import SalesChannelConditionTrigger from './components/SalesChannelConditionTrigger'
+
+export default SalesChannelConditionTrigger

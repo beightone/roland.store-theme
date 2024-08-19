@@ -5,8 +5,8 @@
       "blockClass": "pre-owned-wrapper"
     },
     "children": [
-       "responsive-layout.desktop#pre-owned-section",
-        "responsive-layout.phone#pre-owned-section"
+      "responsive-layout.desktop#pre-owned-section",
+      "responsive-layout.phone#pre-owned-section"
       
     ]
   },
@@ -53,16 +53,12 @@
       "blockClass": "pre-owned-text",
       "preventVerticalStretch": true
     },
-    "children": ["rich-text#pre-owned-home-banner", "modal-trigger#pre-owned"]
+    "children": ["rich-text#pre-owned-home-banner", "sales-channel-trigger-condition"]
   },
-  "modal-trigger#pre-owned": {
+  "sales-channel-trigger-condition": {
     "children": [
-      "rich-text#trigger-button",
-      "modal-layout#pre-owned-modal"
+      "rich-text#trigger-button"
     ]
-  },
-  "modal-layout#pre-owned-modal": {
-    "children": ["pre-owned-popup-alert"]
   },
   "rich-text#trigger-button": {
     "props": {
@@ -86,7 +82,7 @@
   },
   "list-context.product-list#pre-owned-products": {
     "title": "Container da shelf",
-    "blocks": ["product-summary.shelf#pre-owned"],
+    "blocks": ["product-summary.shelf#pre-owned-preview"],
     "children": ["slider-layout#double-shelf"],
     "props": {
       "blockClass": ["shelf-container", "pre-owned-shelf-container"],

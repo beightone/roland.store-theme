@@ -328,3 +328,15 @@
 }
 
 
+
+.flexRow--pre-owned-tab {
+  border-radius: var(--radius-rounded-sm, 2px) var(--radius-rounded-sm, 2px) var(--radius-rounded-none, 0px) var(--radius-rounded-none, 0px);
+  background: var(--icon-feedback-information-base, #FFF);
+  padding: 0 16px;
+
+  .flexRowContent--pre-owned-tab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}

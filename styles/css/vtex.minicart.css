@@ -205,6 +205,12 @@
     min-height: 296px;
   }
 }
+.minicartProductListContainer :global(.vtex-product-highlights-2-x-productHighlightText--pre-owned-product-highlight) {
+  position: unset;
+  display: block;
+  width: fit-content;
+  margin-top: -4px;
+}
 .minicartProductListContainer::-webkit-scrollbar {
   width: 5px;
   /* width of the entire scrollbar */
