@@ -7,11 +7,13 @@
   position: relative;
   flex-direction: column-reverse;
   border-radius: 2px;
+  height: 100%;
 
   @media screen and (max-width: 1025px) {
     max-width: 100%;
     align-items: center;
     padding: 16px 24px 32px 24px;
+    min-height: 324px;
   }
 
   .infoCardImageContainer--our-categories-main-image {
