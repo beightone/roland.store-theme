@@ -683,7 +683,7 @@ function checkSharedCart() {
 
   if (isSharedCart) {
     document.querySelector("body").classList.add('shared-cart')
-    
+
     (document.querySelector('#payment-group-PagalevePixAVistaTransparentePaymentGroup'), setDefaultPayment)
   }
 
@@ -725,10 +725,24 @@ function observeElement(nodeElement, action) {
   const observer = new MutationObserver(callback)
   observer.observe(targetNode, config)
 }
+
+async function checkPostalCodeOnLoad() {
+  console.log('checkPostalCodeOnLoad')
+  const { hash } = window.location
+
+  if (hash !== '#/cart') return null
+
+  const { postalCode } = vtexjs.checkout.orderForm.shippingData.selectedAddresses[0] ?? {}
+
+  if (postalCode) {
+    await handleVtexAddress(postalCode)
+  }
+}
+
 const debouncedValidatePostalCode = debounce(validatePostalCode, 300)
 
 
-$(window).on('load', function () {
+$(window).on('load', async function () {
   showDeliveryOptions()
   checkSharedCart()
   observeElement(document.querySelectorAll('.cart-template .cart-template-holder .product-item'), checkProductPrice)
@@ -736,29 +750,31 @@ $(window).on('load', function () {
     document.querySelector('.summary-totalizers tfoot tr td.monetary'),
     addingPixPriceIntoSummaryTotalizers
   )
+  await checkPostalCodeOnLoad()
   setTimeout(() => {
     updateBreadcrumb()
     settingCupomToggle()
   }, 2000)
 })
 
-$(window).on('hashchange', function () {
+$(window).on('hashchange', async function () {
   updateBreadcrumb()
   checkSharedCart()
   observeElement(document.querySelectorAll('.cart-template .cart-template-holder .product-item'), checkProductPrice)
-   observeElement(
-     document.querySelector('.summary-totalizers tfoot tr td.monetary'),
-     addingPixPriceIntoSummaryTotalizers
-   )
-  const { hash } = window.location
-  if (hash === '#/cart') location.reload()
+  observeElement(
+    document.querySelector('.summary-totalizers tfoot tr td.monetary'),
+    addingPixPriceIntoSummaryTotalizers
+  )
+
   setTimeout(() => {
     settingCupomToggle()
   }, 1000)
+
   const { orderForm } = vtexjs.checkout
 
   if (orderForm) {
     debouncedValidatePostalCode()
+    await checkPostalCodeOnLoad()
   }
 })
 
