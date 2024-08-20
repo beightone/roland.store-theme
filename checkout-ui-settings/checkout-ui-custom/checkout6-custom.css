@@ -2187,7 +2187,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill=white]) {
   color: #dd4b39;
   font-size: 12px;
   position: absolute;
-  top: 17px;
+  top: -15px;
   left: 0;
 }
 
