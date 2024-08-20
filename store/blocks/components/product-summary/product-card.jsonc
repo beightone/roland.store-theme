@@ -17,7 +17,7 @@
   "product-summary.shelf#pre-owned-page": {
     "title": "Card: Sumário de Produto",
     "props": {
-      "blockClass": "product-summary-general"
+      "blockClass": ["product-summary-general", "pre-owned"]
     },
     "children": [
       "vtex.product-highlights@2.x:product-highlights#pre-owned",
@@ -25,6 +25,7 @@
       "product-summary-brand#product-card",
       "product-summary-name#product-card",
       "flex-layout.row#product-card-stars",
+      "product-selling-price#product-card",
       "flex-layout.row#product-card-price",
       "condition-layout.product#availability"
     ]
@@ -42,6 +43,13 @@
       "flex-layout.row#product-card-stars",
       "link.product#pre-owned-product-page"
     ]
+  },
+  "product-selling-price#product-card": {
+    "props": {
+      "markers": ["highlight"],
+      "blockClass": "summary",
+      "message": "{sellingPriceValue}"
+    }
   },
   "condition-layout.product#availability": {
     "props": {

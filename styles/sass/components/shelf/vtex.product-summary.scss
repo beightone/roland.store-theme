@@ -92,3 +92,9 @@
     max-height: 136px!important;
   }
 }
+
+.clearLink--pre-owned {
+  :global(.vtex-flex-layout-0-x-flexRow--product-card-price) {
+    display: none;
+  }
+}
