@@ -8,8 +8,8 @@
       padding: 0;
 
       :global(.vtex-checkbox__inner-container.b--action-primary.bg-action-primary) {
-        border-color: #947c4e !important;
-        background-color: #947c4e !important;
+        border-color: #000 !important;
+        background-color: #000 !important;
       }
     }
   }
@@ -17,7 +17,13 @@
 
 :global(.vtex-search-result-3-x-filters--layout) {
   :global(.vtex-checkbox__inner-container.b--action-primary.bg-action-primary) {
-    border-color: #947c4e !important;
-    background-color: #947c4e !important;
+    border-color: #000 !important;
+    background-color: #000 !important;
+  }
+}
+
+:global(.render-route-store-custom-pre-owned) {
+  :global(.vtex-store-header-2-x-headerStickyRow--search-container) {
+    top: 47px;
   }
 }

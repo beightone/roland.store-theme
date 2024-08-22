@@ -24,7 +24,7 @@
   },
   "total-products.v2": {
     "props": {
-      "message": "{recordsFiltered} {recordsFiltered, plural, one {produto} other {produtos}} <span>{recordsFiltered, plural, one {encontrado} other {encontrados}}</span>"
+      "message": "Mostrando {recordsFiltered} de {recordsFiltered} <span> {recordsFiltered, plural, one {produto} other {produtos}}</span>"
     }
   }
 }

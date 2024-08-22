@@ -20,15 +20,15 @@
     "props": {
       "initiallyCollapsed": false,
       "truncateFilters": true,
-      "showClearByFilter": true,
-      "scrollToTop": "smooth",
+      "showClearByFilter": false,
+      "scrollToTop": "none",
       "fullWidthOnMobile": true,
       "navigationTypeOnMobile": "collapsible",
-      "appliedFiltersOverview": "show",
-      "totalProductsOnMobile": "show",
+      "appliedFiltersOverview": false,
+      "totalProductsOnMobile": "hide",
       "updateOnFilterSelectionOnMobile": true,
       "filtersTitleHtmlTag": "span",
-      "showClearAllFiltersOnDesktop": true
+      "showClearAllFiltersOnDesktop": false
       // "closeOnOutsideClick": true
     }
   }

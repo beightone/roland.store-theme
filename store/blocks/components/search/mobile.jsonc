@@ -9,7 +9,18 @@
       "flex-layout.row#filters",
       "search-fetch-previous",
       "search-content#new",
-      "search-fetch-more"
+      "search-fetch-more",
+      "sticky-layout#filters"
+    ]
+  },
+  "sticky-layout#filters": {
+    "title": "Filtros",
+    "props": {
+      "blockClass": "filters-mobile",
+      "position": "bottom"
+    },
+    "children": [
+      "flex-layout.row#filters"
     ]
   },
   "flex-layout.row#filters": {

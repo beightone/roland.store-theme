@@ -29,11 +29,13 @@
 
 .flexRowContent--search-bar-product {
   align-items: center;
+  position: relative;
   :global(.vtex-button__label) {
     padding: 10px 16px!important;
     height: 16px;
     width: 28px;
   }
+
   :global(.vtex-button) {
     border-radius: var(--radius-rounded-sm, 2px);
     background: var(--bg-brand-secondary-bold-base, #2B2B3A);
@@ -50,9 +52,15 @@
     &:hover {
       background-color: #424250;
     }
-
-    
   };
+
+  :global(.vtex-rich-text-0-x-container--product-card-unavailable) {
+    width: fit-content;
+    left: unset;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
   @media screen and (max-width: 768px) {
     display: flex;
