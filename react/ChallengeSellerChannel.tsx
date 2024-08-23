@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useMemo, useState } from 'react'
 
 // Hooks
 import { useQuery } from 'react-apollo'
@@ -12,41 +12,67 @@ import PreOwnedPopupAlert from './PreOwnedPopupAlert'
 
 const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
   const [showPopupAlert, setShowPopupAlert] = useState(false)
-  const { data } = useQuery(GET_ORDERFORM, { ssr: false })
-  const { data: preOwnedProducts } = useQuery(GET_PRE_OWNED_PRODUCTS, {
-    variables: { id: '169' },
+  const { data, loading: orderFormLoading } = useQuery(GET_ORDERFORM, {
     ssr: false,
   })
 
+  const { data: preOwnedProducts, loading: productsLoading } = useQuery(
+    GET_PRE_OWNED_PRODUCTS,
+    {
+      variables: { id: '169' },
+      ssr: false,
+    }
+  )
+
   const { page, navigate } = useRuntime()
 
-  const orderFormItems = data?.orderForm.items ?? []
-  const preOwnedItems = preOwnedProducts?.productsOrder.items ?? []
+  const orderFormItems = useMemo(
+    () => data?.orderForm.items ?? [],
+    [data?.orderForm.items]
+  )
+
+  const preOwnedItems = useMemo(
+    () => preOwnedProducts?.productsOrder.items ?? [],
+    [preOwnedProducts?.productsOrder.items]
+  )
 
   const hasPreOwnedProductInCart = orderFormItems.some((orderItem: any) =>
     preOwnedItems.some(
-      (preOwnedItem: any) => preOwnedItem.productId === orderItem.id
+      (preOwnedItem: any) => preOwnedItem.skuId === orderItem.id
     )
   )
 
   useEffect(() => {
-    const isPreOwnedPage = page === 'store.custom#pre-owned'
-    const hasScParameter = window.location.search.includes('sc=2')
-
-    // Condição para exibir alerta
-    if (
-      (isPreOwnedPage &&
-        orderFormItems.length > 0 &&
-        !hasPreOwnedProductInCart) ||
-      (!isPreOwnedPage && hasPreOwnedProductInCart)
-    ) {
-      setShowPopupAlert(true)
+    if (orderFormLoading || productsLoading) {
+      return
     }
 
-    // Redirecionar para URL com `sc=2`
-    if (isPreOwnedPage && !hasScParameter) {
+    const isPreOwnedPage = page === 'store.custom#pre-owned'
+    const isHomePage = page === 'store.home'
+    const currentUrl = new URL(window.location.href)
+    const hasScParameter = currentUrl.searchParams.has('sc')
+
+    if (orderFormItems.length > 0) {
+      if (isPreOwnedPage && !hasPreOwnedProductInCart) {
+        setShowPopupAlert(true)
+      }
+
+      if (!isPreOwnedPage && hasPreOwnedProductInCart) {
+        setShowPopupAlert(true)
+      }
+
+      if (isPreOwnedPage && !hasScParameter) {
+        navigate({
+          to: `${window.location.pathname}?sc=2`,
+        })
+      }
+    } else {
+      setShowPopupAlert(false)
+    }
+
+    if (isHomePage && !hasScParameter) {
       navigate({
-        to: `${window.location.pathname}?sc=2`,
+        to: `${window.location.pathname}?sc=1`,
       })
     }
   }, [
@@ -55,10 +81,12 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
     page,
     navigate,
     hasPreOwnedProductInCart,
-    orderFormItems.length,
+    orderFormItems,
+    preOwnedItems,
+    showPopupAlert,
+    orderFormLoading,
+    productsLoading,
   ])
-
-  console.log('ChallengeSellerChannel', { hasPreOwnedProductInCart })
 
   return (
     <Fragment>
@@ -67,6 +95,10 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
         <PreOwnedPopupAlert
           action={setShowPopupAlert}
           hasPreOwnedProductsOnCart={hasPreOwnedProductInCart}
+          modalIsOpen
+          orderFormId={data?.orderForm.id}
+          orderFormItems={orderFormItems}
+          isChallenge
         />
       )}
     </Fragment>

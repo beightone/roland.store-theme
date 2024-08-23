@@ -1,4 +1,5 @@
 // Dependencies
+import type { FC } from 'react'
 import React, { useState } from 'react'
 
 // Styles
@@ -17,28 +18,56 @@ import REMOVE_ALL_PRODUCTS_MUTATION from '../../graphql/mutations/removeAllProdu
 
 const { useOrderForm } = OrderForm
 
-// Props
+// Interface
 
-const PreOwnedPopupAlert = ({
-  action = null,
-  hasPreOwnedProductsOnCart = false,
-}: {
+interface PreOwnedPopupAlertProps {
   action: any
   hasPreOwnedProductsOnCart: boolean
+  modalIsOpen?: boolean
+  orderFormId?: string
+  orderFormItems?: any
+  isChallenge?: boolean
+}
+
+const PreOwnedPopupAlert: FC<PreOwnedPopupAlertProps> = ({
+  action = null,
+  hasPreOwnedProductsOnCart = false,
+  modalIsOpen,
+  orderFormId,
+  orderFormItems,
+  isChallenge,
 }) => {
   const { orderForm } = useOrderForm()
   const runtime = useRuntime()
-  const [isModalOpen, setIsModalOpen] = useState(orderForm.items.length > 0)
+  const [isModalOpen, setIsModalOpen] = useState(
+    modalIsOpen ?? orderForm.items.length > 0
+  )
+
   const [isLoading, setIsLoading] = useState(false)
+
+  const items = orderFormItems ?? orderForm.items
 
   const [removeAllProductsFromCart] = useMutation(REMOVE_ALL_PRODUCTS_MUTATION)
   const handleDecline = () => {
-    if (runtime.page === 'store.home') {
+    if (isChallenge) {
+      if (runtime.page === 'store.home' && hasPreOwnedProductsOnCart) {
+        window.location.href = '/seminovos?sc=2'
+      } else {
+        window.location.href = '/?sc=1'
+      }
+
+      setIsModalOpen(false)
+      action(false)
+    } else if (runtime.page === 'store.home') {
       setIsModalOpen(false)
       action(false)
     } else if (hasPreOwnedProductsOnCart) {
       setIsModalOpen(false)
       action(false)
+    } else if (runtime.page === 'store.custom#pre-owned') {
+      setIsModalOpen(false)
+      action(false)
+      window.location.href = '/?sc=1'
     }
   }
 
@@ -46,24 +75,37 @@ const PreOwnedPopupAlert = ({
     setIsLoading(true)
 
     try {
-      const orderFormId = orderForm.id
-      const itemsToRemove = orderForm.items.map(
-        (_item: any, index: number) => ({
-          index,
-          quantity: 0,
-        })
-      )
+      const id = orderFormId ?? orderForm.id
+      const itemsToRemove = items.map((_item: any, index: number) => ({
+        index,
+        quantity: 0,
+      }))
 
       await removeAllProductsFromCart({
         variables: {
-          orderFormId,
+          id,
           orderItems: itemsToRemove,
         },
       })
       setIsLoading(false)
       setIsModalOpen(false)
+      action(false)
 
-      if (runtime.page === 'store.home') {
+      if (isChallenge) {
+        if (
+          runtime.page === 'store.custom#pre-owned' &&
+          items.length > 0 &&
+          !hasPreOwnedProductsOnCart
+        ) {
+          window.location.reload()
+        } else if (
+          runtime.page === 'store.home' &&
+          items.length > 0 &&
+          hasPreOwnedProductsOnCart
+        ) {
+          window.location.reload()
+        }
+      } else if (runtime.page === 'store.home') {
         window.location.href = '/seminovos?sc=2'
       } else {
         window.location.href = '/?sc=1'

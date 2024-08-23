@@ -82,6 +82,14 @@
   transition: all 0.2s ease-in-out;
   border: none;
   cursor: pointer;
+  max-height: 48px;
+}
+
+.acceptButton svg {
+  height: 26px;
+}
+.acceptButton svg circle {
+  stroke: #FF5A00;
 }
 
 .declineButton {
