@@ -306,7 +306,7 @@ function showDeliveryOptions() {
   const observer = new MutationObserver((mutations, obs) => {
     const shippingCalculator = $('.cart-template .cart-template-holder .cart-more-options')
     const targetContainer = document.querySelector('.cart-template.full-cart.active .summary-totalizers')
-    const alreadyAppended = !!targetContainer.querySelector('.cart-more-options')
+    const alreadyAppended = !!targetContainer?.querySelector('.cart-more-options')
 
     if (shippingCalculator.length && !alreadyAppended) {
       setTimeout(() => {
@@ -682,9 +682,9 @@ function checkSharedCart() {
   const isSharedCart = orderId && code
 
   if (isSharedCart) {
-    document.querySelector("body").classList.add('shared-cart')
+    document.querySelector("body")?.classList?.add('shared-cart')
 
-    (document.querySelector('#payment-group-PagalevePixAVistaTransparentePaymentGroup'), setDefaultPayment)
+    setDefaultPayment()
   }
 
 }
@@ -693,7 +693,7 @@ function setDefaultPayment() {
   const element = document.querySelector('#payment-group-PagalevePixAVistaTransparentePaymentGroup')
 
   if (element) {
-    element.click()
+    element?.click()
   }
 }
 
