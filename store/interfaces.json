@@ -47,5 +47,8 @@
   "sales-channel-trigger-condition": {
     "component": "SalesChannelriggerCondition",
     "composition": "children"
+  },
+  "challenge.seller-channel-condition": {
+    "component": "ChallengeSellerChannel"
   }
 }

@@ -17,7 +17,8 @@
     },
     "parent": {
       "header": "header",
-      "footer": "flex-layout.row#footer-roland"
+      "footer": "flex-layout.row#footer-roland",
+      "challenge": "challenge.seller-channel-condition"
     }
   },
   "pre-owned-section-condition": {

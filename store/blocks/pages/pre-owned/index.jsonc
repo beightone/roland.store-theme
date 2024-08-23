@@ -14,7 +14,8 @@
     },
     "parent": {
       "header": "header#pre-owned",
-      "footer": "flex-layout.row#footer-roland"
+      "footer": "flex-layout.row#footer-roland",
+      "challenge": "challenge.seller-channel-condition"
     }
   },
   "flex-layout.row#pre-owned-main-banner": {
