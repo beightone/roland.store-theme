@@ -41,8 +41,9 @@
     background: var(--bg-brand-secondary-bold-base, #2B2B3A);
     width: 60px;
     position: absolute;
-    right: 20px;
-    bottom: 26px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
     height: fit-content;
     border: none;
     display: flex;

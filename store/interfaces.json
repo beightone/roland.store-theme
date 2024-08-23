@@ -50,5 +50,8 @@
   },
   "challenge.seller-channel-condition": {
     "component": "ChallengeSellerChannel"
+  },
+  "pre-owned-flag": {
+    "component": "PreOwnedCartFlag"
   }
 }

@@ -218,34 +218,8 @@
     "children": [
       "vtex.product-list@0.x:product-brand#minicart",
       "vtex.product-list@0.x:product-name#minicart",
-       "condition-layout.product#pre-owned-highlight"
+      "pre-owned-flag"
     ]
-  },
-  "condition-layout.product#pre-owned-highlight": {
-    "title": "Condição de exibição da flag Seminovo",
-    "props": {
-      "conditions": [
-        {
-          "subject": "productClusters",
-          "arguments": {
-            "id": "169"
-          }
-        }
-      ],
-      "matchType": "all",
-      "Then": "rich-text#pre-owned-flag",
-      "Else": "flex-layout.row#empty"
-    }
-  },
-  "flex-layout.row#empty": {
-
-  },
-  "rich-text#pre-owned-flag": {
-    "title": "Flag Seminovo",
-    "props": {
-      "text": "Seminovo",
-      "blockClass": "pre-owned-flag"
-    }
   },
   "vtex.product-list@0.x:product-brand#minicart": {
     "props": {
