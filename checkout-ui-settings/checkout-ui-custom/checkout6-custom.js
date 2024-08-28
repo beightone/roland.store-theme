@@ -311,6 +311,25 @@ function buildShippingBar() {
   updateShippingBar()
 }
 
+function configurePostalCodeInput(postalCodeInput) {
+  postalCodeInput.setAttribute('maxlength', '9')
+
+  postalCodeInput.addEventListener('input', (event) => {
+    let value = event.target.value
+
+    value = value.replace(/\D/g, '')
+
+    if (value.length > 8) {
+      value = value.slice(0, 8)
+    }
+
+    if (value.length > 5) {
+      value = value.replace(/(\d{5})(\d{1,3})/, '$1-$2')
+    }
+
+    event.target.value = value
+  })
+}
 
 function validatePostalCode() {
   const { hash } = window.location
@@ -351,7 +370,7 @@ function validatePostalCode() {
       const postalCodeInput = document.getElementById('ship-postalCode')
 
       if (postalCodeInput) {
-        postalCodeInput.attributes.maxlength.value = 9
+        configurePostalCodeInput(postalCodeInput)
         initObserver(postalCodeInput)
       } else {
         setTimeout(waitForPostalCodeInput, 500)
