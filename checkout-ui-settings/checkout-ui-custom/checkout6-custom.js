@@ -314,21 +314,22 @@ function buildShippingBar() {
 function configurePostalCodeInput(postalCodeInput) {
   postalCodeInput.setAttribute('maxlength', '9')
 
-  postalCodeInput.addEventListener('input', (event) => {
-    let value = event.target.value
+  const formatPostalCode = () => {
+    let value = postalCodeInput.value
 
     value = value.replace(/\D/g, '')
 
-    if (value.length > 8) {
-      value = value.slice(0, 8)
-    }
+    value = value.slice(0, 8)
 
     if (value.length > 5) {
       value = value.replace(/(\d{5})(\d{1,3})/, '$1-$2')
     }
 
-    event.target.value = value
-  })
+    postalCodeInput.value = value
+  }
+
+
+  postalCodeInput.addEventListener('keyup', formatPostalCode)
 }
 
 function validatePostalCode() {
