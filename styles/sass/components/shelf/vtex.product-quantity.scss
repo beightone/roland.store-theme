@@ -75,3 +75,10 @@
   }
 
 }
+
+.summaryContainer--product-summary-quantity {
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    border: none;
+  }
+}
