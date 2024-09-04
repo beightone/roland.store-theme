@@ -67,9 +67,18 @@
     height: 236px;
     margin: 0;
 
+    .image {
+      padding: 12px;
+      box-sizing: border-box;
+    }
+
     @media screen and (max-width: 768px) {
       width: 136px;
       height: 136px;
+
+      .image {
+        padding: 6px;
+      }
     }
   }
 
