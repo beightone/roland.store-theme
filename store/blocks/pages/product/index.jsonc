@@ -1,0 +1,15 @@
+{
+  "store.product#roland": {
+    "children": [
+      "flex-layout.row#product-breadcrumb"
+      // "flex-layout.row#product-details"
+    ],
+    "parent": {
+      "header": "header",
+      "footer": "flex-layout.row#footer-roland"
+    }
+  },
+  "flex-layout.row#product-details": {
+    "title": ""
+  }
+}

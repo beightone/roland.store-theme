@@ -1,0 +1,10 @@
+.flexRow--product-breadcrumb {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 32px;
+  margin: 0 auto;
+
+  :global(.vtex-store-components-3-x-container) {
+    padding: 0;
+  }
+}
