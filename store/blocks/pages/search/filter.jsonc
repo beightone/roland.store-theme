@@ -1,23 +1,29 @@
 {
-  "drawer#filter": {
-    "children": ["filter-navigator.v3#new"],
-    "blocks": ["drawer-trigger#filter"],
-    "props": {
-      "blockClass": "filter-drawer"
-    }
-  },
-  "drawer-trigger#filter": {
-    "children": ["rich-text#filter-trigger"]
-  },
-  "rich-text#filter-trigger": {
-    "props": {
-      "blockClass": "filter-trigger",
-      "text": "Filtrar"
-    }
-  },
   "filter-navigator.v3#new": {
     "blocks": ["sidebar-close-button"],
     "props": {
+      "facetOrdering": [
+        {
+          "key": "brand",
+          "orderBy": "name",
+          "order": "ASC"
+        },
+        {
+          "key": "category-2",
+          "orderBy": "name",
+          "order": "ASC"
+        },
+        {
+          "key": "category-3",
+          "orderBy": "name",
+          "order": "ASC"
+        },
+        {
+          "key": "category-1",
+          "orderBy": "name",
+          "order": "ASC"
+        }
+      ],
       "initiallyCollapsed": false,
       "truncateFilters": true,
       "showClearByFilter": false,
@@ -29,7 +35,7 @@
       "updateOnFilterSelectionOnMobile": true,
       "filtersTitleHtmlTag": "span",
       "showClearAllFiltersOnDesktop": false
-      // "closeOnOutsideClick": true
+      
     }
   }
 }

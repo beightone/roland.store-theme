@@ -4,6 +4,24 @@
   margin: 0 auto;
 }
 
+.filter__container {
+  &--category-1 {
+    display: none;
+  }
+
+  &--title {
+    order: -2;
+  }
+
+  &--brand {
+    order: -1;
+  }
+}
+
+.filter__container--category-1 {
+  display: none;
+}
+
 .galleryTitle--layout {
   margin: 0;
   color: var(--text-neutral-bold, #18181B);

@@ -27,3 +27,18 @@
     top: 47px;
   }
 }
+
+:global(.vtex-search-result-3-x-accordionFilter) {
+  :global(.vtex-search-result-3-x-accordionFilterContainer--departamento),
+  :global(.vtex-search-result-3-x-accordionFilterContainer--departamento + .ReactCollapse--collapse) {
+    display: none;
+  }
+
+  // :global(.vtex-search-result-3-x-accordionFilterContainer--marca) {
+  //   order: -2;
+  // }
+
+  // :global(.vtex-search-result-3-x-accordionFilterContainer--marca + .ReactCollapse--collapse) {
+  //   order: -1;
+  // }
+}
