@@ -1,30 +1,77 @@
-.productImagesThumb--product-image {
-  max-width: 84px;
-  max-height: 84px!important;
-  width: 100%;
-  height: 100%!important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  .figure--product-image {
-    border-radius: 2px;
-    
-    
+
+
+.productImagesContainer--product-image--carousel {
+  .carouselContainer--product-image {
+    .carouselGaleryThumbs--product-image {
+      width: fit-content;
+    }
   }
 
-  .carouselThumbBorder {
-    border: 2px solid var(--text-link-primary-default-base, #FF5A00);
+  .productImagesThumbCaret--product-image {
+    &::after {
+      content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 15L12.5 10L7.5 5" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      transform: rotate(90deg);
+      border-radius: var(--radius-rounded-full, 9999px);
+      background: var(--bg-brand-primary-subtlest-base, #FFF);
+      padding: 10px 11px;
+    }
+
+    .caretIcon {
+      display: none;
+    }
   }
-  
+
+  .productImagesThumb--product-image {
+    max-width: 84px;
+    max-height: 84px !important;
+    width: 100%;
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .figure--product-image {
+      border-radius: 2px;
+
+
+    }
+
+    .carouselThumbBorder {
+      border-radius: var(--radius-rounded-sm, 2px);
+      border: 2px solid var(--bg-brand-secondary-subtlest-base, #DCDCDE);
+    }
+  }
+
+  .productImagesThumbActive--product-image {
+    .carouselThumbBorder {
+      border: 2px solid var(--text-link-primary-default-base, #FF5A00);
+    }
+  }
+
+  .productImage--product-image {
+    max-width: 700px;
+    max-height: 504px;
+  }
+
+  .carouselGaleryCursor {
+    padding: 28px 32px {
+      bottom: 16px;
+    }
+
+    ;
+
+    .swiperCaretNext--product-image,
+    .swiperCaretPrev--product-image {
+      display: none;
+    }
+
+  }
+
+  .gradientBaseBottom {
+    background-color: #fff;
+  }
 }
 
-.productImage--product-image {
-  max-width: 700px;
-  max-height: 504px;
-}
 
-.carouselGaleryCursor {
-  padding: 28px 32px {
-    bottom: 16px;
-  };
-}
+
+
