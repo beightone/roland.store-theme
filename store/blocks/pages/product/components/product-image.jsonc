@@ -1,0 +1,21 @@
+{
+  "flex-layout.row#product-image": {
+    "props": {
+      "width": "63%",
+      "blockClass": "product-image"
+      
+    },
+    "children": [
+      "product-images#product-image"
+    ]
+  },
+  "product-images#product-image": {
+    "props": {
+      // "zoomMode": "in-place-click",
+      "zoomFactor": 2,
+      "displayThumbnailsArrows": true,
+      "blockClass": "product-image"
+
+    }
+  }
+}

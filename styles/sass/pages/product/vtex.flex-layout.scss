@@ -1,3 +1,4 @@
+.flexRow--product-details,
 .flexRow--product-breadcrumb {
   max-width: 1440px;
   width: 100%;
@@ -7,4 +8,13 @@
   :global(.vtex-store-components-3-x-container) {
     padding: 0;
   }
+}
+
+.flexRow--product-breadcrumb {
+
+  
+}
+
+.flexRow--product-details {
+  padding-top: 16px;
 }
