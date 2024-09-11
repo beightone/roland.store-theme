@@ -9,8 +9,14 @@
       "vtex.store-components:product-name#product-page",
       "trust-vox-stars",
       "vtex.store-components:product-description#product-page",
-      "flex-layout.col#product-page-price"
+      "flex-layout.col#product-page-price",
+      "add-to-list-btn#product-page"
     ]
+  },
+  "add-to-list-btn#product-page": {
+    "props": {
+      "blockClass": "product-page-wishlist"
+    }
   },
   "flex-layout.col#product-page-price": {
     "title": "Preço do Produto",
