@@ -8,21 +8,40 @@
     "children": [
       "vtex.store-components:product-name#product-page",
       "trust-vox-stars",
-      "vtex.store-components:product-description#product-page"
-      // "flex-layout.col#product-page-price"
+      "vtex.store-components:product-description#product-page",
+      "flex-layout.col#product-page-price"
     ]
   },
-  // "flex-layout.col#product-price": {
-  //   "title": "Preço do Produto",
-  //   "props": {
-  //     "blockClass": "product-price"
-  //   },
-  //   "children": [
-  //     "product-list-price#product-page",
-  //     "product-spot-price-savings#product-page",
-  //     "product-installments#product-page"
-  //   ]
-  // },
+  "flex-layout.col#product-page-price": {
+    "title": "Preço do Produto",
+    "props": {
+      "blockClass": "product-price",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "product-list-price#product-page",
+      "product-spot-price-savings#product-page",
+      "product-installments#product-page"
+    ]
+  },
+  "product-list-price#product-page": {
+    "props": {
+      "blockClass": "product-list-price",
+      "message": "De {listPriceValue}"
+    }
+  },
+  "product-spot-price-savings#product-page": {
+    "props": {
+      "blockClass": "product-spot-price-savings",
+      "message": "{newSpotPriceValue} no pix ou à vista {spotPriceSavingsPercentage}"
+    }
+  },
+  "product-installments#product-page": {
+    "props": {
+      "blockClass": "product-installments",
+      "message": "ou {installmentsTotalValue} em até {installmentsNumber}x de {installmentValue} sem juros"
+    }
+  },
   "vtex.store-components:product-name#product-page": {
     "props": {
       "blockClass": "product-name"
