@@ -32,5 +32,8 @@
   },
   "custom-banner": {
     "component": "CustomBanner"
+  },
+  "custom-shipping-calculator": {
+    "component": "ShippingCalculator"
   }
 }

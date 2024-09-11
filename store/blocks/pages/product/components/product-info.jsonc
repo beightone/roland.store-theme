@@ -11,9 +11,11 @@
       "vtex.store-components:product-description#product-page",
       "flex-layout.col#product-page-price",
       "add-to-list-btn#product-page",
-      "flex-layout.row#product-page-buy-button"
+      "flex-layout.row#product-page-buy-button",
+      "custom-shipping-calculator"
     ]
   },
+  
   "flex-layout.row#product-page-buy-button": {
     "title": "Botão de Compra",
     "props": {
