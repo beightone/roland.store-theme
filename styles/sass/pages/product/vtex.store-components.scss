@@ -73,5 +73,30 @@
 }
 
 
+.productBrand--product-name {
+  color: var(--Brand-Primary-Darkest, #353535);
+  font-family: "Proxima Nova";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  margin: 0 {
+    bottom: 16px;
+  };
+  display: block;
+}
+
+.content--product-description {
+  color: var(--Brand-Primary-Dark, #5E5E5E);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  margin-top: 16px;
+}
+
 
 

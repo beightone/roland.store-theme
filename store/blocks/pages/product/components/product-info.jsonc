@@ -1,0 +1,37 @@
+{
+  "flex-layout.col#product-info": {
+    "title": "Seção - Informações do produto",
+    "props": {
+      "blockClass": "product-info",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "vtex.store-components:product-name#product-page",
+      "trust-vox-stars",
+      "vtex.store-components:product-description#product-page"
+      // "flex-layout.col#product-page-price"
+    ]
+  },
+  // "flex-layout.col#product-price": {
+  //   "title": "Preço do Produto",
+  //   "props": {
+  //     "blockClass": "product-price"
+  //   },
+  //   "children": [
+  //     "product-list-price#product-page",
+  //     "product-spot-price-savings#product-page",
+  //     "product-installments#product-page"
+  //   ]
+  // },
+  "vtex.store-components:product-name#product-page": {
+    "props": {
+      "blockClass": "product-name"
+    }
+  },
+  "vtex.store-components:product-description#product-page": {
+    "props": {
+      "showTitle": false,
+      "blockClass": "product-description"
+    }
+  }
+}

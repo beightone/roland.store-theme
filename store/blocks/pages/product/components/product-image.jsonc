@@ -1,7 +1,6 @@
 {
   "flex-layout.row#product-image": {
     "props": {
-      "width": "63%",
       "blockClass": "product-image"
       
     },

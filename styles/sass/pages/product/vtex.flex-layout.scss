@@ -15,6 +15,20 @@
   
 }
 
+.flexRowContent--product-details {
+  justify-content: space-between;
+}
+
 .flexRow--product-details {
   padding-top: 16px;
+}
+
+.flexRow--product-image {
+  max-width: 864px;
+  width: 100%;
+}
+
+.flexCol--product-info {
+  max-width: 448px;
+  width: 100%;
 }

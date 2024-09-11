@@ -12,10 +12,12 @@
   "flex-layout.row#product-details": {
     "title": "Seção - Detalhes do produto",
     "props": {
-      "blockClass": "product-details" 
+      "blockClass": "product-details",
+      "preventHorizontalStretch": true
     },
     "children": [
-      "flex-layout.row#product-image"
+      "flex-layout.row#product-image",
+      "flex-layout.col#product-info"
     ]
   }
 }
