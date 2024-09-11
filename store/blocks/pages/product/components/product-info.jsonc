@@ -10,8 +10,31 @@
       "trust-vox-stars",
       "vtex.store-components:product-description#product-page",
       "flex-layout.col#product-page-price",
-      "add-to-list-btn#product-page"
+      "add-to-list-btn#product-page",
+      "flex-layout.row#product-page-buy-button"
     ]
+  },
+  "flex-layout.row#product-page-buy-button": {
+    "title": "Botão de Compra",
+    "props": {
+      "blockClass": "product-buy-button",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "product-quantity#product-page",
+      "add-to-cart-button#product-page"
+    ]
+  },
+  "product-quantity#product-page": {
+    "props": {
+      "blockClass": "product-quantity",
+      "showLabel": false
+    }
+  },
+  "add-to-cart-button#product-page": {
+    "props": {
+      "blockClass": "product-page-add-to-cart"
+    }
   },
   "add-to-list-btn#product-page": {
     "props": {

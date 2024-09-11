@@ -39,3 +39,26 @@
     bottom: 20px;
   }
 }
+
+.flexRowContent--product-buy-button {
+  margin-top: 20px;
+  gap: 20px;
+
+  :global(.vtex-button) {
+    border-radius: var(--radius-rounded-sm, 2px);
+    background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+    border: none;
+    transition: all .2s ease-in-out;
+    max-width: 308px;
+    width: 100%;
+
+    &:hover {
+      background: var(--bg-brand-secondary-bold-hover, #424250);
+    }
+
+    :global(.vtex-button__label) {
+      padding: 10px 16px!important;
+      
+    }
+  }
+}
