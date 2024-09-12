@@ -1,0 +1,39 @@
+{
+    "modal-trigger#buy-button": {
+    "props": {
+      "blockClass": "buy-button-modal-trigger"
+    },
+    "children": ["rich-text#buy-button", "modal-layout#buy-button"]
+  },
+  "modal-layout#buy-button": {
+    "props": {
+      "blockClass": "buy-button-modal",
+      "customPixelEventName": "addToCart"
+    },
+    "children": ["custom-buy-button-popup-content", "modal-actions.close#buy-button-popup"]
+  },
+  "custom-buy-button-popup-content": {
+    "props": {
+      "RichText": "rich-text#buy-button-modal-content",
+      "BuyButton": "add-to-cart-button#product-page"
+    }
+  },
+  "modal-actions.close#buy-button-popup": {
+    "props": {
+      "blockClass": "buy-button-modal-close"
+    }
+  },
+  "rich-text#buy-button-modal-content": {
+    "props": {
+      "blockClass": "buy-button-modal-text-content",
+      "text": "**Atenção** A entrega de pianos não inlcui montagem, carregamento ou içamento do produto. "
+    }
+  },
+  "rich-text#buy-button": {
+    "title": "Texto do botão de compra",
+    "props": {
+      "text": "Adicionar ao carrinho",
+      "blockClass": "buy-button-text"
+    }
+  }
+}

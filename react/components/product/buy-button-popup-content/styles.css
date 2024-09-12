@@ -1,0 +1,105 @@
+.custom-buy-button-popup-content {
+
+}
+
+.popup-checkbox {
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 16px;
+  
+}
+
+.popup-checkbox input[type="checkbox"] {
+  display: none;
+}
+
+.popup-checkbox label {
+  color: var(--text-neutral-subtle, #3F3F46);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.popup-buy-button button {
+  max-width: 100%!important;
+}
+
+.popup-buy-button button:disabled {
+  background: var(--bg-disabled, #E4E4E7);
+}
+
+.popup-buy-button button span {
+  font-size: 0;
+}
+.popup-buy-button button span::before {
+  content: "Continuar para o carrinho";
+
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  position: relative;
+  top: 2px;
+  text-transform: math-auto;
+}
+
+.popup-buy-button button:disabled span::before {
+  color: var(--text-disabled, #8E8E93);
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  border-radius: var(--radius-rounded, 4px);
+  border: 1px solid var(--border-input-base, #D4D4D8);
+  background: var(--bg-neutral-subtlest-base, #FFF);
+  width: 16px;
+  height: 16px;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #FF5A00;
+  border-color: #FF5A00;
+}
+
+.checkmark:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked + .checkmark:after {
+  display: block;
+}
+
+.custom-checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

@@ -67,8 +67,10 @@
 
   }
 
-  .gradientBaseBottom {
+  .gradientBaseBottom,
+  .gradientBaseTop {
     background-color: #fff;
+    opacity: 1;
   }
 }
 

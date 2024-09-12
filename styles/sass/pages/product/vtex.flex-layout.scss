@@ -40,7 +40,8 @@
   }
 }
 
-.flexRowContent--product-buy-button {
+.flexRowContent--product-buy-button,
+:global(.vtex-modal-layout-0-x-paper--buy-button-modal) {
   margin-top: 20px;
   gap: 20px;
 

@@ -24,9 +24,24 @@
     },
     "children": [
       "product-quantity#product-page",
-      "add-to-cart-button#product-page"
+      "condition-layout.product#buy-button"
     ]
   },
+  "condition-layout.product#buy-button": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryTree",
+          "arguments": {
+            "id": "156"
+          }
+        }
+      ],
+      "Then": "modal-trigger#buy-button",
+      "Else": "add-to-cart-button#product-page"
+    }
+  },
+
   "product-quantity#product-page": {
     "props": {
       "blockClass": "product-quantity",

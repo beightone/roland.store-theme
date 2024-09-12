@@ -18,7 +18,7 @@ import GET_SHIPPING_ESTIMATE from '../../graphql/queries/getShippingEstimate.gra
 import type { ShippingData, ShippingEstimateVariables, SLA } from './types'
 
 const ShippingCalculator: React.FC = () => {
-  const { selectedItem, selectedQuantity } = useProduct() ?? {}
+  const { product, selectedItem, selectedQuantity } = useProduct() ?? {}
 
   const [getShippingEstimate, { data, loading }] = useLazyQuery<
     { shipping: ShippingData },
@@ -26,6 +26,8 @@ const ShippingCalculator: React.FC = () => {
   >(GET_SHIPPING_ESTIMATE, {
     fetchPolicy: 'network-only',
   })
+
+  console.log("product", {product, selectedItem})
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
     event.preventDefault()

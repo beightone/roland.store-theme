@@ -35,5 +35,8 @@
   },
   "custom-shipping-calculator": {
     "component": "ShippingCalculator"
+  },
+  "custom-buy-button-popup-content": {
+    "component": "BuyButtonPopupContent"
   }
 }
