@@ -669,7 +669,6 @@ $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
   debouncedValidatePostalCode()
   handleCouponSuccess()
   showDeliveryOptions()
-  checkSharedCart()
   observeElement(document.querySelectorAll('.cart-template .cart-template-holder .product-item'), checkProductPrice)
   observeElement(
     document.querySelector('.summary-totalizers tfoot tr td.monetary'),
