@@ -1,17 +1,19 @@
 {
   "flex-layout.row#product-image": {
     "props": {
-      "blockClass": "product-image"
+      "blockClass": "product-image",
+      "preventHorizontalStretch": true
     },
-    "children": ["custom-image-slider"]
+    "children": ["custom-image-slider", "share"]
   },
-  // "product-images.high-quality-image": {
-  //   "props": {
-  //     "zoomMode": "in-place-click",
-  //     "zoomFactor": 2,
-  //     "showNavigationArrows": true
-  //   }
-  // },
+  "share": {
+    "props": {
+      "social": {
+        "WhatsApp": true,
+        "Facebook": true
+      }
+    }
+  },
   "modal-layout#product-zoom": {
     "props": {
       "blockClass": "product-zoom"

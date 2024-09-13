@@ -1,3 +1,6 @@
+.wrapper--buy-button-text {
+  width: 100%;
+}
 
 .paragraph--buy-button-text {
   border-radius: var(--radius-rounded-sm, 2px);
@@ -11,6 +14,7 @@
   line-height: 20px;
   letter-spacing: -0.14px;
   cursor: pointer;
+  text-align: center;
   margin: 0;
 }
 

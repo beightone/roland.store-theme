@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { useState, useRef, useMemo } from 'react'
+import React, { useState, useRef } from 'react'
 
 // Styles
 import styles from './styles.css'
@@ -24,10 +24,12 @@ const VTEXClasses = {
 const ImageSlider = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [activeSlideIndex, setActiveSlideIndex] = useState(0)
-  const { selectedItem } = useProduct() ?? {}
+  const { selectedItem, product } = useProduct() ?? {}
   const { isMobile } = useDevice()
   const slider1 = useRef<Slider | null>(null)
   const slider2 = useRef<Slider | null>(null)
+
+  console.log("product", product)
 
   const settingsMainSlider = {
     dots: false,
@@ -45,21 +47,13 @@ const ImageSlider = () => {
     asNavFor: slider1.current!,
     ref: slider2,
     slidesToShow: 4,
-    vertical: true,
+    vertical: !isMobile,
     swipeToSlide: true,
     className: styles['thumb-slider'],
     focusOnSelect: true,
     nextArrow: <Arrow cssClass={VTEXClasses.ARROW_RIGHT_CLASS} />,
     prevArrow: <Arrow cssClass={VTEXClasses.ARROW_LEFT_CLASS} />,
   }
-
-  const filterImages = useMemo(
-    () =>
-      selectedItem?.images.filter((image: any) =>
-        image.imageUrl?.includes(isMobile ? 'mobile' : 'desktop')
-      ),
-    [selectedItem, isMobile]
-  )
 
   const openModal = (index: number) => {
     setActiveSlideIndex(index)
@@ -73,7 +67,7 @@ const ImageSlider = () => {
   return (
     <div className={styles['image-slider-wrapper']}>
       <Slider {...settingsMainSlider}>
-        {selectedItem?.images.map((image, index) => (
+        {selectedItem?.images?.map((image, index) => (
           <div
             key={image.imageId}
             className={styles['image-wrapper']}
@@ -88,7 +82,7 @@ const ImageSlider = () => {
         ))}
       </Slider>
       <Slider {...settingsThumbsSlider}>
-        {selectedItem?.images.map((image) => (
+        {selectedItem?.images?.map((image) => (
           <div key={image.imageId} className={`${styles['thumb-wrapper']}`}>
             <img
               src={image.imageUrl}
@@ -102,7 +96,7 @@ const ImageSlider = () => {
       <ModalZoom
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}
-        filterImages={filterImages}
+        images={selectedItem?.images}
         activeSlideIndex={activeSlideIndex}
         closeModal={closeModal}
         VTEXClasses={VTEXClasses}

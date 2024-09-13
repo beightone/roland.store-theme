@@ -18,7 +18,7 @@ import { ResetIcon } from './ResetIcon'
 interface ModalZoomProps {
   isModalOpen: boolean
   setIsModalOpen: (isModalOpen: boolean) => void
-  filterImages?: Array<{ imageUrl: string; imageId: string }>
+  images?: Array<{ imageUrl: string; imageId: string }>
   activeSlideIndex?: number
   closeModal: () => void
   VTEXClasses: {
@@ -30,7 +30,7 @@ interface ModalZoomProps {
 const ModalZoom = ({
   isModalOpen,
   setIsModalOpen,
-  filterImages,
+  images,
   activeSlideIndex = 0,
   VTEXClasses,
 }: ModalZoomProps) => {
@@ -80,7 +80,7 @@ const ModalZoom = ({
           </div>
         </button>
         <Slider {...modalSliderSettings} ref={modalSliderRef}>
-          {filterImages?.map((image) => (
+          {images?.map((image) => (
             <div key={image.imageId} className={styles['modal-slide']}>
               <TransformWrapper>
                 {({ zoomIn, zoomOut, resetTransform }) => (

@@ -75,3 +75,19 @@
   letter-spacing: -0.14px;
   margin-top: 8px;
 }
+
+.savings--product-price-savings {
+  
+  border-radius: 1000px;
+  background: var(--Brand-Secondary-Medium, #FBCD7C);
+  display: block;
+  padding: 2px 6px;
+  color: var(--Brand-Primary-Darkest, #353535);
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+  width: fit-content;
+}

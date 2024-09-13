@@ -8,11 +8,20 @@
   :global(.vtex-store-components-3-x-container) {
     padding: 0;
   }
+
+  @media screen and (max-width: 1024px) {
+    padding: 0 16px;
+  }
 }
 
 .flexRow--product-breadcrumb {
 
   
+}
+
+.flexRowContent--list-price-wrapper {
+  display: flex;
+  gap: 8px;
 }
 
 .flexRowContent--product-details {
@@ -40,6 +49,8 @@
   }
 }
 
+
+
 .flexRowContent--product-buy-button,
 :global(.vtex-modal-layout-0-x-paper--buy-button-modal) {
   margin-top: 20px;
@@ -62,4 +73,26 @@
       
     }
   }
+}
+
+.flexRowContent--product-buy-button {
+  display: flex;
+
+  .stretchChildrenWidth {
+    &:first-child {
+      max-width: 120px;
+    }
+
+    &:last-child {
+      width: 100%!important;
+    }
+
+
+  }
+  
+}
+
+.flexRowContent--product-image {
+  display: flex;
+  flex-direction: column;
 }

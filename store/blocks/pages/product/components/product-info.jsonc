@@ -18,8 +18,7 @@
   "flex-layout.row#product-page-buy-button": {
     "title": "Botão de Compra",
     "props": {
-      "blockClass": "product-buy-button",
-      "preventHorizontalStretch": true
+      "blockClass": "product-buy-button"
     },
     "children": [
       "product-quantity#product-page",
@@ -64,10 +63,23 @@
       "preventVerticalStretch": true
     },
     "children": [
-      "product-list-price#product-page",
+      "flex-layout.row#list-price-wrapper",
       "product-spot-price-savings#product-page",
       "product-installments#product-page"
     ]
+  },
+  "flex-layout.row#list-price-wrapper": {
+    "props": {
+      "blockClass": "list-price-wrapper",
+      "preventHorizontalStretch": true
+    },
+    "children": ["product-list-price#product-page", "product-price-savings#product-page"]
+  },
+  "product-price-savings#product-page": {
+    "props": {
+      "blockClass": "product-price-savings",
+      "message": "{savingsPercentage} OFF"
+    }
   },
   "product-list-price#product-page": {
     "props": {
@@ -78,7 +90,7 @@
   "product-spot-price-savings#product-page": {
     "props": {
       "blockClass": "product-spot-price-savings",
-      "message": "{newSpotPriceValue} no pix ou à vista {spotPriceSavingsPercentage}"
+      "message": "{newSpotPriceValue} no pix ou à vista"
     }
   },
   "product-installments#product-page": {
