@@ -38,5 +38,9 @@
   },
   "custom-buy-button-popup-content": {
     "component": "BuyButtonPopupContent"
+  },
+  "custom-image-slider": {
+    "component": "ImageSlider"
+    
   }
 }

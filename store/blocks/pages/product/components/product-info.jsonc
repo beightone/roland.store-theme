@@ -15,7 +15,6 @@
       "custom-shipping-calculator"
     ]
   },
-  
   "flex-layout.row#product-page-buy-button": {
     "title": "Botão de Compra",
     "props": {

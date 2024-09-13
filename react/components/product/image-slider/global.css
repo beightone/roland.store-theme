@@ -1,0 +1,6 @@
+@import url('~slick-carousel/slick/slick.css');
+@import url('~slick-carousel/slick/slick-theme.css');
+
+.slick-current .thumb-element {
+  border-color: #FF5A00!important;
+}

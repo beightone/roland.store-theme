@@ -2,19 +2,40 @@
   "flex-layout.row#product-image": {
     "props": {
       "blockClass": "product-image"
-      
     },
-    "children": [
-      "product-images#product-image"
-    ]
+    "children": ["custom-image-slider"]
+  },
+  // "product-images.high-quality-image": {
+  //   "props": {
+  //     "zoomMode": "in-place-click",
+  //     "zoomFactor": 2,
+  //     "showNavigationArrows": true
+  //   }
+  // },
+  "modal-layout#product-zoom": {
+    "props": {
+      "blockClass": "product-zoom"
+    },
+    "children": ["product-images#zoom", "modal-actions.close#product-zoom-close"]
+  },
+  "modal-actions.close#product-zoom-close": {
+    "props": {
+      "blockClass": "product-zoom-close"
+    }
+  },
+  "product-images#zoom": {
+    "props": {
+      "showNavigationArrows": true,
+      "thumbnailVisibility": "hidden",
+      "showPaginationDots": "false"
+    }
   },
   "product-images#product-image": {
     "props": {
-      // "zoomMode": "in-place-click",
-      "zoomFactor": 2,
+      "ModalZoom": "modal-layout#product-zoom",
+      "zoomMode": "open-modal",
       "displayThumbnailsArrows": true,
       "blockClass": "product-image"
-
     }
   }
 }
