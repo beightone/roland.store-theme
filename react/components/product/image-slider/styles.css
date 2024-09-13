@@ -245,7 +245,7 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 88px;
+    bottom: 0;
     top: unset;
     z-index: 1;
   }

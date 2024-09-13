@@ -4,3 +4,8 @@
 .slick-current .thumb-element {
   border-color: #FF5A00!important;
 }
+
+.react-transform-wrapper {
+  width: 100%!important;
+  height: 100%!important;
+}
