@@ -1,0 +1,575 @@
+.searchResultContainer {
+  padding: 0;
+  max-width: 1376px;
+  margin: 0 auto;
+}
+
+.filter__container {
+  &--category-1 {
+    display: none;
+  }
+
+  &--title {
+    order: -2;
+  }
+
+  &--brand {
+    order: -1;
+  }
+}
+
+.filter__container--category-1 {
+  display: none;
+}
+
+.galleryTitle--layout {
+  margin: 0;
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+}
+
+.totalProducts--layout {
+  border: none;
+}
+
+.gallery--list {
+  padding-left: 16px;
+  
+  .galleryItem--list {
+    margin-top: 55px;
+    padding: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-left: 0;
+    margin: 0;
+    width: 100%;
+    margin-top: 32px;
+    gap: 16px;
+
+  .galleryItem--list {
+    margin-top: 0;
+    border-radius: var(--radius-rounded-sm, 2px);
+    border: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+    padding: 12px;
+  }
+  }
+}
+
+.galleryLayoutSwitcher {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  &::before {
+    content: "Exibição:";
+    color: var(--greyscale-100, #1A1413);
+    font-family: 'Oxygen';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    margin-right: 16px;
+  }
+  .galleryLayoutOptionButton {
+    padding: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    justify-content: flex-end;
+    margin-top: 16px;
+  }
+}
+
+
+.totalProducts--layout,
+.totalProductsMessage {
+  padding: 0;
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  text-transform: math-auto;
+}
+
+.orderByDropdown {
+  @media screen and (min-width: 768px) {
+    padding: 0;
+
+    width: fit-content;
+    align-items: center;
+    display: flex;
+
+    &::before {
+      content: "Ordenar produtos por";
+      color: var(--text-neutral-subtle, #3F3F46);
+      text-align: center;
+      font-family: "Proxima Nova";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+      margin-right: 24px;
+    }
+  }
+}
+
+.orderByButton {
+  padding: 12px 20px;
+  width: fit-content;
+  float: right;
+  display: flex;
+  gap: 8px;
+  border-radius: var(--radius-rounded-sm, 2px);
+  border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
+  background: #FFF;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    border-color: var(--border-brand-primary-base, #EE8146);
+    background: var(--bg-brand-primary-subtlest-hover, #FDF2EC);
+
+    .filterPopupTitle {
+      color: var(--text-brand-primary-base, #FF5A00);
+    }
+
+    .filterPopupArrowIcon::before {
+      content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="%23FF5A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    }
+  }
+}
+
+.orderByText {
+  color: var(--text-neutral-subtle, #3F3F46);
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.filtersWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter__container:not(.filter__container--title) {
+  border-radius: var(--radius-rounded-sm, 2px);
+  padding: 20px 24px;
+  border: 1px solid var(--border-input-base, #D4D4D8);
+
+  .filter {
+    padding: 0;
+  }
+}
+
+.filterAvailable {
+  &.filterIsOpen {
+    .filterIcon {
+      &::before {
+        content: url('data:image/svg+xml,<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.33337 8.91113H12.6667" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      }
+    }
+  }
+
+}
+
+.filterIcon,
+.accordionFilterItemIcon {
+  &::before {
+    content: url('data:image/svg+xml,<svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.00004 4.24451V13.5778M3.33337 8.91117H12.6667" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+
+    width: 16px;
+    height: 16px;
+    display: block;
+    padding: 4px;
+  }
+}
+
+
+.caretIcon {
+  display: none;
+}
+
+.filterTitleSpan,
+.accordionFilterItemTitle {
+  color: var(--text-neutral-subtle, #3F3F46);
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+
+.filterIcon {
+  padding: 0;
+}
+
+.filterContent {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  
+}
+
+.filterItem,
+.filterAccordionItemBox {
+  :global(.vtex-checkbox__label) {
+    color: var(--text-neutral-subtle, #3F3F46);
+    font-family: "Proxima Nova";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+  }
+
+  :global(.vtex-checkbox__line-container) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  :global(.vtex-checkbox__inner-container) {
+    border-radius: var(--radius-rounded-sm, 2px);
+    border: 1px solid var(--border-input-base, #D4D4D8);
+    background: var(--bg-neutral-subtlest-base, #FFF);
+  }
+
+}
+
+.filter__container--title,
+.filterBreadcrumbsText {
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  margin-bottom: 16px;
+  border: none;
+}
+
+.gallery--grid {
+  padding: 0;
+  margin: 0;
+  gap: 16px;
+
+  @media screen and (max-width: 768px) {
+    gap: 8px;
+  }
+}
+
+.filterPopupTitle {
+  color: var(--text-neutral-subtle, #3F3F46);
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  text-transform: lowercase;
+
+  .orderByText {
+    font-weight: 500;
+    display: none;
+
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.filterPopupArrowIcon {
+  padding: 0;
+  &::before {
+    content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5 7.5L10 12.5L15 7.5" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  .caretIcon {
+    display: none;
+  }
+}
+
+.container--layout {
+  padding: 16px;
+}
+
+.filter__container--clearAllFilters,
+.filter__container--selectedFilters {
+  display: none;
+}
+
+// FILTER DRAWER
+.filterAccordionBreadcrumbs {
+  padding: 24px 16px 16[x] 16px;
+  border: none;
+  height: fit-content;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999999;
+
+  .filterBreadcrumbsContent {
+    padding: 0;
+
+    .filterBreadcrumbsText {
+      margin: 0;
+    }
+  }
+}
+
+:global(.vtex-slider__left-value),
+:global(.vtex-slider__right-value) {
+  color: var(--text-neutral-subtle, #3F3F46);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+
+.closeIconButton {
+  padding: 0;
+  right: 16px;
+  top: 24px;
+  z-index: 9999999999;
+  &::before {
+    content: url('data:image/svg+xml,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.25 3.75L3.75 20.25" stroke="black" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.75 3.75L20.25 20.25" stroke="black" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 24px;
+    height: 24px;
+    display: block;
+    
+  }
+  .closeIcon {
+    display: none;
+  }
+}
+
+
+
+.sidebar {
+
+  .accordionFilter {
+    padding-top: 72px;
+
+  }
+  .accordionFilterContainer {
+    padding: 0 16px;
+    border: none;
+
+    
+
+    .accordionFilterItem {
+      padding: 20px 24px;
+      border-radius: var(--radius-rounded-sm, 2px);
+      border: 1px solid var(--border-input-base, #D4D4D8);
+
+      .accordionFilterContent {
+        padding: 0;
+
+        .accordionFilterItemTag {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .filter__container--priceRange {
+    border: none;
+    padding: 0;
+
+    .filterTitleSpan {
+      display: none;
+    }
+  }
+
+  .accordionFilterItemOptions {
+    padding: 20px 24px;
+    padding-top: 0;
+    border-radius: var(--radius-rounded-sm, 2px);
+    border: 1px solid var(--border-input-base, #D4D4D8);
+    position: relative;
+    top: -1px;
+    background-color: white;
+    z-index: 99999;
+    border-top: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .filterAccordionItemBox {
+      padding: 0;
+      border: none;
+      min-height: unset;
+    }
+  }
+
+  .filterButtonsBox {
+    background: var(--bg-neutral-subtle-base, #F4F4F5);
+    padding: 8px;
+    display: flex;
+    gap: 16px;
+    border: none;
+    
+    position: relative;
+    z-index: 1;
+
+    .filterClearButtonWrapper {
+      :global(.vtex-button) {
+        border-color: var(--border-neutral-subtle, #D4D4D8);
+        background: #FFF;
+
+        :global(.vtex-button__label) {
+          color: var(--text-neutral-subtle, #3F3F46);
+        }
+      }
+      
+    }
+
+    .filterApplyButtonWrapper {
+      :global(.vtex-button) {
+        background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+
+        :global(.vtex-button__label) {
+          color: #FFF;
+
+          &::after {
+            content:" filtro" ;
+            margin-left: 5px;
+          }
+        }
+      }
+
+    }
+
+    .filterClearButtonWrapper,
+    .filterApplyButtonWrapper {
+      width: 148px;
+      padding: 0;
+
+      :global(.vtex-button) {
+         border-radius: var(--radius-rounded-sm, 2px);
+        border: 1.25px solid;
+
+      }
+
+      :global(.vtex-button__label) {
+        font-family: "Proxima Nova";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.16px;
+        text-transform: math-auto;
+      }
+    }
+
+    .filterTotalProducts {
+      display: none;
+    }
+  }
+}
+
+
+.galleryItem--grid {
+  padding: 0;
+
+  margin: 0 {
+    top: 32px
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 160px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .orderByButton {
+    .filterPopupTitle {
+      font-size: 0;
+
+      &::before {
+        content: "Ordenar por";
+        color: var(--text-neutral-subtle, #3F3F46);
+        font-family: "Proxima Nova";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.16px;
+        text-transform: math-auto;
+      }
+    }
+  }
+
+  
+
+  .orderByOptionsContainer {
+    right: 0;
+  }
+  .filterPopupButton {
+    background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+    
+    .filterPopupTitle {
+      color: var(--text-inverse-bold, #FFF);
+      font-family: "Proxima Nova";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      letter-spacing: -0.16px;
+      text-transform: capitalize;
+      margin: 0 auto;
+    }
+
+    .filterPopupArrowIcon {
+      display: none;
+    }
+  }
+
+  .orderByButton {
+    border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
+    background: #FFF;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+  }
+
+  .filterPopupButton,
+  .orderByButton {
+    border-radius: var(--radius-rounded-sm, 2px);
+    padding: 12px 20px;
+    width: 100%;
+    height: 48px;
+  }
+
+  .sidebar {
+    max-width: 328px;
+    width: 100%;
+  }
+
+}

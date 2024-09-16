@@ -8,14 +8,23 @@
       "add-to-cart-event"
     ]
   },
+  "header-layout.mobile#pre-owned": {
+    "title": "Header Mobile",
+    "children": [
+      "header-row#topbar-mobile",
+      "header-row#pre-owned-main-mobile",
+      "header-row#search-mobile",
+      "add-to-cart-event"
+    ]
+  },
   "header-row#search-mobile": {
     "props": {
       "blockClass": ["search-container"]
     },
     "children": ["search-bar"]
-
   },
   "menu#mobile": {
     "title": "Menu Customizado - Mobile"
   }
+  
 }

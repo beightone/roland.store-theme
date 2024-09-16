@@ -32,5 +32,26 @@
   },
   "custom-banner": {
     "component": "CustomBanner"
+  },
+  "collapsible-content": {
+    "component": "CollapsibleContent",
+    "composition": "children"
+  },
+  "pre-owned-popup-alert": {
+    "component": "PreOwnedPopupAlert"
+  },
+  "pre-owned-section-condition": {
+    "component": "PreOwnedSectionCondition",
+    "composition": "children"
+  },
+  "sales-channel-trigger-condition": {
+    "component": "SalesChannelriggerCondition",
+    "composition": "children"
+  },
+  "challenge.seller-channel-condition": {
+    "component": "ChallengeSellerChannel"
+  },
+  "pre-owned-flag": {
+    "component": "PreOwnedCartFlag"
   }
 }

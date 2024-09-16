@@ -1,0 +1,148 @@
+.wrapper--pre-owned-main-text-banner {
+  color: var(--Secondary-50, #EAEAEB);
+  font-family: "Proxima Nova";
+  font-style: normal;
+  max-width: 395px;
+  
+  .heading--pre-owned-main-text-banner {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -0.4px;
+    margin: 0 {
+      bottom: 16px;
+    };
+
+  }
+
+  .paragraph--pre-owned-main-text-banner {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.18px;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 144px;
+    .heading--pre-owned-main-text-banner {
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: -0.18px;
+      margin-bottom: 8px;
+    }
+
+    .paragraph--pre-owned-main-text-banner {
+      font-size: 12px;
+      line-height: 16px;
+      letter-spacing: -0.12px;
+      margin: 0;
+    }
+  }
+}
+
+.container--pre-owned-faq-title {
+
+  .wrapper--pre-owned-faq-title {
+    width: 100%;
+  }
+ 
+
+  .paragraph--pre-owned-faq-title {
+    margin: 0;
+    color: var(--Brand-Primary-Black, #000);
+    text-align: center;
+    font-family: "Proxima Nova";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: -0.4px;
+
+    @media screen and (max-width: 768px) {
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: -0.24px;
+      text-align: center4;
+    }
+  }
+}
+
+.wrapper--pre-owned-faq-subtitle {
+  width: 100%;
+}
+
+.paragraph--pre-owned-faq-subtitle {
+  color: var(--Brand-Primary-Black, #000);
+  text-align: center;
+  font-size: 16px;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  margin: 0 {
+    top: 16px;
+    bottom: 32px;
+  };
+   
+}
+
+.paragraph--pre-owned-faq-item {
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Effra CC";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0;
+  letter-spacing: -0.16px;
+}
+
+.paragraph--pre-owned-faq-item--answer {
+  color: var(--greyscale-100, #1A1413);
+
+  /* text-sm/medium */
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  /* 142.857% */
+  letter-spacing: -0.14px;
+}
+
+.wrapper--pre-owned-seo-text--content {
+  color: #FFF;
+  font-family: "Proxima Nova";
+  font-style: normal;
+  
+  .heading--pre-owned-seo-text--content {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+    margin: 0 {
+      bottom: 16px;
+    };
+  }
+
+  .paragraph--pre-owned-seo-text--content {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    margin: 0;
+
+    @media screen and (max-width: 768px) {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+    }
+  }
+}
+
+.container--pre-owned-faq-item {
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+}

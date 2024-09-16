@@ -1,0 +1,89 @@
+.flexRow--pre-owned-main-banner {
+  background:#000;
+  padding: 28px 0;
+
+  .flexRowContent--pre-owned-main-banner {
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: space-between;
+    padding-left: 51px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  
+    .flexRowContent--pre-owned-main-banner {
+      padding-left: 16px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+}
+
+.flexRow--pre-owned-benefits {
+  background: #F4F4F5;
+  padding: 32px;
+
+  .flexRowContent--pre-owned-benefits {
+    max-width: 1376px;
+    gap: 16px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 16px {
+      bottom: 38px;
+    };
+  }
+}
+
+.container--pre-owned-faq-title,
+.container--pre-owned-faq-subtitle {
+  align-items: center;
+}
+
+.flexRow--pre-owned-faq {
+  padding: 32px;
+  width: 100%;
+  margin-top: 32px;
+  background: #FFF6F2;
+  
+  @media screen and (max-width: 768px) {
+    padding: 16px 32px;
+  }
+}
+
+.flexColChild--pre-owned-faq-content {
+  width: 100%;
+}
+
+.flexCol--pre-owned-faq-content {
+  max-width: 648px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.flexColChild--pre-owned-questions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.flexRow--pre-owned-seo {
+  padding: 32px;
+  background: var(--Brand-Primary-Black, #000);
+
+  .flexRowContent--pre-owned-seo {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.flexRowContent--pre-owned-seo {
+  justify-content: space-between;
+  align-tracks: center;
+}

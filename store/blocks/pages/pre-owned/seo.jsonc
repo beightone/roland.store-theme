@@ -1,0 +1,21 @@
+{
+  "collapsible-content#pre-owned-seo": {
+    "children": [
+      "rich-text#pre-owned-seo"
+    ]
+  },
+  "rich-text#pre-owned-seo": {
+    "title": "Texto SEO",
+    "props": {
+      "text": "#### Seminovos \n\nDescubra a melhor seleção de instrumentos musicais seminovos em nosso site! Aqui você encontra teclado usado/seminovo, piano usado/seminovo, bateria usado/seminovo, percussão usado/seminovo, fones de ouvido usado/seminovo e muito mais, todos revisados e em perfeito estado para garantir sua satisfação. Aproveite nossos preços imbatíveis e dê um upgrade na sua música com qualidade e economia. Navegue agora e encontre o instrumento ideal para você! Descubra a melhor seleção de instrumentos musicais seminovos em nosso site! Aqui você encontra teclado usado/seminovo, piano usado/seminovo, bateria usado/seminovo, percussão usado/seminovo, fones de ouvido usado/seminovo e muito mais, todos revisados e em perfeito estado para garantir sua satisfação. Aproveite nossos preços imbatíveis e dê um upgrade na sua música com qualidade e economia. Navegue agora e encontre o instrumento ideal para você!",
+      "blockClass": "pre-owned-seo-text--content"
+    }
+  },
+  "image#pre-owned-seo-image": {
+    "title": "Imagem SEO",
+    "props": {
+      "blockClass": "pre-owned-seo-image",
+      "src": "/arquivos/pre-owned-seo-image.png"
+    }
+  }
+}

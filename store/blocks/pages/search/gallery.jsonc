@@ -1,0 +1,67 @@
+{
+  "flex-layout.row#search.gallery": {
+    "props": {
+      "fullWidth": true,
+      "blockClass": "search-gallery"
+    },
+    "children": [
+      "flex-layout.col#search.filter",
+      "flex-layout.col#search.gallery"
+    ]
+  },
+  "flex-layout.col#search.filter": {
+    "props": {
+      "width": "24%",
+      "rowGap": 5
+    },
+    "children": ["filter-navigator.v3#new"]
+  },
+  "flex-layout.col#search.gallery": {
+    "props": {
+      "rowGap": 5,
+      "blockClass": "search-gallery",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      // "flex-layout.row#search.buttons",
+      "search-fetch-previous",
+      "search-content#new",
+      "search-fetch-more"
+    ]
+  },
+  "search-content#new": {
+    "blocks": ["gallery#new", "not-found"]
+  },
+  "gallery#new": {
+    // "blocks": [
+    //   "product-summary.shelf"
+    // ],
+    "props": {
+      "maxItemsDepartment": 12,
+      "maxItemsCategory": 12,
+      "maxItemsPerRow": {
+        "desktop": 4,
+        "tablet": 2,
+        "phone": 2
+      },
+      "layouts": [
+        {
+          "name": "grid",
+          "component": "GridSummary",
+          "itemsPerRow": {
+            "(min-width:1008px)": 3,
+            "(min-width:623px) and (max-width:1007px)": 2,
+            "(max-width:622px)": 2
+          }
+        },
+        {
+          "name": "list",
+          "component": "ListSummary",
+          "itemsPerRow": 1
+        }
+      ],
+      "GridSummary": "product-summary.shelf#pre-owned-page",
+      "ListSummary": "product-summary.shelf#list-layout"
+    }
+  }
+}

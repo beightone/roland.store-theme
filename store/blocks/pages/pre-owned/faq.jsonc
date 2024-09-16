@@ -1,0 +1,229 @@
+{
+  "flex-layout.col#pre-owned-faq-content": {
+    "title": "Conteúdo",
+    "props": {
+      "blockClass": "pre-owned-faq-content",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#pre-owned-faq-title",
+      "rich-text#pre-owned-faq-subtitle",
+      "flex-layout.col#pre-owned-questions"
+    ]
+  },
+  "rich-text#pre-owned-faq-title": {
+    "title": "Título FAQ",
+    "props": {
+      "text": "Dúvidas Frequentes",
+      "blockClass": "pre-owned-faq-title"
+    }
+  },
+  "rich-text#pre-owned-faq-subtitle": {
+    "title": "Subtítulo FAQ",
+    "props": {
+      "text": "Preparamos algumas respostas pra você",
+      "blockClass": "pre-owned-faq-subtitle"
+    }
+  },
+  "flex-layout.col#pre-owned-questions": {
+    "title": "Perguntas",
+    "props": {
+      "blockClass": "pre-owned-questions",
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "disclosure-layout-group#pre-owned-faq"
+    ]
+  },
+  "disclosure-layout-group#pre-owned-faq": {
+    "props": {
+      "blockClass": "pre-owned-faq"
+    },
+    "children": [
+      "disclosure-layout#1",
+      "disclosure-layout#2",
+      "disclosure-layout#3",
+      "disclosure-layout#4",
+      "disclosure-layout#5",
+      "disclosure-layout#6"
+    ]
+  },
+
+  "disclosure-layout#1": {
+  
+    "children": ["disclosure-trigger#1", "disclosure-content#1"]
+  },
+  "disclosure-trigger#1": {
+    "props": {
+      "blockClass": "pre-owned-faq-item"
+    },
+    "children": ["rich-text#question1"]
+  },
+  "disclosure-content#1": {
+    "props": {
+      "blockClass": "pre-owned-faq-item"
+    },
+    "children": ["rich-text#answer1"]
+  },
+  "rich-text#question1": {
+    "title": "Pergunta 1",
+    "props": {
+      "text": "É confiável comprar instrumentos seminovos na Roland?",
+      "blockClass": "pre-owned-faq-item"
+    }
+  },
+  "rich-text#answer1": {
+    "title": "Resposta 1",
+    "props": {
+      "text": "A música é uma linguagem universal, uma paixão que conecta pessoas de todas as idades e origens. Na Roland e BOSS, estamos comprometidos em tornar essa linguagem acessível a todos, oferecendo instrumentos e equipamentos musicais de alta qualidade a preços mais acessíveis. A música é uma linguagem universal, uma paixão que conecta pessoas de todas as idades e origens.",
+      "blockClass": ["pre-owned-faq-item", "pre-owned-faq-item--answer"]
+    }
+  },
+  "disclosure-layout#2": {
+    "children": ["disclosure-trigger#2", "disclosure-content#2"]
+  },
+  "disclosure-trigger#2": {
+    "props": {
+      "blockClass": "pre-owned-faq-item"
+    },
+    "children": ["rich-text#question2"]
+  },
+  "disclosure-content#2": {
+    "props": {
+      "blockClass": "pre-owned-faq-item"
+    },
+    "children": ["rich-text#answer2"]
+  },
+  "rich-text#question2": {
+    "title": "Pergunta 2",
+    "props": {
+      "text": "Qual a garantia das peças seminovas?",
+      "blockClass": "pre-owned-faq-item"
+    }
+  },
+  "rich-text#answer2": {
+    "title": "Resposta 2",
+    "props": {
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "blockClass": ["pre-owned-faq-item", "pre-owned-faq-item--answer"]
+    }
+  },
+  "disclosure-layout#3": {
+    "children": ["disclosure-trigger#3", "disclosure-content#3"]
+  },
+  "disclosure-trigger#3": {
+    "props": {
+      "blockClass": "pre-owned-faq-item"
+    },
+    "children": ["rich-text#question3"]
+  },
+  "disclosure-content#3": {
+    "props": {
+      "blockClass": "pre-owned-faq-item"
+    },
+    "children": ["rich-text#answer3"]
+  },
+  "rich-text#question3": {
+    "title": "Pergunta 3",
+    "props": {
+      "text": "Qual é o prazo de entrega dos produtos?",
+      "blockClass": "pre-owned-faq-item"
+    }
+  },
+  "rich-text#answer3": {
+    "title": "Resposta 3",
+    "props": {
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "blockClass": ["pre-owned-faq-item", "pre-owned-faq-item--answer"]
+    }
+  },
+  "disclosure-layout#4": {
+    "children": ["disclosure-trigger#4", "disclosure-content#4"]
+  },
+  "disclosure-trigger#4": {
+    "props": {
+      "blockClass": "pre-owned-faq-item"
+    },
+    "children": ["rich-text#question4"]
+  },
+  "disclosure-content#4": {
+    "props": {
+      "blockClass": "pre-owned-faq-item"
+    },
+    "children": ["rich-text#answer4"]
+  },
+  "rich-text#question4": {
+    "title": "Pergunta 4",
+    "props": {
+      "text": "Como faço para pedir reembolso?",
+      "blockClass": "pre-owned-faq-item"
+    }
+  },
+  "rich-text#answer4": {
+    "title": "Resposta 4",
+    "props": {
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "blockClass": ["pre-owned-faq-item", "pre-owned-faq-item--answer"]
+    }
+  },
+  "disclosure-layout#5": {
+    "children": ["disclosure-trigger#5", "disclosure-content#5"]
+  },
+  "disclosure-trigger#5": {
+    "props": {
+      "blockClass": "pre-owned-faq-item"
+    },
+    "children": ["rich-text#question5"]
+  },
+  "disclosure-content#5": {
+    "props": {
+      "blockClass": "pre-owned-faq-item"
+    },
+    "children": ["rich-text#answer5"]
+  },
+  "rich-text#question5": {
+    "title": "Pergunta 5",
+    "props": {
+      "text": "Qual valor mínimo e quantidade de parcelamentos?",
+      "blockClass": "pre-owned-faq-item"
+    }
+  },
+  "rich-text#answer5": {
+    "title": "Resposta 5",
+    "props": {
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "blockClass": ["pre-owned-faq-item", "pre-owned-faq-item--answer"]
+    }
+  },
+  "disclosure-layout#6": {
+    "children": ["disclosure-trigger#6", "disclosure-content#6"]
+  },
+  "disclosure-trigger#6": {
+    "props": {
+      "blockClass": "pre-owned-faq-item"
+    },
+    "children": ["rich-text#question6"]
+  },
+  "disclosure-content#6": {
+    "props": {
+      "blockClass": "pre-owned-faq-item"
+    },
+    "children": ["rich-text#answer6"]
+  },
+  "rich-text#question6": {
+    "title": "Pergunta 6",
+    "props": {
+      "text": "Como faço para vender na Roland?",
+      "blockClass": "pre-owned-faq-item"
+    }
+  },
+  "rich-text#answer6": {
+    "title": "Resposta 6",
+    "props": {
+      "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "blockClass": ["pre-owned-faq-item", "pre-owned-faq-item--answer"]
+    }
+  }
+}

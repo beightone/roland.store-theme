@@ -217,7 +217,8 @@
   "flex-layout.col#product-name": {
     "children": [
       "vtex.product-list@0.x:product-brand#minicart",
-      "vtex.product-list@0.x:product-name#minicart"
+      "vtex.product-list@0.x:product-name#minicart",
+      "pre-owned-flag"
     ]
   },
   "vtex.product-list@0.x:product-brand#minicart": {

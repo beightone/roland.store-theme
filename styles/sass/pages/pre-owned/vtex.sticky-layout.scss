@@ -1,0 +1,12 @@
+.wrapper--filters-mobile {
+  height: 0!important;
+
+  .container {
+    background: #FFF;
+    padding: 8px;
+
+    :global(.vtex-flex-layout-0-x-flexRowContent--filters-mobile) {
+      margin: 0;
+    }
+  }
+}

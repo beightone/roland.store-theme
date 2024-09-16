@@ -1,0 +1,105 @@
+{
+  "flex-layout.col#pre-owned-section.content": {
+    "title": "Conteúdo",
+    "props": {
+      "blockClass": "pre-owned-wrapper"
+    },
+    "children": [
+      "responsive-layout.desktop#pre-owned-section",
+      "responsive-layout.phone#pre-owned-section"
+      
+    ]
+  },
+  "responsive-layout.desktop#pre-owned-section": {
+    "title": "Desktop",
+    "children": [
+      "flex-layout.row#shelf-title-container-1",
+      "flex-layout.row#shelf-with-banner"
+    ]
+  },
+  "responsive-layout.phone#pre-owned-section": {
+    "title": "Mobile",
+    "children": [
+      "flex-layout.row#pre-owned-banner.content",
+      "flex-layout.row#shelf-title-container-1",
+      "list-context.product-list#pre-owned-products"
+    ]
+  },
+  "flex-layout.row#shelf-with-banner": {
+    "title": "Prateleira com banner",
+    "props": {
+      "blockClass": "shelf-with-banner",
+      "fullWidth": true
+    },
+    "children": [
+      "list-context.product-list#pre-owned-products",
+      "flex-layout.row#pre-owned-banner.content"
+    ]
+  },
+  "flex-layout.row#pre-owned-banner.content": {
+    "title": "Conteúdo do Banner",
+    "props": {
+      "blockClass": "pre-owned-banner",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "flex-layout.col#pre-owned-text.content",
+      "image#pre-owned-home-banner"
+    ]
+  },
+  "flex-layout.col#pre-owned-text.content": {
+    "title": "Texto do Banner",
+    "props": {
+      "blockClass": "pre-owned-text",
+      "preventVerticalStretch": true
+    },
+    "children": ["rich-text#pre-owned-home-banner", "sales-channel-trigger-condition"]
+  },
+  "sales-channel-trigger-condition": {
+    "children": [
+      "rich-text#trigger-button"
+    ]
+  },
+  "rich-text#trigger-button": {
+    "props": {
+      "text": "Veja mais",
+      "blockClass": "pre-owned-button-trigger"
+    }
+  },
+  "rich-text#pre-owned-home-banner": {
+    "title": "Texto do Banner",
+    "props": {
+      "text": "### Seminovos \n\n Na Roland e BOSS, estamos comprometidos em tornar a música acessível a todos, oferecendo instrumentos e equipamentos musicais de alta qualidade a preços mais acessíveis.",
+      "blockClass": "pre-owned-banner-text"
+    }
+  },
+  "image#pre-owned-home-banner": {
+    "title": "Imagem do Banner",
+    "props": {
+      "src": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/62d19d82-3694-444a-834a-5f1fef7e651b___5c39e6b8ea46bc90538c9f95915f85a7.png",
+      "blockClass": "pre-owned-banner-image"
+    }
+  },
+  "list-context.product-list#pre-owned-products": {
+    "title": "Container da shelf",
+    "blocks": ["product-summary.shelf#pre-owned-preview"],
+    "children": ["slider-layout#double-shelf"],
+    "props": {
+      "blockClass": ["shelf-container", "pre-owned-shelf-container"],
+      "collection": "169"
+    }
+  },
+  "slider-layout#double-shelf": {
+    "title": "Slider: Carrosel da Shelf Dupla ",
+    "props": {
+      "showPaginationDots": "always",
+      "itemsPerPage": {
+        "desktop": 2,
+        "tablet": 2,
+        "phone": 2
+      },
+      "infinite": true,
+      "blockClass": "shelf-slider"
+    }
+  }
+}

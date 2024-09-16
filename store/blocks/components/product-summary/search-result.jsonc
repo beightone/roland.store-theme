@@ -16,8 +16,20 @@
     "children": [
       "product-summary-image#search-result",
       "flex-layout.col#product-informations",
-      "add-to-cart-button#search-result"
+      "condition-layout.product#search-result-bar-availability"
+      
     ]
+  },
+  "condition-layout.product#search-result-bar-availability": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "add-to-cart-button#search-result",
+      "Else": "rich-text#product-card-unavailable"
+    }
   },
   "add-to-cart-button#search-result": {
     "props": {

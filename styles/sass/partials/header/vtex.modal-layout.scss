@@ -1,0 +1,45 @@
+.modal--modal-tooltip-content {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .container {
+    max-width: 312px;
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    left: 93px;
+    top: 34px;
+
+    .paper {
+      margin: 0;
+      overflow: hidden;
+      width: fit-content;
+      padding: 12px {
+        right: 40px
+      };
+      border-radius: var(--radius-rounded-sm, 2px);
+      border-bottom: 2px solid var(--Tertiary-900, #F07342);
+      background: var(--bg-brand-primary-subtle-base, #FDF2EC);
+    }
+  }
+
+  .closeButton {
+    position: absolute;
+    right: 12px;
+    width: 16px;
+    height: 16px;
+    top: 12px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+    &::before {
+      content: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_5605_9140)"><path d="M7.99998 14.6666C11.6819 14.6666 14.6666 11.6818 14.6666 7.99992C14.6666 4.31802 11.6819 1.33325 7.99998 1.33325C4.31808 1.33325 1.33331 4.31802 1.33331 7.99992C1.33331 11.6818 4.31808 14.6666 7.99998 14.6666Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 6L6 10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M6 6L10 10" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="clip0_5605_9140"><rect width="16" height="16" fill="white"/></clipPath></defs></svg>');
+      display: block;
+    }
+
+    .closeButtonLabel {
+      font-size: 0;
+    }
+  }
+}

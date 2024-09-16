@@ -1,0 +1,111 @@
+.overlayContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupWrapper {
+  max-width: 330px;
+  max-height: 336px;
+  width: 100%;
+  height: 100%;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+
+.popupIcon {
+  
+}
+
+.popupContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popupTitle {
+  color: var(--Neutral-darkest, #13171B);
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.16px;
+  margin: 8px 0;
+  width: 50%;
+}
+
+.popupText {
+  color: var(--text-brand-secondary-base, #2B2B3A);
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.12px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.popupActions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.declineButton,
+.acceptButton {
+  border-radius: var(--radius-rounded-sm, 2px);
+  padding: 12px 20px;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  width: 100%;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  cursor: pointer;
+  max-height: 48px;
+}
+
+.acceptButton svg {
+  height: 26px;
+}
+.acceptButton svg circle {
+  stroke: #FF5A00;
+}
+
+.declineButton {
+  background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+  color: #FFF;
+}
+
+.declineButton:hover {
+  background: var(--bg-brand-secondary-bold-hover, #424250);
+}
+
+.acceptButton {
+  background: var(--bg-brand-primary-subtle-base, #FDF2EC);
+  color: #FF5A00;
+}
+
+.acceptButton:hover {
+  background: var(--bg-brand-primary-subtle-hover, #FBE5D8);
+}

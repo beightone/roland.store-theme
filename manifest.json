@@ -64,7 +64,13 @@
     "vtex.store-image": "0.x",
     "vtex.pixel-manager": "1.x",
     "vtex.store-newsletter": "1.x",
-    "vtex.native-types": "0.x"
+    "vtex.native-types": "0.x",
+    "vtex.disclosure-layout": "1.x",
+    "vtex.checkout-graphql": "0.x",
+    "vtex.modal-layout": "0.x",
+    "vtex.condition-layout": "2.x",
+    "vtex.product-highlights": "2.x",
+    "vtex.catalog-graphql": "1.x"
   },
   "peerDependencies": {
     "vtex.wish-list": "1.x",

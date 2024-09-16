@@ -1,0 +1,82 @@
+.flexRow--search-header {
+  padding: 24px 0;
+  :global(.vtex-store-components-3-x-container) {
+    padding: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
+}
+
+.flexRowContent--search-gallery {
+  gap: 16px;
+}
+
+.flexRowContent--search-info {
+  align-items: center;
+  gap: 24px;
+}
+
+.flexRowContent--filters-mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+  gap: 16px;
+}
+
+
+.flexRowContent--search-actions {
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+.flexRowContent--product-summary-image {
+  height: 100%;
+}
+
+.flexColChild--product-summary-list-layout-info {
+  padding: 0;
+
+  .flexColChild--price-container {
+    padding: 0;
+    &:first-child {
+      min-height: 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+
+    &:last-child {
+      height: 36px!important;
+    }
+
+    .flexRow--product-card-actions {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+    }
+    
+  }
+}
+
+.flexRowContent--product-summary-list-layout {
+  gap: 12px;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+  }
+}
+
+.flexCol--product-summary-list-layout-info {
+  align-items: flex-start;
+  position: relative;
+  justify-content: center;
+
+  @media screen and (max-width: 768px) {
+    position: unset;
+  }
+}
