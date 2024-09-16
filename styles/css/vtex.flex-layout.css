@@ -350,6 +350,7 @@
 .flexRowContent--list-price-wrapper {
   display: flex;
   gap: 8px;
+  align-items: center;
 }
 
 .flexRowContent--product-details {

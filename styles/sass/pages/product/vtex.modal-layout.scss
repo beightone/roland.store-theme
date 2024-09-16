@@ -9,6 +9,10 @@
   border: 1px solid var(--System-Neutral-Lighter, #C3C3C3);
   background: var(--Lightgrey-white, #FFF);
   position: relative;
+
+  @media screen and (max-width: 768px) {
+    margin: 16px;
+  }
 }
 
 .closeButton--buy-button-modal-close {

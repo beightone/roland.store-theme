@@ -11,12 +11,12 @@
   justify-content: center;
 
   &:hover {
-    background-color: #F4F4F5;
+    background-color: #FFF;
 
     :global(.vtex-numeric-stepper__minus-button__text),
     :global(.vtex-numeric-stepper__plus-button__text),
     :global(.vtex-numeric-stepper__input) {
-      background-color: #F4F4F5 !important;
+      background-color: #FFF !important;
 
     }
 

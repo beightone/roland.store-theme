@@ -24,12 +24,10 @@ const VTEXClasses = {
 const ImageSlider = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [activeSlideIndex, setActiveSlideIndex] = useState(0)
-  const { selectedItem, product } = useProduct() ?? {}
+  const { selectedItem } = useProduct() ?? {}
   const { isMobile } = useDevice()
   const slider1 = useRef<Slider | null>(null)
   const slider2 = useRef<Slider | null>(null)
-
-  console.log("product", product)
 
   const settingsMainSlider = {
     dots: false,

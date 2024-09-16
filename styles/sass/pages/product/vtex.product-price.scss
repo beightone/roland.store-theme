@@ -77,17 +77,24 @@
 }
 
 .savings--product-price-savings {
-  
-  border-radius: 1000px;
-  background: var(--Brand-Secondary-Medium, #FBCD7C);
   display: block;
-  padding: 2px 6px;
-  color: var(--Brand-Primary-Darkest, #353535);
-  font-family: "Proxima Nova";
+  width: fit-content;
+  border-radius: var(--radius-rounded-sm, 2px);
+  border: 2px solid var(--text-link-primary-default-base, #FF5A00);
+  background: var(--lightgrey-white, #FFF);
+  padding: 4px;
+  color: var(--bg-brand-primary-bold-base, #FF5A00);
+  font-family: Roboto;
   font-size: 12px;
   font-style: normal;
   font-weight: 600;
   line-height: 16px;
-  letter-spacing: -0.12px;
-  width: fit-content;
+
+
+  &::before {
+    content: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.64645 9.35355C5.84171 9.54882 6.15829 9.54882 6.35355 9.35355L9.53553 6.17157C9.7308 5.97631 9.7308 5.65973 9.53553 5.46447C9.34027 5.2692 9.02369 5.2692 8.82843 5.46447L6 8.29289L3.17157 5.46447C2.97631 5.2692 2.65973 5.2692 2.46447 5.46447C2.2692 5.65973 2.2692 5.97631 2.46447 6.17157L5.64645 9.35355ZM5.5 2L5.5 9L6.5 9L6.5 2L5.5 2Z" fill="%23FF5A00"/></svg>');
+    position: relative;
+    top: 2px;
+  }
+
 }

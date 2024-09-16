@@ -78,19 +78,19 @@
   "product-price-savings#product-page": {
     "props": {
       "blockClass": "product-price-savings",
-      "message": "{savingsPercentage} OFF"
+      "message": "{savingsPercentage}"
     }
   },
   "product-list-price#product-page": {
     "props": {
       "blockClass": "product-list-price",
-      "message": "De {listPriceValue}"
+      "message": "De: {listPriceValue}"
     }
   },
   "product-spot-price-savings#product-page": {
     "props": {
       "blockClass": "product-spot-price-savings",
-      "message": "{newSpotPriceValue} no pix ou à vista"
+      "message": "{newSpotPriceValue} no pix ou à vista (-10% OFF)"
     }
   },
   "product-installments#product-page": {

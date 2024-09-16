@@ -3,25 +3,48 @@
   flex-direction: row-reverse;
   gap: 16px;
   max-width: 100%;
+  position: relative;
+
+  background-image: url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M27.707 26.293L21.738 20.324C23.15 18.6 24 16.398 24 14C24 8.486 19.514 4 14 4C8.486 4 4 8.486 4 14C4 19.514 8.486 24 14 24C16.398 24 18.6 23.15 20.324 21.738L26.293 27.707C26.684 28.098 27.316 28.098 27.707 27.707C28.098 27.316 28.098 26.684 27.707 26.293ZM6 14C6 9.589 9.589 6 14 6C18.411 6 22 9.589 22 14C22 18.411 18.411 22 14 22C9.589 22 6 18.411 6 14Z" fill="black"/><path d="M19 14C19 14.552 18.552 15 18 15H15V18C15 18.552 14.552 19 14 19C13.448 19 13 18.552 13 18V15H10C9.448 15 9 14.552 9 14C9 13.448 9.448 13 10 13H13V10C13 9.448 13.448 9 14 9C14.552 9 15 9.448 15 10V13H18C18.552 13 19 13.448 19 14Z" fill="black"/></svg>');
+  background-repeat: no-repeat;
+  background-position: top 16px right 4px;
 }
+
 
 .main-slider {
   max-width: 88.43%;
-    padding: 28px 32px;
+  padding: 28px 32px;
+  cursor: zoom-in;
 
 
 }
+
 
 .thumb-slider {
   max-width: 84px;
-  padding-top: 27px;
-  max-height: 430px;
+  padding-top: 56px;
+  max-height: 475px;
 }
 
-.thumb-wrapper {
-
+.image-slider-wrapper .arrow-right,
+.image-slider-wrapper .arrow-left {
+  border-radius: var(--radius-rounded-full, 9999px);
+  background: var(--bg-brand-primary-subtlest-base, #FFF);
+  transition: all 0.2s ease-in-out;
+  padding: 10px;
+  width: 40px;
+  height: 40px;
 }
 
+.image-slider-wrapper .arrow-right:hover,
+.image-slider-wrapper .arrow-left:hover {
+  background: var(--bg-brand-primary-subtlest-hover, #FDF2EC);
+}
+
+.image-slider-wrapper .arrow-right:hover svg path,
+.image-slider-wrapper .arrow-left:hover svg path {
+  stroke: #EE8146;
+}
 
 .image-slider-wrapper .arrow-right {
   position: absolute;
@@ -289,7 +312,6 @@
     max-width: 100%;
     max-height: 100%;
     padding: 0px 29px;
-    padding-right: 10px;
   }
 
   .image-wrapper {
@@ -335,8 +357,9 @@
     bottom: 24px;
   }
 
-  /* .modal-slider,
-  .modal-slider div {
-    height: 100%;
-  } */
+  .image-slider-wrapper .arrow-right,
+  .image-slider-wrapper .arrow-left  {
+    background-color: transparent;
+
+  }
 }

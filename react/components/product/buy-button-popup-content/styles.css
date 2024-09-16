@@ -103,3 +103,9 @@
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
+
+@media screen and (max-width: 500px) {
+  .custom-checkbox .checkmark:after {
+    top: 12px;
+  }
+}
