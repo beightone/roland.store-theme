@@ -40,8 +40,11 @@
     "title": "Logo: B8One",
     "props": {
       "src": "assets/svgs/logo-b8.svg",
-      "link": "https://www.b8one.com/pt-BR",
-      "blockClass": "b8one-logo"
+      "blockClass": "b8one-logo",
+      "link": {
+        "url": "https://www.b8one.com/pt-BR",
+        "newTab": true
+      }
     }
   },
   "rich-text#technology": {
