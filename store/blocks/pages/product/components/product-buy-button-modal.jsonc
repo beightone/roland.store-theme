@@ -26,7 +26,7 @@
   "rich-text#buy-button-modal-content": {
     "props": {
       "blockClass": "buy-button-modal-text-content",
-      "text": "**Atenção** A entrega de pianos não inlcui montagem, carregamento ou içamento do produto. "
+      "text": "**Atenção** \n\n A entrega de pianos não inlcui montagem, carregamento ou içamento do produto. [Saiba Mais](https://store.roland.com.br/central-de-ajuda/envio-e-entrega) "
     }
   },
   "rich-text#buy-button": {
