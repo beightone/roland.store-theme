@@ -8,7 +8,7 @@
       "flex-layout.row#simple-shelf-container-2",
       "pre-owned-section-condition",
       "flex-layout.row#simple-double-banner",
-      "flex-layout.row#blog-posts",
+      // "flex-layout.row#blog-posts",
       "flex-layout.row#back-to-top-button",
       "flex-layout.row#newsletter"
     ],
