@@ -1,5 +1,17 @@
 {
-  
+  "flex-layout.row#pre-owned-main-banner": {
+    "title": "Banner Principal",
+    "props": {
+      "blockClass": ["pre-owned-main-banner", "generic-main-banner"],
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#pre-owned-main-text-banner",
+      "flex-layout.row#pre-owned-main-banner-image"
+    ]
+  },
   "rich-text#pre-owned-main-text-banner": {
     "title": "Texto do Banner Principal",
     "props": {

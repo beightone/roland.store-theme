@@ -18,19 +18,6 @@
       "challenge": "challenge.seller-channel-condition"
     }
   },
-  "flex-layout.row#pre-owned-main-banner": {
-    "title": "Banner Principal",
-    "props": {
-      "blockClass": "pre-owned-main-banner",
-      "fullWidth": true,
-      "preventHorizontalStretch": true,
-      "preventVerticalStretch": true
-    },
-    "children": [
-      "rich-text#pre-owned-main-text-banner",
-      "flex-layout.row#pre-owned-main-banner-image"
-    ]
-  },
   "search-result-layout.customQuery#pre-owned": {
     "props": {
       "querySchema": {
@@ -44,26 +31,6 @@
       "search-result-layout.desktop#pre-owned",
       "search-result-layout.mobile#pre-owned"
       // "search-not-found-layout"
-    ]
-  },
-  "flex-layout.row#pre-owned-faq": {
-    "title": "FAQ",
-    "props": {
-      "blockClass": "pre-owned-faq",
-      "fullWidth": true
-    },
-    "children": ["flex-layout.col#pre-owned-faq-content"]
-  },
-  "flex-layout.row#pre-owned-seo": {
-    "title": "SEO",
-    "props": {
-      "blockClass": "pre-owned-seo",
-      "fullWidth": true,
-      "preventHorizontalStretch": true
-    },
-    "children": [
-      "collapsible-content#pre-owned-seo",
-      "image#pre-owned-seo-image"
     ]
   }
 }
