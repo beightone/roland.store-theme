@@ -1,0 +1,14 @@
+{
+  "store.custom#black-friday": {
+    "blocks": [
+      "flex-layout.row#black-friday-main-banner"
+    ],
+    "props": {
+      "blockClass": "black-friday"
+    },
+    "parent": {
+      "header": "header#black-friday",
+      "footer": "flex-layout.row#footer-roland"
+    }
+  }
+}
