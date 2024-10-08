@@ -44,3 +44,53 @@
   }
 
 }
+
+.infoCardContainer--info-card-black-friday-banner-discount {
+  height: 298px;
+  padding: 20px;
+  align-items: flex-start;
+  border: none;
+
+  .infoCardTextContainer {
+    margin: 0;
+    width: fit-content;
+  }
+
+  .infoCardCallActionContainer {
+    margin: 0;
+
+    border-radius: var(--radius-rounded-sm, 2px);
+    background: var(--Gray-Scale-White, #FFF);
+    padding: 10px 16px;
+    text-decoration: none;
+    width: fit-content;
+
+    .infoCardCallActionText {
+      margin: 0;
+      color: var(--text-neutral-bold, #18181B);
+      font-family: "Proxima Nova";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+      text-decoration: none;
+    }
+  }
+
+  .paragraph {
+    color: #FFF;
+    font-family: "Monument Extended";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: -0.4px;
+    text-transform: uppercase;
+    margin:0;
+
+    .strong {
+      color: #FF5A00;
+    }
+  } 
+}
