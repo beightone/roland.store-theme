@@ -53,5 +53,8 @@
   },
   "pre-owned-flag": {
     "component": "PreOwnedCartFlag"
+  },
+  "custom-infocard": {
+    "component": "CustomInfoCard"
   }
 }

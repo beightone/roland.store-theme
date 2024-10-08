@@ -1,8 +1,13 @@
 .flexRow--centered-wrapper {
   max-width: 1440px;
-  padding: 0 32px;
+  padding: 48px 32px;
   width: 100%;
   margin: 0 auto;
+}
+
+.flexRow--black-friday-main-banner {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .flexRowContent--black-friday-main-banner {
@@ -14,3 +19,9 @@
   gap: 24px;
   flex-wrap: wrap;
 }
+
+.flexRowContent--category-cards-section {
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
