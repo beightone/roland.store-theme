@@ -9,6 +9,15 @@
   }
 }
 
+.flexRowContent--black-friday-banner-with-shelf {
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.flexRowContent--shelf-with-banner {
+  gap: 16px;
+}
+
 .flexRow--shelf-container-black-friday {
   .flexCol--shelf-container {
     padding: 0;
