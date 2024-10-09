@@ -1,0 +1,14 @@
+{
+  "flex-layout.row#black-friday-countdown-offer": {
+    "title": "Seção - Oferta com contagem regressiva",
+    "props": {
+      "fullWidth": true,
+      "blockClass": ["black-friday-countdown-offer", "centered-wrapper"],
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "countdown#black-friday-countdown",
+      "image#black-friday-countdown-image"
+    ]
+  }
+}

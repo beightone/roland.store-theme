@@ -5,7 +5,8 @@
       "flex-layout.row#black-friday-benefits",
       "flex-layout.row#black-friday-discount-banners",
       "flex-layout.row#black-friday-category-cards",
-      "flex-layout.row#black-friday-middle-banner-text"
+      "flex-layout.row#black-friday-middle-banner-text",
+      "flex-layout.row#black-friday-countdown-offer"
     ],
     "props": {
       "blockClass": "black-friday"
