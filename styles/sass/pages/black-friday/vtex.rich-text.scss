@@ -75,3 +75,36 @@
     }
   }
 }
+
+.container--black-friday-middle-banner-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wrapper {
+    max-width: 385px;
+  }
+
+  .heading {
+    color: var(--bg-brand-primary-bold-base, #FF5A00);
+    font-family: "Monument Extended";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    margin: 0 {
+      bottom: 16px;
+    };
+  }
+
+  .paragraph {
+    color: #FFF;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+  }
+}
