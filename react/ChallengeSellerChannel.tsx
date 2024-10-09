@@ -52,6 +52,15 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
     const currentUrl = new URL(window.location.href)
     const hasScParameter = currentUrl.searchParams.has('sc')
 
+    const hasRefreshed = currentUrl.searchParams.has('refreshed')
+
+    if (isPreOwnedPage && !hasRefreshed) {
+      currentUrl.searchParams.append('refreshed', 'true')
+      window.location.href = currentUrl.toString()
+
+      return
+    }
+
     if (orderFormItems.length > 0) {
       if (isPreOwnedPage && !hasPreOwnedProductInCart) {
         setShowPopupAlert(true)
