@@ -56,5 +56,13 @@
   },
   "custom-infocard": {
     "component": "CustomInfoCard"
+  },
+  "display-condition": {
+    "component": "DisplayCondition",
+    "composition": "children",
+    "allowed": "*"
+  },
+  "countdown": {
+    "component": "Countdown"
   }
 }

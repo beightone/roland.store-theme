@@ -7,8 +7,32 @@
       "preventHorizontalStretch": true
     },
     "children": [
-      "countdown#black-friday-countdown",
-      "image#black-friday-countdown-image"
+      "flex-layout.col#black-friday-countdown-offer-content"
     ]
+  },
+  "flex-layout.col#black-friday-countdown-offer-content": {
+    "title": "Conteúdo",
+    "props": {
+      "blockClass": "black-friday-countdown-offer-content"
+    },
+    "children": [
+      "rich-text#black-friday-countdown-offer-highlighted-text",
+      "rich-text#black-friday-countdown-offer-text",
+      "countdown"
+    ]
+  },
+  "rich-text#black-friday-countdown-offer-highlighted-text": {
+    "title": "Título principal destacado",
+    "props": {
+      "text": "ofertas especiais",
+      "blockClass": ["black-friday-countdown-offer-highlighted-text", "highlight"]
+    }
+  },
+  "rich-text#black-friday-countdown-offer-text": {
+    "title": "Subtítulo",
+    "props": {
+      "text": "Essas ofertas se encerram em:",
+      "blockClass": "black-friday-countdown-offer-text"
+    }
   }
 }

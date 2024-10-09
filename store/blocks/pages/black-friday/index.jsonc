@@ -6,7 +6,7 @@
       "flex-layout.row#black-friday-discount-banners",
       "flex-layout.row#black-friday-category-cards",
       "flex-layout.row#black-friday-middle-banner-text",
-      "flex-layout.row#black-friday-countdown-offer"
+      "display-condition#black-friday-countdown-offer"
     ],
     "props": {
       "blockClass": "black-friday"
@@ -15,5 +15,11 @@
       "header": "header#black-friday",
       "footer": "flex-layout.row#footer-roland"
     }
-  }
+  },
+   "display-condition#black-friday-countdown-offer": {
+    "title": "Condição de exibição da seção do countdown",
+    "children": [
+      "flex-layout.row#black-friday-countdown-offer"
+    ]
+   }
 }
