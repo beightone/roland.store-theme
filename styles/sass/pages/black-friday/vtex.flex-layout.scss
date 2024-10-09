@@ -3,6 +3,16 @@
   padding: 48px 32px;
   width: 100%;
   margin: 0 auto;
+
+  &.flexRow--black-friday-countdown-offer {
+    padding-bottom: 0;
+  }
+}
+
+.flexRow--shelf-container-black-friday {
+  .flexCol--shelf-container {
+    padding: 0;
+  }
 }
 
 .flexRow--black-friday-main-banner {

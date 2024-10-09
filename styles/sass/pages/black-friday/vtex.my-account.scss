@@ -1,3 +1,25 @@
-:global(.render-route-store-custom-black-friday .bg-base) {
-  background-color: #000;
+:global(.render-route-store-custom-black-friday) {
+  :global(.bg-base),
+  :global(.vtex-store-header-2-x-headerRowContainer--main-container),
+  :global(.vtex-store-components-3-x-searchBarContainer),
+  :global(.roland-store-theme-1-x-menuContainer),
+  :global(.vtex-flex-layout-0-x-flexRow--shelf-container) {
+    background-color: #000;
+  }
+
+  :global(.roland-store-theme-1-x-menuItem span),
+  :global(.vtex-login-2-x-label),
+  :global(.vtex-styleguide-9-x-input)::placeholder,
+  :global(.vtex-store-link-0-x-label--wishlist) {
+    color: #FFF!important;
+
+  }
+
+  :global(.vtex-flex-layout-0-x-flexRow--shelf-title-container) {
+    display: none;
+  }
+
+  :global(.roland-store-theme-1-x-menuContainer) {
+    border: none;
+  }
 }

@@ -7,6 +7,7 @@
       "flex-layout.row#black-friday-category-cards",
       "flex-layout.row#black-friday-middle-banner-text",
       "display-condition#black-friday-countdown-offer"
+      
     ],
     "props": {
       "blockClass": "black-friday"
@@ -19,7 +20,8 @@
    "display-condition#black-friday-countdown-offer": {
     "title": "Condição de exibição da seção do countdown",
     "children": [
-      "flex-layout.row#black-friday-countdown-offer"
+      "flex-layout.row#black-friday-countdown-offer",
+      "flex-layout.row#black-friday-shelf-offer"
     ]
    }
 }
