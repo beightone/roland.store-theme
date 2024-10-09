@@ -35,9 +35,10 @@
     "props": {
       "querySchema": {
         "skusFilter": "FIRST_AVAILABLE",
-        "simulationBehavior": "default",
+        "simulationBehavior": "skip",
         "queryField": "169",
         "mapField": "productClusterIds"
+        
       }
     },
     "blocks": [
