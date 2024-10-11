@@ -9,6 +9,14 @@
   }
 }
 
+.flexRowContent--black-friday-SEO {
+  justify-content: space-between;
+
+  .stretchChildrenWidth:first-child {
+    justify-content: flex-start;
+  }
+}
+
 .flexRowContent--black-friday-banner-with-shelf {
   flex-wrap: wrap;
   gap: 24px;
