@@ -64,5 +64,8 @@
   },
   "countdown": {
     "component": "Countdown"
+  },
+  "disclosure-list": {
+    "component": "DisclosureList"
   }
 }

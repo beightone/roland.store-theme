@@ -7,10 +7,10 @@
     },
     "children": [
       "flex-layout.row#section-title",
-      "flex-layout.row#shelf-with-banner"
+      "flex-layout.row#shelf-with-banner-black-friday"
     ]
   },
-  "flex-layout.row#shelf-with-banner": {
+  "flex-layout.row#shelf-with-banner-black-friday": {
     "title": "Prateleira com banner",
     "props": {
       "blockClass": "shelf-with-banner",
