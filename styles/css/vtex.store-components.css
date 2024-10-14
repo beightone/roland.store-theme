@@ -163,6 +163,102 @@
   width: 100%;
 }
 
+.infoCardContainer--info-card-black-friday-benefits {
+  border-radius: var(--radius-rounded-sm, 2px);
+  background: #121212 !important;
+  padding: 16px 32px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.infoCardContainer--info-card-black-friday-benefits .infoCardTextContainer {
+  width: 100%;
+  padding: 0;
+}
+.infoCardContainer--info-card-black-friday-benefits .infoCardHeadline {
+  color: #FF5A00;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  position: relative;
+  left: 42px;
+  top: 4px;
+  margin: 0;
+}
+.infoCardContainer--info-card-black-friday-benefits .infoCardImageContainer {
+  position: absolute;
+  left: 32px;
+  top: 16px;
+  width: fit-content;
+  height: fit-content;
+}
+.infoCardContainer--info-card-black-friday-benefits .infoCardBodyText {
+  color: #FFF;
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+}
+
+.infoCardContainer--info-card-black-friday-banner-discount {
+  height: 298px;
+  padding: 20px;
+  align-items: flex-start;
+  border: none;
+}
+.infoCardContainer--info-card-black-friday-banner-discount .infoCardTextContainer {
+  margin: 0;
+  width: fit-content;
+}
+.infoCardContainer--info-card-black-friday-banner-discount .infoCardCallActionContainer {
+  margin: 0;
+  border-radius: var(--radius-rounded-sm, 2px);
+  background: var(--Gray-Scale-White, #FFF);
+  padding: 10px 16px;
+  text-decoration: none;
+  width: fit-content;
+}
+.infoCardContainer--info-card-black-friday-banner-discount .infoCardCallActionContainer .infoCardCallActionText {
+  margin: 0;
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  text-decoration: none;
+}
+.infoCardContainer--info-card-black-friday-banner-discount .paragraph {
+  color: #FFF;
+  font-family: "Monument Extended";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -0.4px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.infoCardContainer--info-card-black-friday-banner-discount .paragraph .strong {
+  color: #FF5A00;
+}
+
+.imageElement--black-friday-middle-banner-image {
+  width: 100% !important;
+}
+
+.imageElement--black-friday-seo-image {
+  width: 100% !important;
+  max-height: 394px;
+  object-fit: cover;
+}
+
 .container {
   padding: 0;
 }

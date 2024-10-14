@@ -52,6 +52,17 @@
   letter-spacing: -0.14px;
 }
 
+.link--see-more-button {
+  color: var(--Tertiary-900, #F07342);
+  text-align: right;
+  font-family: "Proxima Nova";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+}
+
 .link--myOrders,
 .link--continueShopping {
   border-radius: var(--radius-rounded-sm, 2px);
