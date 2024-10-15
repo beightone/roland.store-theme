@@ -7,4 +7,48 @@
   font-weight: 500;
   line-height: 28px;
   letter-spacing: -0.2px;
+  text-decoration: none;
 }
+
+.label--breadcrumb--black-friday,
+:global(.vtex-flex-layout-0-x-flexRowContent--breadcrumb--black-friday) .label--breadcrumb--home {
+  color: #FFF !important;
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--breadcrumb--black-friday) .link--breadcrumb--home::before {
+  filter: invert(100%);
+}
+
+@media screen and (max-width: 768px) {
+  :global(.vtex-flex-layout-0-x-flexRow--black-friday-banner-with-shelf) {
+    position: relative;
+    padding-bottom: 90px;
+    padding-right: 7px;
+    margin-top: 48px;
+
+    .link--see-more-button {
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: var(--radius-rounded-sm, 2px);
+      background: var(--Gray-Scale-White, #FFF);
+      border: none;
+      color: var(--text-neutral-bold, #18181B);
+      font-family: "Proxima Nova";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+      width: calc(100% - 32px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      text-decoration: none;
+      margin: 0 16px;
+    }
+  }
+}
+

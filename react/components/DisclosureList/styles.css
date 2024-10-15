@@ -8,6 +8,8 @@
   background: #0E0E0E;
   padding: 24px 32px;
   transition: all 0.2s ease-in-out;
+  border: 2px solid transparent;
+
 
 }
 
@@ -29,7 +31,7 @@
 }
 
 .accordion.active {
-  border: 2px solid var(--text-brand-primary-base, #FF5A00);
+  border-color: var(--text-brand-primary-base, #FF5A00);
 }
 
 .accordion.active .accordionContent {
@@ -58,3 +60,15 @@
   top: 0;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .accordion {
+    padding: 16px;
+  }
+
+  .icon {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+

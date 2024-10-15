@@ -3,8 +3,22 @@
   :global(.vtex-store-header-2-x-headerRowContainer--main-container),
   :global(.vtex-store-components-3-x-searchBarContainer),
   :global(.roland-store-theme-1-x-menuContainer),
-  :global(.vtex-flex-layout-0-x-flexRow--shelf-container) {
+  :global(.vtex-flex-layout-0-x-flexRow--shelf-container),
+  :global(.vtex-store-header-2-x-headerStickyRow--search-container)
+   {
     background-color: #000;
+  }
+
+  :global(.vtex-store-newsletter-1-x-newsletterForm--newsletter-form .vtex-styleguide-9-x-input) {
+    background-color: #FFF;
+  }
+
+  :global(.vtex-store-components-3-x-searchBarContainer .vtex-store-components-3-x-searchBarIcon--search-bar) {
+    filter: invert(1);
+  }
+
+  :global(.vtex-store-newsletter-1-x-newsletterForm--newsletter-form .vtex-styleguide-9-x-input)::placeholder {
+    color: #000!important;
   }
 
   :global(.roland-store-theme-1-x-menuItem span),
@@ -12,7 +26,6 @@
   :global(.vtex-styleguide-9-x-input)::placeholder,
   :global(.vtex-store-link-0-x-label--wishlist) {
     color: #FFF!important;
-
   }
 
   :global(.vtex-flex-layout-0-x-flexRow--shelf-title-container) {
@@ -36,5 +49,34 @@
 
     
     
+  }
+
+  :global(.roland-store-theme-1-x-menuItem >a >span):hover {
+    color: #FF5A00!important;
+  }
+
+  :global(.vtex-login-2-x-container .vtex-button):hover {
+    background-color: transparent;
+  }
+
+  @media screen and (min-width: 768px) {
+    :global(.vtex-rich-text-0-x-paragraph br) {
+      display: none !important;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    :global(.vtex-store-components-3-x-imageElement--banner-main) {
+      width: 100%;
+      height: 228px;
+      object-fit: cover;
+      object-position: -75px;
+    }
+
+    
+
+    :global(.roland-store-theme-1-x-menuButton) {
+      background-image: url('data:image/svg+xml,<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.625 10.5H18.375" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/><path d="M2.625 5.25H18.375" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/><path d="M2.625 15.75H18.375" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/></svg>');
+    }
   }
 }

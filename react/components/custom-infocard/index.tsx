@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 // Dependencies
-import React from 'react'
+import React, { Fragment } from 'react'
 
 // Styles
 import styles from './styles.css'
@@ -10,6 +10,10 @@ import { SliderLayout } from 'vtex.slider-layout'
 
 // Context
 import { CUSTOM_INFOCARD_SCHEMA } from './schema'
+
+// Hooks
+// @ts-ignore
+import { useDevice } from 'vtex.device-detector'
 
 // Interface
 interface CustomInfoCardProps {
@@ -29,32 +33,54 @@ const configSlider: any = {
 }
 
 const CustomInfoCard = ({ cards }: CustomInfoCardProps) => {
-  console.log('cards', cards)
+  const { isMobile } = useDevice()
 
   return (
     <div className={styles['cards-container']}>
-      <SliderLayout {...configSlider}>
-        {cards.map((card: any) => {
-          const { image, hoverImage, title, link, buttonLabel } = card
+      {!isMobile ? (
+        <SliderLayout {...configSlider}>
+          {cards.map((card: any) => {
+            const { image, hoverImage, title, link, buttonLabel } = card
 
-          return (
-            <a href={link} key={image}>
-              <div className={styles['card-wrapper']}>
-                <div className={styles['card-image']}>
-                  <img src={image} alt={title} />
+            return (
+              <a href={link} key={image}>
+                <div className={styles['card-wrapper']}>
+                  <div className={styles['card-image']}>
+                    <img src={image} alt={title} />
+                  </div>
+                  <div className={styles['hover-image']}>
+                    <img src={hoverImage} alt={title} />
+                  </div>
+                  <div className={styles['card-content']}>
+                    <h3>{title}</h3>
+                    <button>{buttonLabel}</button>
+                  </div>
                 </div>
-                <div className={styles['hover-image']}>
-                  <img src={hoverImage} alt={title} />
+              </a>
+            )
+          })}
+        </SliderLayout>
+      ) : (
+        <Fragment>
+          {cards.map((card: any) => {
+            const { image, title, link, buttonLabel } = card
+
+            return (
+              <a href={link} key={image}>
+                <div className={styles['card-wrapper']}>
+                  <div className={styles['card-image']}>
+                    <img src={image} alt={title} />
+                  </div>
+                  <div className={styles['card-content']}>
+                    <h3>{title}</h3>
+                    <button>{buttonLabel}</button>
+                  </div>
                 </div>
-                <div className={styles['card-content']}>
-                  <h3>{title}</h3>
-                  <button>{buttonLabel}</button>
-                </div>
-              </div>
-            </a>
-          )
-        })}
-      </SliderLayout>
+              </a>
+            )
+          })}
+        </Fragment>
+      )}
     </div>
   )
 }

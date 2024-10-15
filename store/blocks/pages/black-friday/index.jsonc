@@ -1,6 +1,7 @@
 {
   "store.custom#black-friday": {
     "blocks": [
+      "flex-layout.row#black-friday-breadcrumb",
       "flex-layout.row#black-friday-main-banner",
       "flex-layout.row#black-friday-benefits",
       "flex-layout.row#black-friday-discount-banners",
@@ -9,8 +10,8 @@
       "display-condition#black-friday-countdown-offer",
       "flex-layout.row#black-friday-banner-with-shelf",
       "flex-layout.row#black-friday-FAQ",
-      "flex-layout.row#black-friday-SEO"
-      
+      "flex-layout.row#black-friday-SEO",
+      "flex-layout.row#newsletter"
     ],
     "props": {
       "blockClass": "black-friday"

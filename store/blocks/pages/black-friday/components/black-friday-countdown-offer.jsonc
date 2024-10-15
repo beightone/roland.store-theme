@@ -24,14 +24,14 @@
   "rich-text#black-friday-countdown-offer-highlighted-text": {
     "title": "Título principal destacado",
     "props": {
-      "text": "ofertas especiais",
+      "text": "ofertas \n relâmpago",
       "blockClass": ["black-friday-countdown-offer-highlighted-text", "highlight"]
     }
   },
   "rich-text#black-friday-countdown-offer-text": {
     "title": "Subtítulo",
     "props": {
-      "text": "Essas ofertas se encerram em:",
+      "text": "Essas ofertas se\nencerram em:",
       "blockClass": "black-friday-countdown-offer-text"
     }
   }

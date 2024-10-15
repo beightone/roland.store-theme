@@ -14,13 +14,18 @@
     "props": {
       "blockClass": "black-friday-benefits-slider",
       "showNavigationArrows": false,
-      "showPaginationDots": "mobileOnly",
+      "showPaginationDots": false,
       "infinite": true,
       "fullWidth": true,
       "itemsPerPage": {
         "desktop": 4,
         "tablet": 2,
-        "phone": 2
+        "phone": 1
+      },
+      "centerModeSlidesGap": 16,
+      "centerMode": {
+        "phone": "to-the-left",
+        "desktop": "disabled"
       }
     },
     "children": [

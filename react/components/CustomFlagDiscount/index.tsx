@@ -31,6 +31,8 @@ const CustomFlagDiscount: StorefrontFunctionComponent<
     padding: flagType === '-n%' ? '4px' : '9px 4px',
     display: 'flex',
     flexDirection: flagType === '-n%' ? 'row' : 'column',
+    position: 'absolute',
+    zIndex: '1',
   }
 
   return (

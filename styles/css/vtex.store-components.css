@@ -204,6 +204,15 @@
   line-height: 16px;
   letter-spacing: -0.12px;
 }
+@media screen and (max-width: 768px) {
+  .infoCardContainer--info-card-black-friday-benefits {
+    padding: 8px;
+  }
+  .infoCardContainer--info-card-black-friday-benefits .infoCardImageContainer {
+    top: 8px;
+    left: 8px;
+  }
+}
 
 .infoCardContainer--info-card-black-friday-banner-discount {
   height: 298px;
@@ -247,6 +256,13 @@
 }
 .infoCardContainer--info-card-black-friday-banner-discount .paragraph .strong {
   color: #FF5A00;
+}
+@media screen and (max-width: 768px) {
+  .infoCardContainer--info-card-black-friday-banner-discount .paragraph {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -0.32px;
+  }
 }
 
 .imageElement--black-friday-middle-banner-image {
