@@ -1,0 +1,146 @@
+.cards-container {
+  max-width: 1376px;
+}
+
+.cards-container .sliderTrack {
+  margin: 0 -8px;
+}
+
+.cards-container .slide {
+  margin: 0 8px;
+}
+
+.cards-container .slideChildrenContainer {
+  max-width: 332px;
+  max-height: 320px;
+  
+}
+
+.cards-container .slideChildrenContainer a,
+.cards-container  a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.card-wrapper {
+  border-radius: var(--radius-rounded-sm, 2px);
+  background: #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  padding: 40px 32px;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+
+@media screen and (min-width: 768px) {
+  .card-wrapper:hover .card-content h3,
+  .card-wrapper:hover .card-image {
+    opacity: 0;
+  }
+
+
+  .card-wrapper:hover .hover-image,
+  .card-wrapper:hover .card-content button  {
+    opacity: 1;
+  }
+}
+
+.hover-image {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  border-radius: var(--radius-rounded-sm, 2px);
+  background-color: rgba(0, 0, 0, 0.40);
+  
+}
+.hover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-image {
+  opacity: 1;
+  max-width: 200px;
+  max-height: 200px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-image img {
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 200px;
+
+}
+
+.card-content h3 {
+  opacity: 1;
+  color: var(--Gray-Scale-Black, #000);
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; 
+  letter-spacing: -0.24px;
+  margin: 0;
+}
+
+.card-content button {
+  border-radius: var(--radius-rounded-sm, 2px);
+  background: var(--Gray-Scale-White, #FFF);
+  border: none;
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.14px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  height: 40px;
+  padding: 10px 16px;
+  width: 183px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .card-wrapper .card-content h3 {
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+  }
+
+  .card-wrapper {
+    padding: 12px 0;
+    padding-top: 18px;
+  }
+
+  .card-image img {
+    max-width: 90px;
+    max-height: 90px;
+  }
+
+}

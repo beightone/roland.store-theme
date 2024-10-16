@@ -1,0 +1,43 @@
+{
+  "flex-layout.row#black-friday-FAQ": {
+    "title": "Seção - FAQ",
+    "props": {
+      "blockClass": ["black-friday-FAQ", "centered-wrapper"],
+      "fullWidth": true
+    },
+    "children": [
+      "rich-text#black-friday-aside-title",
+      "flex-layout.row#black-friday-FAQ-questions"
+    ]
+  },
+  "rich-text#black-friday-aside-title": {
+    "title": "Título lateral da seção",
+    "props": {
+      "text": "Black November",
+      "blockClass": "black-friday-aside-title"
+    }
+  },
+  "flex-layout.row#black-friday-FAQ-questions": {
+    "title": "Perguntas frequentes",
+    "props": {
+      "blockClass": "black-friday-FAQ-questions"
+    },
+    "children": [
+      "rich-text#title-faq-wrapper",
+      "disclosure-list"
+    ]
+  },
+  "rich-text#title-faq-wrapper": {
+    "title": "Título e subtitulo da lista de perguntas",
+    "props": {
+      "width": "100%",
+      "text": "### Perguntas frequentes \n \nPreparamos algumas respostas pra você!",
+      "blockClass": "title-faq-wrapper"
+    }
+  },
+  "disclosure-list": {
+    "props": {
+      "width": "100%"
+    }
+  }
+}

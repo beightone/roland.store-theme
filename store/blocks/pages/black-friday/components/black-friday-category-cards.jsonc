@@ -1,0 +1,27 @@
+{
+  "flex-layout.row#black-friday-category-cards": {
+    "title": "Seção - Navegue por Categorias",
+    "props": {
+      "blockClass": ["category-cards-section", "centered-wrapper"],
+      "fullWidth": true
+    },
+    "children": [
+      "rich-text#black-friday-category-cards-title",
+      "custom-infocard#category"
+    ]
+  },
+  "rich-text#black-friday-category-cards-title": {
+    "title": "Título da seção",
+    "props": {
+      "width": "100%",
+      "text": "Navegue\npor Categorias",
+      "blockClass": ["category-cards-title", "highlight"]
+    }
+  },
+  "custom-infocard#category": {
+    "title": "Cards de categoria",
+    "props": {
+      "width": "100%"
+    }
+  }
+}
