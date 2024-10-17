@@ -35,6 +35,10 @@ const configSlider: any = {
 const CustomInfoCard = ({ cards }: CustomInfoCardProps) => {
   const { isMobile } = useDevice()
 
+  if (!cards) {
+    return null
+  }
+
   return (
     <div className={styles['cards-container']}>
       {!isMobile ? (
