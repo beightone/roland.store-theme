@@ -21,6 +21,15 @@
       "countdown"
     ]
   },
+  "countdown": {
+    "props": {
+      // a extensão do bloco deve estar no blockclass do bloco
+      "targetToBeDesabled": [
+        "flex-layout.row#black-friday-countdown-offer",
+        "flex-layout.row#black-friday-shelf-offer"
+      ]
+    }
+  },
   "rich-text#black-friday-countdown-offer-highlighted-text": {
     "title": "Título principal destacado",
     "props": {

@@ -1,0 +1,100 @@
+{
+  "flex-layout.row#home-black-friday-infocard-offers": {
+    "title": "Seção - Infocard de Ofertas",
+    "props": {
+      "blockClass": "home-black-friday-infocard-offers"
+      
+    },
+    "children": [
+       "list-context.info-card-list#infocard-list"
+    ]
+  },
+  "list-context.info-card-list#infocard-list": {
+    "props": {
+      "width": "100%",
+      "blockClass": "info-card-v1",
+      "infoCards": [
+        {
+          "width": "32%",
+          "id": "info-card-example",
+          "isFullModeStyle": true,
+          "textPosition": "left",
+          "imageUrl": "/arquivos/dance%20e%20dj.png",
+          "textMode": "rich-text",
+          "headline": "**OFERTAS EM** \n DANCE E DJ",
+          "callToActionMode": "link",
+          "callToActionText": "Confira",
+          "blockClass": [
+            "info-card-v1"
+          ],
+          "textAlignment": "left"
+        },
+        {
+          "width": "32%",
+          "id": "info-card-example",
+          "isFullModeStyle": true,
+          "textPosition": "left",
+          "imageUrl": "/arquivos/synth.png",
+          "textMode": "rich-text",
+          "headline": "**OFERTAS EM** \n SYNTH",
+          "callToActionMode": "link",
+          "callToActionText": "Confira",
+          "blockClass": [
+            "info-card-v1"
+          ],
+          "textAlignment": "left"
+        },
+        {
+          "width": "32%",
+          "id": "info-card-example",
+          "isFullModeStyle": true,
+          "textPosition": "left",
+          "imageUrl": "/arquivos/teclados.png",
+          "textMode": "rich-text",
+          "headline": "**OFERTAS EM** \n TECLADOS",
+          "callToActionMode": "link",
+          "callToActionText": "Confira",
+          "blockClass": [
+            "info-card-v1"
+          ],
+          "textAlignment": "left"
+        },
+        {
+          "width": "32%",
+          "id": "info-card-example",
+          "isFullModeStyle": true,
+          "textPosition": "left",
+          "imageUrl": "/arquivos/baterias.png",
+          "textMode": "rich-text",
+          "headline": "**BATERIAS** \n E PERCUSSÃO",
+          "callToActionMode": "link",
+          "callToActionText": "Confira",
+          "blockClass": ["info-card-v1"],
+          "textAlignment": "left"
+        },
+        {
+          "width": "32%",
+          "id": "info-card-example",
+          "isFullModeStyle": true,
+          "textPosition": "left",
+          "imageUrl": "/arquivos/v-moda-bg.png",
+          "textMode": "rich-text",
+          "headline": "*OFERTAS EM* \n **V-MODA**",
+          "callToActionMode": "link",
+          "callToActionText": "Confira",
+          "blockClass": ["info-card-v1"],
+          "textAlignment": "left"
+        }
+      ]
+    },
+    "children": ["list-context-renderer#infocard-list"]
+  },
+  "list-context-renderer#infocard-list": {
+    "props": {
+      "listElement": "ul",
+      "itemElement": "li",
+      "blockClass": "info-card-v1-list"
+    }
+  }
+  
+}

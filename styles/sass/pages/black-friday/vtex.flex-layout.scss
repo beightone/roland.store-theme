@@ -1,11 +1,25 @@
 .flexRow--centered-wrapper {
-  max-width: 1440px;
-  padding: 48px 32px;
-  width: 100%;
-  margin: 0 auto;
+ 
 
   &.flexRow--black-friday-countdown-offer {
     padding-bottom: 0;
+    padding-top: 32px;
+
+    .flexRowContent--centered-wrapper {
+      padding: 0;
+    }
+
+  }
+
+  .flexRowContent--centered-wrapper {
+    max-width: 1440px;
+    padding: 48px 32px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media screen and (max-width: 768px) {
+      padding: 0;
+    }
   }
   @media screen and (max-width: 768px) {
     padding: 16px;
@@ -36,6 +50,7 @@
 
   @media screen and (max-width: 768px) {
     padding-right: 7px;
+    padding-bottom: 20px;
   }
 }
 
