@@ -28,7 +28,7 @@ const configSlider: any = {
   },
   infinite: true,
   usePagination: true,
-  showNavigationArrows: 'never',
+  showNavigationArrows: 'desktopOnly',
   showPaginationDots: 'always',
 }
 

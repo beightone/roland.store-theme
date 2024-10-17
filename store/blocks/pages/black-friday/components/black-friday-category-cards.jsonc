@@ -14,7 +14,7 @@
     "title": "Título da seção",
     "props": {
       "width": "100%",
-      "text": "Navegue\npor Categorias",
+      "text": "Navegue\n por Categorias",
       "blockClass": ["category-cards-title", "highlight"]
     }
   },
