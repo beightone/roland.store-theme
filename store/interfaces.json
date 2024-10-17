@@ -53,5 +53,23 @@
   },
   "pre-owned-flag": {
     "component": "PreOwnedCartFlag"
+  },
+  "custom-infocard": {
+    "component": "CustomInfoCard"
+  },
+  "display-condition": {
+    "component": "DisplayCondition",
+    "composition": "children",
+    "allowed": "*"
+  },
+  "countdown": {
+    "component": "Countdown"
+  },
+  "disclosure-list": {
+    "component": "DisclosureList"
+  },
+  "custom-flag-discount": {
+    "component": "CustomFlagDiscount",
+    "composition": "children"
   }
 }

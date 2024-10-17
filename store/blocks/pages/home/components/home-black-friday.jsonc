@@ -1,0 +1,66 @@
+{
+  "store.home#black-friday-home": {
+    "blocks": [
+      "global-styles",
+      "flex-layout.row#main-banner",
+      "responsive-layout.phone#black-friday",
+      "responsive-layout.desktop#black-friday"
+      
+    ],
+    "parent": {
+      "header": "header",
+      "footer": "flex-layout.row#footer-roland",
+      "challenge": "challenge.seller-channel-condition"
+    }
+  },
+  "responsive-layout.phone#black-friday": {
+    "title": "Ordenação de blocos mobile",
+    "children": [
+      "flex-layout.row#banner-redirect-link",
+      "flex-layout.row#home-black-friday-infocard-offers",
+      "display-condition#black-friday-countdown-offer",
+      "flex-layout.row#simple-shelf-container-black-friday",
+      "flex-layout.row#black-friday-banner-with-shelf",
+      "flex-layout.row#simple-double-banner-black-friday",
+      "flex-layout.row#back-to-top-button",
+      "flex-layout.row#newsletter"
+    ]
+  },
+  "responsive-layout.desktop#black-friday": {
+    "title": "Ordenação de blocos desktop",
+    "children": [
+      "flex-layout.row#home-black-friday-infocard-offers",
+      "display-condition#black-friday-countdown-offer",
+      "flex-layout.row#black-friday-banner-with-shelf",
+      "flex-layout.row#simple-shelf-container-black-friday",
+      "flex-layout.row#simple-double-banner-black-friday",
+      "flex-layout.row#back-to-top-button",
+      "flex-layout.row#newsletter"
+    ]
+  },
+  "flex-layout.row#banner-redirect-link": {
+    "title": "Texto e link de redirecionamento",
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "home-black-friday-banner-redirect"
+    },
+    "children": [
+      "rich-text#banner-redirect-link",
+      "link#banner-redirect-link"
+    ]
+  },
+  "rich-text#banner-redirect-link": {
+    "props": {
+      "text": "Produtos selecionados\ncom descontos exclusivos",
+      "blockClass": "home-black-friday-banner-text"
+    }
+  },
+  "link#banner-redirect-link": {
+    "props": {
+      "href": "/black-friday",
+      "target": "_self",
+      "label": "Confira",
+      "blockClass": "home-black-friday-banner-link"
+    }
+  }
+}

@@ -57,3 +57,64 @@
     margin-bottom: 26px;
   }
 }
+
+// BLACK FRIDAY 
+
+.flexRow--black-friday-countdown-offer,
+.flexRow--home-black-friday-infocard-offers,
+.flexRow--black-friday-banner-with-shelf,
+.flexRow--shelf-container-black-friday,
+.flexRow--simple-shelf-container-black-friday,
+.flexRowContent--shelf-container-black-friday :global(.vtex-slider-layout-0-x-sliderLayoutContainer--shelf-slider),
+.flexRow--simple-shelf-container-black-friday :global(.vtex-slider-layout-0-x-sliderLayoutContainer--shelf-slider),
+.flexRow--black-friday {
+  background-color: #000;
+
+  :global(.vtex-rich-text-0-x-paragraph--section-title) {
+    color: #fff;
+  }
+}
+
+
+
+.flexRow--home-black-friday-infocard-offers {
+
+  :global(.vtex-store-components-3-x-container) {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 32px;
+
+    @media screen and (max-width: 768px) {
+      padding: 0 16px;
+    }
+  }
+
+  .stretchChildrenWidth {
+    height: 100%;
+  }
+}
+
+.flexRowContent--home-black-friday-banner-redirect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 16px;
+}
+
+// @media screen and (min-width: 1024px) {
+//   .flexRow--shelf-container-black-friday,
+//   .flexRow--black-friday-banner-with-shelf {
+//     .flexRowContent--centered-wrapper {
+//       padding: 0px;
+//     }
+//   }
+// }
+
+.flexRow--black-friday-banner-with-shelf {
+  margin-top: 0!important;
+  
+}
+
+
+
