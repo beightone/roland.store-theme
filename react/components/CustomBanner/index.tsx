@@ -6,6 +6,7 @@ import { BANNER_SCHEMA } from './schema'
 
 interface BannerProps {
   items: ItemProps[]
+  infinite: boolean
 }
 
 interface ItemProps {
@@ -17,7 +18,10 @@ interface ItemProps {
   itemLink?: string
 }
 
-const CustomBanner: StorefrontFunctionComponent<BannerProps> = ({ items }) => {
+const CustomBanner: StorefrontFunctionComponent<BannerProps> = ({
+  items,
+  infinite,
+}) => {
   const { deviceInfo } = useRuntime()
   const actualDate = Date.now()
 
@@ -30,7 +34,7 @@ const CustomBanner: StorefrontFunctionComponent<BannerProps> = ({ items }) => {
       phone: 1,
     },
 
-    infinite: true,
+    infinite,
     autoplay: {
       timeout: 5000,
     },
