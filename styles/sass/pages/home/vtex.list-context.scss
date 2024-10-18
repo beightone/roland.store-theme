@@ -16,13 +16,15 @@
      }
 
      .infoCardCallActionContainer {
-       margin: 0;
+       margin: 0 {
+        top: 8px;
+       };
 
        border-radius: var(--radius-rounded-sm, 2px);
        background: var(--Gray-Scale-White, #FFF);
        padding: 10px 16px;
        text-decoration: none;
-       width: fit-content;
+       width: 168px;
 
        .infoCardCallActionText {
          margin: 0;
@@ -34,6 +36,7 @@
          line-height: 20px;
          letter-spacing: -0.14px;
          text-decoration: none;
+         text-align: center;
        }
      }
 

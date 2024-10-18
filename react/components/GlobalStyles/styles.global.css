@@ -15,8 +15,9 @@
   background-color: #000;
 }
 
-.render-route-store-home .roland-store-theme-1-x-menuItem > a {
-  color: #FFF;
+.render-route-store-home .roland-store-theme-1-x-menuItem > a,
+.render-route-store-home .vtex-store-components-3-x-searchBarInnerContainer .vtex-styleguide-9-x-input {
+  color: #FFF!important;
 
 }
 
