@@ -1,0 +1,44 @@
+{
+  "flex-layout.row#black-friday-main-banner": {
+    "title": "Seção - Banner Principal",
+    "props": {
+      "blockClass": ["black-friday-main-banner", "centered-wrapper"],
+      "fullWidth": true
+    },
+    "children": [
+      "rich-text#black-friday-main-text-banner",
+      "flex-layout.row#black-friday-main-banner-image"
+    ]
+  },
+  "rich-text#black-friday-main-text-banner": {
+    "title": "Texto - Banner Principal",
+    "props": {
+      "width": "32%",
+      "text": "## **BLACK** \n ## **NOVEMBER** \n A Roland, referência em instrumentos musicais, está com tudo no **Black November**! Aproveite descontos incríveis em pianos digitais, sintetizadores, baterias eletrônicas e muito mais.",
+      "blockClass": "black-friday-main-text-banner"
+    }
+  },
+  "flex-layout.row#black-friday-main-banner-image": {
+    "title": "Imagem - Banner Principal",
+    "props": {
+      "width": "55%",
+      "blockClass": "black-friday-main-banner-image",
+      "preventHorizontalStretch": true
+    },
+    "children": ["list-context.image-list#banner-full-black-friday"]
+  },
+  "list-context.image-list#banner-full-black-friday": {
+    "props": {
+      "preload": true,
+      "images": [
+        {
+          "loading": "lazy",
+          "image": "/arquivos/black-friday-main-banner.png",
+          "mobileImage": "/arquivos/black-friday-main-banner.png",
+          "description": "Banner Principal - BLACK NOVEMBER"
+        }
+      ]
+    },
+    "children": ["slider-layout#banner-one-by-one"]
+  }
+}

@@ -1,0 +1,14 @@
+.sliderTrack--black-friday-benefits-slider {
+  gap: 16px;
+
+  @media screen and (max-width: 768px) {
+    gap: 0px;
+    margin: 0 -8px!important;
+
+
+    .slide--black-friday-benefits-slider {
+      margin: 0 8px!important;
+      padding: 0!important;
+    }
+  }
+}

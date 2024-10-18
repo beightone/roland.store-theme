@@ -1,0 +1,227 @@
+.cards-container {
+  max-width: 1376px;
+}
+
+.cards-container .sliderTrack {
+  margin: 0 -8px;
+}
+
+.cards-container .slide {
+  margin: 0 8px;
+}
+
+.cards-container .slideChildrenContainer {
+  max-width: 332px;
+  max-height: 320px;
+  
+}
+
+.cards-container .slideChildrenContainer a,
+.cards-container  a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.card-wrapper {
+  border-radius: var(--radius-rounded-sm, 2px);
+  background: #F0F0F0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  padding: 40px 32px;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.hover-image {
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  border-radius: var(--radius-rounded-sm, 2px);
+  background-color: rgba(0, 0, 0, 0.40);
+  
+}
+.hover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-image {
+  opacity: 1;
+  max-width: 200px;
+  max-height: 200px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-image img {
+  mix-blend-mode: multiply;
+  width: 100%;
+  height: 100%;
+  max-width: 200px;
+  max-height: 200px;
+
+}
+
+.card-content h3 {
+  opacity: 1;
+  color: var(--Gray-Scale-Black, #000);
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; 
+  letter-spacing: -0.24px;
+  margin: 0;
+}
+
+.card-content button {
+  border-radius: var(--radius-rounded-sm, 2px);
+  background: var(--Gray-Scale-White, #FFF);
+  border: none;
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+  letter-spacing: -0.14px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  height: 40px;
+  padding: 10px 16px;
+  width: 183px;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.sliderLeftArrow,
+.sliderRightArrow {
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat !important;
+  transition: all 0.1s ease-in-out;
+  width: 42px;
+  height: 42px;
+}
+
+.caretIcon {
+  display: none;
+}
+
+
+
+.sliderLeftArrow {
+  background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="20" fill="white"/><path d="M21.5 25L16.5 20L21.5 15" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat !important;
+  left: 1px;
+}
+
+
+.sliderRightArrow {
+  background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"/><path d="M18.5 25L23.5 20L18.5 15" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat !important;
+  right: 15px;
+  filter: unset;
+}
+
+
+.paginationDotsContainer {
+  bottom: -24px;
+  margin-right: 16px;
+}
+
+.paginationDot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 9999px !important;
+  background: #A1A1AA !important;
+}
+
+.paginationDot--isActive {
+  background: #FF5A00 !important;
+}
+
+
+@media screen and (min-width: 768px) {
+  .card-wrapper:hover .card-content h3,
+  .card-wrapper:hover .card-image {
+    opacity: 0;
+  }
+
+  .sliderRightArrow:hover {
+    background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="%23FDF2EC"/><path d="M18.5 25L23.5 20L18.5 15" stroke="%23EE8146" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat !important;
+  }
+
+  .card-wrapper:hover .hover-image,
+  .card-wrapper:hover .card-content button  {
+    opacity: 1;
+  }
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .card-wrapper .card-content h3 {
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+  }
+
+  .card-wrapper {
+    padding: 12px 0;
+    padding-top: 18px;
+  }
+
+  .card-image img {
+    max-width: 90px;
+    max-height: 90px;
+  }
+
+  .paginationDotsContainer {
+    bottom: -18px;
+    margin-right: 0;
+  }
+
+  .sliderLeftArrow:hover {
+    background: url('data:image/svg+xml,<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="%23FDF2EC"/><path d="M21.5 25L16.5 20L21.5 15" stroke="%23EE8146" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat !important;
+  }
+
+  .sliderLeftArrow,
+  .sliderRightArrow {
+    width: 32px;
+  }
+
+  .sliderLeftArrow {
+    left: -15px;
+    background: url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="40" height="40" rx="20" fill="white"/><path d="M21.5 25L16.5 20L21.5 15" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat !important;
+    height: 32px;
+    width: 32px;
+    left: -18px;
+  }
+
+  .sliderRightArrow {
+    right: -7px;
+    background: url('data:image/svg+xml,<svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 20C0 8.95431 8.95431 0 20 0C31.0457 0 40 8.95431 40 20C40 31.0457 31.0457 40 20 40C8.95431 40 0 31.0457 0 20Z" fill="white"/><path d="M18.5 25L23.5 20L18.5 15" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat !important;
+    width: 32px;
+    height: 32px;
+  }
+
+}
+
