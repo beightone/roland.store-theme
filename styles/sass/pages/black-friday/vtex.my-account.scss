@@ -23,7 +23,8 @@
 
   :global(.vtex-login-2-x-label),
   :global(.vtex-styleguide-9-x-input)::placeholder,
-  :global(.vtex-store-link-0-x-label--wishlist) {
+  :global(.vtex-store-link-0-x-label--wishlist),
+  :global(.vtex-store-components-3-x-searchBarInnerContainer .vtex-styleguide-9-x-input) {
     color: #FFF!important;
   }
 
