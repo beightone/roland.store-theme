@@ -33,7 +33,8 @@
   "product-summary.shelf#pre-owned-preview": {
     "title": "Card: Sumário de Produto",
     "props": {
-      "blockClass": "product-summary-general"
+      "blockClass": "product-summary-general",
+      "href": "/seminovos?sc=2"
     },
     "children": [
       "vtex.product-highlights@2.x:product-highlights#pre-owned",
@@ -72,7 +73,7 @@
     "title": "Link: Página de Produto Seminovo",
     "props": {
       "blockClass": "pre-owned-product-summary-link",
-      "href": "/{slug}/p",
+      "href": "/seminovos?sc=2",
       "label": "Ver detalhes"
     }
   },
