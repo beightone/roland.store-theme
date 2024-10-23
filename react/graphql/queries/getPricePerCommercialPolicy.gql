@@ -1,0 +1,16 @@
+query getPricePerCommercialPolicy(
+  $slug: String, 
+  $salesChannel: Int
+) {
+  product(slug: $slug salesChannel: $salesChannel) @context(provider: "vtex.search-graphql") {
+    items {
+      sellers {
+        commertialOffer {
+          Price
+          spotPrice
+          ListPrice
+        }
+      }
+    }
+  }
+}

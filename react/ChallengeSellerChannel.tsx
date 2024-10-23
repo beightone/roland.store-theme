@@ -53,17 +53,24 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
     const isPreOwnedPage = page === 'store.custom#pre-owned'
     const isHomePage = page === 'store.home'
     const isProductPage = page === 'store.product'
-    const isPreOwnedProduct = preOwnedItems.some(
-      (preOwnedItem: any) => preOwnedItem.productId === route.params.id
-    )
+    const isPreOwnedProduct = document.referrer.includes('seminovos')
 
     const currentUrl = new URL(window.location.href)
     const hasScParameter = currentUrl.searchParams.has('sc')
     const hasRefreshed = currentUrl.searchParams.has('refreshed')
 
+    console.log('isPreOwnedPage', isPreOwnedPage, document.referrer)
+
     if (isProductPage && isPreOwnedProduct && !hasScParameter) {
       currentUrl.searchParams.set('sc', '2')
       window.location.href = currentUrl.toString()
+
+      return
+    }
+
+    if (isProductPage && !isPreOwnedProduct && !hasScParameter) {
+      currentUrl.searchParams.set('sc', '1')
+      window.location.href
 
       return
     }
