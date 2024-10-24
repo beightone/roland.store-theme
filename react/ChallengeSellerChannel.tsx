@@ -49,8 +49,6 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
     elements.forEach((element) => {
       const elementToDisable = document.querySelector(element) as HTMLElement
 
-      console.log('elementToDisable', elementToDisable)
-
       if (elementToDisable) {
         elementToDisable.style.display = 'none'
       }
@@ -71,10 +69,6 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
     const hasScParameter = currentUrl.searchParams.has('sc')
     const hasRefreshed = currentUrl.searchParams.has('refreshed')
 
-    console.log('isProductPage && isPreOwnedProduct', isProductPage && isPreOwnedProduct, {
-      isProductPage,isPreOwnedProduct
-    })
-
     if (isProductPage && isPreOwnedProduct && !hasScParameter) {
       currentUrl.searchParams.set('sc', '2')
       window.location.href = currentUrl.toString()
@@ -94,8 +88,6 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
         '.roland-store-theme-1-x-menuContainer',
         '.vtex-breadcrumb-1-x-container',
       ]
-
-      console.log('elementsToDisable', elementsToDisable)
 
       disableElements(elementsToDisable)
 
