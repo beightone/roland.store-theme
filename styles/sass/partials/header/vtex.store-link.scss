@@ -31,10 +31,17 @@
 
 :global(.vtex-flex-layout-0-x-flexRow--pre-owned) {
   .label--link-roland {
-      background-image: url('assets/svgs/roland-inactive.svg')!important;
-
+    background-image: url('assets/svgs/roland-inactive.svg') !important;
   }
 }
+
+:global(.vtex-flex-layout-0-x-flexRow--pre-owned):global(.vtex-flex-layout-0-x-flexRow--pre-owned-product) {
+  .label--link-roland {
+    background-image: url('assets/svgs/roland-button.svg')!important;
+  }
+}
+
+
 
 .link--link {
 

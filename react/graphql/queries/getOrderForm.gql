@@ -1,11 +1,187 @@
 query getOrderForm {
   orderForm @context(provider: "vtex.store-graphql") {
+    cacheId
     orderFormId
+    customData {
+      customApps {
+        fields
+        id
+        major
+      }
+    }
+    value
     items {
       id
       name
+      detailUrl
+      imageUrl
+      skuName
+      productRefId
+      quantity
+      uniqueId
+      productId
+      refId
+      ean
+      priceValidUntil
+      price
+      tax
+      listPrice
+      sellingPrice
+      rewardValue
+      isGift
+      parentItemIndex
+      parentAssemblyBinding
+      additionalInfo {
+        brandName
+      }
+      assemblyOptions {
+        added {
+          item {
+            id
+            name
+          }
+          normalizedQuantity
+          choiceType
+          extraQuantity
+        }
+        removed {
+          initialQuantity
+          removedQuantity
+          name
+        }
+        parentPrice
+      }
       seller
+      cartIndex
+      productCategoryIds
+      productCategories
+      priceTags {
+        identifier
+        isPercentual
+        name
+        rawValue
+        value
+      }
+      measurementUnit
+      sellingPriceWithAssemblies
+      unitMultiplier
+      canHaveAttachment
+      priceDefinition {
+        calculatedSellingPrice
+        sellingPrices {
+          quantity
+          value
+        }
+        total
+      }
     }
     salesChannel
+    loggedIn
+    isCheckedIn
+    storeId
+    allowManualPrice
+    canEditData
+    userProfileId
+    userType
+    ignoreProfileData
+    totalizers {
+      id
+      name
+      value
+    }
+    clientProfileData {
+      email
+      firstName
+      lastName
+      phone
+      isCorporate
+      corporateDocument
+      corporateName
+      corporatePhone
+      document
+      documentType
+      stateInscription
+      tradeName
+    }
+    sellers {
+      id
+      name
+    }
+    shippingData {
+      address {
+        addressId
+        addressType
+        postalCode
+        country
+        receiverName
+        city
+        state
+        street
+        number
+        complement
+        neighborhood
+        geoCoordinates
+        isDisposable
+      }
+      availableAddresses {
+        addressId
+        addressType
+        postalCode
+        country
+        receiverName
+        city
+        state
+        street
+        number
+        complement
+        neighborhood
+        geoCoordinates
+        isDisposable
+      }
+      selectedAddresses {
+        addressId
+        addressType
+        postalCode
+        country
+        receiverName
+        city
+        state
+        street
+        number
+        complement
+        neighborhood
+        geoCoordinates
+        isDisposable
+      }
+    }
+    storePreferencesData {
+      countryCode
+      currencyCode
+      timeZone
+      currencyFormatInfo {
+        currencyDecimalDigits
+        currencyDecimalSeparator
+        currencyGroupSeparator
+        startsWithCurrencySymbol
+      }
+      currencySymbol
+    }
+    itemMetadata {
+      id
+      name
+      sku
+    }
+    checkedInPickupPointId
+    pickupPointCheckedIn {
+      pickupStoreInfo {
+        friendlyName
+        address {
+          addressId
+          city
+          state
+          postalCode
+        }
+      }
+    }
   }
 }

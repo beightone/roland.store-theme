@@ -18,15 +18,227 @@
     ]
   },
   "header-layout.desktop#pre-owned-product": {
-    "title": "Header Desktop",
+    "title": "Header Desktop Produto Seminovo",
     "children": [
       "header-row#topbar-desktop.pre-owned",
       "header-row#main-desktop",
+      "menu",
+      "flex-layout.row#breadcrumb.pre-owned",
       "add-to-cart-event"
     ]
   },
   "menu": {
-    "title": "Menu Customizado - Desktop"
+    "title": "Menu Customizado - Desktop",
+    "props": {
+      "departments": [
+        {
+          "departmentImageDesktop": {
+            "src": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/d46e9604-655f-490a-b4d7-dd1a1f797d49___4d47f8f92901ffd363d12d40d1cb3ac5.png"
+          },
+          "departmentThumbImageMobile": {},
+          "departmentImageMobile": {},
+          "__editorItemTitle": "Teclados",
+          "name": "Teclados",
+          "link": "/roland/teclados",
+          "categories": [
+            {
+              "__editorItemTitle": "Arranjadores",
+              "name": "Arranjadores",
+              "link": "/roland/teclados/arranjadores"
+            },
+            {
+              "__editorItemTitle": "Sintetizadores",
+              "name": "Sintetizadores",
+              "link": "/roland/teclados/sintetizadores"
+            },
+            {
+              "__editorItemTitle": "Acordeon",
+              "name": "Acordeon",
+              "link": "/roland/teclados/acordeon"
+            },
+            {
+              "__editorItemTitle": "Controladores MIDI",
+              "name": "Controladores MIDI",
+              "link": "/roland/teclados/controladores-midi"
+            },
+            {
+              "__editorItemTitle": "Amplificadores",
+              "name": "Amplificadores",
+              "link": "/roland/teclados/amplificadores"
+            },
+            {
+              "__editorItemTitle": "Acessórios",
+              "name": "Acessórios",
+              "link": "/roland/teclados/acessorios"
+            }
+          ]
+        },
+        {
+          "departmentImageDesktop": {
+            "src": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/c09d913a-0ac0-4db9-aaf7-66e884186bc4___5ad25cce41c5fbd2c65630a47cbe0f74.png"
+          },
+          "departmentThumbImageMobile": {},
+          "departmentImageMobile": {},
+          "__editorItemTitle": "Pianos",
+          "name": "Pianos",
+          "link": "/roland/pianos",
+          "categories": [
+            {
+              "__editorItemTitle": "Pianos de Palco",
+              "name": "Pianos de Palco",
+              "link": "/roland/pianos/pianos-de-palco"
+            },
+            {
+              "__editorItemTitle": "Pianos Verticais",
+              "name": "Pianos Verticais",
+              "link": "/roland/pianos/pianos-verticais"
+            },
+            {
+              "__editorItemTitle": "Pianos Compactos",
+              "name": "Pianos Compactos",
+              "link": "/roland/pianos/pianos-compactos"
+            },
+            {
+              "__editorItemTitle": "Pianos de Cauda",
+              "link": "/roland/pianos/pianos-de-cauda",
+              "name": "Pianos de Cauda"
+            },
+            {
+              "__editorItemTitle": "Banquetas",
+              "name": "Banquetas",
+              "link": "/roland/pianos/banquetas"
+            }
+          ]
+        },
+        {
+          "departmentImageDesktop": {
+            "src": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/b94f681a-71b3-40ea-97c0-98fb580ebdb7___6cf35c94d95bc0acd0ebec45b64b88a8.png"
+          },
+          "departmentThumbImageMobile": {},
+          "departmentImageMobile": {},
+          "__editorItemTitle": "Baterias e percussão",
+          "name": "Baterias e percussão",
+          "link": "/roland/baterias-e-percussao",
+          "categories": [
+            {
+              "link": "/roland/baterias-e-percussao/Baterias-eletronicas",
+              "__editorItemTitle": "Baterias Eletrônicas",
+              "name": "Baterias Eletrônicas"
+            },
+            {
+              "link": "/roland/baterias-e-percussao/v-drums-acoustic-design",
+              "__editorItemTitle": "V-Drums Acoustic Design",
+              "name": "V-Drums Acoustic Design"
+            },
+            {
+              "__editorItemTitle": "Acessórios",
+              "name": "Acessórios",
+              "link": "/roland/baterias-e-percussao/acessorios"
+            },
+            {
+              "__editorItemTitle": "Amplificadores",
+              "name": "Amplificadores",
+              "link": "/roland/baterias-e-percussao/Amplificadores"
+            },
+            {
+              "__editorItemTitle": "Módulos e Triggers",
+              "name": "Módulos e Triggers",
+              "link": "/roland/baterias-e-percussao/modulos-e-triggers"
+            },
+            {
+              "__editorItemTitle": "Pads de Bateria",
+              "name": "Pads de Bateria",
+              "link": "/roland/baterias-e-percussao/pads-de-bateria"
+            },
+            {
+              "__editorItemTitle": "Percussão Digital",
+              "name": "Percussão Digital",
+              "link": "/roland/baterias-e-percussao/percussao-digital"
+            }
+          ]
+        },
+        {
+          "departmentImageDesktop": {
+            "src": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/0c6e460b-5171-401e-8727-cee66e8f8d06___521457ffc4a8ee895e38de2a524ac8ba.png"
+          },
+          "departmentThumbImageMobile": {},
+          "departmentImageMobile": {},
+          "__editorItemTitle": "Dance & DJ",
+          "name": "Dance & DJ",
+          "link": "/roland/dance---dj",
+          "categories": [
+            {
+              "__editorItemTitle": "Drum machines",
+              "name": "Drum machines",
+              "link": "/roland/dance---dj/drum-machines"
+            },
+            {
+              "link": "/roland/dance---dj/sintetizadores",
+              "__editorItemTitle": "Sintetizadores",
+              "name": "Sintetizadores"
+            },
+            {
+              "link": "/roland/dance---dj/controladoras-dj",
+              "__editorItemTitle": "Controladoras DJ",
+              "name": "Controladoras DJ"
+            },
+            {
+              "__editorItemTitle": "Samplers",
+              "name": "Samplers",
+              "link": "/roland/dance---dj/samplers"
+            },
+            {
+              "__editorItemTitle": "Grooveboxes",
+              "name": "Grooveboxes",
+              "link": "/roland/dance---dj/grooveboxes"
+            },
+            {
+              "__editorItemTitle": "Efeitos",
+              "link": "/roland/dance---dj/efeitos",
+              "name": "Efeitos"
+            },
+            {
+              "__editorItemTitle": "Acessórios",
+              "name": "Acessórios",
+              "link": "/roland/dance---dj/acessorios"
+            }
+          ]
+        },
+        {
+          "departmentImageDesktop": {
+            "src": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/dd6fcb04-9cd8-4506-9473-1c9261157266___3c550ab6c7576b3d8cdc4aa801ff4425.png"
+          },
+          "departmentThumbImageMobile": {},
+          "departmentImageMobile": {},
+          "__editorItemTitle": "Fone de ouvido",
+          "name": "Fone de ouvido",
+          "link": "/roland/fones-de-ouvido",
+          "categories": [
+            {
+              "__editorItemTitle": "Fones Roland",
+              "name": "Fones Roland",
+              "link": "/roland/fones-de-ouvido/fones-roland"
+            },
+            {
+              "__editorItemTitle": "Fones V-MODA",
+              "link": "/roland/fones-de-ouvido/fones-v-moda",
+              "name": "Fones V-MODA"
+            },
+            {
+              "link": "/roland/fones-de-ouvido/acessorios-para-fones-de-ouvido",
+              "name": "Acessórios para fone de ouvido",
+              "__editorItemTitle": "Acessórios para fone de ouvido"
+            }
+          ]
+        }
+      ],
+      "staticLink": {
+        "active": false,
+        "name": "",
+        "color": "#ffffff",
+        "backgroundColor": "#000000"
+      }
+    }
   },
   "flex-layout.row#breadcrumb.pre-owned": {
     "title": "Breadcrumb - Seminovos",
