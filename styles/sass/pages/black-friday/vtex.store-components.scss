@@ -11,7 +11,7 @@
     padding: 0;
   }
 
-  .infoCardHeadline {
+  .headingLevel3--info-card-black-friday-benefits {
     color: #FF5A00;
     font-family: "Proxima Nova";
     font-size: 16px;
@@ -33,7 +33,7 @@
     height: fit-content;
   }
 
-  .infoCardBodyText {
+  .paragraph--info-card-black-friday-benefits {
     color: #FFF;
     font-family: "Proxima Nova";
     font-size: 12px;
@@ -86,8 +86,7 @@
       text-decoration: none;
     }
   }
-
-  .paragraph {
+  .headingLevel2--info-card-black-friday-banner-discount {
     color: #FFF;
     font-family: "Monument Extended";
     font-size: 40px;
@@ -98,7 +97,7 @@
     text-transform: uppercase;
     margin:0;
 
-    .strong {
+    &:last-child{
       color: #FF5A00;
     }
   } 

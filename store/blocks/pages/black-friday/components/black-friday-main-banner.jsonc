@@ -14,7 +14,7 @@
     "title": "Texto - Banner Principal",
     "props": {
       "width": "32%",
-      "text": "## **BLACK** \n ## **NOVEMBER** \n A Roland, referência em instrumentos musicais, está com tudo no **Black November**! Aproveite descontos incríveis em pianos digitais, sintetizadores, baterias eletrônicas e muito mais.",
+      "text": "# **BLACK** \n # **NOVEMBER** \n A Roland, referência em instrumentos musicais, está com tudo no **Black November**! Aproveite descontos incríveis em pianos digitais, sintetizadores, baterias eletrônicas e muito mais.",
       "blockClass": "black-friday-main-text-banner"
     }
   },

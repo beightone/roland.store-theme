@@ -9,17 +9,6 @@
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
 /* Grid breakpoints */
-.imageElement--newsletter-image {
-  height: fit-content;
-  align-self: center;
-}
-@media screen and (max-width: 768px) {
-  .imageElement--newsletter-image {
-    width: 100%;
-    margin-top: 32px;
-  }
-}
-
 .infoCardContainer--our-categories-main-image {
   max-width: 680px;
   background-color: black;
@@ -151,16 +140,27 @@
   height: 100%;
 }
 
+.imageElement--newsletter-image {
+  height: fit-content;
+  align-self: center;
+}
+@media screen and (max-width: 768px) {
+  .imageElement--newsletter-image {
+    width: 100%;
+    margin-top: 32px;
+  }
+}
+
+.discountContainer .discountInsideContainer {
+  display: none;
+}
+
 .imageElement--simple-banner-image-1 {
   margin-right: 24px;
 }
 
 .imageElement--mobile {
   width: 100%;
-}
-
-.discountContainer .discountInsideContainer {
-  display: none;
 }
 
 .infoCardContainer--info-card-black-friday-benefits {
@@ -175,7 +175,7 @@
   width: 100%;
   padding: 0;
 }
-.infoCardContainer--info-card-black-friday-benefits .infoCardHeadline {
+.infoCardContainer--info-card-black-friday-benefits .headingLevel3--info-card-black-friday-benefits {
   color: #FF5A00;
   font-family: "Proxima Nova";
   font-size: 16px;
@@ -195,7 +195,7 @@
   width: fit-content;
   height: fit-content;
 }
-.infoCardContainer--info-card-black-friday-benefits .infoCardBodyText {
+.infoCardContainer--info-card-black-friday-benefits .paragraph--info-card-black-friday-benefits {
   color: #FFF;
   font-family: "Proxima Nova";
   font-size: 12px;
@@ -243,7 +243,7 @@
   letter-spacing: -0.14px;
   text-decoration: none;
 }
-.infoCardContainer--info-card-black-friday-banner-discount .paragraph {
+.infoCardContainer--info-card-black-friday-banner-discount .headingLevel2--info-card-black-friday-banner-discount {
   color: #FFF;
   font-family: "Monument Extended";
   font-size: 40px;
@@ -254,7 +254,7 @@
   text-transform: uppercase;
   margin: 0;
 }
-.infoCardContainer--info-card-black-friday-banner-discount .paragraph .strong {
+.infoCardContainer--info-card-black-friday-banner-discount .headingLevel2--info-card-black-friday-banner-discount:last-child {
   color: #FF5A00;
 }
 @media screen and (max-width: 768px) {

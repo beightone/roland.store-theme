@@ -69,7 +69,8 @@
 
 .wrapper--highlight {
   width: 100%;
-  .paragraph--highlight {
+  .paragraph--highlight,
+  .headingLevel2--black-friday-countdown-offer-highlighted-text {
     width: 100%;
     text-align: center;
     color: var(--text-brand-primary-base, #FF5A00);
@@ -169,7 +170,7 @@
   }
 }
 
-.container--black-friday-countdown-offer-highlighted-text .paragraph--black-friday-countdown-offer-highlighted-text {
+.container--black-friday-countdown-offer-highlighted-text .headingLevel2--black-friday-countdown-offer-highlighted-text {
   color: var(--text-brand-primary-base, #FF5A00);
   font-family: "Monument Extended";
   font-size: 72px;
@@ -219,7 +220,7 @@
   }
 }
 
-.paragraph--banner-with-shelf-section-title {
+.headingLevel2--banner-with-shelf-section-title {
   color: var(--Lightgrey-white, #FFF);
   font-family: "Proxima Nova";
   font-size: 32px;

@@ -6,9 +6,7 @@
       "blockClass": ["black-friday-countdown-offer", "centered-wrapper"],
       "preventHorizontalStretch": true
     },
-    "children": [
-      "flex-layout.col#black-friday-countdown-offer-content"
-    ]
+    "children": ["flex-layout.col#black-friday-countdown-offer-content"]
   },
   "flex-layout.col#black-friday-countdown-offer-content": {
     "title": "Conteúdo",
@@ -16,16 +14,19 @@
       "blockClass": "black-friday-countdown-offer-content"
     },
     "children": [
-      "rich-text#black-friday-countdown-offer-highlighted-text",
+      "rich-text#black-friday-countdown-offer-title",
       "rich-text#black-friday-countdown-offer-text",
       "countdown"
     ]
   },
-  "rich-text#black-friday-countdown-offer-highlighted-text": {
+  "rich-text#black-friday-countdown-offer-title": {
     "title": "Título principal destacado",
     "props": {
-      "text": "ofertas \n relâmpago",
-      "blockClass": ["black-friday-countdown-offer-highlighted-text", "highlight"]
+      "text": "## ofertas especiais",
+      "blockClass": [
+        "black-friday-countdown-offer-highlighted-text",
+        "highlight"
+      ]
     }
   },
   "rich-text#black-friday-countdown-offer-text": {
