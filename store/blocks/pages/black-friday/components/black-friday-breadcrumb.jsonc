@@ -1,0 +1,27 @@
+{
+  "flex-layout.row#black-friday-breadcrumb": {
+    "title": "Breadcrumb",
+    "props": {
+      "blockClass": ["breadcrumb--pre-owned", "breadcrumb--black-friday"],
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true
+    },
+    "children": ["link#breadcrumb.home", "link#black-friday-breadcrumb"]
+  },
+  "link#breadcrumb.home": {
+    "title": "Link para Home",
+    "props": {
+      "href": "/",
+      "label": "Home",
+      "blockClass": ["breadcrumb--home"]
+    }
+  },
+  "link#black-friday-breadcrumb": {
+    "title": "Link para black friday",
+    "props": {
+      "href": "/black-friday",
+      "label": "Black November",
+      "blockClass": ["breadcrumb--pre-owned", "breadcrumb--black-friday"]
+    }
+  }
+}
