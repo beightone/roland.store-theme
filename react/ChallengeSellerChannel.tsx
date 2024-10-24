@@ -45,6 +45,18 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
     )
   )
 
+  const disableElements = (elements: string[]) => {
+    elements.forEach((element) => {
+      const elementToDisable = document.querySelector(element) as HTMLElement
+
+      console.log('elementToDisable', elementToDisable)
+
+      if (elementToDisable) {
+        elementToDisable.style.display = 'none'
+      }
+    })
+  }
+
   useEffect(() => {
     if (orderFormLoading || productsLoading || !preOwnedItems?.length) {
       return
@@ -59,26 +71,52 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
     const hasScParameter = currentUrl.searchParams.has('sc')
     const hasRefreshed = currentUrl.searchParams.has('refreshed')
 
-    console.log('isPreOwnedPage', isPreOwnedPage, document.referrer)
+    console.log('isProductPage && isPreOwnedProduct', isProductPage && isPreOwnedProduct, {
+      isProductPage,isPreOwnedProduct
+    })
 
     if (isProductPage && isPreOwnedProduct && !hasScParameter) {
       currentUrl.searchParams.set('sc', '2')
       window.location.href = currentUrl.toString()
 
+      const elementsToDisable = [
+        '.roland-store-theme-1-x-menuContainer',
+        '.vtex-breadcrumb-1-x-container',
+      ]
+
+      disableElements(elementsToDisable)
+
+      return
+    }
+
+    if (isProductPage && (isPreOwnedProduct || hasScParameter)) {
+      const elementsToDisable = [
+        '.roland-store-theme-1-x-menuContainer',
+        '.vtex-breadcrumb-1-x-container',
+      ]
+
+      console.log('elementsToDisable', elementsToDisable)
+
+      disableElements(elementsToDisable)
+
       return
     }
 
     if (isProductPage && !isPreOwnedProduct && !hasScParameter) {
-      currentUrl.searchParams.set('sc', '1')
-      window.location.href
+      const elementsToDisable = [
+        '.vtex-flex-layout-0-x-flexRow--pre-owned-tab',
+        '.vtex-flex-layout-0-x-flexRow--breadcrumb--pre-owned',
+      ]
 
-      return
-    }
+      const preOwnedClass = document.querySelector(
+        '.vtex-flex-layout-0-x-flexRow--pre-owned'
+      ) as HTMLElement
 
-    if (isProductPage && !isPreOwnedProduct && !hasScParameter) {
-      currentUrl.searchParams.set('sc', '1')
+      preOwnedClass.classList.add(
+        'vtex-flex-layout-0-x-flexRow--pre-owned-product'
+      )
 
-      window.location.href = currentUrl.toString()
+      disableElements(elementsToDisable)
 
       return
     }
