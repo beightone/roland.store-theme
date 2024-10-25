@@ -14,13 +14,30 @@
       "blockClass": "black-friday-countdown-offer-content"
     },
     "children": [
-      "rich-text#black-friday-countdown-offer-title",
+      "responsive-layout.mobile#rich-text-title",
+      "responsive-layout.desktop#rich-text-title",
       "rich-text#black-friday-countdown-offer-text",
       "countdown"
     ]
   },
+  "responsive-layout.mobile#rich-text-title": {
+    "children": ["rich-text#black-friday-countdown-offer-title-mobile"]
+  },
+  "rich-text#black-friday-countdown-offer-title-mobile": {
+    "title": "Título principal destacado mobile",
+    "props": {
+      "text": "## ofertas \n ## especiais",
+      "blockClass": [
+        "black-friday-countdown-offer-highlighted-text",
+        "highlight"
+      ]
+    }
+  },
+  "responsive-layout.desktop#rich-text-title": {
+    "children": ["rich-text#black-friday-countdown-offer-title"]
+  },
   "rich-text#black-friday-countdown-offer-title": {
-    "title": "Título principal destacado",
+    "title": "Título principal destacado desktop",
     "props": {
       "text": "## ofertas especiais",
       "blockClass": [
