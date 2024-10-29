@@ -100,15 +100,13 @@
     &:last-child{
       color: #FF5A00;
     }
-  } 
-
-  @media screen and (max-width: 768px) {
-    .paragraph {
+    @media screen and (max-width: 768px) {
       font-size: 32px;
       line-height: 40px;
       letter-spacing: -0.32px;
     }
-  }
+  } 
+
 }
 
 .imageElement--black-friday-middle-banner-image {
