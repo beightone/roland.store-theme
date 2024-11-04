@@ -1,0 +1,56 @@
+{
+  "flex-layout.row#black-friday-countdown-offer": {
+    "title": "Seção - Oferta com contagem regressiva",
+    "props": {
+      "fullWidth": true,
+      "blockClass": ["black-friday-countdown-offer", "centered-wrapper"],
+      "preventHorizontalStretch": true
+    },
+    "children": ["flex-layout.col#black-friday-countdown-offer-content"]
+  },
+  "flex-layout.col#black-friday-countdown-offer-content": {
+    "title": "Conteúdo",
+    "props": {
+      "blockClass": "black-friday-countdown-offer-content"
+    },
+    "children": [
+      "responsive-layout.mobile#rich-text-title",
+      "responsive-layout.desktop#rich-text-title",
+      "rich-text#black-friday-countdown-offer-text",
+      "countdown"
+    ]
+  },
+  "responsive-layout.mobile#rich-text-title": {
+    "children": ["rich-text#black-friday-countdown-offer-title-mobile"]
+  },
+  "rich-text#black-friday-countdown-offer-title-mobile": {
+    "title": "Título principal destacado mobile",
+    "props": {
+      "text": "## ofertas \n ## especiais",
+      "blockClass": [
+        "black-friday-countdown-offer-highlighted-text",
+        "highlight"
+      ]
+    }
+  },
+  "responsive-layout.desktop#rich-text-title": {
+    "children": ["rich-text#black-friday-countdown-offer-title"]
+  },
+  "rich-text#black-friday-countdown-offer-title": {
+    "title": "Título principal destacado desktop",
+    "props": {
+      "text": "## ofertas especiais",
+      "blockClass": [
+        "black-friday-countdown-offer-highlighted-text",
+        "highlight"
+      ]
+    }
+  },
+  "rich-text#black-friday-countdown-offer-text": {
+    "title": "Subtítulo",
+    "props": {
+      "text": "Essas ofertas se\nencerram em:",
+      "blockClass": "black-friday-countdown-offer-text"
+    }
+  }
+}

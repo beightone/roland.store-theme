@@ -1,0 +1,65 @@
+{
+  "flex-layout.row#black-friday-banner-with-shelf": {
+    "title": "Seção - Banner com prateleira",
+    "props": {
+      "blockClass": ["black-friday-banner-with-shelf", "centered-wrapper"],
+      "fullWidth": true
+    },
+    "children": [
+      "flex-layout.row#section-title",
+      "flex-layout.row#shelf-with-banner-black-friday"
+    ]
+  },
+  "flex-layout.row#shelf-with-banner-black-friday": {
+    "title": "Prateleira com banner",
+    "props": {
+      "blockClass": "shelf-with-banner",
+      "fullWidth": true,
+      "width": "100%"
+    },
+    "children": [
+      "image#banner-black-friday-shelf",
+      "list-context.product-list#black-friday-products"
+    ]
+  },
+  "list-context.product-list#black-friday-products": {
+    "title": "Container da shelf",
+    "blocks": ["product-summary.shelf#general"],
+    "children": ["slider-layout#double-shelf"],
+    "props": {
+      "blockClass": ["shelf-container", "black-friday-shelf-container"],
+      "collection": "180"
+    }
+  },
+  "image#banner-black-friday-shelf": {
+    "title": "Banner",
+    "props": {
+      "src": "/arquivos/banner-shelf-bf.png",
+      "alt": "Banner Black Friday",
+      "blockClass": "black-friday-banner"
+    }
+  },
+  "flex-layout.row#section-title": {
+    "title": "Título da seção e botão ver mais",
+    "props": {
+      "width": "100%",
+      "blockClass": ["section-title", "see-more-button"]
+    },
+    "children": ["rich-text#section-title", "link#shelf-see-more"]
+  },
+  "rich-text#section-title": {
+    "title": "Título",
+    "props": {
+      "text": "## Black November Roland",
+      "blockClass": "banner-with-shelf-section-title"
+    }
+  },
+  "link#shelf-see-more": {
+    "title": "Botão ver tudo",
+    "props": {
+      "label": "Ver tudo",
+      "href": "/",
+      "blockClass": "see-more-button"
+    }
+  }
+}

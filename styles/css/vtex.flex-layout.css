@@ -240,6 +240,140 @@
   gap: 16px;
 }
 
+.flexRow--centered-wrapper {
+  max-width: 1440px;
+  padding: 48px 32px;
+  width: 100%;
+  margin: 0 auto;
+}
+.flexRow--centered-wrapper.flexRow--black-friday-countdown-offer {
+  padding-bottom: 0;
+}
+@media screen and (max-width: 768px) {
+  .flexRow--centered-wrapper {
+    padding: 16px;
+  }
+}
+
+.flexRowContent--black-friday-SEO {
+  justify-content: space-between;
+}
+.flexRowContent--black-friday-SEO .stretchChildrenWidth:first-child {
+  justify-content: flex-start;
+}
+
+.flexRowContent--black-friday-banner-with-shelf {
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.flexRowContent--shelf-with-banner {
+  gap: 16px;
+}
+
+.flexRow--shelf-container-black-friday .flexCol--shelf-container {
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .flexRow--shelf-container-black-friday {
+    padding-right: 7px;
+  }
+}
+
+.flexRow--black-friday-main-banner {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.flexRowContent--black-friday-main-banner {
+  justify-content: space-between;
+  padding: 27px 0;
+}
+
+.flexRowContent--black-friday-discount-banners {
+  gap: 24px;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 768px) {
+  .flexRowContent--black-friday-discount-banners {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.flexRowContent--category-cards-section {
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.flexRowContent--black-friday-middle-banner-text {
+  gap: 87px;
+}
+
+.flexRowContent--black-friday-countdown-offer {
+  display: flex;
+  justify-content: center;
+}
+
+.flexRow--black-friday-FAQ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 998px) {
+  .flexRow--black-friday-FAQ {
+    min-height: 980px;
+    position: relative;
+    background-image: url(/arquivos/faq-background.png);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-blend-mode: overlay;
+    background-size: 100% 680px;
+  }
+}
+
+.flexRow--black-friday-FAQ-questions {
+  border-radius: 2px;
+  background: var(--Brand-Primary-Black, #000);
+  padding: 32px;
+}
+@media screen and (min-width: 998px) {
+  .flexRow--black-friday-FAQ-questions {
+    position: absolute;
+    right: 0;
+    max-width: 668px;
+    opacity: 0.8;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.flexRowContent--breadcrumb--black-friday {
+  display: flex;
+}
+
+.flexRowContent--black-friday-FAQ {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .flexRowContent--black-friday-FAQ {
+    flex-direction: column;
+  }
+  .flexRowContent--black-friday-FAQ :global(.vtex-rich-text-0-x-container--black-friday-aside-title) {
+    display: none;
+  }
+  .flexRowContent--black-friday-FAQ .flexRow--black-friday-FAQ-questions {
+    padding: 0;
+  }
+}
+
+.flexRowContent--black-friday-FAQ-questions {
+  flex-wrap: wrap;
+}
+
 .flexRowContent--home-content-container {
   max-width: 1440px;
   margin: 0 auto;
@@ -1009,7 +1143,7 @@
 
 .flexRow--breadcrumb--pre-owned {
   display: flex;
-  width: 1440px;
+  max-width: 1440px;
   padding: 16px 32px;
   margin: 0 auto;
 }

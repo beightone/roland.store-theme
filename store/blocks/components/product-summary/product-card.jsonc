@@ -5,6 +5,7 @@
       "blockClass": "product-summary-general"
     },
     "children": [
+      "custom-flag-discount",
       "add-to-list-btn#product-card",
       "product-summary-image#product-card",
       "product-summary-brand#product-card",
@@ -43,6 +44,25 @@
       "flex-layout.row#product-card-stars",
       "link.product#pre-owned-product-page"
     ]
+  },
+  "product-summary.shelf#black-friday": {
+    "title": "Card: Sumário de Produto",
+    "props": {
+      "blockClass": "product-summary-general"
+    },
+    "children": [
+      "custom-flag-discount",
+      "add-to-list-btn#product-card",
+      "product-summary-image#product-card",
+      "product-summary-brand#product-card",
+      "product-summary-name#product-card",
+      "flex-layout.row#product-card-stars",
+      "flex-layout.row#product-card-price",
+      "condition-layout.product#availability"
+    ]
+  },
+  "custom-flag-discount": {
+    "children": ["product-price-savings#black-friday"]
   },
   "product-selling-price#product-card": {
     "props": {
@@ -110,6 +130,14 @@
     "props": {
       "blockClass": "product-summary-price",
       "message": "{newSpotPriceValue} no pix ou à vista {spotPriceSavingsPercentage}",
+      "alwaysShow": true
+    }
+  },
+  "product-price-savings#black-friday": {
+    "title": "Preço: Sumário de Produto - black friday",
+    "props": {
+      "blockClass": "product-summary-price-black-friday",
+      "message": "{savingsPercentage}",
       "alwaysShow": true
     }
   },
