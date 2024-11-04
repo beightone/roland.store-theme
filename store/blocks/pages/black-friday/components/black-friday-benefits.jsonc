@@ -5,11 +5,9 @@
       "blockClass": ["black-friday-benefits", "centered-wrapper"],
       "fullWidth": true
     },
-    "children": [
-      "slider-layout#blac-friday-benefits"
-    ]
+    "children": ["slider-layout#black-friday-benefits"]
   },
-  "slider-layout#blac-friday-benefits": {
+  "slider-layout#black-friday-benefits": {
     "title": "Slider de Vantagens",
     "props": {
       "blockClass": "black-friday-benefits-slider",
@@ -42,7 +40,8 @@
       "isFullModeStyle": false,
       "textPosition": "left",
       "imageUrl": "assets/svgs/discount.svg",
-      "headline": "Descontos especiais",
+      "textMode": "rich-text",
+      "headline": "### Descontos especiais",
       "callToActionMode": "none",
       "bodyText": "Economize em instrumentos de alta\nqualidade para todos os níveis. ",
       "blockClass": "info-card-black-friday-benefits",
@@ -56,7 +55,8 @@
       "isFullModeStyle": false,
       "textPosition": "left",
       "imageUrl": "assets/svgs/price-tag.svg",
-      "headline": "Lançamentos",
+      "textMode": "rich-text",
+      "headline": "### Lançamentos",
       "callToActionMode": "none",
       "bodyText": "Descubra os últimos lançamentos da Roland e\n eleve sua música a outro patamar.",
       "blockClass": "info-card-black-friday-benefits",
@@ -70,7 +70,8 @@
       "isFullModeStyle": false,
       "textPosition": "left",
       "imageUrl": "assets/svgs/piano.svg",
-      "headline": "Qualidade",
+      "textMode": "rich-text",
+      "headline": "### Qualidade",
       "callToActionMode": "none",
       "bodyText": "Garantimos a funcionalidade\n100% do produto ",
       "blockClass": "info-card-black-friday-benefits",
@@ -84,7 +85,8 @@
       "isFullModeStyle": false,
       "textPosition": "left",
       "imageUrl": "assets/svgs/truck.svg",
-      "headline": "Fretes grátis*",
+      "textMode": "rich-text",
+      "headline": "### Fretes grátis*",
       "callToActionMode": "none",
       "bodyText": "Nas compras acima de R$ 1.000\nConsulte as regras*",
       "blockClass": "info-card-black-friday-benefits",

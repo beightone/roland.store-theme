@@ -45,15 +45,12 @@
       "width": "100%",
       "blockClass": ["section-title", "see-more-button"]
     },
-    "children": [
-      "rich-text#section-title",
-      "link#shelf-see-more"
-    ]
+    "children": ["rich-text#section-title", "link#shelf-see-more"]
   },
   "rich-text#section-title": {
     "title": "Título",
     "props": {
-      "text": "Black November Roland",
+      "text": "## Black November Roland",
       "blockClass": "banner-with-shelf-section-title"
     }
   },

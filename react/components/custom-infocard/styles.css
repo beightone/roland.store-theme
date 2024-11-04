@@ -1,5 +1,9 @@
 .cards-container {
   max-width: 1376px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .cards-container .sliderTrack {
@@ -13,11 +17,10 @@
 .cards-container .slideChildrenContainer {
   max-width: 332px;
   max-height: 320px;
-  
 }
 
 .cards-container .slideChildrenContainer a,
-.cards-container  a {
+.cards-container a {
   width: 100%;
   height: 100%;
   text-decoration: none;
@@ -25,7 +28,7 @@
 
 .card-wrapper {
   border-radius: var(--radius-rounded-sm, 2px);
-  background: #F0F0F0;
+  background: #f0f0f0;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -33,20 +36,8 @@
   padding: 40px 32px;
   justify-content: center;
   transition: all 0.3s ease-in-out;
-}
-
-
-@media screen and (min-width: 768px) {
-  .card-wrapper:hover .card-content h3,
-  .card-wrapper:hover .card-image {
-    opacity: 0;
-  }
-
-
-  .card-wrapper:hover .hover-image,
-  .card-wrapper:hover .card-content button  {
-    opacity: 1;
-  }
+  width: 100%;
+  height: 100%;
 }
 
 .hover-image {
@@ -56,8 +47,9 @@
   top: 0;
   opacity: 0;
   border-radius: var(--radius-rounded-sm, 2px);
-  background-color: rgba(0, 0, 0, 0.40);
-  
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  height: 100%;
 }
 .hover-image img {
   width: 100%;
@@ -78,28 +70,27 @@
   height: 100%;
   max-width: 200px;
   max-height: 200px;
-
 }
 
 .card-content h3 {
   opacity: 1;
   color: var(--Gray-Scale-Black, #000);
   text-align: center;
-  font-family: "Proxima Nova";
+  font-family: 'Proxima Nova';
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  line-height: 32px; 
+  line-height: 32px;
   letter-spacing: -0.24px;
   margin: 0;
 }
 
 .card-content button {
   border-radius: var(--radius-rounded-sm, 2px);
-  background: var(--Gray-Scale-White, #FFF);
+  background: var(--Gray-Scale-White, #fff);
   border: none;
-  color: var(--text-neutral-bold, #18181B);
-  font-family: "Proxima Nova";
+  color: var(--text-neutral-bold, #18181b);
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -117,13 +108,66 @@
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
-  .cards-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
+.caretIcon {
+  display: none;
+}
+.cards-container .see-all-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.cards-container .see-all-card .see-all-card-title {
+  font-family: 'Monument Extended';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #ff5a00;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.cards-container .see-all-card .see-all-card-button {
+  border-radius: 2px;
+  border: 1.25px solid #d4d4d8;
+  background: #fff;
+  width: calc(100% - 4rem);
+  height: 3rem;
+  color: #3f3f46;
+  font-family: 'Proxima Nova';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.cards-container .see-all-card .see-all-card-button:hover {
+  transition: all 0.3s ease-in-out;
+  border-color: #ee8146;
+  background: #fdf2ec;
+  color: #ff5a00;
+}
+
+@media screen and (min-width: 768px) {
+  .card-wrapper:hover .card-content h3,
+  .card-wrapper:hover .card-image {
+    opacity: 0;
+  }
+  .card-wrapper:hover .hover-image,
+  .card-wrapper:hover .card-content button {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 64rem) {
   .card-wrapper .card-content h3 {
     text-align: center;
     font-size: 14px;
@@ -132,10 +176,15 @@
     line-height: 20px;
     letter-spacing: -0.14px;
   }
-
+  .card-link {
+    max-width: 15rem;
+    max-height: 15rem;
+  }
   .card-wrapper {
     padding: 12px 0;
     padding-top: 18px;
+    max-width: 15rem;
+    max-height: 15rem;
   }
 
   .card-image img {
@@ -143,4 +192,22 @@
     max-height: 90px;
   }
 
+  .cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: auto;
+    justify-items: center;
+  }
+
+  .cards-container .see-all-card .see-all-card-title {
+    margin-bottom: 0.75rem;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .cards-container .see-all-card .see-all-card-button {
+    max-width: 16.75rem;
+    width: 100%;
+    height: 2.5rem;
+  }
 }

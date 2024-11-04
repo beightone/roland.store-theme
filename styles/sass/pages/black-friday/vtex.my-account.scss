@@ -21,10 +21,10 @@
     color: #000!important;
   }
 
-  :global(.roland-store-theme-1-x-menuItem span),
   :global(.vtex-login-2-x-label),
   :global(.vtex-styleguide-9-x-input)::placeholder,
-  :global(.vtex-store-link-0-x-label--wishlist) {
+  :global(.vtex-store-link-0-x-label--wishlist),
+  :global(.vtex-store-components-3-x-searchBarInnerContainer .vtex-styleguide-9-x-input) {
     color: #FFF!important;
   }
 
@@ -63,6 +63,11 @@
     :global(.vtex-rich-text-0-x-paragraph br) {
       display: none !important;
     }
+
+      :global(.roland-store-theme-1-x-menuItem span) {
+    color: #FFF !important;
+
+      }
   }
 
   @media screen and (max-width: 768px) {

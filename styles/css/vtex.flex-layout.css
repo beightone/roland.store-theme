@@ -101,7 +101,7 @@
 }
 @media screen and (min-width: 998px) {
   .flexRow--black-friday-FAQ {
-    min-height: 952px;
+    min-height: 980px;
     position: relative;
     background-image: url(/arquivos/faq-background.png);
     background-color: rgba(0, 0, 0, 0.5);

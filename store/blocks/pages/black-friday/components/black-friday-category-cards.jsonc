@@ -7,21 +7,92 @@
     },
     "children": [
       "rich-text#black-friday-category-cards-title",
-      "custom-infocard#category"
+      "custom-infocard#categories-infos"
     ]
   },
   "rich-text#black-friday-category-cards-title": {
     "title": "Título da seção",
     "props": {
       "width": "100%",
-      "text": "Navegue\npor Categorias",
+      "text": "Navegue\n por Categorias",
       "blockClass": ["category-cards-title", "highlight"]
     }
   },
-  "custom-infocard#category": {
+  "custom-infocard#categories-infos": {
     "title": "Cards de categoria",
     "props": {
-      "width": "100%"
+      "width": "100%",
+      "cards": [
+        {
+          "visible": true,
+          "title": "Pianos",
+          "link": "/roland/pianos",
+          "buttonLabel": "Ver tudo",
+          "__editorItemTitle": "Pianos",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/10572b5f-6d15-477c-8ab0-aa1b3c5c6056___3c6a0d16970065aacd04880c31a6d52a.png",
+          "hoverImage": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/7496ac46-dcd1-40fa-9998-cf5c37af033a___db9309d0c2b446586ec59857f91de610.png"
+        },
+        {
+          "visible": true,
+          "title": "Teclados",
+          "link": "/roland/teclados",
+          "buttonLabel": "Ver tudo",
+          "__editorItemTitle": "Teclados",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/ae05d4d2-05ec-4231-9ecf-6c37102a5eb7___282e5260d88ad297228a321596423db2.png",
+          "hoverImage": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/7496ac46-dcd1-40fa-9998-cf5c37af033a___db9309d0c2b446586ec59857f91de610.png"
+        },
+        {
+          "visible": true,
+          "title": "Dance & Dj",
+          "link": "/roland/dance---dj",
+          "buttonLabel": "Ver tudo",
+          "__editorItemTitle": "Dance & Dj",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/16ad68de-9d3b-4d06-9f82-8d374156893f___08f8d5f5b35ba07c928ccadc99c69799.png",
+          "hoverImage": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/7496ac46-dcd1-40fa-9998-cf5c37af033a___db9309d0c2b446586ec59857f91de610.png"
+        },
+        {
+          "visible": true,
+          "title": "Synths",
+          "link": "/",
+          "buttonLabel": "Ver tudo",
+          "__editorItemTitle": "Synths",
+          "hoverImage": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/7496ac46-dcd1-40fa-9998-cf5c37af033a___db9309d0c2b446586ec59857f91de610.png",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/e91e36c0-8952-4558-bc64-8c6685e589ac___85a614d26ddf58972c1ba292f083a26c.png"
+        },
+        {
+          "visible": true,
+          "title": "Baterias e percussão",
+          "link": "/roland/baterias-e-percussao",
+          "buttonLabel": "Ver tudo",
+          "__editorItemTitle": "Baterias e percussão",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/fc90d03f-3cd2-4b30-8181-5bd7ec6067e3___5ee0be4cced97e44cc57b5b052cb72ca.png",
+          "hoverImage": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/7496ac46-dcd1-40fa-9998-cf5c37af033a___db9309d0c2b446586ec59857f91de610.png"
+        },
+
+        {
+          "visible": true,
+          "title": "V-Moda",
+          "link": "/roland/fones-de-ouvido/fones-v-moda",
+          "buttonLabel": "Ver tudo",
+          "__editorItemTitle": "V-Moda",
+          "hoverImage": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/7496ac46-dcd1-40fa-9998-cf5c37af033a___db9309d0c2b446586ec59857f91de610.png",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/e91e36c0-8952-4558-bc64-8c6685e589ac___85a614d26ddf58972c1ba292f083a26c.png"
+        },
+        {
+          "visible": true,
+          "title": "Acessórios",
+          "link": "/",
+          "buttonLabel": "Ver tudo",
+          "__editorItemTitle": "Acessórios",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/fc90d03f-3cd2-4b30-8181-5bd7ec6067e3___5ee0be4cced97e44cc57b5b052cb72ca.png",
+          "hoverImage": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/7496ac46-dcd1-40fa-9998-cf5c37af033a___db9309d0c2b446586ec59857f91de610.png"
+        }
+      ],
+      "cardSeeAll": {
+        "title": "Ver todas as categorias",
+        "link": "/#",
+        "buttonLabel": "Ver tudo"
+      }
     }
   }
 }

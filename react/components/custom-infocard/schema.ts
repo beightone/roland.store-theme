@@ -2,7 +2,7 @@ export const CUSTOM_INFOCARD_SCHEMA = {
   type: 'object',
   properties: {
     cards: {
-      title: 'Cards',
+      title: 'Cards e Card Geral',
       type: 'array',
       items: {
         title: 'Card',
@@ -46,6 +46,27 @@ export const CUSTOM_INFOCARD_SCHEMA = {
             type: 'string',
             default: 'Ver tudo',
           },
+        },
+      },
+    },
+    cardSeeAll: {
+      title: 'Card Geral',
+      type: 'object',
+      properties: {
+        title: {
+          title: 'Título Card Geral',
+          type: 'string',
+          default: 'Ver todas as categorias',
+        },
+        link: {
+          title: 'Link de redirecionamento Card Geral',
+          type: 'string',
+          default: '/#',
+        },
+        buttonLabel: {
+          title: 'Button Label Card Geral',
+          type: 'string',
+          default: 'Ver tudo',
         },
       },
     },
