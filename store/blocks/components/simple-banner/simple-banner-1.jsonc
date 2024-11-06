@@ -11,6 +11,18 @@
       "responsive-layout.mobile#simple-banner"
     ]
   },
+  "flex-layout.row#simple-double-banner-black-friday": {
+    "title": "Banner Duplo Simples",
+    "props": {
+      "blockClass": ["simple-double-banner", "home-content-container", "black-friday"],
+      "fullWidth": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "responsive-layout.desktop#simple-double-banner",
+      "responsive-layout.mobile#simple-banner"
+    ]
+  },
   "responsive-layout.desktop#simple-double-banner": {
     "title": "Desktop",
     "children": [

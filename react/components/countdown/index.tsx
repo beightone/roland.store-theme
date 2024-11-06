@@ -15,10 +15,21 @@ interface TimeLeft {
 
 interface CountdownProps {
   targetDate: string
+  targetToBeDesabled: string[]
   active: boolean
 }
 
-const Countdown = ({ targetDate: deadline, active }: CountdownProps) => {
+const getVtexComponentClass = (component: string) => {
+  const [, blockId] = component.split('#')
+
+  return `vtex-flex-layout-0-x-flexRow--${blockId}`
+}
+
+const Countdown = ({
+  targetDate: deadline,
+  active,
+  targetToBeDesabled,
+}: CountdownProps) => {
   const targetDate = new Date(deadline).getTime()
 
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
@@ -70,6 +81,19 @@ const Countdown = ({ targetDate: deadline, active }: CountdownProps) => {
     return () => clearInterval(interval)
   }, [targetDate, active])
 
+  useEffect(() => {
+    if (!active || targetDate < new Date().getTime()) {
+      targetToBeDesabled.forEach((component) => {
+        const selector = `.${getVtexComponentClass(component)}`
+        const element = document.querySelector(selector) as HTMLElement
+
+        if (element) {
+          element.style.display = 'none'
+        }
+      })
+    }
+  }, [active, targetDate, targetToBeDesabled])
+
   if (!active || targetDate < new Date().getTime()) {
     return null
   }
@@ -115,6 +139,13 @@ Countdown.schema = {
     active: {
       title: 'Ativar contagem regressiva?',
       type: 'boolean',
+    },
+    targetToBeDesabled: {
+      title: 'Elementos a serem desabilitados',
+      type: 'array',
+      items: {
+        type: 'string',
+      },
     },
   },
 }
