@@ -187,7 +187,10 @@ const MenuContent = ({ staticLink }: MenuContentProps) => {
           })}
         </ul>
         {isMobile && (
-          <a href="/boss-black-friday" className={styles.brandSwitcherMobile} />
+          <a
+            href="/loja/boss-black-friday"
+            className={styles.brandSwitcherMobile}
+          />
         )}
         {isMobile && (
           <a
