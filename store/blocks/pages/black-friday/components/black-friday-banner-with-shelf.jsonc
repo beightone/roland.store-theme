@@ -43,7 +43,7 @@
     "title": "Título da seção e botão ver mais",
     "props": {
       "width": "100%",
-      "blockClass": ["section-title", "see-more-button"]
+      "blockClass": ["section-title", "see-more-button-roland"]
     },
     "children": ["rich-text#section-title", "link#shelf-see-more"]
   },
@@ -59,7 +59,7 @@
     "props": {
       "label": "Ver tudo",
       "href": "/",
-      "blockClass": "see-more-button"
+      "blockClass": "see-more-button-roland"
     }
   }
 }

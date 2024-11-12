@@ -76,7 +76,7 @@ const SalesChannelriggerCondition = ({ children }: { children: ReactNode }) => {
         }
       } else if (hasPreOwnedProductsOnCart) {
         setShowPopupAlert(true)
-      } else {
+      } else if (!hasPreOwnedProductsOnCart) {
         window.location.href = link ?? '/?sc=1'
       }
     },

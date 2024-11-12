@@ -1,7 +1,7 @@
 {
   "header-row#main-desktop": {
     "children": [
-      "sales-channel-trigger-condition#logo",
+      "image#logo-roland-header",
       "search-bar",
       "login#desktop",
       "link#wishlist",
@@ -12,7 +12,7 @@
     }
   },
   "sales-channel-trigger-condition#logo": {
-    "children": ["image#logo"]
+    "children": ["image#logo-roland-header"]
   },
   "header-row#main-mobile": {
     "children": [
@@ -42,7 +42,7 @@
       "blockClass": "wishlist"
     }
   },
-  "image#logo": {
+  "image#logo-roland-header": {
     "title": "Logo da loja",
     "props": {
       "src": "assets/svgs/roland-logo.svg",

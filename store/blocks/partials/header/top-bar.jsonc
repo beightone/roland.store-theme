@@ -118,7 +118,7 @@
   "link#boss": {
     "title": "Link para BOSS",
     "props": {
-      "href": "/loja/boss-black-friday?sc=1",
+      "href": "/loja/boss?sc=1",
       "label": "boss",
       "blockClass": ["link-boss"]
     }
