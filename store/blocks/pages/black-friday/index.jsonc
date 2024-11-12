@@ -17,7 +17,7 @@
       "blockClass": "black-friday"
     },
     "parent": {
-      "header": "header#black-friday",
+      "header": "header",
       "footer": "flex-layout.row#footer-roland"
     }
   },
