@@ -52,7 +52,7 @@
   letter-spacing: -0.14px;
 }
 
-.link--see-more-button {
+.link--see-more-button-roland {
   color: var(--Tertiary-900, #F07342);
   text-align: right;
   font-family: "Proxima Nova";
@@ -64,7 +64,7 @@
   text-decoration: none;
 }
 @media screen and (min-width: 1024px) {
-  .link--see-more-button {
+  .link--see-more-button-roland {
     margin-right: 7px;
   }
 }
@@ -85,7 +85,7 @@
     padding-right: 7px;
     margin-top: 48px;
   }
-  :global(.vtex-flex-layout-0-x-flexRow--black-friday-banner-with-shelf) .link--see-more-button {
+  :global(.vtex-flex-layout-0-x-flexRow--black-friday-banner-with-shelf) .link--see-more-button-roland {
     position: absolute;
     bottom: 0;
     left: 0;

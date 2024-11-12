@@ -62,7 +62,12 @@
     ]
   },
   "custom-flag-discount": {
-    "children": ["product-price-savings#black-friday"]
+    "children": ["product-price-savings#black-friday"],
+    "props": {
+      "flagType": "-n%",
+      "backgroundColor": "#FF5A00",
+      "color": "#FFFFFF"
+    }
   },
   "product-selling-price#product-card": {
     "props": {
