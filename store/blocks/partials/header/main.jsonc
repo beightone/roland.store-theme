@@ -1,7 +1,7 @@
 {
   "header-row#main-desktop": {
     "children": [
-      "image#logo-roland-header",
+      "sales-channel-trigger-condition#logo",
       "search-bar",
       "login#desktop",
       "link#wishlist",

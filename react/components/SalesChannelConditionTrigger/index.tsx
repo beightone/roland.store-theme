@@ -13,7 +13,6 @@ import React, {
 
 // Hooks
 import { OrderForm } from 'vtex.order-manager'
-import { useRuntime } from 'vtex.render-runtime'
 
 // Components
 import PreOwnedPopupAlert from '../PreOwnedPopupAlert'
@@ -21,7 +20,6 @@ import PreOwnedPopupAlert from '../PreOwnedPopupAlert'
 const { useOrderForm } = OrderForm
 
 const SalesChannelriggerCondition = ({ children }: { children: ReactNode }) => {
-  const runtime = useRuntime()
   const { orderForm } = useOrderForm()
   const ref = useRef<HTMLSpanElement>(null)
   const [showPopupAlert, setShowPopupAlert] = useState(false)
@@ -68,19 +66,13 @@ const SalesChannelriggerCondition = ({ children }: { children: ReactNode }) => {
 
       const link = ref.current?.querySelector('a')?.getAttribute('href')
 
-      if (runtime.page === 'store.home') {
-        if (orderForm.items.length === 0) {
-          window.location.href = '/seminovos?sc=2'
-        } else {
-          setShowPopupAlert(true)
-        }
-      } else if (hasPreOwnedProductsOnCart) {
+      if (hasPreOwnedProductsOnCart) {
         setShowPopupAlert(true)
-      } else if (!hasPreOwnedProductsOnCart) {
+      } else {
         window.location.href = link ?? '/?sc=1'
       }
     },
-    [runtime.page, orderForm.items, hasPreOwnedProductsOnCart]
+    [orderForm.items, hasPreOwnedProductsOnCart]
   )
 
   useEffect(() => {

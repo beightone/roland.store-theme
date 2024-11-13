@@ -212,17 +212,14 @@
     line-height: 28px;
     letter-spacing: -0.2px;
     margin-bottom: 24px;
+    white-space: nowrap;
   }
 }
 
 .flexRow--black-friday-banner-with-shelf {
   @media screen and (max-width: 768px) {
     position: relative;
-
-    
   }
-
-  
 }
 
 .wrapper--black-friday-aside-title {

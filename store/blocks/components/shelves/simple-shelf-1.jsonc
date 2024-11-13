@@ -17,7 +17,11 @@
     "title": "Vitrine Simples 2",
     "children": ["flex-layout.col#shelf-container-1"],
     "props": {
-      "blockClass": ["shelf-container", "home-content-container", "simple-shelf-container-black-friday"]
+      "blockClass": [
+        "shelf-container",
+        "home-content-container",
+        "simple-shelf-container-black-friday"
+      ]
     }
   },
   "flex-layout.col#shelf-container-1": {
@@ -44,7 +48,7 @@
   "rich-text#shelf-section-title-1": {
     "title": "Texto: Título da Sessão",
     "props": {
-      "text": "Titulo da Shelf",
+      "text": "Novidades",
       "blockClass": "section-title"
     }
   },
