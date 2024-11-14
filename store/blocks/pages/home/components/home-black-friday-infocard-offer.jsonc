@@ -3,11 +3,8 @@
     "title": "Seção - Infocard de Ofertas",
     "props": {
       "blockClass": "home-black-friday-infocard-offers"
-      
     },
-    "children": [
-       "list-context.info-card-list#infocard-list"
-    ]
+    "children": ["list-context.info-card-list#infocard-list"]
   },
   "list-context.info-card-list#infocard-list": {
     "props": {
@@ -19,71 +16,96 @@
           "id": "info-card-example",
           "isFullModeStyle": true,
           "textPosition": "left",
-          "imageUrl": "/arquivos/dance%20e%20dj.png",
+          "imageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/604a9a0f-f482-4f76-8e30-c3f8fff61c36___0bf40386538cf1a503e3012fb6887878.jpg",
           "textMode": "rich-text",
-          "headline": "**OFERTAS EM** \n DANCE E DJ",
-          "callToActionMode": "link",
-          "callToActionText": "Confira",
-          "blockClass": [
-            "info-card-v1"
-          ],
-          "textAlignment": "left"
-        },
-        {
-          "width": "32%",
-          "id": "info-card-example",
-          "isFullModeStyle": true,
-          "textPosition": "left",
-          "imageUrl": "/arquivos/synth.png",
-          "textMode": "rich-text",
-          "headline": "**OFERTAS EM** \n SYNTH",
-          "callToActionMode": "link",
-          "callToActionText": "Confira",
-          "blockClass": [
-            "info-card-v1"
-          ],
-          "textAlignment": "left"
-        },
-        {
-          "width": "32%",
-          "id": "info-card-example",
-          "isFullModeStyle": true,
-          "textPosition": "left",
-          "imageUrl": "/arquivos/teclados.png",
-          "textMode": "rich-text",
-          "headline": "**OFERTAS EM** \n TECLADOS",
-          "callToActionMode": "link",
-          "callToActionText": "Confira",
-          "blockClass": [
-            "info-card-v1"
-          ],
-          "textAlignment": "left"
-        },
-        {
-          "width": "32%",
-          "id": "info-card-example",
-          "isFullModeStyle": true,
-          "textPosition": "left",
-          "imageUrl": "/arquivos/baterias.png",
-          "textMode": "rich-text",
-          "headline": "**BATERIAS** \n E PERCUSSÃO",
+          "headline": "**DANCE & DJ**",
           "callToActionMode": "link",
           "callToActionText": "Confira",
           "blockClass": ["info-card-v1"],
-          "textAlignment": "left"
+          "textAlignment": "left",
+          "subhead": "",
+          "bodyText": "",
+          "callToActionUrl": "/roland/black-friday/dance---dj",
+          "callToActionLinkTarget": "_self",
+          "mobileImageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/47b00fdc-36d5-4e28-915f-d88f4a1b3433___265eb78c6414776045ce8edf4d4206d6.jpg",
+          "imageActionUrl": "/roland/black-friday/dance---dj"
+        },
+
+        {
+          "width": "32%",
+          "id": "info-card-example",
+          "isFullModeStyle": true,
+          "textPosition": "left",
+          "imageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/80e9b43b-67c5-41b2-81a7-9cd7446ba3c6___fecb6697bf5512b617b11955310eae26.jpg",
+          "textMode": "rich-text",
+          "headline": "**SYNTH**",
+          "callToActionMode": "link",
+          "callToActionText": "Confira",
+          "blockClass": ["info-card-v1"],
+          "textAlignment": "left",
+          "subhead": "",
+          "bodyText": "",
+          "callToActionUrl": "/roland/black-friday/synths",
+          "callToActionLinkTarget": "_self",
+          "mobileImageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/404e0be0-03ef-4b0e-8067-5a884b3ec848___f103b8a1b0302559180e44e2fd3768be.jpg",
+          "imageActionUrl": "/roland/black-friday/synths"
         },
         {
           "width": "32%",
           "id": "info-card-example",
           "isFullModeStyle": true,
           "textPosition": "left",
-          "imageUrl": "/arquivos/v-moda-bg.png",
+          "imageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/fd1519f7-fe62-4af4-84e4-ca29377b0ba6___7020b00b031a43d3472ffc455c50327a.jpg",
           "textMode": "rich-text",
-          "headline": "*OFERTAS EM* \n **V-MODA**",
+          "headline": "**TECLADOS**",
           "callToActionMode": "link",
           "callToActionText": "Confira",
           "blockClass": ["info-card-v1"],
-          "textAlignment": "left"
+          "textAlignment": "left",
+          "subhead": "",
+          "bodyText": "",
+          "callToActionUrl": "/roland/black-friday/teclados",
+          "callToActionLinkTarget": "_self",
+          "mobileImageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/f094a141-fb4a-462d-bbd9-3069b0c4c686___7fd5d77fc2b57418a6ab1929412374af.jpg",
+          "imageActionUrl": "/roland/black-friday/teclados"
+        },
+        {
+          "width": "32%",
+          "id": "info-card-example",
+          "isFullModeStyle": true,
+          "textPosition": "left",
+          "imageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/781d7a83-abc8-488c-b15f-7e9744700c19___edf091d1ac81761f7eb94ddd68de7592.jpg",
+          "textMode": "rich-text",
+          "headline": "**BATERIAS E PERCUSSÃO**",
+          "callToActionMode": "link",
+          "callToActionText": "Confira",
+          "blockClass": ["info-card-v1"],
+          "textAlignment": "left",
+          "subhead": "",
+          "bodyText": "",
+          "callToActionUrl": "/roland/black-friday/bateria-e-percussao",
+          "callToActionLinkTarget": "_self",
+          "mobileImageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/ec75bfb9-792f-47a8-ab46-40eb02f041ee___f5479e0c4e74f93423e30dee78789347.jpg",
+          "imageActionUrl": "/roland/black-friday/bateria-e-percussao"
+        },
+        {
+          "width": "32%",
+          "id": "info-card-example",
+          "isFullModeStyle": true,
+          "textPosition": "left",
+          "imageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/623d8c6d-f6d9-43c0-a4aa-592c5d98ca49___1874984d9a60ae74e212f91189fa8475.jpg",
+          "textMode": "rich-text",
+          "headline": "**FONES DE OUVIDO**",
+          "callToActionMode": "link",
+          "callToActionText": "Confira",
+          "blockClass": ["info-card-v1"],
+          "textAlignment": "left",
+          "subhead": "",
+          "bodyText": "",
+          "callToActionUrl": "/roland/black-friday/fones-de-ouvido",
+          "callToActionLinkTarget": "_self",
+          "mobileImageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/47e0400a-9052-4d22-b65e-9862a842c6b4___419f4391b9396f066fdd0047b26bd8cb.jpg",
+          "imageActionUrl": "/roland/black-friday/fones-de-ouvido"
         }
       ]
     },
@@ -96,5 +118,4 @@
       "blockClass": "info-card-v1-list"
     }
   }
-  
 }

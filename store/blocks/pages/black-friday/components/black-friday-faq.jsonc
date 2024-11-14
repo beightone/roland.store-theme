@@ -28,7 +28,7 @@
     "title": "Título e subtitulo da lista de perguntas",
     "props": {
       "width": "100%",
-      "text": "### Perguntas frequentes \n \nPreparamos algumas respostas pra você!",
+      "text": "### Perguntas frequentes \n \nEstá com dúvida? Nós preparamos algumas respostas para você!",
       "blockClass": "title-faq-wrapper"
     }
   },
@@ -38,28 +38,28 @@
       "questions": [
         {
           "__editorItemTitle": "Pergunta 1",
-          "question": "Quais são os produtos Roland que costumam ter desconto no Black November?",
-          "answer": "'Durante o Black November, a Roland costuma oferecer descontos em uma ampla gama de produtos, incluindo:\n\n * **Teclados e pianos**: Desde modelos mais acessíveis até workstations profissionais, ideais para músicos de todos os níveis.\n\n* **Sintetizadores** : Ótimas opções para quem busca sonoridades únicas e versatilidade na criação musical.\n\n* **Baterias eletrônicas**: Perfeitas para quem busca praticar em casa ou em estúdio, sem incomodar os vizinhos.\n\n* **Guitarras e baixos**: Modelos com tecnologias inovadoras e sonoridades autênticas.\n\n* **Acessórios**: Pedais, cabos, fones de ouvido e outros itens essenciais para músicos.'"
+          "question": "Quais produtos estão em promoção nesta Black Friday?",
+          "answer": "Nesta Black Friday, oferecemos descontos especiais em uma ampla variedade de produtos, incluindo pianos digitais, baterias eletrônicas e pedais de efeitos. Confira todos os produtos em promoção visitando nossa landing page."
         },
         {
           "__editorItemTitle": "Pergunta 2",
-          "question": " Quais as formas de pagamento oferecidas pela Roland durante o Black November?",
-          "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n"
+          "question": "Os descontos da Black Friday estão disponíveis em lojas físicas ou apenas online?",
+          "answer": "Os descontos especiais de Black Friday estão disponíveis tanto em nossas lojas parceiras quanto online. Acesse nosso site ou visite nossas lojas parceiras autorizadas para aproveitar as melhores ofertas do ano."
         },
         {
           "__editorItemTitle": "Pergunta 3",
-          "question": "Existe alguma garantia especial para produtos adquiridos durante o Black November?",
-          "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\n"
+          "question": "Posso comprar mais de um produto com desconto durante a Black Friday?",
+          "answer": "Sim, você pode adquirir múltiplos produtos com desconto durante a Black Friday. Devido à alta demanda e ao estoque limitado, recomendamos que finalize suas compras rapidamente para garantir a disponibilidade dos produtos desejados."
         },
         {
           "__editorItemTitle": "Pergunta 4",
-          "question": "Como posso garantir que estou comprando um produto original da Roland?",
-          "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\n"
+          "question": "A Roland e a BOSS oferecem garantia nos produtos comprados na Black Friday?",
+          "answer": "Sim, todos os produtos comprados durante a Black Friday possuem a mesma garantia de qualidade e suporte ao cliente que a Roland e a BOSS oferecem regularmente."
         },
         {
           "__editorItemTitle": "Pergunta 5",
-          "question": "Quais são as melhores dicas para aproveitar o Black November da Roland?",
-          "answer": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\n"
+          "question": "Existe uma política de devolução para compras feitas durante a Black Friday?",
+          "answer": "Sim, as compras realizadas durante a Black Friday estão sujeitas à nossa política de devolução padrão. Caso não esteja satisfeito com sua compra, você pode devolver o produto dentro do prazo especificado em nossas diretrizes de devolução."
         }
       ]
     }

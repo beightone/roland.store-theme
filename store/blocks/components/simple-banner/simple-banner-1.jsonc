@@ -14,7 +14,11 @@
   "flex-layout.row#simple-double-banner-black-friday": {
     "title": "Banner Duplo Simples",
     "props": {
-      "blockClass": ["simple-double-banner", "home-content-container", "black-friday"],
+      "blockClass": [
+        "simple-double-banner",
+        "home-content-container",
+        "black-friday"
+      ],
       "fullWidth": true,
       "preventHorizontalStretch": true
     },
@@ -47,18 +51,18 @@
   "image#desktop-simple-double-banner-1": {
     "title": "Imagem",
     "props": {
-      "src": "/arquivos/banner-home-roland.png",
+      "src": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/99990a09-ac07-4b50-95c3-a5c53f32d257___028ce5d75773ba3378c94483dd14a2f7.png",
       "alt": "Banner simples desktop",
-      "link": "#",
+      "link": "https://store.roland.com.br/kit-completo-vad103/p?utm_source=Roland_Store&utm_medium=Banner_Principal&utm_campaign=VAD103_08.24",
       "blockClass": ["simple-banner-image-1", "desktop"]
     }
   },
   "image#desktop-simple-double-banner-2": {
     "title": "Imagem",
     "props": {
-      "src": "/arquivos/simple-banner-2-desktop.png",
+      "src": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/6296df7c-fc92-4c9c-baf2-036283c36111___7f2b5248453701a859ad10ed89334e30.png",
       "alt": "Banner simples desktop",
-      "link": "#",
+      "link": "https://store.roland.com.br/kit-completo-vad103/p?utm_source=Roland_Store&utm_medium=Banner_Principal&utm_campaign=VAD103_08.24",
       "blockClass": ["simple-banner-image-2", "desktop"]
     }
   },

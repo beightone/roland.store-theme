@@ -22,7 +22,7 @@
   },
   "countdown#roland": {
     "props": {
-      "targetDate": "2024-11-30T23:59:59.000Z",
+      "targetDate": "2024-12-02T02:59:59.000Z",
       "active": true,
       // a extensão do bloco deve estar no blockclass do bloco
       "targetToBeDesabled": [

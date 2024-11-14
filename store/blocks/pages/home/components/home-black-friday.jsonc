@@ -24,15 +24,24 @@
     "props": {
       "items": [
         {
-          "visible": true,
+          "visible": false,
           "itemLink": "",
           "initialDate": "",
           "finalDate": "",
           "__editorItemTitle": "Banner black friday",
           "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/059c2251-ba68-4903-9a9e-92f2ce29c8aa___d6e795e6eb51e66156a910b934c49c20.png",
           "imageMobile": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/a4df309a-144e-4234-a4c3-0085f7d273b0___779f8efddcd3d2d67b675afe6d0d824c.png"
+        },
+        {
+          "visible": true,
+          "itemLink": "https://store.roland.com.br/roland/black-friday/",
+          "initialDate": "2024-11-14T15:00:00.000Z",
+          "finalDate": "2024-12-02T02:59:00.000Z",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/05acfa4e-60eb-4b37-9075-156528eee142___27ff5ab571374fc521813862d2fa90da.jpg",
+          "imageMobile": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/9b0c9723-d68c-4777-8872-5fa011734810___5aadb254ca15f84ca31cab55f99b9644.jpg"
         }
-      ]
+      ],
+      "infinite": false
     }
   },
   "responsive-layout.phone#black-friday": {

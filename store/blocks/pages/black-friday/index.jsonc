@@ -35,7 +35,7 @@
     "title": "Condição de exibição da seção Banner de descontos",
     "children": ["flex-layout.row#black-friday-discount-banners"],
     "props": {
-      "isActive": true
+      "isActive": false
     }
   }
 }

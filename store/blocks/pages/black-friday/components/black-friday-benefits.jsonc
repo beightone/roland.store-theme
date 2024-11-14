@@ -43,7 +43,7 @@
       "textMode": "rich-text",
       "headline": "### Descontos especiais",
       "callToActionMode": "none",
-      "bodyText": "Economize em instrumentos de alta\nqualidade para todos os níveis. ",
+      "bodyText": "Aproveite a maior promoção \n do ano de Roland e BOSS.",
       "blockClass": "info-card-black-friday-benefits",
       "textAlignment": "left"
     }
@@ -56,9 +56,9 @@
       "textPosition": "left",
       "imageUrl": "assets/svgs/price-tag.svg",
       "textMode": "rich-text",
-      "headline": "### Lançamentos",
+      "headline": "### Durabilidade e Confiança",
       "callToActionMode": "none",
-      "bodyText": "Descubra os últimos lançamentos da Roland e\n eleve sua música a outro patamar.",
+      "bodyText": "Embarque em sua jornada musical com produtos Roland, projetados para oferecer durabilidade excepcional.",
       "blockClass": "info-card-black-friday-benefits",
       "textAlignment": "left"
     }
@@ -73,7 +73,7 @@
       "textMode": "rich-text",
       "headline": "### Qualidade",
       "callToActionMode": "none",
-      "bodyText": "Garantimos a funcionalidade\n100% do produto ",
+      "bodyText": "Experimente a excelência com instrumentos desenvolvidos com inovação e tecnologia exclusiva Roland.",
       "blockClass": "info-card-black-friday-benefits",
       "textAlignment": "left"
     }
@@ -88,7 +88,7 @@
       "textMode": "rich-text",
       "headline": "### Fretes grátis*",
       "callToActionMode": "none",
-      "bodyText": "Nas compras acima de R$ 1.000\nConsulte as regras*",
+      "bodyText": "Aproveite o frete grátis em compras \n acima de R$199,00.*",
       "blockClass": "info-card-black-friday-benefits",
       "textAlignment": "left"
     }
