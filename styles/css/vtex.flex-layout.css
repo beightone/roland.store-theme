@@ -1200,7 +1200,7 @@
 
 .flexRow--breadcrumb--pre-owned {
   display: flex;
-  max-width: 1440px;
+  max-width: 1440px !important;
   padding: 16px 32px;
   margin: 0 auto;
 }
