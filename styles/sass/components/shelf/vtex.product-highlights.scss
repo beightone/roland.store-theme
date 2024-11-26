@@ -1,0 +1,20 @@
+.productHighlightText--pre-owned-product-highlight {
+  border-radius: var(--radius-rounded-full, 9999px);
+  background: var(--text-accent-brand-subtlest, #F5C09E);
+  padding: 2px 8px;
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  &::before {
+    content: 'Seminovo';
+    color: var(--Gray-Scale-Black, #000);
+    font-family: "Proxima Nova";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.12px;
+  }
+}

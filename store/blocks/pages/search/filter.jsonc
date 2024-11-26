@@ -1,0 +1,41 @@
+{
+  "filter-navigator.v3#new": {
+    "blocks": ["sidebar-close-button"],
+    "props": {
+      "facetOrdering": [
+        {
+          "key": "brand",
+          "orderBy": "name",
+          "order": "ASC"
+        },
+        {
+          "key": "category-2",
+          "orderBy": "name",
+          "order": "ASC"
+        },
+        {
+          "key": "category-3",
+          "orderBy": "name",
+          "order": "ASC"
+        },
+        {
+          "key": "category-1",
+          "orderBy": "name",
+          "order": "ASC"
+        }
+      ],
+      "initiallyCollapsed": false,
+      "truncateFilters": true,
+      "showClearByFilter": false,
+      "scrollToTop": "none",
+      "fullWidthOnMobile": true,
+      "navigationTypeOnMobile": "collapsible",
+      "appliedFiltersOverview": false,
+      "totalProductsOnMobile": "hide",
+      "updateOnFilterSelectionOnMobile": true,
+      "filtersTitleHtmlTag": "span",
+      "showClearAllFiltersOnDesktop": false
+      
+    }
+  }
+}

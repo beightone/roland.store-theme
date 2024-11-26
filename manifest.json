@@ -1,7 +1,7 @@
 {
   "vendor": "roland",
   "name": "store-theme",
-  "version": "1.0.9",
+  "version": "1.0.26",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
@@ -50,6 +50,7 @@
     "vtex.sticky-layout": "0.x",
     "vtex.add-to-cart-button": "0.x",
     "vtex.list-context": "0.x",
+    "vtex.info-card-list": "0.x",
     "vtex.store-link": "0.x",
     "vtex.search": "2.x",
     "vtex.product-price": "1.x",
@@ -65,10 +66,12 @@
     "vtex.pixel-manager": "1.x",
     "vtex.store-newsletter": "1.x",
     "vtex.native-types": "0.x",
-    "vtex.shipping-estimate-translator": "2.x",
-    "vtex.order-shipping": "0.x",
+    "vtex.disclosure-layout": "1.x",
+    "vtex.checkout-graphql": "0.x",
+    "vtex.modal-layout": "0.x",
     "vtex.condition-layout": "2.x",
-    "vtex.modal-layout": "0.x"
+    "vtex.product-highlights": "2.x",
+    "vtex.catalog-graphql": "1.x"
   },
   "peerDependencies": {
     "vtex.wish-list": "1.x",

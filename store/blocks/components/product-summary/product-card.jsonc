@@ -1,0 +1,213 @@
+{
+  "product-summary.shelf#general": {
+    "title": "Card: Sumário de Produto",
+    "props": {
+      "blockClass": "product-summary-general"
+    },
+    "children": [
+      "custom-flag-discount",
+      "add-to-list-btn#product-card",
+      "product-summary-image#product-card",
+      "product-summary-brand#product-card",
+      "product-summary-name#product-card",
+      "flex-layout.row#product-card-stars",
+      "flex-layout.row#product-card-price",
+      "condition-layout.product#availability"
+    ]
+  },
+  "product-summary.shelf#pre-owned-page": {
+    "title": "Card: Sumário de Produto",
+    "props": {
+      "blockClass": ["product-summary-general", "pre-owned"]
+    },
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#pre-owned",
+      "product-summary-image#product-card",
+      "product-summary-brand#product-card",
+      "product-summary-name#product-card",
+      "flex-layout.row#product-card-stars",
+      "product-selling-price#product-card",
+      "flex-layout.row#product-card-price",
+      "condition-layout.product#availability"
+    ]
+  },
+  "product-summary.shelf#pre-owned-preview": {
+    "title": "Card: Sumário de Produto",
+    "props": {
+      "blockClass": "product-summary-general"
+    },
+    "children": [
+      "vtex.product-highlights@2.x:product-highlights#pre-owned",
+      "product-summary-image#product-card",
+      "product-summary-brand#product-card",
+      "product-summary-name#product-card",
+      "flex-layout.row#product-card-stars",
+      "link.product#pre-owned-product-page"
+    ]
+  },
+  "product-summary.shelf#black-friday": {
+    "title": "Card: Sumário de Produto",
+    "props": {
+      "blockClass": "product-summary-general"
+    },
+    "children": [
+      "custom-flag-discount",
+      "add-to-list-btn#product-card",
+      "product-summary-image#product-card",
+      "product-summary-brand#product-card",
+      "product-summary-name#product-card",
+      "flex-layout.row#product-card-stars",
+      "flex-layout.row#product-card-price",
+      "condition-layout.product#availability"
+    ]
+  },
+  "custom-flag-discount": {
+    "children": ["product-price-savings#black-friday"],
+    "props": {
+      "flagType": "-n%",
+      "backgroundColor": "#FF5A00",
+      "color": "#FFFFFF"
+    }
+  },
+  "product-selling-price#product-card": {
+    "props": {
+      "markers": ["highlight"],
+      "blockClass": "summary",
+      "message": "{sellingPriceValue}"
+    }
+  },
+  "condition-layout.product#availability": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "flex-layout.row#product-card-actions",
+      "Else": "rich-text#product-card-unavailable"
+    }
+  },
+  "rich-text#product-card-unavailable": {
+    "props": {
+      "text": "Indisponível",
+      "blockClass": "product-card-unavailable"
+    }
+  },
+  "link.product#pre-owned-product-page": {
+    "title": "Link: Página de Produto Seminovo",
+    "props": {
+      "blockClass": "pre-owned-product-summary-link",
+      "href": "/{slug}/p",
+      "label": "Ver detalhes"
+    }
+  },
+  "flex-layout.row#product-card-stars": {
+    "title": "Linha: Estrelas do Produto",
+    "children": ["trust-vox-stars"],
+    "props": {
+      "blockClass": "product-card-stars"
+    }
+  },
+  "product-summary-image#product-card": {
+    "title": "Imagem: Sumário de Produto",
+    "props": {
+      "blockClass": "product-summary-image",
+      "hoverImage": {
+        "criteria": "index",
+        "index": 1
+      }
+    }
+  },
+  "product-summary-brand#product-card": {
+    "title": "Marca: Sumário de Produto",
+    "props": {
+      "blockClass": "product-summary-brand"
+    }
+  },
+  "product-summary-name#product-card": {
+    "title": "Nome: Sumário de Produto",
+    "props": {
+      "blockClass": "product-summary-name"
+    }
+  },
+  "product-spot-price-savings#product-card": {
+    "title": "Preço: Sumário de Produto",
+    "props": {
+      "blockClass": "product-summary-price",
+      "message": "{newSpotPriceValue} no pix ou à vista {spotPriceSavingsPercentage}",
+      "alwaysShow": true
+    }
+  },
+  "product-price-savings#black-friday": {
+    "title": "Preço: Sumário de Produto - black friday",
+    "props": {
+      "blockClass": "product-summary-price-black-friday",
+      "message": "{savingsPercentage}",
+      "alwaysShow": true
+    }
+  },
+  "flex-layout.row#product-card-price": {
+    "title": "Linha: Preço do Produto",
+    "children": ["flex-layout.col#price-container"],
+    "props": {
+      "blockClass": "product-card-price"
+    }
+  },
+  "flex-layout.col#price-container": {
+    "title": "Coluna: Container de Preço",
+    "children": [
+      "product-list-price#product-card",
+      "product-spot-price-savings#product-card",
+      "product-installments#product-card"
+    ],
+    "props": {
+      "blockClass": "price-container"
+    }
+  },
+  "product-list-price#product-card": {
+    "props": {
+      "blockClass": "product-card-list-price",
+      "message": "{listPriceValue}",
+      "alwaysShow": true
+    }
+  },
+  "product-installments#product-card": {
+    "props": {
+      "blockClass": "product-card-installments",
+      "message": "ou {installmentsTotalValue} em até {installmentsNumber} de {installmentValue} sem juros",
+      "alwaysShow": true
+    }
+  },
+  "flex-layout.row#product-card-actions": {
+    "title": "Linha: Ações do Produto",
+    "children": [
+      "product-summary-quantity#product-card",
+      "add-to-cart-button#product-card"
+    ],
+    "props": {
+      "blockClass": "product-card-actions",
+      "preventHorizontalStretch": true
+    }
+  },
+  "product-summary-quantity#product-card": {
+    "title": "Quantidade: Sumário de Produto",
+    "props": {
+      "blockClass": "product-summary-quantity",
+      "showLabel": false
+    }
+  },
+  "add-to-cart-button#product-card": {
+    "title": "Botão: Adicionar ao Carrinho",
+    "props": {
+      "blockClass": "add-to-cart-button",
+      "text": " ",
+      "unavailableText": "Indisponível"
+    }
+  },
+  "add-to-list-btn#product-card": {
+    "title": "Botão: Adicionar à Lista",
+    "props": {
+      "blockClass": "wishlist-product-card"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+.container--pre-owned-banner-text {
+  align-items: center;
+  color: var(--Gray-Scale-White, #FFF);
+  font-family: "Proxima Nova";
+  padding-left: 32px;
+  max-width: 284px ;
+  box-sizing: content-box;
+  position: relative;
+  z-index: 2;
+
+  
+
+  .heading--pre-owned-banner-text {
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: -0.4px;
+    margin: 0 {
+      bottom: 16px;
+    };
+  }
+
+  .paragraph--pre-owned-banner-text {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.18px;
+    margin: 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-left: 16px;
+    max-width: 145px;
+    
+    .heading--pre-owned-banner-text {
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: -0.18px;
+    }
+
+    .paragraph--pre-owned-banner-text {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: -0.12px;
+    }
+  }
+}
+
+.paragraph--home-black-friday-banner-text {
+  color: #FFF;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.14px;
+  margin: 0;
+}
+
+.paragraph--pre-owned-button-trigger {
+  border-radius: var(--radius-rounded-sm, 2px);
+  background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+  padding: 12px 20px;
+  margin: 0 {
+    left: 32px;
+    top: 32px;
+  };
+  color: var(--text-inverse-bold, #FFF);
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--bg-brand-secondary-bold-hover, #424250);
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-left: 16px;
+    margin-top: 8px;
+    padding: 10px 16px;
+
+    
+  }
+}

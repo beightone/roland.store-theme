@@ -1,0 +1,32 @@
+{
+  "flex-layout.row#black-friday-SEO": {
+    "title": "Seção - Texto e imagem SEO",
+    "props": {
+      "blockClass": ["black-friday-SEO", "centered-wrapper"],
+      "fullWidth": true
+    },
+    "children": [
+      "collapsible-content#black-friday-seo",
+      "image#black-friday-seo-image"
+    ]
+  },
+  "collapsible-content#black-friday-seo": {
+    "children": ["rich-text#black-friday-seo"]
+  },
+  "rich-text#black-friday-seo": {
+    "title": "Texto SEO",
+    "props": {
+      "width": "49%",
+      "text": "#### Black Friday \n\nAproveite a Black Friday de instrumentos musicais na Roland Store! Encontre as melhores promoções em teclados, baterias eletrônicas, guitarras e muito mais. Esta é a oportunidade perfeita  para adquirir equipamentos de alta qualidade com preços imperdíveis. Não perca a chance de atualizar seu setup musical ou iniciar sua jornada no mundo da música. Descontos exclusivos por tempo limitado, aproveite agora e garanta os melhores produtos da Roland. Acesse a página e confira todas as ofertas desta Black Friday!",
+      "blockClass": "black-friday-seo-text--content"
+    }
+  },
+  "image#black-friday-seo-image": {
+    "title": "Imagem SEO",
+    "props": {
+      "width": "40%",
+      "blockClass": ["black-friday-seo-image"],
+      "src": "/arquivos/black-friday-seo-image.png"
+    }
+  }
+}

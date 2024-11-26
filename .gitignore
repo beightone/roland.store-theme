@@ -81,4 +81,7 @@ styles/css/*.css
 styles/css
 **/*.sass-cache/
 **/*.css.map
+styles/css/*.css
+styles/css/vtex.flex-layout.css
+
 styles/css/vtex.flex-layout.css

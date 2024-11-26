@@ -1,0 +1,70 @@
+{
+  "store.custom#pre-owned": {
+    "blocks": [
+      "pre-owned-popup-alert",
+      "flex-layout.row#pre-owned-main-banner",
+      "flex-layout.row#pre-owned-benefits",
+      "search-result-layout.customQuery#pre-owned",
+      "flex-layout.row#pre-owned-faq",
+      "flex-layout.row#pre-owned-seo",
+      "flex-layout.row#newsletter"
+    ],
+    "props": {
+      "blockClass": "pre-owned"
+    },
+    "parent": {
+      "header": "header#pre-owned",
+      "footer": "flex-layout.row#footer-roland",
+      "challenge": "challenge.seller-channel-condition"
+    }
+  },
+  "flex-layout.row#pre-owned-main-banner": {
+    "title": "Banner Principal",
+    "props": {
+      "blockClass": "pre-owned-main-banner",
+      "fullWidth": true,
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#pre-owned-main-text-banner",
+      "flex-layout.row#pre-owned-main-banner-image"
+    ]
+  },
+  "search-result-layout.customQuery#pre-owned": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "skip",
+        "queryField": "169",
+        "mapField": "productClusterIds"
+        
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#pre-owned",
+      "search-result-layout.mobile#pre-owned"
+      // "search-not-found-layout"
+    ]
+  },
+  "flex-layout.row#pre-owned-faq": {
+    "title": "FAQ",
+    "props": {
+      "blockClass": "pre-owned-faq",
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#pre-owned-faq-content"]
+  },
+  "flex-layout.row#pre-owned-seo": {
+    "title": "SEO",
+    "props": {
+      "blockClass": "pre-owned-seo",
+      "fullWidth": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "collapsible-content#pre-owned-seo",
+      "image#pre-owned-seo-image"
+    ]
+  }
+}

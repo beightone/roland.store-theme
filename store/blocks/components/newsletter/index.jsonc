@@ -1,4 +1,15 @@
 {
+  "flex-layout.row#newsletter": {
+    "title": "Newsletter",
+    "props": {
+      "blockClass": ["newsletter", "home-content-container"],
+      "fullWidth": true
+    },
+    "children": [
+      "responsive-layout.desktop#newsletter-content",
+      "responsive-layout.mobile#newsletter-content"
+    ]
+  },
   "responsive-layout.desktop#newsletter-content": {
     "title": "Desktop",
     "children": ["newsletter-form", "flex-layout.row#newsletter-images-desktop"]

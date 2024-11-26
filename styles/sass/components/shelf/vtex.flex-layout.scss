@@ -25,6 +25,14 @@
   }
 }
 
+.flexRow--product-card-actions,
+.flexRow--product-card-price,
+.flexRow--product-card-stars {
+  :global(.vtex-store-components-3-x-container) {
+    padding: 0;
+  }
+}
+
 .flexRow--shelf-container {
   background: #F4F4F5;
 }
@@ -34,6 +42,7 @@
 
   @media screen and (max-width: 768px) {
     margin-bottom: 24px;
+    margin-right: 8px;
   }
 }
 

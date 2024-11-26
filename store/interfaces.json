@@ -42,5 +42,44 @@
   "custom-image-slider": {
     "component": "ImageSlider"
     
+  },
+  "collapsible-content": {
+    "component": "CollapsibleContent",
+    "composition": "children"
+  },
+  "pre-owned-popup-alert": {
+    "component": "PreOwnedPopupAlert"
+  },
+  "pre-owned-section-condition": {
+    "component": "PreOwnedSectionCondition",
+    "composition": "children"
+  },
+  "sales-channel-trigger-condition": {
+    "component": "SalesChannelriggerCondition",
+    "composition": "children"
+  },
+  "challenge.seller-channel-condition": {
+    "component": "ChallengeSellerChannel"
+  },
+  "pre-owned-flag": {
+    "component": "PreOwnedCartFlag"
+  },
+  "custom-infocard": {
+    "component": "CustomInfoCard"
+  },
+  "display-condition": {
+    "component": "DisplayCondition",
+    "composition": "children",
+    "allowed": "*"
+  },
+  "countdown": {
+    "component": "Countdown"
+  },
+  "disclosure-list": {
+    "component": "DisclosureList"
+  },
+  "custom-flag-discount": {
+    "component": "CustomFlagDiscount",
+    "composition": "children"
   }
 }

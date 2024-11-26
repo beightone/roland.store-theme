@@ -1,0 +1,32 @@
+{
+  
+  "rich-text#pre-owned-main-text-banner": {
+    "title": "Texto do Banner Principal",
+    "props": {
+      "blockClass": "pre-owned-main-text-banner",
+      "text": "## Seminovos\n\nNa Roland e BOSS, estamos comprometidos em tornar a música acessível a todos, oferecendo instrumentos e equipamentos musicais de alta qualidade a preços mais acessíveis."
+    }
+  },
+  "flex-layout.row#pre-owned-main-banner-image": {
+    "title": "Imagem do Banner Principal",
+    "props": {
+      "blockClass": "pre-owned-main-banner-image",
+      "fullWidth": true
+    },
+    "children": ["list-context.image-list#banner-full"]
+  },
+  "list-context.image-list#banner-full": {
+    "props": {
+      "preload": true,
+      "images": [
+        {
+          "loading": "lazy",
+          "image": "/arquivos/pre-owned-main-banner.png",
+          "mobileImage": "/arquivos/pre-owned-main-banner-mobile.png",
+          "description": "Banner Principal - SEMINOVOS"
+        }
+      ]
+    },
+    "children": ["slider-layout#banner-one-by-one"]
+  }
+}

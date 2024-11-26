@@ -1,0 +1,8 @@
+{
+  "store.custom#pre-owned": {
+    "path": "/seminovos"
+  },
+  "store.custom#black-friday": {
+    "path": "/black-friday"
+  }
+}

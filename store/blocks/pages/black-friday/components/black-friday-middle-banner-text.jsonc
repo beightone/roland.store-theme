@@ -1,0 +1,30 @@
+{
+  "flex-layout.row#black-friday-middle-banner-text": {
+    "title": "Seção - Banner e texto central",
+    "props": {
+      "fullWidth": true,
+      "blockClass": ["black-friday-middle-banner-text", "centered-wrapper"],
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "rich-text#black-friday-middle-banner-text",
+      "image#black-friday-middle-banner-image"
+    ]
+  },
+  "rich-text#black-friday-middle-banner-text": {
+    "title": "Texto",
+    "props": {
+      "text": "## Black November Roland! \n\nO Black November chegou e a Roland preparou ofertas incríveis para você transformar seus sonhos musicais em realidade! Aproveite os descontos imperdíveis em teclados, baterias eletrônicas, sintetizadores e muito mais. Se você é músico profissional ou está começando agora, a Roland tem o instrumento ideal para você. Com a qualidade e inovação que a marca oferece, você terá uma experiência musical única.",
+      "blockClass": "black-friday-middle-banner-text"
+    }
+  },
+  "image#black-friday-middle-banner-image": {
+    "title": "Imagem",
+    "props": {
+      "width": "58%",
+      "src": "/arquivos/middleimagebf.png",
+      "alt": "Banner Black",
+      "blockClass": "black-friday-middle-banner-image"
+    }
+  }
+}

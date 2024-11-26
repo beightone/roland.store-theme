@@ -1,0 +1,11 @@
+query getProductsFromCollection($id: ID!) {
+  productsOrder(collectionId: $id, term: "", page: 1, pageSize: 10)
+    @context(provider: "vtex.catalog-graphql") {
+    items {
+      productId
+      skuId
+      position
+      productName
+    }
+  }
+}
