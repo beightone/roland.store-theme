@@ -41,7 +41,6 @@
   },
   "custom-image-slider": {
     "component": "ImageSlider"
-    
   },
   "collapsible-content": {
     "component": "CollapsibleContent",
@@ -81,5 +80,8 @@
   "custom-flag-discount": {
     "component": "CustomFlagDiscount",
     "composition": "children"
+  },
+  "product-link-share": {
+    "component": "ProductLinkShare"
   }
 }

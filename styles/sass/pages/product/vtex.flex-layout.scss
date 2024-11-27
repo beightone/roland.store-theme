@@ -59,14 +59,14 @@
 
   :global(.vtex-button) {
     border-radius: var(--radius-rounded-sm, 2px);
-    background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+    background: var(--bg-brand-secondary-bold-base, #FF5A00);
     border: none;
     transition: all .2s ease-in-out;
     max-width: 308px;
     width: 100%;
 
     &:hover {
-      background: var(--bg-brand-secondary-bold-hover, #424250);
+      background: var(--bg-brand-secondary-bold-hover, #2B2B3A);
     }
 
     :global(.vtex-button__label) {
@@ -96,4 +96,11 @@
 .flexRowContent--product-image {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.flexRow--share-buttons {
+  width: 100%;
+  .flexRowContent--share-buttons {
+    justify-content: center;
+  }
 }

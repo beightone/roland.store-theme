@@ -10,7 +10,6 @@
       "trust-vox-stars",
       "vtex.store-components:product-description#product-page",
       "flex-layout.col#product-page-price",
-      "add-to-list-btn#product-page",
       "flex-layout.row#product-page-buy-button",
       "custom-shipping-calculator"
     ]
@@ -73,7 +72,10 @@
       "blockClass": "list-price-wrapper",
       "preventHorizontalStretch": true
     },
-    "children": ["product-list-price#product-page", "product-price-savings#product-page"]
+    "children": [
+      "product-list-price#product-page",
+      "product-price-savings#product-page"
+    ]
   },
   "product-price-savings#product-page": {
     "props": {

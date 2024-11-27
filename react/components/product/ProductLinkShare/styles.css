@@ -1,0 +1,19 @@
+.share-button {
+  display: flex;
+  align-items: center;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 8px;
+  margin: 20px auto 28px auto;
+}
+.share-button-copied-text {
+  margin-left: 8px;
+}
+.share-button-icon {
+  filter: brightness(0);
+}
+.share-button:hover .share-button-icon {
+  filter: brightness(1);
+  transition: all 0.5s ease-in-out;
+}
