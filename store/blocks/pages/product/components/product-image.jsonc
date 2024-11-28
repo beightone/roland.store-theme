@@ -15,7 +15,8 @@
     "children": ["share", "product-link-share"],
     "props": {
       "blockClass": "share-buttons",
-      "preventHorizontalStretch": true
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true
     }
   },
   "share": {

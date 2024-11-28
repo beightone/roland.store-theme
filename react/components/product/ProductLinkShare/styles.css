@@ -6,9 +6,21 @@
   cursor: pointer;
   padding: 8px;
   margin: 20px auto 28px auto;
+  position: relative;
 }
 .share-button-copied-text {
   margin-left: 8px;
+  position: absolute;
+  top: 10px;
+  left: 26px;
+  white-space: nowrap;
+  color: #000;
+  font-family: 'Proxima Nova';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
 }
 .share-button-icon {
   filter: brightness(0);

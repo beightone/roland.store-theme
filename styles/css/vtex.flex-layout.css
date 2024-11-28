@@ -711,7 +711,7 @@
 .flexRowContent--product-buy-button :global(.vtex-button),
 :global(.vtex-modal-layout-0-x-paper--buy-button-modal) :global(.vtex-button) {
   border-radius: var(--radius-rounded-sm, 2px);
-  background: var(--bg-brand-secondary-bold-base, #FF5A00);
+  background: var(--bg-brand-secondary-bold-base, #ff5a00);
   border: none;
   transition: all 0.2s ease-in-out;
   max-width: 308px;
@@ -719,7 +719,7 @@
 }
 .flexRowContent--product-buy-button :global(.vtex-button):hover,
 :global(.vtex-modal-layout-0-x-paper--buy-button-modal) :global(.vtex-button):hover {
-  background: var(--bg-brand-secondary-bold-hover, #2B2B3A);
+  background: var(--bg-brand-secondary-bold-hover, #2b2b3a);
 }
 .flexRowContent--product-buy-button :global(.vtex-button) :global(.vtex-button__label),
 :global(.vtex-modal-layout-0-x-paper--buy-button-modal) :global(.vtex-button) :global(.vtex-button__label) {
@@ -745,8 +745,10 @@
 .flexRow--share-buttons {
   width: 100%;
 }
-.flexRow--share-buttons .flexRowContent--share-buttons {
-  justify-content: center;
+@media screen and (min-width: 48rem) {
+  .flexRow--share-buttons .flexRowContent--share-buttons {
+    justify-content: center;
+  }
 }
 
 .flexRow--search-header {
