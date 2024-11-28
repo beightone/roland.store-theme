@@ -1,0 +1,25 @@
+{
+  "flex-layout.row#main-banner-collection": {
+    "title": "Banner Principal",
+    "props": {
+      "blockClass": ["main-banner", "main-banner-collection"]
+    },
+    "children": ["custom-banner#main-banner-collection"]
+  },
+  "custom-banner#main-banner-collection": {
+    "title": "Configuração",
+    "props": {
+      "items": [
+        {
+          "visible": true,
+          "itemLink": "",
+          "initialDate": "",
+          "finalDate": "",
+          "__editorItemTitle": "Banner 1",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/239ae985-9b34-4888-8267-f05593e94cfa___cc4b4d75af045e2205c1cd3b10f4d9c6.png",
+          "imageMobile": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/e195c37b-962c-4999-a7ba-b3fb373e03ce___d2a180a98fdef780ad4df38fe2521cc0.png"
+        }
+      ]
+    }
+  }
+}

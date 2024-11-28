@@ -1,0 +1,23 @@
+{
+  "store.custom#collection-roland": {
+    "blocks": [
+      "flex-layout.row#breadcrumb.collection",
+      "flex-layout.row#main-banner-collection",
+      "collapsible-content#collection-seo-one",
+      "flex-layout.row#collection-category-cards",
+      "flex-layout.row#simple-shelf-container-new",
+      "flex-layout.row#simple-banner-collection",
+      "flex-layout.row#simple-shelf-container-2",
+      "flex-layout.row#simple-double-banner-collection",
+      "collapsible-content#collection-seo",
+      "flex-layout.row#newsletter"
+    ],
+    "props": {
+      "blockClass": "collection"
+    },
+    "parent": {
+      "header": "header",
+      "footer": "flex-layout.row#footer-roland"
+    }
+  }
+}

@@ -2,6 +2,11 @@
   max-width: 720px;
   width: 100%;
 }
+.collapsible-content--collection-seo.collapsibleContentContainer {
+  max-width: 90rem;
+  margin: 0 auto 3rem;
+  padding: 0 2rem;
+}
 
 .collapsibleContentContainer p {
   overflow: hidden;
@@ -13,17 +18,16 @@
 
 .collapsibleContentContainerOpen p {
   -webkit-line-clamp: 4;
-  
 }
 
 .collapsibleContentButton {
   border-radius: var(--radius-rounded-sm, 2px);
-  border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
-  background: #FFF;
+  border: 1.25px solid var(--border-neutral-subtle, #d4d4d8);
+  background: #fff;
   padding: 12px 20px;
   margin-top: 24px;
-  color: var(--text-neutral-subtle, #3F3F46);
-  font-family: "Proxima Nova";
+  color: var(--text-neutral-subtle, #3f3f46);
+  font-family: 'Proxima Nova';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -34,8 +38,14 @@
 }
 
 .collapsibleContentButton:hover {
-  border-color: var(--border-brand-primary-base, #EE8146);
-  background: var(--bg-brand-primary-subtlest-hover, #FDF2EC);
-  color: var(--text-brand-primary-base, #FF5A00);
+  border-color: var(--border-brand-primary-base, #ee8146);
+  background: var(--bg-brand-primary-subtlest-hover, #fdf2ec);
+  color: var(--text-brand-primary-base, #ff5a00);
+}
 
+@media screen and (max-width: 64rem) {
+  .collapsible-content--collection-seo.collapsibleContentContainer {
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+  }
 }

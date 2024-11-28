@@ -1,0 +1,58 @@
+.infoCardContainer--category-cards-collection {
+  flex-direction: column-reverse;
+  padding: 2rem;
+  gap: 1rem;
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+  }
+  .infoCardTextContainer--category-cards-collection {
+    padding: 0;
+    width: 100%;
+    .infoCardCallActionContainer--category-cards-collection {
+      margin: 0;
+      width: 100%;
+      text-align: center;
+      :global(.vtex-button) {
+        border: none;
+        background-color: transparent;
+        :global(.vtex-button__label) {
+          color: #5a5a66;
+          text-align: center;
+          font-family: 'Proxima Nova';
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          letter-spacing: -0.16px;
+          text-transform: capitalize;
+          padding: 0 !important;
+          @media screen and (max-width: 768px) {
+            color: #2b2b3a;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: -0.12px;
+          }
+        }
+      }
+    }
+  }
+  .infoCardImageContainer--category-cards-collection {
+    width: 100%;
+  }
+}
+.caretIcon--category-cards-collection {
+  display: none;
+}
+.sliderLayoutContainer--category-cards-collection {
+  .sliderRightArrow--category-cards-collection {
+    right: 4px;
+    @media screen and (max-width: 768px) {
+      right: -14px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .sliderTrack--category-cards-collection {
+    gap: 8px;
+  }
+}

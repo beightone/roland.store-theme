@@ -1,0 +1,37 @@
+{
+  "flex-layout.row#simple-shelf-container-new": {
+    "title": "Vitrine Simples 1",
+    "children": ["flex-layout.col#shelf-container-new"],
+    "props": {
+      "blockClass": ["shelf-container", "home-content-container"]
+    }
+  },
+  "flex-layout.col#shelf-container-new": {
+    "title": "Col: Vitrine",
+    "children": [
+      "flex-layout.row#shelf-title-container-new",
+      "flex-layout.row#shelf-slider-container-1"
+    ],
+    "props": {
+      "blockClass": "shelf-container"
+    }
+  },
+  "flex-layout.row#shelf-title-container-new": {
+    "title": "Linha: Título da Shelf",
+    "children": [
+      "rich-text#shelf-section-title-new",
+      "link#shelf-section-show-all-1"
+    ],
+    "props": {
+      "blockClass": "shelf-title-container",
+      "preventHorizontalStretch": true
+    }
+  },
+  "rich-text#shelf-section-title-new": {
+    "title": "Texto: Título da Sessão",
+    "props": {
+      "text": "Mais vendidos",
+      "blockClass": "section-title"
+    }
+  }
+}
