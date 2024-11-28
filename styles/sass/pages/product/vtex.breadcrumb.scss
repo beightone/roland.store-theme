@@ -1,8 +1,10 @@
 .container {
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
 
-  .container--product-breadcrumb {
+  &.container--product-breadcrumb {
     padding: 16px 0;
     .homeLink--product-breadcrumb {
       display: flex;
@@ -26,7 +28,7 @@
 
     .arrow--product-breadcrumb {
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       padding: 0;
       &::before {
         content: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.5 9L7.5 6L4.5 3" stroke="%23A1A1AA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
