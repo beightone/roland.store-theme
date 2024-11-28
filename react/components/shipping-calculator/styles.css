@@ -1,7 +1,7 @@
 .shipping-calculator-container {
   border-radius: var(--radius-rounded-sm, 2px);
-  border: 1px solid var(--System-Neutral-Lighter, #C3C3C3);
-  background: var(--Lightgrey-white, #FFF);
+  border: 1px solid var(--System-Neutral-Lighter, #c3c3c3);
+  background: var(--Lightgrey-white, #fff);
   width: 100%;
   height: fit-content;
   padding: 20px 24px 24px 24px;
@@ -11,12 +11,11 @@
 .shipping-calculator-form {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .shipping-calculator-label {
   color: var(--Gray-Scale-Black, #000);
-  font-family: "Proxima Nova";
+  font-family: 'Proxima Nova';
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -28,8 +27,8 @@
 
 .shipping-calculator-input {
   border-radius: var(--radius-rounded-sm, 2px);
-  border: 1px solid var(--border-input-base, #D4D4D8);
-  background: var(--bg-neutral-subtlest-base, #FFF);
+  border: 1px solid var(--border-input-base, #d4d4d8);
+  background: var(--bg-neutral-subtlest-base, #fff);
   max-width: 284px;
   width: 100%;
   margin-right: 10px;
@@ -40,8 +39,8 @@
 }
 
 .shipping-calculator-input::placeholder {
-  color: var(--text-neutral-bold, #18181B);
-  font-family: "Proxima Nova";
+  color: var(--text-neutral-bold, #18181b);
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -49,16 +48,18 @@
   letter-spacing: -0.14px;
 }
 
-.shipping-calculator-input:focus {
-  border: 1.5px solid var(--border-focus-base, #EE8146);
+.shipping-calculator-input:focus,
+.shipping-calculator-input:focus-visible {
+  border: 1.5px solid #ee8146 !important;
+  outline: 1.5px solid #ee8146 !important;
 }
 
 .shipping-calculator-button {
   border-radius: var(--radius-rounded-sm, 2px);
-  border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
-  background: var(--Gray-Scale-White, #FFF);
-  color: var(--text-neutral-subtle, #3F3F46);
-  font-family: "Proxima Nova";
+  border: 1.25px solid var(--border-neutral-subtle, #d4d4d8);
+  background: var(--Gray-Scale-White, #fff);
+  color: var(--text-neutral-subtle, #3f3f46);
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -73,21 +74,21 @@
 }
 
 .shipping-calculator-button:hover {
-  border-color: #EE8146;
-  background: var(--bg-brand-primary-subtlest-hover, #FDF2EC);
-  color: #FF5A00;
+  border-color: #ee8146;
+  background: var(--bg-brand-primary-subtlest-hover, #fdf2ec);
+  color: #ff5a00;
 }
 
-.shipping-calculator-idk-cep  {
+.shipping-calculator-idk-cep {
   width: 100%;
   margin-top: 8px;
   a {
-    color: var(--text-neutral-subtlest, #71717A);
-    font-family: "Proxima Nova";
+    color: var(--text-neutral-subtlest, #71717a);
+    font-family: 'Proxima Nova';
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 16px; 
+    line-height: 16px;
     letter-spacing: -0.12px;
     margin-top: 8px;
     width: 100%;
@@ -103,8 +104,8 @@
 }
 
 .shipping-options-table thead tr th {
-  color: var(--text-neutral-bold, #18181B);
-  font-family: "Proxima Nova";
+  color: var(--text-neutral-bold, #18181b);
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -128,16 +129,15 @@
 
 .shipping-options-table tbody tr {
   border-radius: var(--radius-rounded-sm, 2px);
-  background: #F1F1F1;
+  background: #f1f1f1;
   margin-bottom: 8px;
 }
 
 .shipping-options-table tbody tr td {
   padding: 8px 12px;
-  color: var(--text-neutral-bold, #18181B);
-  font-family: "Proxima Nova";
+  color: var(--text-neutral-bold, #18181b);
+  font-family: 'Proxima Nova';
   font-style: normal;
- 
 }
 
 .shipping-options-table tbody tr td:first-child {
@@ -169,9 +169,9 @@
 }
 
 .shipping-calculator-disclaimer {
-  color: var(--text-disabled, #71717A);
+  color: var(--text-disabled, #71717a);
   text-align: center;
-  font-family: "Proxima Nova";
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
