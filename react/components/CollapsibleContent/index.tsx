@@ -23,8 +23,6 @@ const CollapsibleContent = ({
   const [isCollapsed, setIsCollapsed] = useState(true)
   const { isMobile } = useDevice()
 
-  console.log(origin, 'origin')
-
   const handleToggle = () => {
     setIsCollapsed(!isCollapsed)
   }
