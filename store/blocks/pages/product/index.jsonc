@@ -13,7 +13,8 @@
     "title": "Seção - Detalhes do produto",
     "props": {
       "blockClass": "product-details",
-      "preventHorizontalStretch": true
+      "preventHorizontalStretch": true,
+      "colSizing": "auto"
     },
     "children": [
       "flex-layout.row#product-image",

@@ -3,3 +3,9 @@
     align-items: flex-start;
   }
 }
+@media screen and (min-width: 1024px) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--product-details)
+    > :global(.items-stretch) {
+    max-width: 64%;
+  }
+}

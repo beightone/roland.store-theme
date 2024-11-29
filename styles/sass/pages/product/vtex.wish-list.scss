@@ -11,7 +11,8 @@
     min-height: unset;
     border: none;
 
-    &:hover {
+    &:hover,
+    &:focus {
       background-color: transparent;
     }
 
