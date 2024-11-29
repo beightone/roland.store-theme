@@ -51,7 +51,7 @@ const LoginMobile = () => {
             {loggedIn ? (
               <span>Hello, {data?.profile?.firstName} </span>
             ) : (
-              <a href="/account">Minha conta</a>
+              <a href="/login">Minha conta</a>
             )}
           </li>
           {loggedIn && (
