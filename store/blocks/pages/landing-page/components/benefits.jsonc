@@ -2,7 +2,7 @@
   "flex-layout.row#pre-owned-benefits": {
     "title": "Vantagens",
     "props": {
-      "blockClass": "pre-owned-benefits",
+      "blockClass": ["pre-owned-benefits", "generic-benefits"],
       "fullWidth": true
     },
     "children": [

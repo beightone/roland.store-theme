@@ -1,4 +1,16 @@
 {
+  "flex-layout.row#pre-owned-seo": {
+    "title": "SEO",
+    "props": {
+      "blockClass": "pre-owned-seo",
+      "fullWidth": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "collapsible-content#pre-owned-seo",
+      "image#pre-owned-seo-image"
+    ]
+  },
   "collapsible-content#pre-owned-seo": {
     "children": [
       "rich-text#pre-owned-seo"
