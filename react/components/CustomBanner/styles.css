@@ -10,12 +10,13 @@
 }
 
 .bannerWrapper {
+  padding: 0 !important;
   .sliderLayoutContainer {
     .paginationDotsContainer {
       border-radius: 200px;
-      background: #FFF;
+      background: #fff;
       display: inline-flex;
-      padding: var(--spacing-1, 4px) 8px;
+      padding: 4px 8px;
       justify-content: center;
       align-items: center;
       gap: var(--spacing-2, 8px);
@@ -23,21 +24,17 @@
       margin: 0 auto;
       height: 16px;
       bottom: 8px;
-
     }
-
 
     .paginationDot {
       width: 6px !important;
       height: 6px !important;
       border-radius: 9999px !important;
-      background: #71717C;
-
+      background: #71717c;
     }
 
     .paginationDot--isActive {
-      background: #FF5A00 !important;
+      background: #ff5a00 !important;
     }
   }
-
 }

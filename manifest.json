@@ -1,7 +1,7 @@
 {
   "vendor": "roland",
   "name": "store-theme",
-  "version": "1.0.14",
+  "version": "1.0.26",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
@@ -50,6 +50,7 @@
     "vtex.sticky-layout": "0.x",
     "vtex.add-to-cart-button": "0.x",
     "vtex.list-context": "0.x",
+    "vtex.info-card-list": "0.x",
     "vtex.store-link": "0.x",
     "vtex.search": "2.x",
     "vtex.product-price": "1.x",

@@ -10,5 +10,9 @@
   "header#pre-owned-product": {
     "title": "ROLAND - Header pagina de produto seminovo",
     "blocks": ["header-layout.desktop#pre-owned-product", "header-layout.mobile#pre-owned"]
+  },
+  "flex-layout.row#header-black-friday": {
+    "title": "Header Black Friday",
+    "children": ["header-layout.desktop#roland", "header-layout.mobile#roland"]
   }
 }

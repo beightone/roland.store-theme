@@ -55,5 +55,10 @@ export const BANNER_SCHEMA = {
         },
       },
     },
+    infinite: {
+      title: 'Infinite',
+      type: 'boolean',
+      default: true,
+    },
   },
 }
