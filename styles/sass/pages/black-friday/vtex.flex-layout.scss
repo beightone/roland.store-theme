@@ -1,6 +1,4 @@
 .flexRow--centered-wrapper {
- 
-
   &.flexRow--black-friday-countdown-offer {
     padding-bottom: 0;
     padding-top: 32px;
@@ -8,7 +6,6 @@
     .flexRowContent--centered-wrapper {
       padding: 0;
     }
-
   }
 
   .flexRowContent--centered-wrapper {
@@ -89,11 +86,10 @@
 }
 
 .flexRow--black-friday-FAQ {
- 
   display: flex;
   align-items: center;
   justify-content: center;
-  
+
   @media screen and (min-width: 998px) {
     min-height: 980px;
     position: relative;
@@ -104,7 +100,6 @@
     background-blend-mode: overlay;
     background-size: 100% 680px;
   }
-
 }
 
 .flexRow--black-friday-FAQ-questions {
@@ -113,12 +108,12 @@
   padding: 32px;
 
   @media screen and (min-width: 998px) {
-   position: absolute;
-   right: 0;
-   max-width: 668px;
+    position: absolute;
+    right: 0;
+    max-width: 668px;
     opacity: 0.8;
 
-   top: 50%;
+    top: 50%;
     transform: translateY(-50%);
   }
 }
@@ -134,7 +129,7 @@
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    
+
     :global(.vtex-rich-text-0-x-container--black-friday-aside-title) {
       display: none;
     }

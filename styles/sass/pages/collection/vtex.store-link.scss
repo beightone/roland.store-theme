@@ -1,0 +1,25 @@
+.link--collection-category-cards-see-all {
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  border: 1.25px solid #18181b;
+  background: #fff;
+  color: #3f3f46;
+  font-family: 'Proxima Nova';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  width: fit-content;
+  margin-top: 2.375rem;
+  text-decoration: none;
+  &:hover {
+    border-color: #ee8146;
+    background: #fdf2ec;
+    color: #ff5a00;
+    transition: all 0.3s ease-in-out;
+  }
+}

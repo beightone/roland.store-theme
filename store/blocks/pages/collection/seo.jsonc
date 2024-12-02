@@ -1,0 +1,30 @@
+{
+  "collapsible-content#collection-seo-one": {
+    "children": ["rich-text#collection-seo-one"],
+    "props": {
+      "origin": "collection-seo",
+      "shouldCollapsed": false
+    }
+  },
+  "rich-text#collection-seo-one": {
+    "title": "Texto SEO Superior",
+    "props": {
+      "text": "### Teclados \n\nDescubra nossa incrível linha de produtos, projetada para atender a todas as fases da sua jornada musical. Com a melhor qualidade do mercado, oferecemos opções para cada necessidade e estilo. Nossos teclados digitais, disponíveis em diferentes tamanhos e categorias, são perfeitos para qualquer objetivo musical. Seja qual for o seu estilo, temos o teclado ideal para você alcançar seu potencial!",
+      "blockClass": "collection-seo-text--content"
+    }
+  },
+  "collapsible-content#collection-seo": {
+    "children": ["rich-text#collection-seo"],
+    "props": {
+      "origin": "collection-seo",
+      "shouldCollapsed": false
+    }
+  },
+  "rich-text#collection-seo": {
+    "title": "Texto SEO",
+    "props": {
+      "text": "### Teclados Roland \n\nConheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase conheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase conheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase conheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase para qualquer fase conheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase...",
+      "blockClass": "collection-seo-text--content"
+    }
+  }
+}
