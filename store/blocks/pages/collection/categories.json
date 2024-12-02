@@ -88,66 +88,6 @@
           "isFullModeStyle": false,
           "textPosition": "center",
           "textAlignment": "center"
-        },
-        {
-          "id": "info-card-1",
-          "imageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/0afbfe97-5026-48d6-84e1-85dfa5321d97___c5d509d169ba7d9ae76aff9ded6d4bce.png",
-          "callToActionText": "Arranjadores",
-          "callToActionUrl": "/#",
-          "blockClass": "info-card-1",
-          "isFullModeStyle": false,
-          "textPosition": "center",
-          "textAlignment": "center"
-        },
-        {
-          "id": "info-card-2",
-          "imageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/8f6d8ddb-9b69-4ad9-907e-4c374e4a3b64___441dfb6af3975788b24d284ea3084d53.png",
-          "callToActionText": "Sintetizadores",
-          "callToActionUrl": "/#",
-          "blockClass": "info-card-2",
-          "isFullModeStyle": false,
-          "textPosition": "center",
-          "textAlignment": "center"
-        },
-        {
-          "id": "info-card-3",
-          "imageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/7ef7f4c5-f129-4b15-8a1c-88a13291f676___bc7ee4286b741d5132ece25fbf1ebbc7.png",
-          "callToActionText": "Acordeon",
-          "callToActionUrl": "/#",
-          "blockClass": "info-card-3",
-          "isFullModeStyle": false,
-          "textPosition": "center",
-          "textAlignment": "center"
-        },
-        {
-          "id": "info-card-4",
-          "imageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/271a7612-35e5-4730-8721-27638bc3d6b2___24a8df8bff859d487c8e4aa8a2db9e85.png",
-          "callToActionText": "Controles Midi",
-          "callToActionUrl": "/#",
-          "blockClass": "info-card-4",
-          "isFullModeStyle": false,
-          "textPosition": "center",
-          "textAlignment": "center"
-        },
-        {
-          "id": "info-card-5",
-          "imageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/87eb05dc-7f72-495d-b9a6-fe541099043d___5d58db04894db131530e357444150626.png",
-          "callToActionText": "Amplicadores",
-          "callToActionUrl": "/#",
-          "blockClass": "info-card-5",
-          "isFullModeStyle": false,
-          "textPosition": "center",
-          "textAlignment": "center"
-        },
-        {
-          "id": "info-card-6",
-          "imageUrl": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/45fa9c61-d099-4199-a4e5-0ea08d7838e0___1e2a7c23b8dd49674ac5b1b75611fb9d.png",
-          "callToActionText": "Acessórios",
-          "callToActionUrl": "/#",
-          "blockClass": "info-card-6",
-          "isFullModeStyle": false,
-          "textPosition": "center",
-          "textAlignment": "center"
         }
       ]
     }
@@ -161,7 +101,7 @@
         "tablet": 3,
         "phone": 3
       },
-      "infinite": false,
+      "infinite": true,
       "blockClass": ["shelf-slider", "category-cards-collection"]
     }
   },
