@@ -1,0 +1,62 @@
+{
+  "flex-layout.row#black-friday-discount-banners": {
+    "title": "Seção - Banner de descontos",
+    "props": {
+      "blockClass": ["black-friday-discount-banners", "centered-wrapper"],
+      "fullWidth": true
+    },
+    "children": [
+      "info-card#black-friday-banner-discount-1",
+      "info-card#black-friday-banner-discount-2",
+      "info-card#black-friday-banner-discount-3"
+    ]
+  },
+  "info-card#black-friday-banner-discount-1": {
+    "title": "Banner de desconto 1",
+    "props": {
+      "width": "32%",
+      "id": "info-card-example",
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "/arquivos/40bannerdesconto.png",
+      "textMode": "rich-text",
+      "headline": "## DESCONTOS \n ## ATé 40%",
+      "callToActionMode": "link",
+      "callToActionText": "Ver todos os descontos",
+      "blockClass": "info-card-black-friday-banner-discount",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#black-friday-banner-discount-2": {
+    "title": "Banner de desconto 2",
+    "props": {
+      "width": "32%",
+      "id": "info-card-example",
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "/arquivos/50bannerdesconto.png",
+      "headline": "## DESCONTOS \n ## ATé 50%",
+      "textMode": "rich-text",
+      "callToActionMode": "link",
+      "callToActionText": "Ver todos os descontos",
+      "blockClass": "info-card-black-friday-banner-discount",
+      "textAlignment": "left"
+    }
+  },
+  "info-card#black-friday-banner-discount-3": {
+    "title": "Banner de desconto 3",
+    "props": {
+      "width": "32%",
+      "id": "info-card-example",
+      "isFullModeStyle": true,
+      "textPosition": "left",
+      "imageUrl": "/arquivos/60bannerdesconto.png",
+      "textMode": "rich-text",
+      "headline": "## DESCONTOS \n ## ATé 60%",
+      "callToActionMode": "link",
+      "callToActionText": "Ver todos os descontos",
+      "blockClass": "info-card-black-friday-banner-discount",
+      "textAlignment": "left"
+    }
+  }
+}

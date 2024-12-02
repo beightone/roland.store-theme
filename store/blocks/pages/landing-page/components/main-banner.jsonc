@@ -39,18 +39,6 @@
         }
       ]
     },
-    "children": ["slider-layout#pre-owned-main-banner"]
-  },
-  "slider-layout#pre-owned-main-banner": {
-    "props": {
-      "itemsPerPage": {
-        "desktop": 1,
-        "tablet": 1,
-        "phone": 1
-      },
-      "infinite": false,
-      "blockClass": ["banner-main"]
-    },
-    "title": "Slider Banner Principal"
+    "children": ["slider-layout#banner-one-by-one"]
   }
 }

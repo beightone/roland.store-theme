@@ -1,0 +1,85 @@
+{
+  "store.home": {
+    "blocks": [
+      "global-styles",
+      "flex-layout.row#main-banner-black-friday",
+      "responsive-layout.phone#black-friday",
+      "responsive-layout.desktop#black-friday"
+    ],
+    "parent": {
+      "header": "header",
+      "footer": "flex-layout.row#footer-roland",
+      "challenge": "challenge.seller-channel-condition"
+    }
+  },
+  "flex-layout.row#main-banner-black-friday": {
+    "title": "Banner Principal",
+    "props": {
+      "blockClass": ["main-banner"]
+    },
+    "children": ["custom-banner#main-banner-black-friday"]
+  },
+  "custom-banner#main-banner-black-friday": {
+    "title": "Configuração",
+    "props": {
+      "items": [
+        {
+          "visible": true,
+          "itemLink": "",
+          "initialDate": "",
+          "finalDate": "",
+          "__editorItemTitle": "Banner black friday",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/059c2251-ba68-4903-9a9e-92f2ce29c8aa___d6e795e6eb51e66156a910b934c49c20.png",
+          "imageMobile": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/a4df309a-144e-4234-a4c3-0085f7d273b0___779f8efddcd3d2d67b675afe6d0d824c.png"
+        }
+      ]
+    }
+  },
+  "responsive-layout.phone#black-friday": {
+    "title": "Ordenação de blocos mobile",
+    "children": [
+      "flex-layout.row#banner-redirect-link",
+      "flex-layout.row#home-black-friday-infocard-offers",
+      "display-condition#black-friday-countdown-offer",
+      "flex-layout.row#simple-shelf-container-black-friday",
+      "flex-layout.row#black-friday-banner-with-shelf",
+      "flex-layout.row#simple-double-banner-black-friday",
+      "flex-layout.row#back-to-top-button",
+      "flex-layout.row#newsletter"
+    ]
+  },
+  "responsive-layout.desktop#black-friday": {
+    "title": "Ordenação de blocos desktop",
+    "children": [
+      "flex-layout.row#home-black-friday-infocard-offers",
+      "display-condition#black-friday-countdown-offer",
+      "flex-layout.row#black-friday-banner-with-shelf",
+      "flex-layout.row#simple-shelf-container-black-friday",
+      "flex-layout.row#simple-double-banner-black-friday",
+      "flex-layout.row#back-to-top-button",
+      "flex-layout.row#newsletter"
+    ]
+  },
+  "flex-layout.row#banner-redirect-link": {
+    "title": "Texto e link de redirecionamento",
+    "props": {
+      "preventHorizontalStretch": true,
+      "blockClass": "home-black-friday-banner-redirect"
+    },
+    "children": ["rich-text#banner-redirect-link", "link#banner-redirect-link"]
+  },
+  "rich-text#banner-redirect-link": {
+    "props": {
+      "text": "Produtos selecionados\ncom descontos exclusivos",
+      "blockClass": "home-black-friday-banner-text"
+    }
+  },
+  "link#banner-redirect-link": {
+    "props": {
+      "href": "/black-friday",
+      "target": "_self",
+      "label": "Confira",
+      "blockClass": "home-black-friday-banner-link"
+    }
+  }
+}
