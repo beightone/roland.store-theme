@@ -2,8 +2,28 @@
   flex-direction: column-reverse;
   padding: 2rem;
   gap: 1rem;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  &:hover {
+    transition: all 0.3s ease-in-out;
+    border-color: #e95c24;
+    .infoCardTextContainer--category-cards-collection {
+      .infoCardCallActionContainer--category-cards-collection {
+        :global(.vtex-button) {
+          :global(.vtex-button__label) {
+            @media screen and (min-width: 1024px) {
+              color: #2b2b3a;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
   @media screen and (max-width: 768px) {
+    display: flex;
     padding: 1rem;
+    flex-direction: column-reverse;
   }
   .infoCardTextContainer--category-cards-collection {
     padding: 0;
@@ -26,6 +46,12 @@
           letter-spacing: -0.16px;
           text-transform: capitalize;
           padding: 0 !important;
+          @media screen and (min-width: 1024px) {
+            &:hover {
+              color: #2b2b3a;
+              font-weight: 600;
+            }
+          }
           @media screen and (max-width: 768px) {
             color: #2b2b3a;
             font-size: 12px;
@@ -51,8 +77,6 @@
     }
   }
 }
-@media screen and (max-width: 768px) {
-  .sliderTrack--category-cards-collection {
-    gap: 8px;
-  }
+.sliderTrack--category-cards-collection {
+  gap: 0.5rem;
 }

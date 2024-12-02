@@ -10,8 +10,8 @@
   top: 4px;
 
   .label--help-center {
-    color: #FFF;
-    font-family: "Proxima Nova";
+    color: #fff;
+    font-family: 'Proxima Nova';
     font-size: 0.875rem;
     font-style: normal;
     font-weight: 600;
@@ -31,13 +31,11 @@
 
 :global(.vtex-flex-layout-0-x-flexRow--pre-owned) {
   .label--link-roland {
-      background-image: url('assets/svgs/roland-inactive.svg')!important;
-
+    background-image: url('assets/svgs/roland-inactive.svg') !important;
   }
 }
 
 .link--link {
-
   &-roland,
   &-boss {
     .label {
@@ -49,14 +47,15 @@
   }
 
   &-pre-owned {
-    border-radius: var(--radius-rounded-sm, 2px) var(--radius-rounded-sm, 2px) var(--radius-rounded-none, 0px) var(--radius-rounded-none, 0px);
-    background: var(--icon-feedback-information-base, #FFF);
+    border-radius: var(--radius-rounded-sm, 2px) var(--radius-rounded-sm, 2px)
+      var(--radius-rounded-none, 0px) var(--radius-rounded-none, 0px);
+    background: var(--icon-feedback-information-base, #fff);
     padding: 0 16px;
     text-decoration: none;
 
     .label--link-pre-owned {
-      color: var(--text-neutral-bold, #18181B);
-      font-family: "Proxima Nova";
+      color: var(--text-neutral-bold, #18181b);
+      font-family: 'Proxima Nova';
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
@@ -70,7 +69,6 @@
     .label--link-roland {
       font-size: 0;
       background-image: url('assets/svgs/roland-button.svg');
-
     }
   }
 
@@ -78,7 +76,6 @@
     .label--link-boss {
       font-size: 0;
       background-image: url('assets/svgs/boss-button.svg');
-
     }
   }
 }
@@ -88,7 +85,7 @@
 
   .label--wishlist {
     color: var(--Gray-Scale-Black, #000);
-    font-family: "Proxima Nova";
+    font-family: 'Proxima Nova';
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -102,7 +99,7 @@
 
     &::before {
       content: '';
-      background-image: url("assets/svgs/wishlist-icon.svg");
+      background-image: url('assets/svgs/wishlist-icon.svg');
       width: 20px;
       height: 20px;
       display: block;
@@ -131,8 +128,8 @@
   }
 
   .label {
-    color: var(--text-neutral-subtlest, #71717A);
-    font-family: "Proxima Nova";
+    color: var(--text-neutral-subtlest, #71717a);
+    font-family: 'Proxima Nova';
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
@@ -145,8 +142,8 @@
   text-decoration: none;
 
   .label {
-    color: var(--text-neutral-subtle, #3F3F46);
-    font-family: "Proxima Nova";
+    color: var(--text-neutral-subtle, #3f3f46);
+    font-family: 'Proxima Nova';
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
