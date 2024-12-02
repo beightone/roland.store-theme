@@ -54,6 +54,9 @@
   "pre-owned-flag": {
     "component": "PreOwnedCartFlag"
   },
+  "price-per-commercial-policy": {
+    "component": "PricePerCommercialPolicy"
+  },
   "custom-infocard": {
     "component": "CustomInfoCard"
   },

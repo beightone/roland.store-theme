@@ -18,7 +18,6 @@ const PreOwnedSectionCondition = ({ children }: { children: ReactNode }) => {
         )
       )
 
-      console.log('data.length', { data, isAvailable })
       setHasPreOwnedProducts(isAvailable && data?.length > 0)
     } catch (error) {
       console.error('Error while fetching pre-owned products', error)
