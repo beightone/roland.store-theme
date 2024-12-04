@@ -34,7 +34,7 @@
         {
           "loading": "lazy",
           "image": "/arquivos/pre-owned-main-banner.png",
-          "mobileImage": "/arquivos/pre-owned-main-banner-mobile.png",
+          "mobileImage": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/e02684aa-af9a-40a0-a2a5-d7a05808c5e0___5c39e6b8ea46bc90538c9f95915f85a7.png",
           "description": "Banner Principal - SEMINOVOS"
         }
       ]

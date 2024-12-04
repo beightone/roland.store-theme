@@ -24,8 +24,8 @@
 
 .galleryTitle--layout {
   margin: 0;
-  color: var(--text-neutral-bold, #18181B);
-  font-family: "Proxima Nova";
+  color: var(--text-neutral-bold, #18181b);
+  font-family: 'Proxima Nova';
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -39,7 +39,7 @@
 
 .gallery--list {
   padding-left: 16px;
-  
+
   .galleryItem--list {
     margin-top: 55px;
     padding: 0;
@@ -52,12 +52,12 @@
     margin-top: 32px;
     gap: 16px;
 
-  .galleryItem--list {
-    margin-top: 0;
-    border-radius: var(--radius-rounded-sm, 2px);
-    border: 1px solid var(--border-neutral-subtlest, #E4E4E7);
-    padding: 12px;
-  }
+    .galleryItem--list {
+      margin-top: 0;
+      border-radius: var(--radius-rounded-sm, 2px);
+      border: 1px solid var(--border-neutral-subtlest, #e4e4e7);
+      padding: 12px;
+    }
   }
 }
 
@@ -67,8 +67,8 @@
   align-items: center;
 
   &::before {
-    content: "Exibição:";
-    color: var(--greyscale-100, #1A1413);
+    content: 'Exibição:';
+    color: var(--greyscale-100, #1a1413);
     font-family: 'Oxygen';
     font-size: 14px;
     font-style: normal;
@@ -87,12 +87,11 @@
   }
 }
 
-
 .totalProducts--layout,
 .totalProductsMessage {
   padding: 0;
-  color: var(--text-neutral-bold, #18181B);
-  font-family: "Proxima Nova";
+  color: var(--text-neutral-bold, #18181b);
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -110,10 +109,10 @@
     display: flex;
 
     &::before {
-      content: "Ordenar produtos por";
-      color: var(--text-neutral-subtle, #3F3F46);
+      content: 'Ordenar produtos por';
+      color: var(--text-neutral-subtle, #3f3f46);
       text-align: center;
-      font-family: "Proxima Nova";
+      font-family: 'Proxima Nova';
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
@@ -131,16 +130,16 @@
   display: flex;
   gap: 8px;
   border-radius: var(--radius-rounded-sm, 2px);
-  border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
-  background: #FFF;
+  border: 1.25px solid var(--border-neutral-subtle, #d4d4d8);
+  background: #fff;
   transition: all 0.2s ease-in-out;
 
   &:hover {
-    border-color: var(--border-brand-primary-base, #EE8146);
-    background: var(--bg-brand-primary-subtlest-hover, #FDF2EC);
+    border-color: var(--border-brand-primary-base, #ee8146);
+    background: var(--bg-brand-primary-subtlest-hover, #fdf2ec);
 
     .filterPopupTitle {
-      color: var(--text-brand-primary-base, #FF5A00);
+      color: var(--text-brand-primary-base, #ff5a00);
     }
 
     .filterPopupArrowIcon::before {
@@ -150,9 +149,9 @@
 }
 
 .orderByText {
-  color: var(--text-neutral-subtle, #3F3F46);
+  color: var(--text-neutral-subtle, #3f3f46);
   text-align: center;
-  font-family: "Proxima Nova";
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -169,7 +168,7 @@
 .filter__container:not(.filter__container--title) {
   border-radius: var(--radius-rounded-sm, 2px);
   padding: 20px 24px;
-  border: 1px solid var(--border-input-base, #D4D4D8);
+  border: 1px solid var(--border-input-base, #d4d4d8);
 
   .filter {
     padding: 0;
@@ -184,7 +183,6 @@
       }
     }
   }
-
 }
 
 .filterIcon,
@@ -199,15 +197,14 @@
   }
 }
 
-
 .caretIcon {
   display: none;
 }
 
 .filterTitleSpan,
 .accordionFilterItemTitle {
-  color: var(--text-neutral-subtle, #3F3F46);
-  font-family: "Proxima Nova";
+  color: var(--text-neutral-subtle, #3f3f46);
+  font-family: 'Proxima Nova';
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -224,15 +221,13 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
-
-  
 }
 
 .filterItem,
 .filterAccordionItemBox {
   :global(.vtex-checkbox__label) {
-    color: var(--text-neutral-subtle, #3F3F46);
-    font-family: "Proxima Nova";
+    color: var(--text-neutral-subtle, #3f3f46);
+    font-family: 'Proxima Nova';
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -248,16 +243,15 @@
 
   :global(.vtex-checkbox__inner-container) {
     border-radius: var(--radius-rounded-sm, 2px);
-    border: 1px solid var(--border-input-base, #D4D4D8);
-    background: var(--bg-neutral-subtlest-base, #FFF);
+    border: 1px solid var(--border-input-base, #d4d4d8);
+    background: var(--bg-neutral-subtlest-base, #fff);
   }
-
 }
 
 .filter__container--title,
 .filterBreadcrumbsText {
-  color: var(--text-neutral-bold, #18181B);
-  font-family: "Proxima Nova";
+  color: var(--text-neutral-bold, #18181b);
+  font-family: 'Proxima Nova';
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -278,9 +272,9 @@
 }
 
 .filterPopupTitle {
-  color: var(--text-neutral-subtle, #3F3F46);
+  color: var(--text-neutral-subtle, #3f3f46);
   text-align: center;
-  font-family: "Proxima Nova";
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -322,10 +316,9 @@
 
 // FILTER DRAWER
 .filterAccordionBreadcrumbs {
-  padding: 24px 16px 16[x] 16px;
+  padding: 24px 16px 16px 16px;
   border: none;
   height: fit-content;
-  position: fixed;
   top: 0;
   left: 0;
   z-index: 999999999;
@@ -341,8 +334,8 @@
 
 :global(.vtex-slider__left-value),
 :global(.vtex-slider__right-value) {
-  color: var(--text-neutral-subtle, #3F3F46);
-  font-family: "Proxima Nova";
+  color: var(--text-neutral-subtle, #3f3f46);
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -360,31 +353,21 @@
     width: 24px;
     height: 24px;
     display: block;
-    
   }
   .closeIcon {
     display: none;
   }
 }
 
-
-
 .sidebar {
-
-  .accordionFilter {
-    padding-top: 72px;
-
-  }
   .accordionFilterContainer {
     padding: 0 16px;
     border: none;
 
-    
-
     .accordionFilterItem {
       padding: 20px 24px;
       border-radius: var(--radius-rounded-sm, 2px);
-      border: 1px solid var(--border-input-base, #D4D4D8);
+      border: 1px solid var(--border-input-base, #d4d4d8);
 
       .accordionFilterContent {
         padding: 0;
@@ -409,7 +392,7 @@
     padding: 20px 24px;
     padding-top: 0;
     border-radius: var(--radius-rounded-sm, 2px);
-    border: 1px solid var(--border-input-base, #D4D4D8);
+    border: 1px solid var(--border-input-base, #d4d4d8);
     position: relative;
     top: -1px;
     background-color: white;
@@ -427,41 +410,39 @@
   }
 
   .filterButtonsBox {
-    background: var(--bg-neutral-subtle-base, #F4F4F5);
+    background: var(--bg-neutral-subtle-base, #f4f4f5);
     padding: 8px;
     display: flex;
     gap: 16px;
     border: none;
-    
+
     position: relative;
     z-index: 1;
 
     .filterClearButtonWrapper {
       :global(.vtex-button) {
-        border-color: var(--border-neutral-subtle, #D4D4D8);
-        background: #FFF;
+        border-color: var(--border-neutral-subtle, #d4d4d8);
+        background: #fff;
 
         :global(.vtex-button__label) {
-          color: var(--text-neutral-subtle, #3F3F46);
+          color: var(--text-neutral-subtle, #3f3f46);
         }
       }
-      
     }
 
     .filterApplyButtonWrapper {
       :global(.vtex-button) {
-        background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+        background: var(--bg-brand-secondary-bold-base, #2b2b3a);
 
         :global(.vtex-button__label) {
-          color: #FFF;
+          color: #fff;
 
           &::after {
-            content:" filtro" ;
+            content: ' filtro';
             margin-left: 5px;
           }
         }
       }
-
     }
 
     .filterClearButtonWrapper,
@@ -470,13 +451,12 @@
       padding: 0;
 
       :global(.vtex-button) {
-         border-radius: var(--radius-rounded-sm, 2px);
+        border-radius: var(--radius-rounded-sm, 2px);
         border: 1.25px solid;
-
       }
 
       :global(.vtex-button__label) {
-        font-family: "Proxima Nova";
+        font-family: 'Proxima Nova';
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -492,12 +472,11 @@
   }
 }
 
-
 .galleryItem--grid {
   padding: 0;
 
   margin: 0 {
-    top: 32px
+    top: 32px;
   }
 
   @media screen and (max-width: 768px) {
@@ -506,36 +485,15 @@
 }
 
 @media screen and (max-width: 768px) {
-
-  .orderByButton {
-    .filterPopupTitle {
-      font-size: 0;
-
-      &::before {
-        content: "Ordenar por";
-        color: var(--text-neutral-subtle, #3F3F46);
-        font-family: "Proxima Nova";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 24px;
-        letter-spacing: -0.16px;
-        text-transform: math-auto;
-      }
-    }
-  }
-
-  
-
   .orderByOptionsContainer {
     right: 0;
   }
   .filterPopupButton {
-    background: var(--bg-brand-secondary-bold-base, #2B2B3A);
-    
+    background: var(--bg-brand-secondary-bold-base, #2b2b3a);
+
     .filterPopupTitle {
-      color: var(--text-inverse-bold, #FFF);
-      font-family: "Proxima Nova";
+      color: var(--text-inverse-bold, #fff);
+      font-family: 'Proxima Nova';
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
@@ -551,12 +509,11 @@
   }
 
   .orderByButton {
-    border: 1.25px solid var(--border-neutral-subtle, #D4D4D8);
-    background: #FFF;
+    border: 1.25px solid var(--border-neutral-subtle, #d4d4d8);
+    background: #fff;
     justify-content: center;
     align-items: center;
     gap: 8px;
-
   }
 
   .filterPopupButton,
@@ -571,5 +528,10 @@
     max-width: 328px;
     width: 100%;
   }
+}
 
+.galleryLayoutSwitcher {
+  @media screen and (max-width: 768px) {
+    padding: 0 1rem;
+  }
 }
