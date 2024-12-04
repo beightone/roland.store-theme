@@ -1,0 +1,24 @@
+{
+  "flex-layout.row#search-main-banners": {
+    "title": "Banner",
+    "props": {
+      "blockClass": "main-banner",
+      "fullWidth": true
+    },
+    "children": ["list-context.image-list#banner-full-search"]
+  },
+  "list-context.image-list#banner-full-search": {
+    "props": {
+      "preload": true,
+      "images": [
+        {
+          "loading": "lazy",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/823146df-ac7f-4571-b600-c840ace4030e___cc4b4d75af045e2205c1cd3b10f4d9c6.png",
+          "mobileImage": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/cefe0081-3806-43fe-bf0c-cd10692a70a8___132c00e3c3f8c1efdd8737af11f4dc46.png",
+          "description": "Banner Principal"
+        }
+      ]
+    },
+    "children": ["slider-layout#banner-one-by-one"]
+  }
+}

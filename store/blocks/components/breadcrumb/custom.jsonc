@@ -1,0 +1,15 @@
+{
+  "flex-layout.row#searchbread": {
+    "children": ["breadcrumb.search#custom"],
+    "props": {
+      "blockClass": "search-breadcrumb",
+      "preserveLayoutOnMobile": true,
+      "fullWidth": true
+    }
+  },
+  "breadcrumb.search#custom": {
+    "props": {
+      "showOnMobile": true
+    }
+  }
+}

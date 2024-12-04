@@ -1,0 +1,46 @@
+{
+  "flex-layout.row#search-SEO": {
+    "title": "Texto SEO",
+    "props": {
+      "blockClass": ["search-SEO", "centered-wrapper"],
+      "fullWidth": true
+    },
+    "children": ["collapsible-content#search-seo"]
+  },
+  "collapsible-content#search-seo": {
+    "children": ["rich-text#search-seo"],
+    "props": {
+      "origin": "search-seo",
+      "shouldCollapsed": true
+    }
+  },
+  "rich-text#search-seo": {
+    "props": {
+      "width": "100%",
+      "text": "#### Um universo de equipamentos para você explorar sua criatividade e criar músicas incríveis. \n\n Conheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase conheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase conheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase conheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase para qualquer fase conheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase ...",
+      "blockClass": "seo-text--content"
+    }
+  },
+  "flex-layout.row#search-SEO-mobile": {
+    "title": "Texto SEO",
+    "props": {
+      "blockClass": ["search-SEO", "centered-wrapper"],
+      "fullWidth": true
+    },
+    "children": ["collapsible-content#search-seo-mobile"]
+  },
+  "collapsible-content#search-seo-mobile": {
+    "children": ["rich-text#search-seo-mobile"],
+    "props": {
+      "origin": "search-seo",
+      "shouldCollapsed": true
+    }
+  },
+  "rich-text#search-seo-mobile": {
+    "props": {
+      "width": "100%",
+      "text": "#### Teclados Roland \n\n Conheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase conheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase conheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase conheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase para qualquer fase conheça nossa variedade de produtos, com a melhor qualidade, para qualquer fase ...",
+      "blockClass": "seo-text--content"
+    }
+  }
+}

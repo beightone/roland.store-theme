@@ -1,0 +1,33 @@
+{
+  "m3-custom-fale-conosco": {
+    "props": {
+      "lojaBoss": false,
+      "links": [
+        {
+          "nome": "Fale conosco",
+          "openNewTab": true,
+          "url": "/central-de-ajuda",
+          "icon": "/arquivos/faleConosco--central-de-ajuda.png"
+        },
+        {
+          "nome": "Perguntas frequentes",
+          "openNewTab": false,
+          "url": "/institucional-central-faq",
+          "icon": "/arquivos/faleConosco--perguntas-frequentes.png"
+        },
+        {
+          "nome": "Status do Pedido",
+          "openNewTab": false,
+          "url": "/account#/orders",
+          "icon": "/arquivos/faleConosco--status-do-pedido.png"
+        },
+        {
+          "nome": "Backstage",
+          "openNewTab": true,
+          "url": "/central-de-ajuda",
+          "icon": "/arquivos/faleConosco--backstage.png"
+        }
+      ]
+    }
+  }
+}

@@ -1,5 +1,5 @@
 .flexRow--search-header {
-  padding: 24px 0;
+  padding: 24px 16px;
   :global(.vtex-store-components-3-x-container) {
     padding: 0;
   }
@@ -24,10 +24,7 @@
   align-items: center;
   margin-top: 16px;
   gap: 16px;
-
-  
 }
-
 
 .flexRowContent--search-actions {
   justify-content: flex-end;
@@ -49,12 +46,9 @@
 .flexColChild--product-summary-list-layout-info {
   padding: 0;
 
-  
-
   @media screen and (max-width: 768px) {
-
     &:last-child {
-      height: 36px!important;
+      height: 36px !important;
     }
 
     .flexRow--product-card-actions {
@@ -64,7 +58,6 @@
       width: 100%;
       display: flex;
     }
-    
   }
 }
 
@@ -83,5 +76,22 @@
 
   @media screen and (max-width: 768px) {
     position: unset;
+  }
+}
+.flexRowContent--search-gallery {
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 768px) {
+  .flexRow--search-breadcrumb,
+  .flexRow--search-info,
+  :global(.vtex-search-result-3-x-galleryLayoutSwitcher),
+  .flexRow--filters-mobile,
+  :global(.vtex-search-result-3-x-gallery--list),
+  :global(.vtex-search-result-3-x-buttonShowMore--layout) {
+    padding: 0 1rem !important;
+  }
+  .flexRow--search-info {
+    padding-top: 1rem !important;
   }
 }
