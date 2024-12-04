@@ -1,0 +1,163 @@
+{
+  "store.search": {
+    "props": {
+      "context": {
+        "maxItemsPerPage": 9,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    },
+    "blocks": ["search-result-layout#result"],
+    "parent": {
+      "header": "roland.store-theme:header",
+      "footer": "roland.store-theme:flex-layout.row#footer-roland"
+    }
+  },
+  "store.search#category": {
+    "props": {
+      "context": {
+        "maxItemsPerPage": 9,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    },
+    "blocks": ["search-result-layout"],
+    "parent": {
+      "header": "roland.store-theme:header",
+      "footer": "roland.store-theme:flex-layout.row#footer-roland"
+    }
+  },
+  "store.search#subcategory": {
+    "props": {
+      "context": {
+        "maxItemsPerPage": 9,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    },
+    "blocks": ["search-result-layout"],
+    "parent": {
+      "header": "roland.store-theme:header",
+      "footer": "roland.store-theme:flex-layout.row#footer-roland"
+    }
+  },
+  "store.search#department": {
+    "props": {
+      "context": {
+        "maxItemsPerPage": 9,
+        "skusFilter": "ALL",
+        "simulationBehavior": "default"
+      }
+    },
+    "blocks": ["search-result-layout"],
+    "parent": {
+      "header": "roland.store-theme:header",
+      "footer": "roland.store-theme:flex-layout.row#footer-roland"
+    }
+  },
+  "search-result-layout#result": {
+    "blocks": [
+      "search-result-layout.desktop#result",
+      "search-result-layout.mobile#result",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout": {
+    "blocks": [
+      "search-result-layout.desktop",
+      "search-result-layout.mobile",
+      "search-not-found-layout"
+    ]
+  },
+  "search-result-layout.desktop#result": {
+    "title": "Conteúdo Desktop",
+    "children": [
+      "flex-layout.row#searchbread",
+      "flex-layout.row#search.header",
+      "flex-layout.row#generic-search.gallery"
+    ],
+    "props": {
+      "preventRouteChange": false,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "hiddenFacets": {
+        "brands": false,
+        "categories": false,
+        "priceRange": false
+      }
+    }
+  },
+  "search-result-layout.desktop": {
+    "title": "Conteúdo Desktop",
+    "children": [
+      "flex-layout.row#searchbread",
+      "flex-layout.row#search-main-banners",
+      "flex-layout.row#search.header",
+      "flex-layout.row#generic-search.gallery",
+      "flex-layout.row#search-SEO"
+    ],
+    "props": {
+      "preventRouteChange": false,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "hiddenFacets": {
+        "brands": false,
+        "categories": false,
+        "priceRange": false
+      }
+    }
+  },
+  "search-result-layout.mobile#result": {
+    "title": "Conteúdo Mobile",
+    "children": [
+      "flex-layout.row#searchbread",
+      "flex-layout.row#search-info",
+      "gallery-layout-switcher",
+      "flex-layout.row#filters",
+      "search-fetch-previous",
+      "search-content#generic",
+      "search-fetch-more",
+      "sticky-layout#filters",
+      "flex-layout.row#simple-double-banner-search",
+      "flex-layout.row#search-SEO-mobile"
+    ],
+    "props": {
+      "preventRouteChange": false,
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      },
+      "hiddenFacets": {
+        "brands": false,
+        "categories": false,
+        "priceRange": false
+      }
+    }
+  },
+  "search-result-layout.mobile": {
+    "title": "Conteúdo Mobile",
+    "children": [
+      "flex-layout.row#searchbread",
+      "flex-layout.row#search-main-banners",
+      "flex-layout.row#search-info",
+      "gallery-layout-switcher",
+      "flex-layout.row#filters",
+      "search-fetch-previous",
+      "search-content#generic",
+      "search-fetch-more",
+      "sticky-layout#filters",
+      "flex-layout.row#simple-double-banner-search",
+      "flex-layout.row#search-SEO-mobile"
+    ],
+    "props": {
+      "mobileLayout": {
+        "mode1": "small",
+        "mode2": "normal"
+      }
+    }
+  }
+}

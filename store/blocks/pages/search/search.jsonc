@@ -67,15 +67,10 @@
     "children": ["order-by.v2", "gallery-layout-switcher"]
   },
   "flex-layout.row#search-info": {
-    "children": ["search-title.v2", "total-products.v2"],
+    "children": ["search-title.v2", "search-products-count-per-page"],
     "props": {
       "blockClass": "search-info",
       "preventHorizontalStretch": true
-    }
-  },
-  "total-products.v2": {
-    "props": {
-      "message": "Mostrando {recordsFiltered} de {recordsFiltered} <span> {recordsFiltered, plural, one {produto} other {produtos}}</span>"
     }
   },
   "sticky-layout#filters": {

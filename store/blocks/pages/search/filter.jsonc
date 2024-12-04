@@ -35,7 +35,34 @@
       "updateOnFilterSelectionOnMobile": true,
       "filtersTitleHtmlTag": "span",
       "showClearAllFiltersOnDesktop": false
-      
+    }
+  },
+  "filter-navigator.v3": {
+    "props": {
+      "initiallyCollapsed": true,
+      "navigationTypeOnMobile": "collapsible",
+      "facetOrdering": [
+        {
+          "key": "category-1",
+          "orderBy": "name",
+          "order": "ASC"
+        },
+        {
+          "key": "category-2",
+          "orderBy": "name",
+          "order": "ASC"
+        },
+        {
+          "key": "category-3",
+          "orderBy": "name",
+          "order": "ASC"
+        },
+        {
+          "key": "brand",
+          "orderBy": "name",
+          "order": "ASC"
+        }
+      ]
     }
   }
 }

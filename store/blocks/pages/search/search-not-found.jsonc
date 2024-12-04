@@ -1,0 +1,28 @@
+{
+  "search-not-found-layout": {
+    "title": "Busca não encontrada",
+    "children": [
+      "flex-layout.row#notfound",
+      "flex-layout.row#simple-shelf-container-1"
+    ]
+  },
+  "flex-layout.row#notfound": {
+    "children": ["flex-layout.row#search-not-found"],
+    "props": {
+      "fullWidth": true
+    }
+  },
+  "flex-layout.row#search-not-found": {
+    "props": {
+      "blockClass": "not-found-row",
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#search-not-found"]
+  },
+  "flex-layout.col#search-not-found": {
+    "props": {
+      "blockClass": "search-not-found-col"
+    },
+    "children": ["not-found"]
+  }
+}

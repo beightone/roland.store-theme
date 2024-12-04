@@ -7,7 +7,9 @@
     :global(.pl8) {
       padding: 0;
 
-      :global(.vtex-checkbox__inner-container.b--action-primary.bg-action-primary) {
+      :global(
+          .vtex-checkbox__inner-container.b--action-primary.bg-action-primary
+        ) {
         border-color: #000 !important;
         background-color: #000 !important;
       }
@@ -30,15 +32,10 @@
 
 :global(.vtex-search-result-3-x-accordionFilter) {
   :global(.vtex-search-result-3-x-accordionFilterContainer--departamento),
-  :global(.vtex-search-result-3-x-accordionFilterContainer--departamento + .ReactCollapse--collapse) {
+  :global(
+      .vtex-search-result-3-x-accordionFilterContainer--departamento
+        + .ReactCollapse--collapse
+    ) {
     display: none;
   }
-
-  // :global(.vtex-search-result-3-x-accordionFilterContainer--marca) {
-  //   order: -2;
-  // }
-
-  // :global(.vtex-search-result-3-x-accordionFilterContainer--marca + .ReactCollapse--collapse) {
-  //   order: -1;
-  // }
 }
