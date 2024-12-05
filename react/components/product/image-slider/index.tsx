@@ -1,9 +1,11 @@
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 
 // Styles
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import styles from './styles.css'
 import './global.css'
 
@@ -23,38 +25,15 @@ const VTEXClasses = {
 
 const ImageSlider = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0)
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0) // Índice da imagem principal
   const { selectedItem } = useProduct() ?? {}
   const { isMobile } = useDevice()
-  const slider1 = useRef<Slider | null>(null)
-  const slider2 = useRef<Slider | null>(null)
 
-  const settingsMainSlider = {
-    dots: false,
-    infinite: false,
-    arrows: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    className: styles['main-slider'],
-    asNavFor: slider2.current!,
-    ref: slider1,
-    beforeChange: (_: any, next: any) => setActiveSlideIndex(next),
+  if (!selectedItem || !selectedItem.images?.length) {
+    return null
   }
 
-  const settingsThumbsSlider = {
-    asNavFor: slider1.current!,
-    ref: slider2,
-    slidesToShow: 4,
-    vertical: !isMobile,
-    swipeToSlide: true,
-    className: styles['thumb-slider'],
-    focusOnSelect: true,
-    nextArrow: <Arrow cssClass={VTEXClasses.ARROW_RIGHT_CLASS} />,
-    prevArrow: <Arrow cssClass={VTEXClasses.ARROW_LEFT_CLASS} />,
-  }
-
-  const openModal = (index: number) => {
-    setActiveSlideIndex(index)
+  const openModal = () => {
     setIsModalOpen(true)
   }
 
@@ -62,39 +41,58 @@ const ImageSlider = () => {
     setIsModalOpen(false)
   }
 
+  const settingsThumbsSlider = {
+    slidesToShow: 4,
+    vertical: !isMobile,
+    swipeToSlide: true,
+    className: styles['thumb-slider'],
+    focusOnSelect: true,
+    nextArrow: <Arrow cssClass={VTEXClasses.ARROW_RIGHT_CLASS} />,
+    prevArrow: <Arrow cssClass={VTEXClasses.ARROW_LEFT_CLASS} />,
+    beforeChange: (_: any, next: number) => setActiveSlideIndex(next),
+  }
+
   return (
     <div className={styles['image-slider-wrapper']}>
-      <Slider {...settingsMainSlider}>
-        {selectedItem?.images?.map((image, index) => (
+      {/* Imagem principal */}
+      <div
+        className={styles['image-wrapper']}
+        style={{ width: '100%' }}
+        onClick={openModal}
+      >
+        <img
+          src={selectedItem.images[activeSlideIndex]?.imageUrl}
+          alt={selectedItem.images[activeSlideIndex]?.imageLabel}
+          width="100%"
+          loading="lazy"
+          className={styles['image-element']}
+        />
+      </div>
+
+      {/* Slider de thumbnails */}
+      <Slider {...settingsThumbsSlider}>
+        {selectedItem.images.map((image, index) => (
           <div
             key={image.imageId}
-            className={styles['image-wrapper']}
-            onClick={() => openModal(index)}
+            className={`${styles['thumb-wrapper']} ${
+              activeSlideIndex === index ? styles['active-thumb'] : ''
+            }`}
+            onClick={() => setActiveSlideIndex(index)} // Alterar imagem principal ao clicar
           >
             <img
               src={image.imageUrl}
               alt={image.imageLabel}
-              className={styles['image-element']}
-            />
-          </div>
-        ))}
-      </Slider>
-      <Slider {...settingsThumbsSlider}>
-        {selectedItem?.images?.map((image) => (
-          <div key={image.imageId} className={`${styles['thumb-wrapper']}`}>
-            <img
-              src={image.imageUrl}
-              alt={image.imageLabel}
-              className={`${styles['thumb-element']} thumb-element `}
+              className={`${styles['thumb-element']} thumb-element`}
             />
           </div>
         ))}
       </Slider>
 
+      {/* Modal de Zoom */}
       <ModalZoom
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}
-        images={selectedItem?.images}
+        images={selectedItem.images}
         activeSlideIndex={activeSlideIndex}
         closeModal={closeModal}
         VTEXClasses={VTEXClasses}
