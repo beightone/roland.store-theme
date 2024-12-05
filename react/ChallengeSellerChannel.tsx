@@ -1,14 +1,17 @@
 import type { ReactNode } from 'react'
 import React, { Fragment, useEffect, useMemo, useState } from 'react'
 
+// Components
+import PreOwnedPopupAlert from './PreOwnedPopupAlert'
+
 // Hooks
 import { useQuery } from 'react-apollo'
+// @ts-ignore
 import { useRuntime } from 'vtex.render-runtime'
 
 // Queries
 import GET_ORDERFORM from './graphql/queries/getOrderForm.gql'
 import GET_PRE_OWNED_PRODUCTS from './graphql/queries/getProductsFromCollection.gql'
-import PreOwnedPopupAlert from './PreOwnedPopupAlert'
 
 const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
   const [showPopupAlert, setShowPopupAlert] = useState(false)
@@ -24,7 +27,7 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
     }
   )
 
-  const { page, navigate } = useRuntime()
+  const { page, route } = useRuntime()
 
   const orderFormItems = useMemo(
     () => data?.orderForm.items ?? [],
@@ -42,20 +45,84 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
     )
   )
 
+  const disableElements = (elements: string[]) => {
+    elements.forEach((element) => {
+      const elementToDisable = document.querySelector(element) as HTMLElement
+
+      if (elementToDisable) {
+        elementToDisable.style.display = 'none'
+      }
+    })
+  }
+
   useEffect(() => {
-    if (orderFormLoading || productsLoading) {
+    if (orderFormLoading || productsLoading || !preOwnedItems?.length) {
       return
     }
 
     const isPreOwnedPage = page === 'store.custom#pre-owned'
     const isHomePage = page === 'store.home'
+    const isProductPage = page === 'store.product'
+    const isPreOwnedProduct = document.referrer.includes('seminovos')
+
     const currentUrl = new URL(window.location.href)
     const hasScParameter = currentUrl.searchParams.has('sc')
-
     const hasRefreshed = currentUrl.searchParams.has('refreshed')
 
+    if (isProductPage && isPreOwnedProduct && !hasScParameter) {
+      currentUrl.searchParams.set('sc', '2')
+      window.location.href = currentUrl.toString()
+
+      const elementsToDisable = [
+        '.roland-store-theme-1-x-menuContainer',
+        '.vtex-breadcrumb-1-x-container',
+      ]
+
+      disableElements(elementsToDisable)
+
+      return
+    }
+
+    if (isProductPage && (isPreOwnedProduct || hasScParameter)) {
+      const elementsToDisable = [
+        '.roland-store-theme-1-x-menuContainer',
+        '.vtex-breadcrumb-1-x-container',
+      ]
+
+      disableElements(elementsToDisable)
+
+      return
+    }
+
+    if (isProductPage && !isPreOwnedProduct && !hasScParameter) {
+      const elementsToDisable = [
+        '.vtex-flex-layout-0-x-flexRow--pre-owned-tab',
+        '.vtex-flex-layout-0-x-flexRow--breadcrumb--pre-owned',
+      ]
+
+      const preOwnedClass = document.querySelector(
+        '.vtex-flex-layout-0-x-flexRow--pre-owned'
+      ) as HTMLElement
+
+      preOwnedClass.classList.add(
+        'vtex-flex-layout-0-x-flexRow--pre-owned-product'
+      )
+
+      disableElements(elementsToDisable)
+
+      return
+    }
+
+    if (isPreOwnedPage && !hasScParameter) {
+      currentUrl.searchParams.set('sc', '2')
+      currentUrl.searchParams.set('refreshed', 'true')
+      window.location.href = currentUrl.toString()
+
+      return
+    }
+
     if (isPreOwnedPage && !hasRefreshed) {
-      currentUrl.searchParams.append('refreshed', 'true')
+      currentUrl.searchParams.set('refreshed', 'true')
       window.location.href = currentUrl.toString()
 
       return
@@ -69,32 +136,25 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
       if (!isPreOwnedPage && hasPreOwnedProductInCart) {
         setShowPopupAlert(true)
       }
-
-      if (isPreOwnedPage && !hasScParameter) {
-        navigate({
-          to: `${window.location.pathname}?sc=2`,
-        })
-      }
     } else {
       setShowPopupAlert(false)
     }
 
     if (isHomePage && !hasScParameter) {
-      navigate({
-        to: `${window.location.pathname}?sc=1`,
-      })
+      currentUrl.searchParams.set('sc', '1')
+      window.location.href = currentUrl.toString()
     }
   }, [
     data,
     preOwnedProducts,
     page,
-    navigate,
     hasPreOwnedProductInCart,
     orderFormItems,
     preOwnedItems,
     showPopupAlert,
     orderFormLoading,
     productsLoading,
+    route.params.id,
   ])
 
   return (

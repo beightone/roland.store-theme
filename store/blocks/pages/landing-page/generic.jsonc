@@ -1,0 +1,31 @@
+{
+  "store.custom#generic-landing-page": {
+    "blocks": [
+      "flex-layout.row#pre-owned-main-banner",
+      "flex-layout.row#pre-owned-benefits",
+      "search-result-layout.customQuery#generic",
+      "flex-layout.row#pre-owned-faq",
+      "flex-layout.row#pre-owned-seo",
+      "flex-layout.row#newsletter"
+    ],
+    "parent": {
+      "header": "header",
+      "footer": "flex-layout.row#footer-roland"
+    }
+  },
+  "search-result-layout.customQuery#generic": {
+    "props": {
+      "querySchema": {
+        "skusFilter": "FIRST_AVAILABLE",
+        "simulationBehavior": "default",
+        "queryField": "179",
+        "mapField": "productClusterIds"
+      }
+    },
+    "blocks": [
+      "search-result-layout.desktop#generic",
+      "search-result-layout.mobile#generic"
+      // "search-not-found-layout"
+    ]
+  }
+}

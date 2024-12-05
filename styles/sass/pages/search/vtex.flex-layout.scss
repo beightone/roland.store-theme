@@ -26,7 +26,6 @@
   gap: 16px;
 }
 
-
 .flexRowContent--search-actions {
   justify-content: flex-end;
   gap: 24px;
@@ -36,20 +35,20 @@
   height: 100%;
 }
 
+.flexColChild--price-container {
+  padding: 0;
+
+  &:first-child {
+    min-height: 0;
+  }
+}
+
 .flexColChild--product-summary-list-layout-info {
   padding: 0;
 
-  .flexColChild--price-container {
-    padding: 0;
-    &:first-child {
-      min-height: 0;
-    }
-  }
-
   @media screen and (max-width: 768px) {
-
     &:last-child {
-      height: 36px!important;
+      height: 36px !important;
     }
 
     .flexRow--product-card-actions {
@@ -59,7 +58,6 @@
       width: 100%;
       display: flex;
     }
-    
   }
 }
 
@@ -78,5 +76,12 @@
 
   @media screen and (max-width: 768px) {
     position: unset;
+  }
+}
+.flexRow--search-info,
+.galleryLayoutSwitcher,
+.flexRow--filters-mobile {
+  @media screen and (max-width: 768px) {
+    padding: 0 1rem;
   }
 }

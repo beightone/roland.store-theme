@@ -26,7 +26,7 @@
   },
   "header-row#pre-owned-main-mobile": {
     "children": [
-      // "menu#mobile",
+      "menu#mobile",
       "sales-channel-trigger-condition#logo",
       "minicart.v2#new"
     ],

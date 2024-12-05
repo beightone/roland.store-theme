@@ -1,3 +1,18 @@
+:global(.vtex-search-result-3-x-galleryItem--list) {
+  @media screen and (max-width: 768px) {
+    .newSpotPriceValue--product-summary-price {
+      width: 100%;
+      text-align: left;
+    }
+
+    .spotPriceSavingsPercentage--product-summary-price {
+      position: relative;
+      margin-top: -8px;
+      margin-left: 4px;
+    }
+  }
+}
+
 .spotPriceSavings--product-summary-price {
   color:  #3F3F46;
   font-family: "Proxima Nova";
@@ -15,6 +30,21 @@
     flex-wrap: wrap;
     gap: 0;
   }
+}
+
+
+
+.sellingPrice--summary .sellingPriceValue--summary .currencyContainer--summary {
+  overflow: hidden;
+  color: var(--text-neutral-subtlest, #71717A);
+  text-overflow: ellipsis;
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.14px;
+  text-decoration: line-through;
 }
 
 .newSpotPriceValue--product-summary-price,

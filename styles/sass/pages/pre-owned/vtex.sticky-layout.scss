@@ -9,4 +9,10 @@
       margin: 0;
     }
   }
+
+  @media screen and (max-width: 768px) {
+    :global(.vtex-search-result-3-x-orderByOptionsContainer) {
+      top: -290px;
+    }
+  }
 }
