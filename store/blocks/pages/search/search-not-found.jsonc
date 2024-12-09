@@ -2,6 +2,7 @@
   "search-not-found-layout": {
     "title": "Busca não encontrada",
     "children": [
+      "flex-layout.row#searchbread",
       "flex-layout.row#notfound",
       "flex-layout.row#simple-shelf-container-1"
     ]

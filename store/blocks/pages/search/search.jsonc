@@ -74,7 +74,7 @@
     }
   },
   "sticky-layout#filters": {
-    "title": "Filtros",
+    "title": "Filtros Flutuante",
     "props": {
       "blockClass": "filters-mobile",
       "position": "bottom"
@@ -82,6 +82,14 @@
     "children": ["flex-layout.row#filters"]
   },
   "flex-layout.row#filters": {
+    "title": "Filtros",
+    "props": {
+      "blockClass": ["filters-mobile", "filters-normal-position"],
+      "fullWidth": true
+    },
+    "children": ["filter-navigator.v3#new", "order-by.v2"]
+  },
+  "flex-layout.row#filters-stack": {
     "title": "Filtros",
     "props": {
       "blockClass": "filters-mobile",

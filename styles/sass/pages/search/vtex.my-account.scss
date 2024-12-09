@@ -39,3 +39,13 @@
     display: none;
   }
 }
+:global(.render-route-store-search) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--search-info) {
+    :global(.vtex-search-result-3-x-galleryTitle--layout) {
+      &::before {
+        content: 'Você pesquisou sobre: ';
+        text-transform: math-auto;
+      }
+    }
+  }
+}

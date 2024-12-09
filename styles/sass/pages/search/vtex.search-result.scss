@@ -21,18 +21,23 @@
 .filter__container--category-1 {
   display: none;
 }
+:global(.vtex-flex-layout-0-x-flexRowContent--search-info) {
+  .galleryTitle--layout {
+    margin: 0;
+    color: var(--text-neutral-bold, #18181b);
+    font-family: 'Proxima Nova';
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: -0.24px;
 
-.galleryTitle--layout {
-  margin: 0;
-  color: var(--text-neutral-bold, #18181b);
-  font-family: 'Proxima Nova';
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 32px;
-  letter-spacing: -0.24px;
+    @media screen and (max-width: 768px) {
+      font-size: 1.25rem;
+      line-height: 1.75rem;
+    }
+  }
 }
-
 .totalProducts--layout {
   border: none;
 }
@@ -133,19 +138,6 @@
   background: #fff;
   transition: all 0.2s ease-in-out;
   justify-content: flex-start;
-
-  &:hover {
-    border-color: var(--border-brand-primary-base, #ee8146);
-    background: var(--bg-brand-primary-subtlest-hover, #fdf2ec);
-
-    .filterPopupTitle {
-      color: var(--text-brand-primary-base, #ff5a00);
-    }
-
-    .filterPopupArrowIcon::before {
-      content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 7.5L10 12.5L15 7.5" stroke="%23FF5A00" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-    }
-  }
 }
 
 .orderByText {
@@ -258,6 +250,9 @@
   margin-bottom: 16px;
   border: none;
 }
+.filter__container--title {
+  margin: 0 !important;
+}
 .sidebar .accordionFilter .filterAccordionBreadcrumbs {
   border-bottom: none !important;
 }
@@ -295,11 +290,60 @@
   }
 }
 
-.filter__container--clearAllFilters,
-.filter__container--selectedFilters {
+.filter__container--clearAllFilters {
   display: none;
 }
+.filter__container--selectedFilters {
+  display: block;
+  border: none !important;
+  padding: 0 !important;
+  .filterSelected {
+    font-family: 'Proxima Nova';
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 500;
+    color: #18181b;
+  }
+  .filterTemplateOverflow {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0.5rem;
+    padding-top: 0.5rem;
+    .filterItem {
+      width: fit-content;
+      :global(.vtex-checkbox__line-container) {
+        display: flex;
+        flex-direction: row-reverse;
+        width: fit-content;
+        border: 1px solid #71717a;
+        padding: 0 0 0 0.25rem;
+        background: #f4f4f5;
+        border-radius: 0.125rem;
+        height: 1.25rem;
 
+        :global(.vtex-checkbox__container) {
+          :global(.vtex-checkbox__inner-container),
+          :global(.vtex-checkbox__box-wrapper),
+          :global(.vtex-checkbox__input) {
+            display: none;
+          }
+          &::before {
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none"><path d="M10.5 4.41113L3.5 11.4111" stroke="%2371717A" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 4.41113L10.5 11.4111" stroke="%2371717A" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            height: 0.875rem;
+            width: 0.875rem;
+          }
+        }
+        :global(.vtex-checkbox__label) {
+          white-space: nowrap;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+          color: #3f3f46;
+        }
+      }
+    }
+  }
+}
 // FILTER DRAWER
 .filterAccordionBreadcrumbs {
   padding: 1.5rem 1.5rem 0 1rem !important;
@@ -525,7 +569,7 @@
     border-radius: var(--radius-rounded-sm, 2px);
     padding: 12px 20px;
     width: 100%;
-    height: 48px;
+    height: 3rem;
   }
 
   .sidebar {
@@ -535,4 +579,16 @@
 }
 .buttonShowMore--layout {
   margin-top: 1rem;
+}
+
+.showingProducts {
+  font-family: 'Proxima Nova';
+  color: #3f3f46;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0;
+  @media screen and (max-width: 48rem) {
+    padding-top: 0.5rem;
+  }
 }

@@ -119,9 +119,9 @@
       "gallery-layout-switcher",
       "flex-layout.row#filters",
       "search-fetch-previous",
+      "sticky-layout#filters",
       "search-content#generic",
       "search-fetch-more",
-      "sticky-layout#filters",
       "flex-layout.row#simple-double-banner-search",
       "flex-layout.row#search-SEO-mobile"
     ],
@@ -147,17 +147,24 @@
       "gallery-layout-switcher",
       "flex-layout.row#filters",
       "search-fetch-previous",
+      "sticky-layout#filters",
       "search-content#generic",
       "search-fetch-more",
-      "sticky-layout#filters",
       "flex-layout.row#simple-double-banner-search",
-      "flex-layout.row#search-SEO-mobile"
+      "flex-layout.row#search-SEO-mobile",
+      "sticky-layout-observer"
     ],
     "props": {
       "mobileLayout": {
         "mode1": "small",
         "mode2": "normal"
       }
+    }
+  },
+  "sticky-layout-observer": {
+    "props": {
+      "elementObserver": ".vtex-flex-layout-0-x-flexRow--filters-normal-position",
+      "elementSticky": ".vtex-sticky-layout-0-x-wrapper--filters-mobile"
     }
   }
 }

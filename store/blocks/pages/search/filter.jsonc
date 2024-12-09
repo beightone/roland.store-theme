@@ -39,8 +39,19 @@
   },
   "filter-navigator.v3": {
     "props": {
+      "scrollToTop": "auto",
       "initiallyCollapsed": true,
+      "truncateFilters": true,
+      "fullWidthOnMobile": true,
       "navigationTypeOnMobile": "collapsible",
+      "totalProductsOnMobile": "show",
+      "updateOnFilterSelectionOnMobile": true,
+      "filtersTitleHtmlTag": "span",
+      "closeOnOutsideClick": true,
+      "appliedFiltersOverview": "show",
+      "showClearAllFiltersOnDesktop": true,
+      "maxItemsDepartment": 2,
+      "maxItemsCategory": 2,
       "facetOrdering": [
         {
           "key": "category-1",

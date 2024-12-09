@@ -74,5 +74,8 @@
   "custom-flag-discount": {
     "component": "CustomFlagDiscount",
     "composition": "children"
+  },
+  "sticky-layout-observer": {
+    "component": "StickyLayoutObserver"
   }
 }

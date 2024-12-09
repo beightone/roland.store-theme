@@ -37,10 +37,6 @@
 
 .flexColChild--price-container {
   padding: 0;
-
-  &:first-child {
-    min-height: 0;
-  }
 }
 
 .flexColChild--product-summary-list-layout-info {
@@ -93,5 +89,11 @@
   }
   .flexRow--search-info {
     padding-top: 1rem !important;
+  }
+}
+.flexRowContent--product-card-price {
+  height: 4.625rem;
+  @media screen and (max-width: 48rem) {
+    height: 8rem;
   }
 }
