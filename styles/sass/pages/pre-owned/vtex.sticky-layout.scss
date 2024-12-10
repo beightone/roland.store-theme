@@ -1,9 +1,10 @@
 .wrapper--filters-mobile {
-  height: 0!important;
+  height: 0 !important;
 
   .container {
-    background: #FFF;
+    background: #fff;
     padding: 8px;
+    position: fixed;
 
     :global(.vtex-flex-layout-0-x-flexRowContent--filters-mobile) {
       margin: 0;

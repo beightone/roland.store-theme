@@ -1,5 +1,5 @@
 .flexRow--search-header {
-  padding: 24px 16px;
+  padding: 1.5rem 1rem 0 1rem;
   :global(.vtex-store-components-3-x-container) {
     padding: 0;
   }
@@ -8,9 +8,10 @@
     padding: 0;
   }
 }
-
-.flexRowContent--search-gallery {
-  gap: 16px;
+.flexRow--search-gallery {
+  .flexRowContent--search-gallery {
+    gap: 16px;
+  }
 }
 
 .flexRowContent--search-info {

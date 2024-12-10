@@ -148,6 +148,7 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding-top: 1.5rem;
 }
 
 .filter__container:not(.filter__container--title) {
@@ -312,33 +313,30 @@
     .filterItem {
       width: fit-content;
       :global(.vtex-checkbox__line-container) {
-        display: flex;
-        flex-direction: row-reverse;
         width: fit-content;
         border: 1px solid #71717a;
-        padding: 0 0 0 0.25rem;
+        padding: 0 0.25rem 0;
         background: #f4f4f5;
         border-radius: 0.125rem;
         height: 1.25rem;
 
         :global(.vtex-checkbox__container) {
-          :global(.vtex-checkbox__inner-container),
-          :global(.vtex-checkbox__box-wrapper),
-          :global(.vtex-checkbox__input) {
-            display: none;
-          }
-          &::before {
-            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none"><path d="M10.5 4.41113L3.5 11.4111" stroke="%2371717A" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 4.41113L10.5 11.4111" stroke="%2371717A" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-            height: 0.875rem;
-            width: 0.875rem;
-          }
+          display: none;
         }
         :global(.vtex-checkbox__label) {
           white-space: nowrap;
           font-weight: 500;
           font-size: 12px;
-          line-height: 16px;
+          height: 1.25rem;
           color: #3f3f46;
+          display: flex;
+          align-items: center;
+          column-gap: 0.5rem;
+          &::after {
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none"><path d="M10.5 4.41113L3.5 11.4111" stroke="%2371717A" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 4.41113L10.5 11.4111" stroke="%2371717A" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            height: 1.25rem;
+            width: auto;
+          }
         }
       }
     }
