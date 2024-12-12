@@ -104,7 +104,7 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
         '.vtex-flex-layout-0-x-flexRow--pre-owned'
       ) as HTMLElement
 
-      preOwnedClass.classList.add(
+      preOwnedClass?.classList.add(
         'vtex-flex-layout-0-x-flexRow--pre-owned-product'
       )
 
