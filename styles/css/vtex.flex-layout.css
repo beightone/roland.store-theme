@@ -752,6 +752,17 @@
   }
 }
 
+.flexRowContent--product-roland {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.flexRowContent--product-roland .stretchChildrenWidth {
+  width: 100% !important;
+  flex: 1;
+}
+
 .flexRow--search-header {
   padding: 24px 0;
 }
