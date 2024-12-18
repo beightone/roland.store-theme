@@ -1,0 +1,11 @@
+{
+  "flex-layout.row#product-description": {
+    "title": "Seção - Descrição do produto",
+    "props": {
+      "blockClass": "product-description"
+    },
+    "children": [
+      "product-description"
+    ]
+  }
+}
