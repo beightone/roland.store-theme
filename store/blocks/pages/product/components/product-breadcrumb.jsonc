@@ -1,0 +1,17 @@
+{
+  "flex-layout.row#product-breadcrumb": {
+    "title": "Seção - Breadcrumb",
+    "props": {
+      "blockClass": "product-breadcrumb"
+    },
+     "children": [
+      "breadcrumb#product-breadcrumb"
+     ]
+  },
+  "breadcrumb#product-breadcrumb": {
+    "props": {
+      "showOnMobile": true,
+      "blockClass" : "product-breadcrumb"
+    }
+  }
+}

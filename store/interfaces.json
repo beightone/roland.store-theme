@@ -33,6 +33,15 @@
   "custom-banner": {
     "component": "CustomBanner"
   },
+  "custom-shipping-calculator": {
+    "component": "ShippingCalculator"
+  },
+  "custom-buy-button-popup-content": {
+    "component": "BuyButtonPopupContent"
+  },
+  "custom-image-slider": {
+    "component": "ImageSlider"
+  },
   "collapsible-content": {
     "component": "CollapsibleContent",
     "composition": "children"
@@ -74,5 +83,11 @@
   "custom-flag-discount": {
     "component": "CustomFlagDiscount",
     "composition": "children"
+  },
+  "product-link-share": {
+    "component": "ProductLinkShare"
+  },
+  "anchor-sections": {
+    "component": "AnchorSections"
   }
 }

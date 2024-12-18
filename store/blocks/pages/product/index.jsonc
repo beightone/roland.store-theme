@@ -1,0 +1,22 @@
+{
+  "store.product#roland": {
+    "blocks": [
+      "flex-layout.row#product-breadcrumb",
+      "flex-layout.row#product-details",
+      "flex-layout.row#product-anchor-sections",
+      "flex-layout.row#product-description"
+    ]
+  },
+  "flex-layout.row#product-details": {
+    "title": "Seção - Detalhes do produto",
+    "props": {
+      "blockClass": "product-details",
+      "preventHorizontalStretch": true,
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.row#product-image",
+      "flex-layout.col#product-info"
+    ]
+  }
+}
