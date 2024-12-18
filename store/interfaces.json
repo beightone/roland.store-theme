@@ -86,5 +86,8 @@
   },
   "product-link-share": {
     "component": "ProductLinkShare"
+  },
+  "anchor-sections": {
+    "component": "AnchorSections"
   }
 }

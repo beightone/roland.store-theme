@@ -1,15 +1,10 @@
 {
-  "flex-layout.row#product-roland-content": {
-    "title": "Produto - Roland",
-    "children": [
+  "store.product#roland": {
+    "blocks": [
       "flex-layout.row#product-breadcrumb",
-      "flex-layout.row#product-details"
-    ],
-    "props": {
-      "blockClass": "product-roland",
-      "fullWidth": "true",
-      "colSizing": "auto"
-    }
+      "flex-layout.row#product-details",
+      "flex-layout.row#product-anchor-sections"
+    ]
   },
   "flex-layout.row#product-details": {
     "title": "Seção - Detalhes do produto",
