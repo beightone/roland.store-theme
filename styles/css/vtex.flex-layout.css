@@ -763,6 +763,34 @@
   flex: 1;
 }
 
+.flexRow--product-anchor-sections {
+  max-width: 1264px;
+  margin: 0 auto;
+  width: 100%;
+  padding-top: 8px;
+  margin-top: 24px;
+}
+@media screen and (max-width: 768px) {
+  .flexRow--product-anchor-sections {
+    padding: 0 16px;
+  }
+}
+
+.flexRow--product-description {
+  background-color: #f4f4f5;
+}
+.flexRow--product-description :global(.vtex-store-components-3-x-container) {
+  max-width: 90rem;
+}
+.flexRow--product-description .flexRowContent--product-description {
+  padding: 3rem 2rem;
+}
+@media screen and (max-width: 64rem) {
+  .flexRow--product-description .flexRowContent--product-description {
+    padding: 1.5rem 1rem;
+  }
+}
+
 .flexRow--search-header {
   padding: 24px 0;
 }

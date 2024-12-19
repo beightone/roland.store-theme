@@ -89,5 +89,8 @@
   },
   "anchor-sections": {
     "component": "AnchorSections"
+  },
+  "product-description-custom": {
+    "component": "ProductDescriptionCustom"
   }
 }

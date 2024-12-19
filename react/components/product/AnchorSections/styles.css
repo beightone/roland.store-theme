@@ -4,7 +4,6 @@
 
 .desktopView {
   display: none;
-  
 }
 
 .mobileDropdown {
@@ -21,14 +20,14 @@
 }
 
 .anchorButton:first-child {
-  border-bottom: 1.5px solid var(--text-brand-primary-base, #FF5A00);
+  border-bottom: 1.5px solid var(--text-brand-primary-base, #ff5a00);
 }
 
 .anchorButton a {
   width: 100%;
   text-decoration: none;
-  color: var(--text-inverse-subtlest, #71717A);
-  font-family: "Proxima Nova";
+  color: var(--text-inverse-subtlest, #71717a);
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -46,9 +45,9 @@
   align-items: center;
   cursor: pointer;
   border-radius: var(--radius-rounded-sm, 2px);
-  background: var(--bg-brand-secondary-bold-pressed, #2B2B3A);
+  background: var(--bg-brand-secondary-bold-pressed, #2b2b3a);
   color: #fff;
-  font-family: "Proxima Nova";
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -58,7 +57,6 @@
 
 .dropdownToggle::after {
   content: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6L8 10L12 6" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-
 }
 
 .dropdownContent {
@@ -94,7 +92,6 @@
     display: flex;
     width: 100%;
     gap: 24px;
-
   }
 }
 
@@ -111,14 +108,12 @@
     max-width: 100%;
     text-align: left;
     padding: 0;
-    
   }
 
-  .dropdownContent {
+  .dropdownContent.open {
     padding: 12px;
     display: flex;
     flex-direction: column;
     gap: 16px;
   }
-  
 }
