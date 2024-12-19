@@ -1,0 +1,37 @@
+{
+  "flex-layout.row#product-shelf": {
+    "title": "Vitrine",
+    "children": ["flex-layout.col#product-shelf"],
+    "props": {
+      "blockClass": ["shelf-container", "home-content-container"]
+    }
+  },
+  "flex-layout.col#product-shelf": {
+    "title": "Col: Vitrine",
+    "children": [
+      "flex-layout.row#product-shelf-title",
+      "flex-layout.row#shelf-slider-container-1"
+    ],
+    "props": {
+      "blockClass": "shelf-container"
+    }
+  },
+  "flex-layout.row#product-shelf-title": {
+    "title": "Linha: Título da Shelf",
+    "children": [
+      "rich-text#product-shelf-section-title",
+      "link#shelf-section-show-all-1"
+    ],
+    "props": {
+      "blockClass": "shelf-title-container",
+      "preventHorizontalStretch": true
+    }
+  },
+  "rich-text#product-shelf-section-title": {
+    "title": "Texto: Título da Sessão",
+    "props": {
+      "text": "Você também pode gostar de",
+      "blockClass": "section-title"
+    }
+  }
+}
