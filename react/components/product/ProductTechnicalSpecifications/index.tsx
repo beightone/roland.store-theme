@@ -19,8 +19,6 @@ const ProductTechnicalSpecifications: React.FC = () => {
 
   const { properties } = product
 
-  console.log(properties, 'here')
-
   const technicalSpecifications: TechnicalSpecification[] =
     properties
       ?.filter(
