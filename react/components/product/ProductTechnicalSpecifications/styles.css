@@ -1,0 +1,86 @@
+.technicalSpecificationsContainer {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.technicalSpecificationsTitle {
+  color: #3f3f46;
+  font-family: 'Proxima Nova';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  margin: 0 0 2rem;
+}
+.technicalSpecificationsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 52.5rem;
+  width: 100%;
+}
+
+.technicalSpecificationsList li {
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.25rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+
+  font-family: 'Proxima Nova';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  color: #3f3f46;
+}
+.technicalSpecificationsList li .technicalSpecificationsName {
+  color: #18181b;
+  width: 15rem;
+  font-weight: 600;
+  display: inline-block;
+}
+.technicalSpecificationsText {
+  width: calc(100% - 15rem);
+  display: inline-block;
+}
+.technicalSpecificationsList li:nth-child(odd) {
+  background: #ededed;
+}
+.technicalSpecificationsButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: none;
+  background: transparent;
+  text-decoration: underline;
+  color: #383838;
+  font-family: 'Proxima Nova';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.16px;
+  padding: 0;
+  margin: 1.5rem 0 0;
+}
+@media screen and (max-width: 64rem) {
+  .technicalSpecificationsContainer {
+    padding: 1.5rem 1rem;
+  }
+  .technicalSpecificationsTitle {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.24px;
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (max-width: 48rem) {
+  .technicalSpecificationsList li .technicalSpecificationsName,
+  .technicalSpecificationsList li .technicalSpecificationsText {
+    width: 50%;
+  }
+}

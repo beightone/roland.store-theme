@@ -5,6 +5,7 @@
       "flex-layout.row#product-details",
       "flex-layout.row#product-anchor-sections",
       "flex-layout.row#product-description",
+      "product-technical-specifications",
       "flex-layout.row#product-shelf",
       "flex-layout.row#product-trustvox-avaliations"
     ]

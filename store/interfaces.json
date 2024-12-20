@@ -95,5 +95,8 @@
   },
   "product-trustvox-avaliations": {
     "component": "ProductTrustvoxAvaliations"
+  },
+  "product-technical-specifications": {
+    "component": "ProductTechnicalSpecifications"
   }
 }
