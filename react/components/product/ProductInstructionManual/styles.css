@@ -1,0 +1,63 @@
+.productInstructionManualContainer {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.productInstructionManualTitle {
+  color: #3f3f46;
+  font-family: 'Proxima Nova';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  margin: 0 0 1.5rem;
+}
+.productInstructionManualContent {
+  display: flex;
+  align: center;
+  justify-content: flex-start;
+  column-gap: 0.75rem;
+}
+.productInstructionManualLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #2b2b3a;
+  padding: 0.75rem;
+  border-radius: 2px;
+  box-sizing: border-box;
+  height: 3.125rem;
+  width: 3.125rem;
+  cursor: pointer;
+}
+
+.productInstructionManualPhrase {
+  color: #5a5a66;
+  font-family: 'Proxima Nova';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  margin: 0;
+}
+.productInstructionManualSimpleLink {
+  color: #18181b;
+  font-family: 'Proxima Nova';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 64rem) {
+  .productInstructionManualTitle {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.24px;
+  }
+}

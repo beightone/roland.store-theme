@@ -98,5 +98,8 @@
   },
   "product-technical-specifications": {
     "component": "ProductTechnicalSpecifications"
+  },
+  "product-instruction-manual": {
+    "component": "ProductInstructionManual"
   }
 }

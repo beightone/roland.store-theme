@@ -120,10 +120,9 @@
 }
 .flexRow--product-description {
   background-color: #f4f4f5;
-  :global(.vtex-store-components-3-x-container) {
-    max-width: 90rem;
-  }
   .flexRowContent--product-description {
+    max-width: 90rem;
+    margin: 0 auto;
     padding: 3rem 2rem;
     @media screen and (max-width: 64rem) {
       padding: 1.5rem 1rem;
