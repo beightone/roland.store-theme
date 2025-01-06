@@ -37,7 +37,10 @@ const ProductTechnicalSpecifications: React.FC = () => {
     : technicalSpecifications.slice(0, 13)
 
   return (
-    <section className={styles.technicalSpecificationsContainer}>
+    <section
+      className={styles.technicalSpecificationsContainer}
+      id="specifications"
+    >
       <h3 className={styles.technicalSpecificationsTitle}>
         Especificações técnicas
       </h3>
