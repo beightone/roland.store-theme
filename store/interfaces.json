@@ -101,5 +101,8 @@
   },
   "product-instruction-manual": {
     "component": "ProductInstructionManual"
+  },
+  "product-content-items": {
+    "component": "ProductContentItems"
   }
 }

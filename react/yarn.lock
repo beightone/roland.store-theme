@@ -5690,9 +5690,9 @@ rimraf@3.0.2, rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
-"roland.store-theme@https://sel3770--roland.myvtex.com/_v/private/typings/linked/v1/roland.store-theme@1.0.32+build1734635443/public/@types/roland.store-theme":
+"roland.store-theme@https://sel3973--roland.myvtex.com/_v/private/typings/linked/v1/roland.store-theme@1.0.32+build1736193354/public/@types/roland.store-theme":
   version "1.0.32"
-  resolved "https://sel3770--roland.myvtex.com/_v/private/typings/linked/v1/roland.store-theme@1.0.32+build1734635443/public/@types/roland.store-theme#c0cec459c5713f441b6e23be54444b575f0f93e2"
+  resolved "https://sel3973--roland.myvtex.com/_v/private/typings/linked/v1/roland.store-theme@1.0.32+build1736193354/public/@types/roland.store-theme#b36997a6768648fabed76501b4f678aaebf087ac"
 
 rsvp@^4.8.4:
   version "4.8.5"
@@ -6760,9 +6760,9 @@ vfile@^6.0.0:
   version "1.3.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-newsletter@1.3.0/public/@types/vtex.store-newsletter#29dd0374e8b44dbf734b7e14f31c2b11e1be71fc"
 
-"vtex.store@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.138.0/public/@types/vtex.store":
-  version "2.138.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.138.0/public/@types/vtex.store#bc1ef2f3eedc20d042014b815bdc5a4bc390d5a0"
+"vtex.store@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.139.0/public/@types/vtex.store":
+  version "2.139.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store@2.139.0/public/@types/vtex.store#8e70800bb49c595b94636b85de18ba55d303a4c0"
 
 "vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.13/public/@types/vtex.styleguide":
   version "9.146.13"
