@@ -16,7 +16,6 @@ export const ProductVideo: React.FC = () => {
   if (!properties) return null
   const videoId = getPropertyByName(properties, 'Vídeo')
 
-  console.log(videoId, 'here videoId')
   if (!videoId) return null
 
   return (

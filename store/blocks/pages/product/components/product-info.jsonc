@@ -8,7 +8,7 @@
     "children": [
       "vtex.store-components:product-name#product-page",
       "trust-vox-stars",
-      "vtex.store-components:product-description#product-page",
+      "product-read-more-description",
       "flex-layout.col#product-page-price",
       "flex-layout.row#product-page-buy-button",
       "custom-shipping-calculator"
@@ -110,6 +110,14 @@
     "props": {
       "showTitle": false,
       "blockClass": "product-description"
+    }
+  },
+  "link#go-to-product-description": {
+    "title": "Link Leia Mais",
+    "props": {
+      "href": "#description",
+      "label": "Leia Mais",
+      "blockClass": ["link--read-more"]
     }
   }
 }

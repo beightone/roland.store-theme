@@ -21,7 +21,7 @@
     "title": "Header Black Friday",
     "children": ["header-layout.desktop#roland", "header-layout.mobile#roland"]
   },
-  "flex-layout.row#header-normal-wrapper": {
+  "flex-layout.row#header-normal": {
     "title": "ROLAND - Header",
     "children": ["header-layout.desktop#roland", "header-layout.mobile#roland"]
   }

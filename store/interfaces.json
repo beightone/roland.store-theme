@@ -107,5 +107,8 @@
   },
   "product-video": {
     "component": "ProductVideo"
+  },
+  "product-read-more-description": {
+    "component": "ProductReadMoreDescription"
   }
 }

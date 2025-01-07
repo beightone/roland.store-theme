@@ -163,85 +163,6 @@
   width: 100%;
 }
 
-.imageElement--payment-method {
-  width: 48px;
-  height: 34px;
-}
-
-:global(.vtex-store-header-2-x-headerStickyRow) .container {
-  width: 100%;
-  max-width: 100%;
-  padding: 0;
-}
-
-.closeIcon--search-bar {
-  display: none;
-}
-
-.searchBarInnerContainer {
-  border-radius: var(--radius-rounded-sm, 2px);
-  border: 1px solid var(--border-input-base, #D4D4D8);
-  padding: 9px 16px;
-}
-.searchBarInnerContainer--search-bar--opened {
-  border: 1.5px solid var(--border-focus-base, #EE8146);
-}
-
-.searchBarContainer {
-  max-width: 698px;
-  position: relative;
-  width: 100%;
-  display: flex;
-  height: 40px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  align-self: stretch;
-  border-radius: 2px;
-  background: #FFF;
-  margin: unset;
-}
-@media screen and (max-width: 1024px) {
-  .searchBarContainer {
-    max-width: 100%;
-  }
-}
-.searchBarContainer .searchBarIcon--search-bar {
-  background-image: url("assets/svgs/search-icon.svg");
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  padding-left: 8px;
-}
-.searchBarContainer .searchBarIcon--search-bar .searchIcon {
-  display: none;
-}
-.searchBarContainer :global(.vtex-styleguide-9-x-input) {
-  width: 100%;
-  padding: 0;
-  border-right: 1px solid var(--border-input-base, #D4D4D8);
-  margin-right: 8px;
-}
-.searchBarContainer :global(.vtex-styleguide-9-x-input)::placeholder {
-  color: var(--text-neutral-bold, #18181B);
-  font-family: "Proxima Nova";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: -0.14px;
-}
-.searchBarContainer :global(.vtex-input-prefix__group) {
-  height: 100%;
-  border: none;
-}
-
-@media screen and (max-width: 1025px) {
-  .imageElementLink--logo {
-    max-width: 111px;
-    display: block;
-  }
-}
 .infoCardContainer--info-card-black-friday-benefits {
   border-radius: var(--radius-rounded-sm, 2px);
   background: #121212 !important;
@@ -481,7 +402,7 @@
   content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 15L12.5 10L7.5 5" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   transform: rotate(90deg);
   border-radius: var(--radius-rounded-full, 9999px);
-  background: var(--bg-brand-primary-subtlest-base, #FFF);
+  background: var(--bg-brand-primary-subtlest-base, #fff);
   padding: 10px 11px;
 }
 .productImagesContainer--product-image--carousel .productImagesThumbCaret--product-image .caretIcon {
@@ -501,10 +422,10 @@
 }
 .productImagesContainer--product-image--carousel .productImagesThumb--product-image .carouselThumbBorder {
   border-radius: var(--radius-rounded-sm, 2px);
-  border: 2px solid var(--bg-brand-secondary-subtlest-base, #DCDCDE);
+  border: 2px solid var(--bg-brand-secondary-subtlest-base, #dcdcde);
 }
 .productImagesContainer--product-image--carousel .productImagesThumbActive--product-image .carouselThumbBorder {
-  border: 2px solid var(--text-link-primary-default-base, #FF5A00);
+  border: 2px solid var(--text-link-primary-default-base, #ff5a00);
 }
 .productImagesContainer--product-image--carousel .productImage--product-image {
   max-width: 700px;
@@ -542,17 +463,6 @@
     line-height: 32px;
     letter-spacing: -0.24px;
   }
-}
-
-.content--product-description {
-  color: var(--Brand-Primary-Dark, #5E5E5E);
-  font-family: "Proxima Nova";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: -0.14px;
-  margin-top: 16px;
 }
 
 .shareContainer {
@@ -618,4 +528,84 @@
   text-transform: math-auto;
   background: none;
   border: none;
+}
+
+.imageElement--payment-method {
+  width: 48px;
+  height: 34px;
+}
+
+:global(.vtex-store-header-2-x-headerStickyRow) .container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.closeIcon--search-bar {
+  display: none;
+}
+
+.searchBarInnerContainer {
+  border-radius: var(--radius-rounded-sm, 2px);
+  border: 1px solid var(--border-input-base, #D4D4D8);
+  padding: 9px 16px;
+}
+.searchBarInnerContainer--search-bar--opened {
+  border: 1.5px solid var(--border-focus-base, #EE8146);
+}
+
+.searchBarContainer {
+  max-width: 698px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 2px;
+  background: #FFF;
+  margin: unset;
+}
+@media screen and (max-width: 1024px) {
+  .searchBarContainer {
+    max-width: 100%;
+  }
+}
+.searchBarContainer .searchBarIcon--search-bar {
+  background-image: url("assets/svgs/search-icon.svg");
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  padding-left: 8px;
+}
+.searchBarContainer .searchBarIcon--search-bar .searchIcon {
+  display: none;
+}
+.searchBarContainer :global(.vtex-styleguide-9-x-input) {
+  width: 100%;
+  padding: 0;
+  border-right: 1px solid var(--border-input-base, #D4D4D8);
+  margin-right: 8px;
+}
+.searchBarContainer :global(.vtex-styleguide-9-x-input)::placeholder {
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+.searchBarContainer :global(.vtex-input-prefix__group) {
+  height: 100%;
+  border: none;
+}
+
+@media screen and (max-width: 1025px) {
+  .imageElementLink--logo {
+    max-width: 111px;
+    display: block;
+  }
 }
