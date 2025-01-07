@@ -31,7 +31,7 @@
     "title": "Texto: Título da Sessão",
     "props": {
       "text": "Você também pode gostar de",
-      "blockClass": "section-title"
+      "blockClass": ["section-title", "product-page-shelf-title"]
     }
   }
 }

@@ -1,48 +1,48 @@
 .container--product-summary-general {
   border-radius: 2px;
-  background:  #FFF;
+  background: #fff;
   padding: 16px;
-  max-width: 332px!important;
+  max-width: 332px !important;
   width: 100%;
-  margin: 0 6px 0 0!important;
+  margin: 0 6px 0 0 !important;
   border: 1px solid transparent;
   transition: border 0.1s ease-in-out;
 
-
-  &:hover {
-    border: 1px solid  #3F3F46;
+  @media screen and (min-width: 768px) {
+    &:hover {
+      border: 1px solid #3f3f46;
+    }
   }
 
   @media screen and (max-width: 768px) {
     padding: 12px;
     margin-right: 8px;
-    border-color:#E4E4E7;
-    max-width: 160px!important;
+    border-color: #e4e4e7;
+    max-width: 160px !important;
   }
-
-
- }
+}
 
 .containerNormal--product-summary-list-layout {
   margin: 0;
-  max-width: 100%!important;
+  max-width: 100% !important;
   padding: 16px;
   max-height: 268px;
   position: relative;
   border-radius: 0;
-  border-bottom: 1px solid var(--text-inverse-subtle, #D4D4D8);
+  border-bottom: 1px solid var(--text-inverse-subtle, #d4d4d8);
 
   @media screen and (max-width: 768px) {
     padding: 0;
     border: none;
   }
 
-
   .element--product-summary-list-layout {
     padding: 0;
   }
 
-  :global(.vtex-product-highlights-2-x-productHighlightText--pre-owned-product-highlight) {
+  :global(
+      .vtex-product-highlights-2-x-productHighlightText--pre-owned-product-highlight
+    ) {
     left: 16px;
     top: 16px;
 
@@ -55,7 +55,7 @@
   :global(.vtex-rich-text-0-x-container--product-card-unavailable) {
     position: unset;
     width: 192px;
-    
+
     @media screen and (max-width: 768px) {
       position: absolute;
       width: 100%;
@@ -95,11 +95,11 @@
     }
 
     :global(.vtex-numeric-stepper__input) {
-      width: 46px!important;
+      width: 46px !important;
     }
 
     @media screen and (max-width: 768px) {
-      max-width: 205px!important;
+      max-width: 205px !important;
       width: 100%;
 
       :global(.vtex-numeric-stepper__input) {
@@ -108,12 +108,10 @@
     }
   }
 
-  
-
   :global(.vtex-button) {
     width: 91px;
     border-radius: var(--radius-rounded-sm, 2px);
-    background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+    background: var(--bg-brand-secondary-bold-base, #2b2b3a);
   }
 }
 
@@ -141,8 +139,8 @@
 }
 
 .productBrandContainer--product-summary-brand {
-  color:  #FF5A00;
-  font-family: "Proxima Nova";
+  color: #ff5a00;
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -158,9 +156,9 @@
 .brandName--product-summary-name {
   overflow: hidden;
   height: 40px;
-  color:  #18181B;
+  color: #18181b;
   text-overflow: ellipsis;
-  font-family: "Proxima Nova";
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -176,10 +174,9 @@
 .image--product-summary-image {
   object-fit: contain;
 
-
   @media screen and (max-width: 768px) {
-    max-width: 136px!important;
-    max-height: 136px!important;
+    max-width: 136px !important;
+    max-height: 136px !important;
     width: 100%;
     object-fit: contain !important;
   }
