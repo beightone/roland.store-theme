@@ -104,5 +104,8 @@
   },
   "product-content-items": {
     "component": "ProductContentItems"
+  },
+  "product-video": {
+    "component": "ProductVideo"
   }
 }

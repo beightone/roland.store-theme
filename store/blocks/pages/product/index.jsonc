@@ -9,6 +9,7 @@
       "product-technical-specifications",
       "product-instruction-manual",
       "product-content-items",
+      "product-video",
       "flex-layout.row#product-shelf",
       "flex-layout.row#product-trustvox-avaliations"
     ],
