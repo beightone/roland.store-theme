@@ -9,6 +9,43 @@
       "vtex.store-components:product-name#product-page",
       "trust-vox-stars",
       "product-read-more-description",
+      "condition-layout.product#availability-pdp"
+    ]
+  },
+  "condition-layout.product#availability-pdp": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "flex-layout.row#product-buy-informations",
+      "Else": "flex-layout.row#product-unavailable"
+    }
+  },
+  "flex-layout.row#product-unavailable": {
+    "props": {
+      "blockClass": "product-unavailable"
+    },
+    "children": ["flex-layout.col#product-unavailable"]
+  },
+  "flex-layout.col#product-unavailable": {
+    "props": {
+      "blockClass": "product-unavailable"
+    },
+    "children": ["flex-layout.col#product-page-price", "availability-notify"]
+  },
+  "flex-layout.row#product-buy-informations": {
+    "props": {
+      "blockClass": "product-buy-informations"
+    },
+    "children": ["flex-layout.col#product-buy-informations"]
+  },
+  "flex-layout.col#product-buy-informations": {
+    "props": {
+      "blockClass": "product-buy-informations"
+    },
+    "children": [
       "flex-layout.col#product-page-price",
       "flex-layout.row#product-page-buy-button",
       "custom-shipping-calculator"
