@@ -5,6 +5,7 @@ import { useProduct } from 'vtex.product-context'
 import type { IProductProperties } from '../../../typings/productsInfos'
 import styles from './styles.css'
 import { getPropertyByName } from '../../../utils/getPropertyByName'
+import { formatTextAsHTML } from '../../../utils/formatTextAsHTML'
 
 const ProductDescriptionCustom = () => {
   const context = useProduct()
@@ -32,16 +33,23 @@ const ProductDescriptionCustom = () => {
       {qualitiesContent.length > 0 && (
         <ul className={styles.descriptionQualityList}>
           {qualitiesContent?.map((item: any) => (
-            <li className={styles.descriptionQualityListItem} key={item}>
-              {item}
-            </li>
+            <li
+              className={styles.descriptionQualityListItem}
+              key={item}
+              dangerouslySetInnerHTML={{ __html: formatTextAsHTML(item) }}
+            />
           ))}
         </ul>
       )}
       {descriptionTitle && descriptionText && (
         <>
           <h3 className={styles.descriptionTitle}>{descriptionTitle}</h3>
-          <p className={styles.descriptionText}>{descriptionText}</p>
+          <p
+            className={styles.descriptionText}
+            dangerouslySetInnerHTML={{
+              __html: formatTextAsHTML(descriptionText),
+            }}
+          />
         </>
       )}
     </section>

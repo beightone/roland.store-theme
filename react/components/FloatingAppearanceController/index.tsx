@@ -4,7 +4,6 @@ import { useDevice } from 'vtex.device-detector'
 const FloatingAppearanceController = () => {
   const { isMobile } = useDevice()
 
-  console.log('here entrou no floating')
   useLayoutEffect(() => {
     const options = {
       root: null,
@@ -16,8 +15,6 @@ const FloatingAppearanceController = () => {
       const floatingBuyBox = document.querySelector(
         '.vtex-sticky-layout-0-x-wrapper--buy-button-fixed'
       ) as HTMLDivElement
-
-      console.log('here floatingBuyBox', floatingBuyBox)
 
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -39,8 +36,6 @@ const FloatingAppearanceController = () => {
     const buyButtonContainerElement: Element = document.querySelector(
       '.vtex-flex-layout-0-x-flexRow--product-buy-button'
     ) as HTMLDivElement
-
-    console.log('here buyButtonContainerElement', buyButtonContainerElement)
 
     if (buyButtonContainerElement) {
       observer.observe(buyButtonContainerElement)

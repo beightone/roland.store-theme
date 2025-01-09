@@ -1,5 +1,5 @@
 export function formatTextAsHTML(text: string) {
-  let formattedText = text
+  let formattedText = text.replace('•', '').trim()
 
   formattedText = formattedText.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>')
   formattedText = formattedText.replace(/__(.+?)__/g, '<i>$1</i>')
