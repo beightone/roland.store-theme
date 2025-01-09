@@ -8,10 +8,9 @@ const ProductReadMoreDescription = () => {
 
   if (!context) return null
 
-  const product = context?.product
-  const description = product?.description
+  const shortDescription = context?.selectedItem?.complementName
 
-  if (!description) return null
+  if (!shortDescription) return null
 
   function ajustingWindowPosition() {
     const element = document.querySelector('#description') as HTMLElement
@@ -25,7 +24,9 @@ const ProductReadMoreDescription = () => {
 
   return (
     <section className={styles.productReadMoreDescriptionContainer}>
-      <p className={styles.productReadMoreDescriptionText}>{description}</p>
+      <p className={styles.productReadMoreDescriptionText}>
+        {shortDescription}
+      </p>
 
       <button
         className={styles.productReadMoreDescriptionButton}
