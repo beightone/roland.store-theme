@@ -110,5 +110,8 @@
   },
   "product-read-more-description": {
     "component": "ProductReadMoreDescription"
+  },
+  "floating-appearance-controller": {
+    "component": "FloatingAppearanceController"
   }
 }

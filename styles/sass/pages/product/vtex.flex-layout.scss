@@ -129,3 +129,111 @@
     }
   }
 }
+.flexRow--floating-buy-button {
+  background: #fff;
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.25);
+  .flexRowContent--floating-buy-button {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0.5rem 3rem;
+    gap: 3rem;
+    justify-content: space-between;
+  }
+
+  :global(.vtex-store-components-3-x-productNameContainer) {
+    color: var(--text-neutral-bold, #18181b);
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .flexRow--product-floating-infos {
+    .flexRowContent--product-floating-infos {
+      gap: 3rem;
+      .flexCol--product-floating-prices {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        align-items: center;
+        .flexColChild--product-floating-prices {
+          width: min-content;
+          min-width: 9.625rem;
+          :global(
+              .vtex-product-price-1-x-newSpotPriceValue--product-spot-price-savings
+            ) {
+            color: #18181b;
+            &::before {
+              content: '';
+            }
+          }
+        }
+        :global(.vtex-product-price-1-x-installments--product-installments) {
+          font-size: 1rem;
+          font-weight: 500;
+          line-height: 24px;
+          letter-spacing: -0.16px;
+        }
+      }
+      :global(.vtex-button) {
+        width: 21rem;
+        max-width: 100%;
+        border-radius: 2px;
+        background-color: #ff5a00;
+        height: 3rem;
+        border: none;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          background-color: #2b2b3a;
+        }
+        :global(
+            .vtex-add-to-cart-button-0-x-buttonText--product-page-add-to-cart
+          ) {
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: -0.16px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 48rem) {
+    .flexRowContent--floating-buy-button {
+      padding: 0.5rem 0.75rem;
+    }
+    .flexRowContent--floating-buy-button {
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .flexRow--product-floating-infos {
+      .flexRowContent--product-floating-infos {
+        gap: 1rem;
+        .flexCol--product-floating-prices {
+          .flexColChild--product-floating-prices {
+            width: min-content;
+            min-width: 9.625rem;
+            :global(
+                .vtex-product-price-1-x-newSpotPriceValue--product-spot-price-savings
+              ) {
+              font-size: 1.25rem;
+              line-height: 1.75rem;
+              letter-spacing: -0.2px;
+            }
+          }
+          .flexColChild--product-floating-prices:nth-child(even) {
+            display: none;
+          }
+        }
+        :global(.vtex-button) {
+          max-width: 50%;
+          height: 2.5rem;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

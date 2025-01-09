@@ -11,7 +11,6 @@ const ProductReadMoreDescription = () => {
   const product = context?.product
   const description = product?.description
 
-  console.log('here product', product)
   if (!description) return null
 
   function ajustingWindowPosition() {
