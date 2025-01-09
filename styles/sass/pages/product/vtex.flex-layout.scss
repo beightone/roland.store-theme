@@ -155,6 +155,7 @@
   .flexRow--product-floating-infos {
     .flexRowContent--product-floating-infos {
       gap: 3rem;
+      align-items: center;
       .flexCol--product-floating-prices {
         display: flex;
         flex-direction: row;
@@ -215,7 +216,7 @@
         .flexCol--product-floating-prices {
           .flexColChild--product-floating-prices {
             width: min-content;
-            min-width: 9.625rem;
+            min-width: 11rem;
             :global(
                 .vtex-product-price-1-x-newSpotPriceValue--product-spot-price-savings
               ) {

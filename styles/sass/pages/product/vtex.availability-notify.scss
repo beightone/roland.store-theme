@@ -47,6 +47,7 @@
 
   & :global(.vtex-input-prefix__group) {
     border: none;
+    border-radius: 2px;
   }
 
   & :global(.vtex-styleguide-9-x-input) {
@@ -70,7 +71,6 @@
       height: 2.75rem;
       border-radius: 2px;
       cursor: pointer;
-
       &::before {
         content: 'Avise-me';
         font-family: 'Oxygen';
@@ -82,8 +82,8 @@
         text-align: center;
         letter-spacing: -0.14px;
         color: #71717a;
+        text-transform: math-auto;
       }
-
       & :global(.vtex-button__label) {
         display: none;
       }
@@ -91,6 +91,9 @@
     :global(.vtex-button) {
       transition: all 0.3s ease-in-out;
       background: #130c0e;
+      :global(.vtex-button__spinner-container) {
+        display: none;
+      }
       &::before {
         color: #fff;
       }
@@ -99,5 +102,15 @@
       cursor: not-allowed;
       background: #e4e4e7;
     }
+  }
+  .success,
+  .error,
+  :global(.vtex-input__error) {
+    font-family: 'Proxima Nova';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.12px;
   }
 }

@@ -27,7 +27,7 @@
   position: relative;
   width: 100%;
   display: flex;
-
+  column-gap: 0.5rem;
   font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
@@ -79,6 +79,9 @@
   }
 }
 @media screen and (max-width: 48rem) {
+  .technicalSpecificationsList li {
+    column-gap: 0.25rem;
+  }
   .technicalSpecificationsList li .technicalSpecificationsName,
   .technicalSpecificationsList li .technicalSpecificationsText {
     width: 50%;
