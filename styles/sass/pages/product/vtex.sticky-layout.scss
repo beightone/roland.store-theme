@@ -1,6 +1,8 @@
 .wrapper--buy-button-fixed {
   display: none;
 }
-.container--buy-button-fixed {
-  z-index: 2147483649;
+@media screen and (max-width: 1024px) {
+  .container--buy-button-fixed {
+    z-index: 2147483649;
+  }
 }

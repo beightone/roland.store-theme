@@ -163,7 +163,7 @@
         align-items: center;
         .flexColChild--product-floating-prices {
           width: min-content;
-          min-width: 9.625rem;
+          min-width: 11rem;
           :global(
               .vtex-product-price-1-x-newSpotPriceValue--product-spot-price-savings
             ) {
@@ -212,7 +212,7 @@
 
     .flexRow--product-floating-infos {
       .flexRowContent--product-floating-infos {
-        gap: 1rem;
+        gap: 0.25rem;
         .flexCol--product-floating-prices {
           .flexColChild--product-floating-prices {
             width: min-content;
@@ -230,7 +230,7 @@
           }
         }
         :global(.vtex-button) {
-          max-width: 50%;
+          max-width: 48%;
           height: 2.5rem;
           white-space: nowrap;
         }

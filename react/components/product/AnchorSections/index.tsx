@@ -1,5 +1,5 @@
 // Dependencies
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 // Styles
 import styles from './styles.css'
@@ -47,17 +47,42 @@ const AnchorSections = () => {
     setIsOpen(false)
   }
 
-  useLayoutEffect(() => {
-    const updatedAnchors = initialAnchors.map((anchor) => {
-      const element = document.getElementById(anchor.id)
+  function checkingActiveAnchors() {
+    const observers: MutationObserver[] = []
+    let timeoutId: any
 
-      return {
+    const checkAnchors = () => {
+      const updatedAnchors = initialAnchors.map((anchor) => ({
         ...anchor,
-        showItem: !!element,
-      }
+        showItem: !!document.getElementById(anchor.id),
+      }))
+      setAnchors(updatedAnchors)
+    }
+
+    initialAnchors.forEach((anchor) => {
+      const observer = new MutationObserver(() => {
+        const element = document.getElementById(anchor.id)
+        if (element) {
+          checkAnchors()
+          observer.disconnect()
+        }
+      })
+      observer.observe(document.body, { childList: true, subtree: true })
+      observers.push(observer)
     })
 
-    setAnchors(updatedAnchors)
+    timeoutId = setTimeout(() => {
+      observers.forEach((observer) => observer.disconnect())
+    }, 30000)
+
+    return () => {
+      clearTimeout(timeoutId)
+      observers.forEach((observer) => observer.disconnect())
+    }
+  }
+
+  useEffect(() => {
+    checkingActiveAnchors()
   }, [])
 
   return (
