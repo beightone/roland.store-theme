@@ -92,7 +92,12 @@
       transition: all 0.3s ease-in-out;
       background: #130c0e;
       :global(.vtex-button__spinner-container) {
-        display: none;
+        background-color: #e4e4e7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
       }
       &::before {
         color: #fff;

@@ -18,12 +18,25 @@ const TrustVoxStars = () => {
     script.async = true
     document.head.appendChild(script)
   }, [])
+  function ajustingWindowPosition() {
+    const element = document.getElementById('reviews') as HTMLElement
+    console.log('here element', element)
+    if (!element) return
+    const deslocationToCentralize = -50
+
+    const quantityToScroll = Number(element.offsetTop) + deslocationToCentralize
+
+    window.scrollTo({
+      top: quantityToScroll,
+      behavior: 'smooth',
+    })
+  }
 
   return (
     <div className={styles.stars_container}>
-      <a
+      <button
         className="trustvox-fluid-jump trustvox-widget-rating"
-        href="#trustvox-reviews"
+        onClick={ajustingWindowPosition}
         title="Pergunte e veja opiniões de quem já comprou"
       >
         <div
@@ -32,7 +45,7 @@ const TrustVoxStars = () => {
           data-trustvox-should-skip-filter="true"
           data-trustvox-display-rate-schema="true"
         />
-      </a>
+      </button>
     </div>
   )
 }

@@ -12,19 +12,12 @@
 }
 
 .anchorButton {
+  cursor: pointer;
   background-color: transparent;
   border: none;
   max-width: 190px;
   width: 100%;
   padding: 12px 0;
-}
-
-.anchorButton:first-child {
-  border-bottom: 1.5px solid var(--text-brand-primary-base, #ff5a00);
-}
-
-.anchorButton a {
-  width: 100%;
   text-decoration: none;
   color: var(--text-inverse-subtlest, #71717a);
   font-family: 'Proxima Nova';
@@ -33,6 +26,10 @@
   font-weight: 500;
   line-height: 20px;
   letter-spacing: -0.14px;
+}
+
+.anchorButton:first-child {
+  border-bottom: 1.5px solid var(--text-brand-primary-base, #ff5a00);
 }
 
 .dropdownToggle {
@@ -101,11 +98,8 @@
     border-bottom: none;
   }
 
-  .anchorButton a {
-    text-align: left;
-  }
-
   .anchorButton {
+    text-align: left;
     max-width: 100%;
     text-align: left;
     padding: 0;

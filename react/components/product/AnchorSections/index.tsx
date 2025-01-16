@@ -1,5 +1,6 @@
 // Dependencies
 import React, { useEffect, useState } from 'react'
+import { useDevice } from 'vtex.device-detector'
 
 // Styles
 import styles from './styles.css'
@@ -41,10 +42,30 @@ const AnchorSections = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [selectedAnchor, setSelectedAnchor] = useState(initialAnchors[0])
   const [anchors, setAnchors] = useState(initialAnchors)
+  const { isMobile } = useDevice()
 
   const handleAnchorClick = (anchor: (typeof initialAnchors)[0]) => {
+    console.log('here anchor', anchor)
+
+    ajustingWindowPosition(anchor.id)
     setSelectedAnchor(anchor)
     setIsOpen(false)
+  }
+  function ajustingWindowPosition(itemId: string) {
+    console.log('ajustingWindowPosition, here', itemId)
+    const element = document.getElementById(itemId) as HTMLElement
+    console.log('here element', element)
+    if (!element) return
+    const deslocationToCentralize = -50
+    console.log('here deslocationToCentralize', deslocationToCentralize)
+
+    const quantityToScroll = Number(element.offsetTop) + deslocationToCentralize
+    console.log('here quantityToScroll', quantityToScroll)
+
+    window.scrollTo({
+      top: quantityToScroll,
+      behavior: 'smooth',
+    })
   }
 
   function checkingActiveAnchors() {
@@ -87,17 +108,33 @@ const AnchorSections = () => {
 
   return (
     <div className={styles.anchorSectionsWrapper}>
-      <div className={styles.mobileDropdown}>
-        <button
-          className={styles.dropdownToggle}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {selectedAnchor.label}
-        </button>
+      {isMobile ? (
+        <div className={styles.mobileDropdown}>
+          <button
+            className={styles.dropdownToggle}
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            {selectedAnchor.label}
+          </button>
 
-        <div
-          className={`${styles.dropdownContent} ${isOpen ? styles.open : ''}`}
-        >
+          <div
+            className={`${styles.dropdownContent} ${isOpen ? styles.open : ''}`}
+          >
+            {anchors.map((anchor) =>
+              anchor.showItem ? (
+                <button
+                  key={anchor.id}
+                  className={styles.anchorButton}
+                  onClick={() => handleAnchorClick(anchor)}
+                >
+                  {anchor.label}
+                </button>
+              ) : null
+            )}
+          </div>
+        </div>
+      ) : (
+        <div className={styles.desktopView}>
           {anchors.map((anchor) =>
             anchor.showItem ? (
               <button
@@ -105,26 +142,12 @@ const AnchorSections = () => {
                 className={styles.anchorButton}
                 onClick={() => handleAnchorClick(anchor)}
               >
-                <a href={`#${anchor.id}`}>{anchor.label}</a>
+                {anchor.label}
               </button>
             ) : null
           )}
         </div>
-      </div>
-
-      <div className={styles.desktopView}>
-        {anchors.map((anchor) =>
-          anchor.showItem ? (
-            <button
-              key={anchor.id}
-              className={styles.anchorButton}
-              onClick={() => setSelectedAnchor(anchor)}
-            >
-              <a href={`#${anchor.id}`}>{anchor.label}</a>
-            </button>
-          ) : null
-        )}
-      </div>
+      )}
     </div>
   )
 }

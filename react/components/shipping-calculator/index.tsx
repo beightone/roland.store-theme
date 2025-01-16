@@ -51,7 +51,6 @@ const ShippingCalculator: React.FC = () => {
     () => data?.shipping?.logisticsInfo[0]?.slas ?? [],
     [data?.shipping?.logisticsInfo]
   )
-
   const cheapestOption: SLA | undefined = useMemo(() => {
     return shippingOptions.reduce((prev, curr) => {
       return curr.price < prev.price ? curr : prev
@@ -112,29 +111,54 @@ const ShippingCalculator: React.FC = () => {
               </tr>
             </thead>
             <tbody>
-              {cheapestOption && (
-                <tr>
-                  <td>+ Barato</td>
-                  <td>
-                    Até {cheapestOption.shippingEstimate.replace('bd', '')} dias
-                    úteis
-                  </td>
-                  <td>
-                    {cheapestOption.price === 0
-                      ? 'Grátis'
-                      : `R$ ${(cheapestOption.price / 100).toFixed(2)}`}
-                  </td>
-                </tr>
-              )}
-              {fastestOption && (
-                <tr>
-                  <td> + Rápido</td>
-                  <td>
-                    Até {fastestOption.shippingEstimate.replace('bd', '')} dias
-                    úteis
-                  </td>
-                  <td>{`R$ ${(fastestOption.price / 100).toFixed(2)}`}</td>
-                </tr>
+              {shippingOptions.length === 1 ? (
+                <>
+                  {cheapestOption && (
+                    <tr>
+                      <td>+ Barato</td>
+                      <td>
+                        Até {cheapestOption.shippingEstimate.replace('bd', '')}{' '}
+                        dias úteis
+                      </td>
+                      <td>
+                        {cheapestOption.price === 0
+                          ? 'Grátis'
+                          : `R$ ${(cheapestOption.price / 100).toFixed(2)}`}
+                      </td>
+                    </tr>
+                  )}
+                </>
+              ) : (
+                <>
+                  {cheapestOption && (
+                    <tr>
+                      <td>+ Barato</td>
+                      <td>
+                        Até {cheapestOption.shippingEstimate.replace('bd', '')}{' '}
+                        dias úteis
+                      </td>
+                      <td>
+                        {cheapestOption.price === 0
+                          ? 'Grátis'
+                          : `R$ ${(cheapestOption.price / 100).toFixed(2)}`}
+                      </td>
+                    </tr>
+                  )}
+                  {fastestOption && (
+                    <tr>
+                      <td> + Rápido</td>
+                      <td>
+                        Até {fastestOption.shippingEstimate.replace('bd', '')}{' '}
+                        dias úteis
+                      </td>
+                      <td>
+                        {fastestOption.price === 0
+                          ? 'Grátis'
+                          : `R$ ${(fastestOption.price / 100).toFixed(2)}`}
+                      </td>
+                    </tr>
+                  )}
+                </>
               )}
             </tbody>
           </table>

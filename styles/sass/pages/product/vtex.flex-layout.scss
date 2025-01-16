@@ -100,13 +100,17 @@
 .flexRowContent--product-roland {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
 }
 .flexRowContent--product-roland .stretchChildrenWidth {
   width: 100% !important;
   flex: 1;
 }
-
+.flexRowContent--product-roland
+  .stretchChildrenWidth
+  .flexRowContent--newsletter
+  .stretchChildrenWidth {
+  flex: auto;
+}
 .flexRow--product-anchor-sections {
   max-width: 1264px;
   margin: 0 auto;

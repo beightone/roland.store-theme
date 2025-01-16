@@ -12,7 +12,8 @@
       "product-content-items",
       "product-video",
       "flex-layout.row#product-shelf",
-      "flex-layout.row#product-trustvox-avaliations"
+      "flex-layout.row#product-trustvox-avaliations",
+      "flex-layout.row#newsletter"
     ],
     "props": {
       "blockClass": "product-roland",
