@@ -3,7 +3,7 @@
     "children": [
       "sales-channel-trigger-condition#logo",
       "search-bar",
-      "login#desktop",
+      "login#desktop-roland",
       "link#wishlist",
       "minicart.v2#new"
     ],
@@ -52,18 +52,18 @@
       }
     }
   },
-  "login#desktop": {
+  "login#desktop-roland": {
     "title": "Login Desktop",
     "props": {
-      "showIconProfile": true,
+      "showIconProfile": false,
       "iconLabel": "Minha conta",
-      "labelClasses": ["vtex-login-2-x-loginIcon"],
+      "hasGoogleOneTap": true,
       "providerPasswordButtonLabel": "Entrar com e-mail",
       "emailAndPasswordTitle": "Entrar com e-mail e senha",
-      "accessCodeTitle": "Receber código de acesso por e-mail",
-      "emailPraceholder": "EX:@MAIL.COM.BR",
-      "passwordPlaceholder": "adicionar sua senha",
-      "showPasswordVerificationIntoTooltip": true
+      "accessCodeTitle": "Receber código de acesso",
+      "emailPraceholder": "exemplo@email.com",
+      "passwordPlaceholder": "Digite sua senha",
+      "labelClasses": ["vtex-login-2-x-loginIcon"]
     }
   }
 }
