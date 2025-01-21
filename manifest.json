@@ -71,7 +71,8 @@
     "vtex.modal-layout": "0.x",
     "vtex.condition-layout": "2.x",
     "vtex.product-highlights": "2.x",
-    "vtex.catalog-graphql": "1.x"
+    "vtex.catalog-graphql": "1.x",
+    "roland.buy-together": "0.x"
   },
   "peerDependencies": {
     "vtex.wish-list": "1.x",
