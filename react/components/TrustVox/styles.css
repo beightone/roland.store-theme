@@ -208,4 +208,5 @@
 .stars_container button {
   background-color: transparent !important;
   border: none;
+  cursor: pointer;
 }

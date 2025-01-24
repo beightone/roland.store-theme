@@ -2,8 +2,11 @@ import React, { useEffect } from 'react'
 import styles from './styles.css'
 import './styles.global.css'
 import { useProduct } from 'vtex.product-context'
-
-const TrustVoxStars = () => {
+interface TrustVoxStarsProps {
+  origin: string
+}
+const TrustVoxStars = ({ origin }: TrustVoxStarsProps) => {
+  console.log('origin 3', origin)
   const { product } = useProduct() ?? {}
 
   // @ts-ignore
@@ -20,7 +23,6 @@ const TrustVoxStars = () => {
   }, [])
   function ajustingWindowPosition() {
     const element = document.getElementById('reviews') as HTMLElement
-    console.log('here element', element)
     if (!element) return
     const deslocationToCentralize = -50
 
@@ -34,18 +36,27 @@ const TrustVoxStars = () => {
 
   return (
     <div className={styles.stars_container}>
-      <button
-        className="trustvox-fluid-jump trustvox-widget-rating"
-        onClick={ajustingWindowPosition}
-        title="Pergunte e veja opiniões de quem já comprou"
-      >
+      {origin === 'product-page' ? (
+        <button
+          className="trustvox-fluid-jump trustvox-widget-rating"
+          onClick={ajustingWindowPosition}
+          title="Pergunte e veja opiniões de quem já comprou"
+        >
+          <div
+            className="trustvox-shelf-container"
+            data-trustvox-product-code-js={product?.productId}
+            data-trustvox-should-skip-filter="true"
+            data-trustvox-display-rate-schema="true"
+          />
+        </button>
+      ) : (
         <div
           className="trustvox-shelf-container"
           data-trustvox-product-code-js={product?.productId}
           data-trustvox-should-skip-filter="true"
           data-trustvox-display-rate-schema="true"
         />
-      </button>
+      )}
     </div>
   )
 }
