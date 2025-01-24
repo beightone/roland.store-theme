@@ -487,6 +487,10 @@
   margin-top: 0 !important;
 }
 
+.flexRow--login-page {
+  background-color: #f4f4f5;
+}
+
 .flexRowContent--confirmationButtons {
   margin: 0 auto;
 }

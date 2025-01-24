@@ -10,47 +10,11 @@
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
 /* Grid breakpoints */
-.container :global(.vtex-button) {
-  border: none;
+.container :global(.vtex-button):hover {
   background-color: transparent;
 }
-.container :global(.vtex-button):hover {
-  background-color: var(--Gray-Scale-White, #fff);
-}
-.container :global(.vtex-button) :global(.vtex-button__label) {
-  padding: 0 !important;
-}
-.container .loginIcon .profileIcon {
-  display: none;
-}
-.container .profile {
-  font-size: 0;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.container .profile::before {
-  content: "";
-  background-image: url("assets/svgs/login-icon.svg");
-  width: 20px;
-  height: 20px;
-  background-repeat: no-repeat;
-  display: block;
-}
-.container .profile::after {
-  content: "Minha conta";
-  color: var(--Gray-Scale-Black, #000);
-  /* text-base/medium */
-  font-family: "Proxima Nova";
-  font-size: 16px;
-  font-style: normal;
-  text-transform: math-auto;
-  font-weight: 500;
-  line-height: 24px;
-  /* 150% */
-  letter-spacing: -0.16px;
-}
-.container .label {
+
+.label {
   color: var(--Gray-Scale-Black, #000);
   font-family: "Proxima Nova";
   font-size: 16px;
@@ -64,7 +28,7 @@
   gap: 8px;
   text-transform: math-auto;
 }
-.container .label::before {
+.label::before {
   content: "";
   background-image: url("assets/svgs/login-icon.svg");
   width: 20px;
@@ -73,36 +37,70 @@
   display: block;
 }
 
-.content {
-  padding: 1.5rem;
+.loginIcon .profileIcon {
+  display: none;
+}
+
+.profile {
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.profile::before {
+  content: "";
+  background-image: url("assets/svgs/login-icon.svg");
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  display: block;
+}
+.profile::after {
+  content: "Minha conta";
+  color: #000;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  text-transform: math-auto;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
 }
 
 .box {
   right: unset !important;
   left: -4.25rem;
+  min-width: 23rem;
 }
 .box .arrowUp {
   left: calc(50% - 1rem);
 }
-.box .content--loginOptions .formTitle {
-  color: #18181b;
-  font-family: "Proxima Nova";
-  font-size: 0;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: -0.18px;
-  margin: 0;
-  padding: 0;
-  text-align: left;
+.box .content {
+  padding: 1.5rem;
+}
+.box .loginOptionsContainer .formTitle {
+  font-size: 0 !important;
   width: 88%;
 }
-.box .content--loginOptions .formTitle::before {
+.box .loginOptionsContainer .formTitle::before {
   content: "Escolha uma opção para acessar sua conta.";
   font-size: 18px;
 }
+.box .emailPasswordOptionBtn :global(.vtex-button) {
+  background: #2b2b3a;
+  height: 3rem;
+}
+@media screen and (min-width: 48rem) {
+  .box .emailPasswordOptionBtn :global(.vtex-button):hover {
+    transition: all 0.3s ease-in-out;
+    background: #424250;
+  }
+}
+.box .emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before {
+  color: #fff;
+}
 .box .content--loginOptions .optionsList {
-  margin: 4rem 0 1rem;
+  margin: 4rem 0 0;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -147,115 +145,13 @@
   padding-bottom: 1rem;
   display: block;
 }
-.box .content--loginOptions .optionsList .accessCodeOptionBtn :global(.vtex-button) {
-  border-radius: 2px;
-  border: 1.25px solid #18181b;
-  background: #fff;
-  height: 3rem;
-  margin-bottom: 2.5rem;
-  position: relative;
-  text-transform: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 4px;
-}
-.box .content--loginOptions .optionsList .accessCodeOptionBtn :global(.vtex-button):hover {
-  transition: all 0.3s ease-in-out;
-  border: 1.25px solid #ee8146;
-  background: #fdf2ec;
-}
-.box .content--loginOptions .optionsList .accessCodeOptionBtn :global(.vtex-button):hover :global(.vtex-button__label)::before {
-  color: #ff5a00;
-}
-.box .content--loginOptions .optionsList .accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label) {
-  font-size: 0;
-  text-transform: inherit;
-  position: absolute;
-  width: 100%;
-}
-.box .content--loginOptions .optionsList .accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before {
-  content: "Receber código de acesso";
-  display: block;
-  color: #3f3f46;
-  font-family: "Proxima Nova";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.16px;
-}
-.box .content--loginOptions .optionsList .accessCodeOptionBtn :global(.vtex-button)::before {
-  content: "Não tem uma conta?";
-  color: #5e5e5e;
-  font-weight: 500;
-  pointer-events: none;
-}
-.box .content--loginOptions .optionsList .accessCodeOptionBtn :global(.vtex-button)::after {
-  content: "Cadastre-se";
-  color: #353535;
-  font-weight: 600;
-}
-.box .content--loginOptions .optionsList .accessCodeOptionBtn :global(.vtex-button)::before, .box .content--loginOptions .optionsList .accessCodeOptionBtn :global(.vtex-button)::after {
-  font-family: "Proxima Nova";
-  font-size: 16px;
-  font-style: normal;
-  line-height: 24px;
-  letter-spacing: -0.16px;
-  transform: translateY(52px);
-}
-.box .content--loginOptions .optionsList .emailPasswordOptionBtn :global(.vtex-button) {
-  border-radius: 2px;
-  border: none;
-  background: #2b2b3a;
-  height: 3rem;
-  position: relative;
-  text-transform: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 4px;
-}
-.box .content--loginOptions .optionsList .emailPasswordOptionBtn :global(.vtex-button):hover {
-  transition: all 0.3s ease-in-out;
-  background: #424250;
-}
-.box .content--loginOptions .optionsList .emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label) {
-  font-size: 0;
-  text-transform: inherit;
-  position: absolute;
-  width: 100%;
-}
-.box .content--loginOptions .optionsList .emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before {
-  content: "Entrar com e-mail e senha";
-  display: block;
-  color: #fff;
-  font-family: "Proxima Nova";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.16px;
-}
-.box .contentFormVisible {
+.box .content--loginOptions .contentFormVisible {
   padding: 0;
 }
-.box .contentFormVisible .emailAndPasswordForm .formTitle {
-  padding: 0;
-  margin: 0;
-  color: #18181b;
-  font-family: "Proxima Nova";
-  font-size: 0;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: -0.2px;
-  margin: 1.5rem 0;
-  text-align: left;
-  position: relative;
+.box .content--loginOptions .contentFormVisible .emailAndPasswordForm .formTitle {
   font-size: 20px;
 }
-.box .contentFormVisible .emailAndPasswordForm .formTitle::before {
+.box .content--loginOptions .contentFormVisible .emailAndPasswordForm .formTitle::before {
   content: "E-mail e senha";
   position: absolute;
   left: 0;
@@ -266,16 +162,16 @@
   line-height: 16px;
   letter-spacing: -0.12px;
 }
-.box .contentFormVisible .emailAndPasswordForm .inputContainerEmail :global(.vtex-input-prefix__group),
-.box .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input-prefix__group) {
+.box .content--loginOptions .contentFormVisible .emailAndPasswordForm .inputContainerEmail :global(.vtex-input-prefix__group),
+.box .content--loginOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input-prefix__group) {
   border-radius: 2px;
   border: 1px solid #d4d4d8;
   background: #fff;
   padding: 0.75rem 1rem;
   height: 3rem;
 }
-.box .contentFormVisible .emailAndPasswordForm .inputContainerEmail :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input),
-.box .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
+.box .content--loginOptions .contentFormVisible .emailAndPasswordForm .inputContainerEmail :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input),
+.box .content--loginOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
   padding: 0;
   font-family: "Proxima Nova";
   font-size: 16px;
@@ -284,7 +180,7 @@
   line-height: 24px;
   letter-spacing: -0.16px;
 }
-.box .contentFormVisible .emailAndPasswordForm .inputContainerPassword::before {
+.box .content--loginOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword::before {
   content: "Senha";
   color: #3f3f46;
   font-family: "Proxima Nova";
@@ -296,58 +192,37 @@
   padding-bottom: 8px;
   display: block;
 }
-.box .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) {
+.box .content--loginOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) {
   padding: 0;
 }
-.box .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--visible) :global(.vtex-login-2-x-eyeSightIcon) {
+.box .content--loginOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--visible) :global(.vtex-login-2-x-eyeSightIcon) {
   display: none;
 }
-.box .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--visible)::after {
+.box .content--loginOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--visible)::after {
   content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8.95245 4.2436C9.29113 4.19353 9.64051 4.16667 10.0003 4.16667C14.2545 4.16667 17.0461 7.9207 17.9839 9.40569C18.0974 9.58542 18.1542 9.67528 18.1859 9.81389C18.2098 9.91799 18.2098 10.0822 18.1859 10.1863C18.1541 10.3249 18.097 10.4154 17.9827 10.5963C17.7328 10.9918 17.3518 11.5476 16.8471 12.1504M5.6036 5.59586C3.80187 6.81808 2.57871 8.51615 2.01759 9.4044C1.90357 9.58489 1.84656 9.67514 1.81478 9.81373C1.79091 9.91783 1.7909 10.082 1.81476 10.1861C1.84652 10.3247 1.90328 10.4146 2.01678 10.5943C2.95462 12.0793 5.74618 15.8333 10.0003 15.8333C11.7157 15.8333 13.1932 15.223 14.4073 14.3972M2.50035 2.5L17.5003 17.5M8.23258 8.23223C7.78017 8.68464 7.50035 9.30964 7.50035 10C7.50035 11.3807 8.61963 12.5 10.0003 12.5C10.6907 12.5 11.3157 12.2202 11.7681 11.7678" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   display: block;
   width: 1.25rem;
   height: 1.25rem;
 }
-.box .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--invisible) :global(.vtex-login-2-x-eyeSightIcon) {
+.box .content--loginOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--invisible) :global(.vtex-login-2-x-eyeSightIcon) {
   display: none;
 }
-.box .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--invisible)::after {
+.box .content--loginOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--invisible)::after {
   content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.01677 10.5943C1.90328 10.4146 1.84654 10.3248 1.81477 10.1862C1.79091 10.0821 1.79091 9.91794 1.81477 9.81384C1.84654 9.67525 1.90328 9.5854 2.01677 9.40571C2.95461 7.92072 5.74617 4.16669 10.0003 4.16669C14.2545 4.16669 17.0461 7.92072 17.9839 9.4057C18.0974 9.5854 18.1541 9.67525 18.1859 9.81384C18.2098 9.91794 18.2098 10.0821 18.1859 10.1862C18.1541 10.3248 18.0974 10.4146 17.9839 10.5943C17.0461 12.0793 14.2545 15.8334 10.0003 15.8334C5.74617 15.8334 2.95461 12.0793 2.01677 10.5943Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.0003 12.5C11.381 12.5 12.5003 11.3807 12.5003 10C12.5003 8.61931 11.381 7.50002 10.0003 7.50002C8.61962 7.50002 7.50034 8.61931 7.50034 10C7.50034 11.3807 8.61962 12.5 10.0003 12.5Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   display: block;
   width: 1.25rem;
   height: 1.25rem;
 }
-.box .contentFormVisible .emailAndPasswordForm .formLinkContainer:last-child {
+.box .content--loginOptions .contentFormVisible .emailAndPasswordForm .formLinkContainer:last-child {
   display: none;
 }
-.box .contentFormVisible .emailAndPasswordForm .forgotPasswordLink {
-  color: #2b2b3a;
-  text-align: right;
-  font-family: "Proxima Nova";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: -0.14px;
-}
-.box .contentFormVisible .emailVerification .formTitle,
-.box .contentFormVisible .codeConfirmation .formTitle {
-  padding: 0;
-  margin: 0;
+.box .content--loginOptions .contentFormVisible .emailVerification .formTitle,
+.box .content--loginOptions .contentFormVisible .codeConfirmation .formTitle {
   width: 90%;
-  color: #18181b;
-  font-family: "Proxima Nova";
   font-size: 0;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: -0.2px;
-  margin: 1.5rem 0;
-  text-align: left;
-  position: relative;
 }
-.box .contentFormVisible .emailVerification .formTitle::before,
-.box .contentFormVisible .codeConfirmation .formTitle::before {
+.box .content--loginOptions .contentFormVisible .emailVerification .formTitle::before,
+.box .content--loginOptions .contentFormVisible .codeConfirmation .formTitle::before {
   content: "Código de acesso";
   position: absolute;
   left: 0;
@@ -358,12 +233,12 @@
   line-height: 16px;
   letter-spacing: -0.12px;
 }
-.box .contentFormVisible .emailVerification .formTitle::after,
-.box .contentFormVisible .codeConfirmation .formTitle::after {
+.box .content--loginOptions .contentFormVisible .emailVerification .formTitle::after,
+.box .content--loginOptions .contentFormVisible .codeConfirmation .formTitle::after {
   content: "Receber código de acesso por e-mail";
   font-size: 20px;
 }
-.box .contentFormVisible .emailVerification .inputContainerEmail::before {
+.box .content--loginOptions .contentFormVisible .emailVerification .inputContainerEmail::before {
   content: "E-mail";
   color: #3f3f46;
   font-family: "Proxima Nova";
@@ -375,14 +250,14 @@
   padding-bottom: 8px;
   display: block;
 }
-.box .contentFormVisible .emailVerification .inputContainerEmail :global(.vtex-input-prefix__group) {
+.box .content--loginOptions .contentFormVisible .emailVerification .inputContainerEmail :global(.vtex-input-prefix__group) {
   border-radius: 2px;
   border: 1px solid #d4d4d8;
   background: #fff;
   padding: 0.75rem 1rem;
   height: 3rem;
 }
-.box .contentFormVisible .emailVerification .inputContainerEmail :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
+.box .content--loginOptions .contentFormVisible .emailVerification .inputContainerEmail :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
   padding: 0;
   font-family: "Proxima Nova";
   font-size: 16px;
@@ -391,11 +266,11 @@
   line-height: 24px;
   letter-spacing: -0.16px;
 }
-.box .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) {
+.box .content--loginOptions .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) {
   border-radius: 2px;
   background: #2b2b3a;
 }
-.box .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) {
+.box .content--loginOptions .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) {
   font-family: "Proxima Nova";
   font-size: 16px;
   font-style: normal;
@@ -404,13 +279,13 @@
   letter-spacing: -0.16px;
   text-transform: initial;
 }
-.box .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label)::before {
+.box .content--loginOptions .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label)::before {
   content: "Solicitar código";
 }
-.box .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small) {
+.box .content--loginOptions .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small) {
   font-size: 0;
 }
-.box .contentFormVisible .codeConfirmation .inputContainerAccessCode::before {
+.box .content--loginOptions .contentFormVisible .codeConfirmation .inputContainerAccessCode::before {
   content: "Código";
   color: #3f3f46;
   font-family: "Proxima Nova";
@@ -422,14 +297,14 @@
   padding-bottom: 8px;
   display: block;
 }
-.box .contentFormVisible .codeConfirmation .inputContainerAccessCode :global(.vtex-input-prefix__group) {
+.box .content--loginOptions .contentFormVisible .codeConfirmation .inputContainerAccessCode :global(.vtex-input-prefix__group) {
   border-radius: 2px;
   border: 1px solid #d4d4d8;
   background: #fff;
   padding: 0.75rem 1rem;
   height: 3rem;
 }
-.box .contentFormVisible .codeConfirmation .inputContainerAccessCode :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
+.box .content--loginOptions .contentFormVisible .codeConfirmation .inputContainerAccessCode :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
   padding: 0;
   font-family: "Proxima Nova";
   font-size: 16px;
@@ -438,11 +313,11 @@
   line-height: 24px;
   letter-spacing: -0.16px;
 }
-.box .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) {
+.box .content--loginOptions .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) {
   border-radius: 2px;
   background: #2b2b3a;
 }
-.box .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) {
+.box .content--loginOptions .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) {
   font-family: "Proxima Nova";
   font-size: 16px;
   font-style: normal;
@@ -451,20 +326,20 @@
   letter-spacing: -0.16px;
   text-transform: initial;
 }
-.box .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label)::before {
+.box .content--loginOptions .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label)::before {
   content: "Confirmar";
 }
-.box .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small) {
+.box .content--loginOptions .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small) {
   font-size: 0;
 }
-.box .contentFormVisible .formFooter {
+.box .content--loginOptions .contentFormVisible .formFooter {
   margin-top: 1rem;
   padding-top: 1rem;
 }
-.box .contentFormVisible .formFooter :global(.vtex-button) {
+.box .content--loginOptions .contentFormVisible .formFooter :global(.vtex-button) {
   height: 3rem;
 }
-.box .contentFormVisible .formFooter :global(.vtex-button) :global(.vtex-button__label) :global(.t-small) {
+.box .content--loginOptions .contentFormVisible .formFooter :global(.vtex-button) :global(.vtex-button__label) :global(.t-small) {
   font-family: "Proxima Nova";
   font-size: 16px;
   font-style: normal;
@@ -472,81 +347,157 @@
   line-height: 24px;
   letter-spacing: -0.16px;
 }
-.box .contentFormVisible .backButton :global(.vtex-button__label) {
+.box .content--loginOptions .contentFormVisible .backButton :global(.vtex-button__label) {
   display: flex;
   align-items: center;
 }
-.box .contentFormVisible .backButton :global(.vtex-button__label) :global(.t-small) {
+.box .content--loginOptions .contentFormVisible .backButton :global(.vtex-button__label) :global(.t-small) {
   color: #3f3f46;
 }
-.box .contentFormVisible .backButton :global(.vtex-button__label)::before {
+.box .content--loginOptions .contentFormVisible .backButton :global(.vtex-button__label)::before {
   content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15.8332 10H4.1665M4.1665 10L9.99984 15.8334M4.1665 10L9.99984 4.16669" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   width: 1.25rem;
   height: 1.25rem;
 }
-.box .contentFormVisible .backButton :global(.vtex-button__label) .arrowBackIcon {
+.box .content--loginOptions .contentFormVisible .backButton :global(.vtex-button__label) .arrowBackIcon {
   display: none;
 }
-.box .contentFormVisible .backButton :global(.vtex-button):hover {
+.box .content--loginOptions .contentFormVisible .backButton :global(.vtex-button):hover {
   background-color: transparent;
 }
-.box .contentFormVisible .sendButton :global(.vtex-button) {
+.box .content--loginOptions .contentFormVisible .sendButton :global(.vtex-button) {
   border-radius: 2px;
   background: #2b2b3a;
 }
-
-.content--emailAndPassword.contentAlwaysWithOptions,
-.content--emailVerification.contentAlwaysWithOptions,
-.content--codeConfirmation {
-  width: 100%;
-  max-width: 90rem;
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  justify-content: space-evenly;
-  gap: 2rem;
+.box .emailAndPasswordForm .formTitle {
+  position: relative;
+  padding-top: 1.25rem !important;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .loginOptionsContainer,
-.content--emailVerification.contentAlwaysWithOptions .loginOptionsContainer,
-.content--codeConfirmation .loginOptionsContainer {
-  padding: 0;
-}
-.content--emailAndPassword.contentAlwaysWithOptions .loginOptionsContainer .formTitle,
-.content--emailVerification.contentAlwaysWithOptions .loginOptionsContainer .formTitle,
-.content--codeConfirmation .loginOptionsContainer .formTitle {
-  color: #18181b;
+.box .emailAndPasswordForm .formTitle::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "E-mail e senha";
+  color: #5a5a66;
   font-family: "Proxima Nova";
-  font-size: 0;
+  font-size: 12px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: -0.18px;
-  margin: 0;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+}
+.box .emailAndPasswordForm .formFooter {
+  border-top: 1px solid #e4e4e7 !important;
+  padding-top: 1rem !important;
+}
+.box .emailAndPasswordForm .inputContainerEmail :global(.vtex-styleguide-9-x-input)::placeholder {
+  transform: translateX(-1.5rem);
+}
+.box .emailForm .formTitle,
+.box .codeConfirmation .formTitle {
+  width: 80%;
+  position: relative;
+  padding-top: 1.25rem !important;
+  font-size: 0 !important;
+}
+.box .emailForm .formTitle::before,
+.box .codeConfirmation .formTitle::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "Código de acesso";
+  color: #5a5a66;
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+}
+.box .emailForm .formTitle::after,
+.box .codeConfirmation .formTitle::after {
+  content: "Receber código de acesso por e-mail";
+  font-size: 20px;
+}
+.box .emailForm .inputContainerEmail :global(.vtex-styleguide-9-x-input)::placeholder,
+.box .codeConfirmation .inputContainerEmail :global(.vtex-styleguide-9-x-input)::placeholder {
+  transform: translateX(-1.5rem);
+}
+.box .emailForm .inputContainerAccessCode,
+.box .codeConfirmation .inputContainerAccessCode {
   padding: 0;
-  text-align: left;
-  width: 78%;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .loginOptionsContainer .formTitle::before,
-.content--emailVerification.contentAlwaysWithOptions .loginOptionsContainer .formTitle::before,
-.content--codeConfirmation .loginOptionsContainer .formTitle::before {
-  content: "Escolha uma opção para acessar sua conta.";
-  font-size: 18px;
+.box .emailForm .formFooter,
+.box .codeConfirmation .formFooter {
+  border-top: 1px solid #e4e4e7 !important;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  align-items: center;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .loginOptionsContainer .optionsList,
-.content--emailVerification.contentAlwaysWithOptions .loginOptionsContainer .optionsList,
-.content--codeConfirmation .loginOptionsContainer .optionsList {
-  margin: 1rem 0;
-  display: flex;
-  flex-direction: column;
+.box .forgotPasswordForm .formFooter {
+  border-top: 1px solid #e4e4e7 !important;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button),
-.content--emailVerification.contentAlwaysWithOptions .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button),
-.content--codeConfirmation .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button) {
+
+.buttonSocial {
   border-radius: 2px;
   border: 1.25px solid #18181b;
   background: #fff;
+}
+.buttonSocial .oauthLabel {
+  color: #3f3f46;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  text-transform: math-auto;
+}
+.buttonSocial .oauthLabel .oauthProvider {
+  font-weight: 500;
+}
+@media screen and (min-width: 48rem) {
+  .buttonSocial:hover {
+    border-color: #ff5a00;
+  }
+  .buttonSocial:hover :global(.vtex-button) {
+    background-color: #fdf2ec;
+  }
+  .buttonSocial:hover .oauthLabel {
+    color: #ff5a00;
+  }
+}
+
+.facebookOptionBtn .oauthLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.facebookOptionBtn .oauthLabel::before {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none"><path d="M7.11095 17.2408C3.17576 16.5463 0.166504 13.1204 0.166504 9.00002C0.166504 4.41669 3.9165 0.666687 8.49984 0.666687C13.0832 0.666687 16.8332 4.41669 16.8332 9.00002C16.8332 13.1204 13.8239 16.5463 9.88873 17.2408L9.42576 16.8704H7.57391L7.11095 17.2408Z" fill="url(%23paint0_linear_9913_10969)"/><path d="M11.7408 11.3148L12.1112 9H9.88894V7.37963C9.88894 6.73148 10.1204 6.22222 11.1389 6.22222H12.2038V4.09259C11.6019 4 10.9538 3.90741 10.3519 3.90741C8.45376 3.90741 7.11117 5.06482 7.11117 7.14815V9H5.02783V11.3148H7.11117V17.1944C7.57413 17.287 8.03709 17.3333 8.50005 17.3333C8.96302 17.3333 9.42598 17.287 9.88894 17.1944V11.3148H11.7408Z" fill="white"/><defs><linearGradient id="paint0_linear_9913_10969" x1="8.49984" y1="16.7565" x2="8.49984" y2="0.666687" gradientUnits="userSpaceOnUse"><stop stop-color="%230062E0"/><stop offset="1" stop-color="%2319AFFF"/></linearGradient></defs></svg>');
+  height: 18px;
+  width: 17px;
+}
+
+.formTitle {
+  color: #18181b;
+  font-family: "Proxima Nova";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.accessCodeOptionBtn :global(.vtex-button),
+.emailPasswordOptionBtn :global(.vtex-button) {
+  border-radius: 2px;
+  border: 1.25px solid #18181b;
   height: 3rem;
   margin-bottom: 0;
   position: relative;
@@ -556,31 +507,15 @@
   align-items: center;
   column-gap: 4px;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button):hover,
-.content--emailVerification.contentAlwaysWithOptions .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button):hover,
-.content--codeConfirmation .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button):hover {
-  transition: all 0.3s ease-in-out;
-  border: 1.25px solid #ee8146;
-  background: #fdf2ec;
-}
-.content--emailAndPassword.contentAlwaysWithOptions .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button):hover :global(.vtex-button__label)::before,
-.content--emailVerification.contentAlwaysWithOptions .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button):hover :global(.vtex-button__label)::before,
-.content--codeConfirmation .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button):hover :global(.vtex-button__label)::before {
-  color: #ff5a00;
-}
-.content--emailAndPassword.contentAlwaysWithOptions .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label),
-.content--emailVerification.contentAlwaysWithOptions .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label),
-.content--codeConfirmation .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label) {
+.accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label),
+.emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label) {
   font-size: 0;
   text-transform: inherit;
   width: 100%;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before,
-.content--emailVerification.contentAlwaysWithOptions .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before,
-.content--codeConfirmation .loginOptionsContainer .optionsList .accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before {
-  content: "Receber código de acesso por e-mail";
+.accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before,
+.emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before {
   display: block;
-  color: #3f3f46;
   font-family: "Proxima Nova";
   font-size: 16px;
   font-style: normal;
@@ -588,94 +523,96 @@
   line-height: 24px;
   letter-spacing: -0.16px;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .emailPasswordOptionBtn :global(.vtex-button),
-.content--emailVerification.contentAlwaysWithOptions .emailPasswordOptionBtn :global(.vtex-button),
-.content--codeConfirmation .emailPasswordOptionBtn :global(.vtex-button) {
-  border-radius: 2px;
-  border: 1.25px solid #d4d4d8;
+
+.accessCodeOptionBtn :global(.vtex-button) {
+  background: #fff;
+}
+@media screen and (min-width: 48rem) {
+  .accessCodeOptionBtn :global(.vtex-button):hover {
+    transition: all 0.3s ease-in-out;
+    border: 1.25px solid #ee8146;
+    background: #fdf2ec;
+  }
+  .accessCodeOptionBtn :global(.vtex-button):hover :global(.vtex-button__label)::before {
+    color: #ff5a00;
+  }
+}
+.accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before {
+  color: #3f3f46;
+}
+
+.accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before {
+  content: "Receber código de acesso por e-mail";
+}
+
+.emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before {
+  content: "Entrar com e-mail e senha";
+}
+
+:global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content {
+  width: 100%;
+  max-width: 992px;
+  padding: 2.5rem 0;
+  margin: 2.5rem auto;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+:global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content .loginOptionsContainer .optionsList {
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+}
+:global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content .loginOptionsContainer .optionsList .optionsListItem .emailPasswordOptionBtn :global(.vtex-button) {
   background: #fff;
   height: 3rem;
-  position: relative;
-  text-transform: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 4px;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .emailPasswordOptionBtn :global(.vtex-button):hover,
-.content--emailVerification.contentAlwaysWithOptions .emailPasswordOptionBtn :global(.vtex-button):hover,
-.content--codeConfirmation .emailPasswordOptionBtn :global(.vtex-button):hover {
-  transition: all 0.3s ease-in-out;
-  border: 1.25px solid #ee8146;
-  background: #fdf2ec;
+@media screen and (min-width: 48rem) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content .loginOptionsContainer .optionsList .optionsListItem .emailPasswordOptionBtn :global(.vtex-button):hover {
+    transition: all 0.3s ease-in-out;
+    border: 1.25px solid #ee8146;
+    background: #fdf2ec;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content .loginOptionsContainer .optionsList .optionsListItem .emailPasswordOptionBtn :global(.vtex-button):hover :global(.vtex-button__label)::before {
+    color: #ff5a00;
+  }
 }
-.content--emailAndPassword.contentAlwaysWithOptions .emailPasswordOptionBtn :global(.vtex-button):hover :global(.vtex-button__label)::before,
-.content--emailVerification.contentAlwaysWithOptions .emailPasswordOptionBtn :global(.vtex-button):hover :global(.vtex-button__label)::before,
-.content--codeConfirmation .emailPasswordOptionBtn :global(.vtex-button):hover :global(.vtex-button__label)::before {
-  color: #ff5a00;
-}
-.content--emailAndPassword.contentAlwaysWithOptions .emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label),
-.content--emailVerification.contentAlwaysWithOptions .emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label),
-.content--codeConfirmation .emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label) {
-  font-size: 0;
-  text-transform: inherit;
-  position: absolute;
-  width: 100%;
-}
-.content--emailAndPassword.contentAlwaysWithOptions .emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before,
-.content--emailVerification.contentAlwaysWithOptions .emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before,
-.content--codeConfirmation .emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before {
-  content: "Entrar com e-mail e senha";
-  display: block;
+:global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content .loginOptionsContainer .optionsList .optionsListItem .emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before {
   color: #3f3f46;
+}
+
+.forgotPasswordLink {
+  color: #2b2b3a;
+  text-align: right;
   font-family: "Proxima Nova";
-  font-size: 16px;
+  font-size: 0;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.16px;
+  line-height: 20px;
+  letter-spacing: -0.14px;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible,
-.content--codeConfirmation .contentFormVisible {
+.forgotPasswordLink::before {
+  content: "Esqueci a senha";
+  font-size: 14px;
+}
+
+.contentFormVisible {
   width: 100%;
   max-width: 22.5rem;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formTitle,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formTitle,
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .formTitle {
-  padding: 0;
-  color: #18181b;
-  font-family: "Proxima Nova";
-  font-size: 0;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: -0.2px;
-  margin: 1.5rem 0;
-  text-align: left;
-  position: relative;
+.contentFormVisible .emailAndPasswordForm .formTitle {
   font-size: 20px;
   margin: 0 0 1.5rem;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerEmail :global(.vtex-input-prefix__group),
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input-prefix__group),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerEmail :global(.vtex-input-prefix__group),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input-prefix__group),
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .inputContainerEmail :global(.vtex-input-prefix__group),
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input-prefix__group) {
+.contentFormVisible .emailAndPasswordForm .inputContainerEmail :global(.vtex-input-prefix__group),
+.contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input-prefix__group) {
   border-radius: 2px;
   border: 1px solid #d4d4d8;
   background: #fff;
   padding: 0.75rem 1rem;
   height: 3rem;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerEmail :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input),
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerEmail :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input),
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .inputContainerEmail :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input),
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
+.contentFormVisible .emailAndPasswordForm .inputContainerEmail :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input),
+.contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
   padding: 0;
   font-family: "Proxima Nova";
   font-size: 16px;
@@ -684,9 +621,7 @@
   line-height: 24px;
   letter-spacing: -0.16px;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword::before,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword::before,
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .inputContainerPassword::before {
+.contentFormVisible .emailAndPasswordForm .inputContainerPassword::before {
   content: "Senha";
   color: #3f3f46;
   font-family: "Proxima Nova";
@@ -698,66 +633,38 @@
   padding-bottom: 8px;
   display: block;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix),
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) {
+.contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) {
   padding: 0;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--visible) :global(.vtex-login-2-x-eyeSightIcon),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--visible) :global(.vtex-login-2-x-eyeSightIcon),
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--visible) :global(.vtex-login-2-x-eyeSightIcon) {
+.contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--visible) :global(.vtex-login-2-x-eyeSightIcon) {
   display: none;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--visible)::after,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--visible)::after,
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--visible)::after {
+.contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--visible)::after {
   content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8.95245 4.2436C9.29113 4.19353 9.64051 4.16667 10.0003 4.16667C14.2545 4.16667 17.0461 7.9207 17.9839 9.40569C18.0974 9.58542 18.1542 9.67528 18.1859 9.81389C18.2098 9.91799 18.2098 10.0822 18.1859 10.1863C18.1541 10.3249 18.097 10.4154 17.9827 10.5963C17.7328 10.9918 17.3518 11.5476 16.8471 12.1504M5.6036 5.59586C3.80187 6.81808 2.57871 8.51615 2.01759 9.4044C1.90357 9.58489 1.84656 9.67514 1.81478 9.81373C1.79091 9.91783 1.7909 10.082 1.81476 10.1861C1.84652 10.3247 1.90328 10.4146 2.01678 10.5943C2.95462 12.0793 5.74618 15.8333 10.0003 15.8333C11.7157 15.8333 13.1932 15.223 14.4073 14.3972M2.50035 2.5L17.5003 17.5M8.23258 8.23223C7.78017 8.68464 7.50035 9.30964 7.50035 10C7.50035 11.3807 8.61963 12.5 10.0003 12.5C10.6907 12.5 11.3157 12.2202 11.7681 11.7678" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   display: block;
   width: 1.25rem;
   height: 1.25rem;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--invisible) :global(.vtex-login-2-x-eyeSightIcon),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--invisible) :global(.vtex-login-2-x-eyeSightIcon),
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--invisible) :global(.vtex-login-2-x-eyeSightIcon) {
+.contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--invisible) :global(.vtex-login-2-x-eyeSightIcon) {
   display: none;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--invisible)::after,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--invisible)::after,
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--invisible)::after {
+.contentFormVisible .emailAndPasswordForm .inputContainerPassword :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--invisible)::after {
   content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.01677 10.5943C1.90328 10.4146 1.84654 10.3248 1.81477 10.1862C1.79091 10.0821 1.79091 9.91794 1.81477 9.81384C1.84654 9.67525 1.90328 9.5854 2.01677 9.40571C2.95461 7.92072 5.74617 4.16669 10.0003 4.16669C14.2545 4.16669 17.0461 7.92072 17.9839 9.4057C18.0974 9.5854 18.1541 9.67525 18.1859 9.81384C18.2098 9.91794 18.2098 10.0821 18.1859 10.1862C18.1541 10.3248 18.0974 10.4146 17.9839 10.5943C17.0461 12.0793 14.2545 15.8334 10.0003 15.8334C5.74617 15.8334 2.95461 12.0793 2.01677 10.5943Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.0003 12.5C11.381 12.5 12.5003 11.3807 12.5003 10C12.5003 8.61931 11.381 7.50002 10.0003 7.50002C8.61962 7.50002 7.50034 8.61931 7.50034 10C7.50034 11.3807 8.61962 12.5 10.0003 12.5Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   display: block;
   width: 1.25rem;
   height: 1.25rem;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .forgotPasswordLink,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .forgotPasswordLink,
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .forgotPasswordLink {
-  color: #2b2b3a;
-  text-align: right;
-  font-family: "Proxima Nova";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: -0.14px;
-}
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formFooter,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formFooter,
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .formFooter {
+.contentFormVisible .emailAndPasswordForm .formFooter {
   border: none;
   margin-top: 1rem;
   padding: 0;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formFooter .sendButton :global(.vtex-button),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formFooter .sendButton :global(.vtex-button),
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .formFooter .sendButton :global(.vtex-button) {
+.contentFormVisible .emailAndPasswordForm .formFooter .sendButton :global(.vtex-button) {
   border-radius: 2px;
   background: #2b2b3a;
   height: 3rem;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small),
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small) {
+.contentFormVisible .emailAndPasswordForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small) {
   font-family: "Proxima Nova";
   font-size: 16px;
   font-style: normal;
@@ -765,14 +672,10 @@
   line-height: 24px;
   letter-spacing: -0.16px;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formLinkContainer,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formLinkContainer,
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .formLinkContainer {
-  margin-top: 1.5rem;
+.contentFormVisible .emailAndPasswordForm .formLinkContainer {
+  margin-top: 1rem;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formLinkContainer .dontHaveAccount,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formLinkContainer .dontHaveAccount,
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .formLinkContainer .dontHaveAccount {
+.contentFormVisible .emailAndPasswordForm .formLinkContainer .dontHaveAccount {
   color: #5e5e5e;
   font-family: "Proxima Nova";
   font-style: normal;
@@ -781,49 +684,29 @@
   line-height: 24px;
   letter-spacing: -0.16px;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formLinkContainer .dontHaveAccount::before,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formLinkContainer .dontHaveAccount::before,
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .formLinkContainer .dontHaveAccount::before {
+.contentFormVisible .emailAndPasswordForm .formLinkContainer .dontHaveAccount::before {
   content: "Não tem uma conta? ";
   font-size: 16px;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formLinkContainer .dontHaveAccount::after,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailAndPasswordForm .formLinkContainer .dontHaveAccount::after,
-.content--codeConfirmation .contentFormVisible .emailAndPasswordForm .formLinkContainer .dontHaveAccount::after {
+.contentFormVisible .emailAndPasswordForm .formLinkContainer .dontHaveAccount::after {
   content: "Cadastre-se";
   color: #353535;
   font-size: 16px;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailVerification .formTitle,
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .formTitle,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailVerification .formTitle,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .formTitle,
-.content--codeConfirmation .contentFormVisible .emailVerification .formTitle,
-.content--codeConfirmation .contentFormVisible .codeConfirmation .formTitle {
+.contentFormVisible .emailVerification .formTitle,
+.contentFormVisible .codeConfirmation .formTitle {
   padding: 0;
-  margin: 0;
-  width: 80%;
-  color: #18181b;
-  font-family: "Proxima Nova";
-  font-size: 0;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 28px;
-  letter-spacing: -0.2px;
-  margin: 1.5rem 0;
-  text-align: left;
-  position: relative;
+  margin: 0 0 1.5rem !important;
   font-size: 20px;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .formTitle::after,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .formTitle::after,
-.content--codeConfirmation .contentFormVisible .codeConfirmation .formTitle::after {
+.contentFormVisible .codeConfirmation .formTitle {
+  font-size: 0px;
+}
+.contentFormVisible .codeConfirmation .formTitle::after {
   content: "Receber código de acesso por e-mail";
   font-size: 20px;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailVerification .inputContainerEmail::before,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailVerification .inputContainerEmail::before,
-.content--codeConfirmation .contentFormVisible .emailVerification .inputContainerEmail::before {
+.contentFormVisible .emailVerification .inputContainerEmail::before {
   content: "E-mail";
   color: #3f3f46;
   font-family: "Proxima Nova";
@@ -835,18 +718,14 @@
   padding-bottom: 8px;
   display: block;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailVerification .inputContainerEmail :global(.vtex-input-prefix__group),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailVerification .inputContainerEmail :global(.vtex-input-prefix__group),
-.content--codeConfirmation .contentFormVisible .emailVerification .inputContainerEmail :global(.vtex-input-prefix__group) {
+.contentFormVisible .emailVerification .inputContainerEmail :global(.vtex-input-prefix__group) {
   border-radius: 2px;
   border: 1px solid #d4d4d8;
   background: #fff;
   padding: 0.75rem 1rem;
   height: 3rem;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailVerification .inputContainerEmail :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailVerification .inputContainerEmail :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input),
-.content--codeConfirmation .contentFormVisible .emailVerification .inputContainerEmail :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
+.contentFormVisible .emailVerification .inputContainerEmail :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
   padding: 0;
   font-family: "Proxima Nova";
   font-size: 16px;
@@ -855,16 +734,12 @@
   line-height: 24px;
   letter-spacing: -0.16px;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button),
-.content--codeConfirmation .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) {
+.contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) {
   border-radius: 2px;
   background: #2b2b3a;
   height: 3rem;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label),
-.content--codeConfirmation .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) {
+.contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) {
   font-family: "Proxima Nova";
   font-size: 16px;
   font-style: normal;
@@ -873,19 +748,13 @@
   letter-spacing: -0.16px;
   text-transform: initial;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label)::before,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label)::before,
-.content--codeConfirmation .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label)::before {
+.contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label)::before {
   content: "Solicitar código";
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small),
-.content--codeConfirmation .contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small) {
+.contentFormVisible .emailForm .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small) {
   font-size: 0;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .inputContainerAccessCode::before,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .inputContainerAccessCode::before,
-.content--codeConfirmation .contentFormVisible .codeConfirmation .inputContainerAccessCode::before {
+.contentFormVisible .codeConfirmation .inputContainerAccessCode::before {
   content: "Código";
   color: #3f3f46;
   font-family: "Proxima Nova";
@@ -897,18 +766,14 @@
   padding-bottom: 8px;
   display: block;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .inputContainerAccessCode :global(.vtex-input-prefix__group),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .inputContainerAccessCode :global(.vtex-input-prefix__group),
-.content--codeConfirmation .contentFormVisible .codeConfirmation .inputContainerAccessCode :global(.vtex-input-prefix__group) {
+.contentFormVisible .codeConfirmation .inputContainerAccessCode :global(.vtex-input-prefix__group) {
   border-radius: 2px;
   border: 1px solid #d4d4d8;
   background: #fff;
   padding: 0.75rem 1rem;
   height: 3rem;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .inputContainerAccessCode :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .inputContainerAccessCode :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input),
-.content--codeConfirmation .contentFormVisible .codeConfirmation .inputContainerAccessCode :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
+.contentFormVisible .codeConfirmation .inputContainerAccessCode :global(.vtex-input-prefix__group) :global(.vtex-styleguide-9-x-input) {
   padding: 0;
   font-family: "Proxima Nova";
   font-size: 16px;
@@ -917,21 +782,15 @@
   line-height: 24px;
   letter-spacing: -0.16px;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .formFooter,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .formFooter,
-.content--codeConfirmation .contentFormVisible .codeConfirmation .formFooter {
+.contentFormVisible .codeConfirmation .formFooter {
   border: none;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button),
-.content--codeConfirmation .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) {
+.contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) {
   border-radius: 2px;
   background: #2b2b3a;
   height: 3rem;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label),
-.content--codeConfirmation .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) {
+.contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) {
   font-family: "Proxima Nova";
   font-size: 16px;
   font-style: normal;
@@ -940,148 +799,162 @@
   letter-spacing: -0.16px;
   text-transform: initial;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label)::before,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label)::before,
-.content--codeConfirmation .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label)::before {
+.contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label)::before {
   content: "Confirmar";
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small),
-.content--codeConfirmation .contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small) {
+.contentFormVisible .codeConfirmation .formFooter .sendButton :global(.vtex-button) :global(.vtex-button__label) :global(.t-small) {
   font-size: 0;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .backButton :global(.vtex-button__label),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .backButton :global(.vtex-button__label),
-.content--codeConfirmation .contentFormVisible .backButton :global(.vtex-button__label) {
+.contentFormVisible .backButton :global(.vtex-button__label) {
   display: flex;
   align-items: center;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .backButton :global(.vtex-button__label) :global(.t-small),
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .backButton :global(.vtex-button__label) :global(.t-small),
-.content--codeConfirmation .contentFormVisible .backButton :global(.vtex-button__label) :global(.t-small) {
+.contentFormVisible .backButton :global(.vtex-button__label) :global(.t-small) {
   color: #3f3f46;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .backButton :global(.vtex-button__label)::before,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .backButton :global(.vtex-button__label)::before,
-.content--codeConfirmation .contentFormVisible .backButton :global(.vtex-button__label)::before {
+.contentFormVisible .backButton :global(.vtex-button__label)::before {
   content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15.8332 10H4.1665M4.1665 10L9.99984 15.8334M4.1665 10L9.99984 4.16669" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   width: 1.25rem;
   height: 1.25rem;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .backButton :global(.vtex-button__label) .arrowBackIcon,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .backButton :global(.vtex-button__label) .arrowBackIcon,
-.content--codeConfirmation .contentFormVisible .backButton :global(.vtex-button__label) .arrowBackIcon {
+.contentFormVisible .backButton :global(.vtex-button__label) .arrowBackIcon {
   display: none;
 }
-.content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible .backButton :global(.vtex-button):hover,
-.content--emailVerification.contentAlwaysWithOptions .contentFormVisible .backButton :global(.vtex-button):hover,
-.content--codeConfirmation .contentFormVisible .backButton :global(.vtex-button):hover {
+.contentFormVisible .backButton :global(.vtex-button):hover {
   background-color: transparent;
 }
 
-.optionsListItem .buttonSocial {
-  border-radius: 2px;
-  border: 1.25px solid #18181b;
-  background: #fff;
+@media screen and (max-width: 48rem) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .loginOptionsContainer {
+    max-width: 100%;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .loginOptionsContainer .options {
+    min-width: inherit;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .loginOptionsContainer .options .accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label),
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .loginOptionsContainer .options .emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label) {
+    padding: 0.5rem;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--emailAndPassword.contentAlwaysWithOptions,
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--emailVerification,
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--codeConfirmation,
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--beginCreatePass,
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--recoveryPassword {
+    padding: 1.5rem;
+    flex-direction: column;
+    width: calc(100% - 2rem);
+    gap: 0.75rem;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--emailAndPassword.contentAlwaysWithOptions .contentFormVisible,
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--emailVerification .contentFormVisible,
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--codeConfirmation .contentFormVisible,
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--beginCreatePass .contentFormVisible,
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--recoveryPassword .contentFormVisible {
+    padding: 0.75rem 0 0;
+    border-top: 1px solid #e4e4e7;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--beginCreatePass .loginOptionsContainer .optionsListItem:nth-child(2),
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--recoveryPassword .loginOptionsContainer .optionsListItem:nth-child(2) {
+    display: none;
+  }
 }
-.optionsListItem .buttonSocial .oauthLabel {
-  color: #3f3f46;
+@media screen and (min-width: 48rem) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--emailVerification .loginOptionsContainer .formTitle {
+    font-size: 0;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--emailVerification .loginOptionsContainer .formTitle::before {
+    content: "Outras opções de login";
+    font-size: 1.125rem;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .contentFormVisible {
+    height: 23.75rem;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .inputContainerAccessCode {
+    padding: 0;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .formFooter .backButton {
+    display: none;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .formFooter .sendButton {
+    width: 100%;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .formFooter .sendButton :global(.vtex-button) {
+    width: 100%;
+  }
+}
+:global(.vtex-flex-layout-0-x-flexRowContent--login-page) .formFooter {
+  border: 0;
+}
+
+@media screen and (max-width: 48rem) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .emailVerification .formTitle,
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .codeConfirmation .formTitle {
+    max-width: 80%;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content--codeConfirmation .optionsList .optionsListItem:first-child {
+    display: none;
+  }
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .backButton :global(.vtex-button) :global(.vtex-button__label) {
+    display: flex;
+    align-items: center;
+    color: #3f3f46;
+    font-family: "Proxima Nova";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+  }
+}
+.forgotPasswordForm .formTitle {
+  margin-bottom: 1rem;
+}
+.forgotPasswordForm .formSubtitle {
+  color: #18181b;
   font-family: "Proxima Nova";
   font-size: 16px;
+  opacity: 0.8;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.16px;
-  text-transform: math-auto;
+  line-height: 20px;
+  margin-top: 0.5rem;
 }
-.optionsListItem .buttonSocial .oauthLabel .oauthProvider {
-  font-weight: 500;
+.forgotPasswordForm .inputContainerPassword {
+  padding: 0.5rem 0 0;
 }
-.optionsListItem .buttonSocial:hover {
-  border-color: #ff5a00;
+.forgotPasswordForm :global(.vtex-input__suffix) {
+  padding: 0 0.5rem 0 0;
 }
-.optionsListItem .buttonSocial:hover :global(.vtex-button) {
-  background-color: #fdf2ec;
+.forgotPasswordForm :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--visible) :global(.vtex-login-2-x-eyeSightIcon) {
+  display: none;
 }
-.optionsListItem .buttonSocial:hover .oauthLabel {
-  color: #ff5a00;
-}
-
-.optionsListItem .facebookOptionBtn .oauthLabel {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.optionsListItem .facebookOptionBtn .oauthLabel::before {
-  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none"><path d="M7.11095 17.2408C3.17576 16.5463 0.166504 13.1204 0.166504 9.00002C0.166504 4.41669 3.9165 0.666687 8.49984 0.666687C13.0832 0.666687 16.8332 4.41669 16.8332 9.00002C16.8332 13.1204 13.8239 16.5463 9.88873 17.2408L9.42576 16.8704H7.57391L7.11095 17.2408Z" fill="url(%23paint0_linear_9913_10969)"/><path d="M11.7408 11.3148L12.1112 9H9.88894V7.37963C9.88894 6.73148 10.1204 6.22222 11.1389 6.22222H12.2038V4.09259C11.6019 4 10.9538 3.90741 10.3519 3.90741C8.45376 3.90741 7.11117 5.06482 7.11117 7.14815V9H5.02783V11.3148H7.11117V17.1944C7.57413 17.287 8.03709 17.3333 8.50005 17.3333C8.96302 17.3333 9.42598 17.287 9.88894 17.1944V11.3148H11.7408Z" fill="white"/><defs><linearGradient id="paint0_linear_9913_10969" x1="8.49984" y1="16.7565" x2="8.49984" y2="0.666687" gradientUnits="userSpaceOnUse"><stop stop-color="%230062E0"/><stop offset="1" stop-color="%2319AFFF"/></linearGradient></defs></svg>');
-  height: 18px;
-  width: 17px;
-}
-
-.accessCodeOptionBtn :global(.vtex-button) {
-  border-radius: 2px;
-  border: 1.25px solid #18181b;
-  background: #fff;
-  height: 3rem;
-  margin-bottom: 2.5rem;
-  position: relative;
-  text-transform: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 4px;
-}
-.accessCodeOptionBtn :global(.vtex-button):hover {
-  transition: all 0.3s ease-in-out;
-  border: 1.25px solid #ee8146;
-  background: #fdf2ec;
-}
-.accessCodeOptionBtn :global(.vtex-button):hover :global(.vtex-button__label)::before {
-  color: #ff5a00;
-}
-.accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label) {
-  font-size: 0;
-  text-transform: inherit;
-  position: absolute;
-  width: 100%;
-}
-.accessCodeOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before {
-  content: "Receber código de acesso";
+.forgotPasswordForm :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--visible)::after {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8.95245 4.2436C9.29113 4.19353 9.64051 4.16667 10.0003 4.16667C14.2545 4.16667 17.0461 7.9207 17.9839 9.40569C18.0974 9.58542 18.1542 9.67528 18.1859 9.81389C18.2098 9.91799 18.2098 10.0822 18.1859 10.1863C18.1541 10.3249 18.097 10.4154 17.9827 10.5963C17.7328 10.9918 17.3518 11.5476 16.8471 12.1504M5.6036 5.59586C3.80187 6.81808 2.57871 8.51615 2.01759 9.4044C1.90357 9.58489 1.84656 9.67514 1.81478 9.81373C1.79091 9.91783 1.7909 10.082 1.81476 10.1861C1.84652 10.3247 1.90328 10.4146 2.01678 10.5943C2.95462 12.0793 5.74618 15.8333 10.0003 15.8333C11.7157 15.8333 13.1932 15.223 14.4073 14.3972M2.50035 2.5L17.5003 17.5M8.23258 8.23223C7.78017 8.68464 7.50035 9.30964 7.50035 10C7.50035 11.3807 8.61963 12.5 10.0003 12.5C10.6907 12.5 11.3157 12.2202 11.7681 11.7678" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
   display: block;
-  color: #3f3f46;
-  font-family: "Proxima Nova";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: -0.16px;
+  width: 1.25rem;
+  height: 1.25rem;
 }
-
-.emailPasswordOptionBtn :global(.vtex-button) {
+.forgotPasswordForm :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--invisible) :global(.vtex-login-2-x-eyeSightIcon) {
+  display: none;
+}
+.forgotPasswordForm :global(.vtex-input__suffix) :global(.vtex-login-2-x-eyeIcon--invisible)::after {
+  content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.01677 10.5943C1.90328 10.4146 1.84654 10.3248 1.81477 10.1862C1.79091 10.0821 1.79091 9.91794 1.81477 9.81384C1.84654 9.67525 1.90328 9.5854 2.01677 9.40571C2.95461 7.92072 5.74617 4.16669 10.0003 4.16669C14.2545 4.16669 17.0461 7.92072 17.9839 9.4057C18.0974 9.5854 18.1541 9.67525 18.1859 9.81384C18.2098 9.91794 18.2098 10.0821 18.1859 10.1862C18.1541 10.3248 18.0974 10.4146 17.9839 10.5943C17.0461 12.0793 14.2545 15.8334 10.0003 15.8334C5.74617 15.8334 2.95461 12.0793 2.01677 10.5943Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.0003 12.5C11.381 12.5 12.5003 11.3807 12.5003 10C12.5003 8.61931 11.381 7.50002 10.0003 7.50002C8.61962 7.50002 7.50034 8.61931 7.50034 10C7.50034 11.3807 8.61962 12.5 10.0003 12.5Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.forgotPasswordForm :global(.vtex-styleguide-9-x-input) {
+  font-family: "Proxima Nova";
+}
+.forgotPasswordForm .formFooter {
+  padding: 0;
+}
+.forgotPasswordForm .sendButton :global(.vtex-button) {
+  height: 3rem;
   border-radius: 2px;
-  border: none;
   background: #2b2b3a;
-  height: 3rem;
-  position: relative;
-  text-transform: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  column-gap: 4px;
 }
-.emailPasswordOptionBtn :global(.vtex-button):hover {
-  transition: all 0.3s ease-in-out;
-  background: #424250;
-}
-.emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label) {
-  font-size: 0;
-  text-transform: inherit;
-  position: absolute;
-  width: 100%;
-}
-.emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before {
-  content: "Entrar com e-mail e senha";
-  display: block;
+.forgotPasswordForm .sendButton :global(.vtex-button) :global(.vtex-button__label) {
   color: #fff;
   font-family: "Proxima Nova";
   font-size: 16px;
@@ -1090,12 +963,20 @@
   line-height: 24px;
   letter-spacing: -0.16px;
 }
-
-@media screen and (max-width: 768px) {
-  .content--emailAndPassword.contentAlwaysWithOptions,
-  .content--emailVerification,
-  .content--codeConfirmation {
-    padding: 0 1rem;
-    flex-direction: column;
+@media screen and (min-width: 48rem) {
+  .forgotPasswordForm .sendButton :global(.vtex-button):hover {
+    background-color: #424250;
+    transition: all 0.3s ease-in-out;
   }
+}
+
+.portalContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.facebookOptionBtn .oauthLabel .oauthProvider {
+  margin: 0;
 }

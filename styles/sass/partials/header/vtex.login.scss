@@ -28,108 +28,106 @@
 }
 .container {
   :global(.vtex-button) {
-    border: none;
-    background-color: transparent;
-
     &:hover {
-      background-color: var(--Gray-Scale-White, #fff);
-    }
-
-    :global(.vtex-button__label) {
-      padding: 0 !important;
-    }
-  }
-
-  .loginIcon {
-    .profileIcon {
-      display: none;
-    }
-  }
-
-  .profile {
-    font-size: 0;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    &::before {
-      content: '';
-      background-image: url('assets/svgs/login-icon.svg');
-      width: 20px;
-      height: 20px;
-      background-repeat: no-repeat;
-      display: block;
-    }
-
-    &::after {
-      content: 'Minha conta';
-      color: var(--Gray-Scale-Black, #000);
-
-      /* text-base/medium */
-      font-family: 'Proxima Nova';
-      font-size: 16px;
-      font-style: normal;
-      text-transform: math-auto;
-      font-weight: 500;
-      line-height: 24px;
-      /* 150% */
-      letter-spacing: -0.16px;
-    }
-  }
-
-  .label {
-    color: var(--Gray-Scale-Black, #000);
-    font-family: 'Proxima Nova';
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    text-transform: math-auto;
-
-    &::before {
-      content: '';
-      background-image: url('assets/svgs/login-icon.svg');
-      width: 20px;
-      height: 20px;
-      background-repeat: no-repeat;
-      display: block;
+      background-color: transparent;
     }
   }
 }
-.content {
-  padding: 1.5rem;
+.label {
+  color: var(--Gray-Scale-Black, #000);
+  font-family: 'Proxima Nova';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-transform: math-auto;
+
+  &::before {
+    content: '';
+    background-image: url('assets/svgs/login-icon.svg');
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    display: block;
+  }
+}
+.loginIcon {
+  .profileIcon {
+    display: none;
+  }
+}
+.profile {
+  font-size: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &::before {
+    content: '';
+    background-image: url('assets/svgs/login-icon.svg');
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    display: block;
+  }
+
+  &::after {
+    content: 'Minha conta';
+    color: #000;
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+    font-style: normal;
+    text-transform: math-auto;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+  }
 }
 .box {
   right: unset !important;
   left: -4.25rem;
+  min-width: 23rem;
   .arrowUp {
     left: calc(50% - 1rem);
   }
-  .content--loginOptions {
+  .content {
+    padding: 1.5rem;
+  }
+  .loginOptionsContainer {
     .formTitle {
-      color: #18181b;
-      font-family: 'Proxima Nova';
-      font-size: 0;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 28px;
-      letter-spacing: -0.18px;
-      margin: 0;
-      padding: 0;
-      text-align: left;
+      font-size: 0 !important;
       width: 88%;
       &::before {
         content: 'Escolha uma opção para acessar sua conta.';
         font-size: 18px;
       }
     }
+  }
+  .emailPasswordOptionBtn {
+    :global(.vtex-button) {
+      background: #2b2b3a;
+      height: 3rem;
+      @media screen and (min-width: 48rem) {
+        &:hover {
+          transition: all 0.3s ease-in-out;
+          background: #424250;
+        }
+      }
+      :global(.vtex-button__label) {
+        &::before {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .content--loginOptions {
     .optionsList {
-      margin: 4rem 0 1rem;
+      margin: 4rem 0 0;
       display: flex;
       flex-direction: column;
       position: relative;
@@ -173,423 +171,203 @@
           display: block;
         }
       }
-      .accessCodeOptionBtn {
-        :global(.vtex-button) {
-          border-radius: 2px;
-          border: 1.25px solid #18181b;
-          background: #fff;
-          height: 3rem;
-          margin-bottom: 2.5rem;
-          position: relative;
-          text-transform: inherit;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          column-gap: 4px;
-          &:hover {
-            transition: all 0.3s ease-in-out;
-            border: 1.25px solid #ee8146;
-            background: #fdf2ec;
-            :global(.vtex-button__label) {
-              &::before {
-                color: #ff5a00;
-              }
-            }
-          }
-          :global(.vtex-button__label) {
-            font-size: 0;
-            text-transform: inherit;
-            position: absolute;
-            width: 100%;
-            &::before {
-              content: 'Receber código de acesso';
-              display: block;
-              color: #3f3f46;
-              font-family: 'Proxima Nova';
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 24px;
-              letter-spacing: -0.16px;
-            }
-          }
-          &::before {
-            content: 'Não tem uma conta?';
-            color: #5e5e5e;
-            font-weight: 500;
-            pointer-events: none;
-          }
-          &::after {
-            content: 'Cadastre-se';
-            color: #353535;
-            font-weight: 600;
-          }
-          &::before,
-          &::after {
-            font-family: 'Proxima Nova';
-            font-size: 16px;
-            font-style: normal;
-            line-height: 24px;
-            letter-spacing: -0.16px;
-            transform: translateY(52px);
-          }
-        }
-      }
-      .emailPasswordOptionBtn {
-        :global(.vtex-button) {
-          border-radius: 2px;
-          border: none;
-          background: #2b2b3a;
-          height: 3rem;
-          position: relative;
-          text-transform: inherit;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          column-gap: 4px;
-          &:hover {
-            transition: all 0.3s ease-in-out;
-            background: #424250;
-          }
-          :global(.vtex-button__label) {
-            font-size: 0;
-            text-transform: inherit;
-            position: absolute;
-            width: 100%;
-            &::before {
-              content: 'Entrar com e-mail e senha';
-              display: block;
-              color: #fff;
-              font-family: 'Proxima Nova';
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 24px;
-              letter-spacing: -0.16px;
-            }
-          }
-        }
-      }
     }
-  }
-  .contentFormVisible {
-    padding: 0;
-    .emailAndPasswordForm {
-      .formTitle {
-        padding: 0;
-        margin: 0;
-        @include form-title;
-        font-size: 20px;
-        &::before {
-          content: 'E-mail e senha';
-          position: absolute;
-          left: 0;
-          top: -1.5rem;
-          color: #5a5a66;
-          font-size: 12px;
-          font-weight: 600;
-          line-height: 16px;
-          letter-spacing: -0.12px;
-        }
-      }
-      .inputContainerEmail,
-      .inputContainerPassword {
-        :global(.vtex-input-prefix__group) {
-          @include input-shared;
-          :global(.vtex-styleguide-9-x-input) {
-            padding: 0;
-            font-family: 'Proxima Nova';
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: -0.16px;
-          }
-        }
-      }
-      .inputContainerPassword {
-        &::before {
-          content: 'Senha';
-          color: #3f3f46;
-          font-family: 'Proxima Nova';
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 20px;
-          letter-spacing: -0.14px;
-          padding-bottom: 8px;
-          display: block;
-        }
-        :global(.vtex-input__suffix) {
-          padding: 0;
-          :global(.vtex-login-2-x-eyeIcon--visible) {
-            :global(.vtex-login-2-x-eyeSightIcon) {
-              display: none;
-            }
-            &::after {
-              content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8.95245 4.2436C9.29113 4.19353 9.64051 4.16667 10.0003 4.16667C14.2545 4.16667 17.0461 7.9207 17.9839 9.40569C18.0974 9.58542 18.1542 9.67528 18.1859 9.81389C18.2098 9.91799 18.2098 10.0822 18.1859 10.1863C18.1541 10.3249 18.097 10.4154 17.9827 10.5963C17.7328 10.9918 17.3518 11.5476 16.8471 12.1504M5.6036 5.59586C3.80187 6.81808 2.57871 8.51615 2.01759 9.4044C1.90357 9.58489 1.84656 9.67514 1.81478 9.81373C1.79091 9.91783 1.7909 10.082 1.81476 10.1861C1.84652 10.3247 1.90328 10.4146 2.01678 10.5943C2.95462 12.0793 5.74618 15.8333 10.0003 15.8333C11.7157 15.8333 13.1932 15.223 14.4073 14.3972M2.50035 2.5L17.5003 17.5M8.23258 8.23223C7.78017 8.68464 7.50035 9.30964 7.50035 10C7.50035 11.3807 8.61963 12.5 10.0003 12.5C10.6907 12.5 11.3157 12.2202 11.7681 11.7678" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-              display: block;
-              width: 1.25rem;
-              height: 1.25rem;
-            }
-          }
-          :global(.vtex-login-2-x-eyeIcon--invisible) {
-            :global(.vtex-login-2-x-eyeSightIcon) {
-              display: none;
-            }
-            &::after {
-              content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.01677 10.5943C1.90328 10.4146 1.84654 10.3248 1.81477 10.1862C1.79091 10.0821 1.79091 9.91794 1.81477 9.81384C1.84654 9.67525 1.90328 9.5854 2.01677 9.40571C2.95461 7.92072 5.74617 4.16669 10.0003 4.16669C14.2545 4.16669 17.0461 7.92072 17.9839 9.4057C18.0974 9.5854 18.1541 9.67525 18.1859 9.81384C18.2098 9.91794 18.2098 10.0821 18.1859 10.1862C18.1541 10.3248 18.0974 10.4146 17.9839 10.5943C17.0461 12.0793 14.2545 15.8334 10.0003 15.8334C5.74617 15.8334 2.95461 12.0793 2.01677 10.5943Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.0003 12.5C11.381 12.5 12.5003 11.3807 12.5003 10C12.5003 8.61931 11.381 7.50002 10.0003 7.50002C8.61962 7.50002 7.50034 8.61931 7.50034 10C7.50034 11.3807 8.61962 12.5 10.0003 12.5Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-              display: block;
-              width: 1.25rem;
-              height: 1.25rem;
-            }
-          }
-        }
-      }
-      .formLinkContainer:last-child {
-        display: none;
-      }
-      .forgotPasswordLink {
-        color: #2b2b3a;
-        text-align: right;
-        font-family: 'Proxima Nova';
-        font-size: 14px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 20px;
-        letter-spacing: -0.14px;
-      }
-    }
-    .emailVerification,
-    .codeConfirmation {
-      .formTitle {
-        padding: 0;
-        margin: 0;
-        width: 90%;
-        @include form-title;
-        &::before {
-          content: 'Código de acesso';
-          position: absolute;
-          left: 0;
-          top: -1.5rem;
-          color: #5a5a66;
-          font-size: 12px;
-          font-weight: 600;
-          line-height: 16px;
-          letter-spacing: -0.12px;
-        }
-        &::after {
-          content: 'Receber código de acesso por e-mail';
-          font-size: 20px;
-        }
-      }
-    }
-    .emailVerification {
-      .inputContainerEmail {
-        &::before {
-          content: 'E-mail';
-          color: #3f3f46;
-          font-family: 'Proxima Nova';
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 20px;
-          letter-spacing: -0.14px;
-          padding-bottom: 8px;
-          display: block;
-        }
-        :global(.vtex-input-prefix__group) {
-          @include input-shared;
-          :global(.vtex-styleguide-9-x-input) {
-            padding: 0;
-            font-family: 'Proxima Nova';
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: -0.16px;
-          }
-        }
-      }
-    }
-    .emailForm {
-      .formFooter {
-        .sendButton {
-          :global(.vtex-button) {
-            border-radius: 2px;
-            background: #2b2b3a;
-            :global(.vtex-button__label) {
-              @include button-label-shared;
-              &::before {
-                content: 'Solicitar código';
-              }
-              :global(.t-small) {
-                font-size: 0;
-              }
-            }
-          }
-        }
-      }
-    }
-    .codeConfirmation {
-      .inputContainerAccessCode {
-        &::before {
-          content: 'Código';
-          color: #3f3f46;
-          font-family: 'Proxima Nova';
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 20px;
-          letter-spacing: -0.14px;
-          padding-bottom: 8px;
-          display: block;
-        }
-        :global(.vtex-input-prefix__group) {
-          @include input-shared;
-          :global(.vtex-styleguide-9-x-input) {
-            padding: 0;
-            font-family: 'Proxima Nova';
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: -0.16px;
-          }
-        }
-      }
-      .formFooter {
-        .sendButton {
-          :global(.vtex-button) {
-            border-radius: 2px;
-            background: #2b2b3a;
-            :global(.vtex-button__label) {
-              @include button-label-shared;
-              &::before {
-                content: 'Confirmar';
-              }
-              :global(.t-small) {
-                font-size: 0;
-              }
-            }
-          }
-        }
-      }
-    }
-
-    .formFooter {
-      margin-top: 1rem;
-      padding-top: 1rem;
-      :global(.vtex-button) {
-        height: 3rem;
-        :global(.vtex-button__label) {
-          :global(.t-small) {
-            font-family: 'Proxima Nova';
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 24px;
-            letter-spacing: -0.16px;
-          }
-        }
-      }
-    }
-    .backButton {
-      :global(.vtex-button__label) {
-        display: flex;
-        align-items: center;
-        :global(.t-small) {
-          color: #3f3f46;
-        }
-        &::before {
-          content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15.8332 10H4.1665M4.1665 10L9.99984 15.8334M4.1665 10L9.99984 4.16669" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-          width: 1.25rem;
-          height: 1.25rem;
-        }
-        .arrowBackIcon {
-          display: none;
-        }
-      }
-      :global(.vtex-button) {
-        &:hover {
-          background-color: transparent;
-        }
-      }
-    }
-    .sendButton {
-      :global(.vtex-button) {
-        border-radius: 2px;
-        background: #2b2b3a;
-      }
-    }
-  }
-}
-.content--emailAndPassword.contentAlwaysWithOptions,
-.content--emailVerification.contentAlwaysWithOptions,
-.content--codeConfirmation {
-  width: 100%;
-  max-width: 90rem;
-  display: flex;
-  align-items: center;
-  padding: 0;
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
-  justify-content: space-evenly;
-  gap: 2rem;
-  .loginOptionsContainer {
-    padding: 0;
-    .formTitle {
-      color: #18181b;
-      font-family: 'Proxima Nova';
-      font-size: 0;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 20px;
-      letter-spacing: -0.18px;
-      margin: 0;
+    .contentFormVisible {
       padding: 0;
-      text-align: left;
-      width: 78%;
-      &::before {
-        content: 'Escolha uma opção para acessar sua conta.';
-        font-size: 18px;
-      }
-    }
-    .optionsList {
-      margin: 1rem 0;
-      display: flex;
-      flex-direction: column;
-      .accessCodeOptionBtn {
-        :global(.vtex-button) {
-          border-radius: 2px;
-          border: 1.25px solid #18181b;
-          background: #fff;
-          height: 3rem;
-          margin-bottom: 0;
-          position: relative;
-          text-transform: inherit;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          column-gap: 4px;
-          &:hover {
-            transition: all 0.3s ease-in-out;
-            border: 1.25px solid #ee8146;
-            background: #fdf2ec;
-            :global(.vtex-button__label) {
-              &::before {
-                color: #ff5a00;
+      .emailAndPasswordForm {
+        .formTitle {
+          font-size: 20px;
+          &::before {
+            content: 'E-mail e senha';
+            position: absolute;
+            left: 0;
+            top: -1.5rem;
+            color: #5a5a66;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 16px;
+            letter-spacing: -0.12px;
+          }
+        }
+        .inputContainerEmail,
+        .inputContainerPassword {
+          :global(.vtex-input-prefix__group) {
+            @include input-shared;
+            :global(.vtex-styleguide-9-x-input) {
+              padding: 0;
+              font-family: 'Proxima Nova';
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 24px;
+              letter-spacing: -0.16px;
+            }
+          }
+        }
+        .inputContainerPassword {
+          &::before {
+            content: 'Senha';
+            color: #3f3f46;
+            font-family: 'Proxima Nova';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: -0.14px;
+            padding-bottom: 8px;
+            display: block;
+          }
+          :global(.vtex-input__suffix) {
+            padding: 0;
+            :global(.vtex-login-2-x-eyeIcon--visible) {
+              :global(.vtex-login-2-x-eyeSightIcon) {
+                display: none;
+              }
+              &::after {
+                content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8.95245 4.2436C9.29113 4.19353 9.64051 4.16667 10.0003 4.16667C14.2545 4.16667 17.0461 7.9207 17.9839 9.40569C18.0974 9.58542 18.1542 9.67528 18.1859 9.81389C18.2098 9.91799 18.2098 10.0822 18.1859 10.1863C18.1541 10.3249 18.097 10.4154 17.9827 10.5963C17.7328 10.9918 17.3518 11.5476 16.8471 12.1504M5.6036 5.59586C3.80187 6.81808 2.57871 8.51615 2.01759 9.4044C1.90357 9.58489 1.84656 9.67514 1.81478 9.81373C1.79091 9.91783 1.7909 10.082 1.81476 10.1861C1.84652 10.3247 1.90328 10.4146 2.01678 10.5943C2.95462 12.0793 5.74618 15.8333 10.0003 15.8333C11.7157 15.8333 13.1932 15.223 14.4073 14.3972M2.50035 2.5L17.5003 17.5M8.23258 8.23223C7.78017 8.68464 7.50035 9.30964 7.50035 10C7.50035 11.3807 8.61963 12.5 10.0003 12.5C10.6907 12.5 11.3157 12.2202 11.7681 11.7678" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                display: block;
+                width: 1.25rem;
+                height: 1.25rem;
+              }
+            }
+            :global(.vtex-login-2-x-eyeIcon--invisible) {
+              :global(.vtex-login-2-x-eyeSightIcon) {
+                display: none;
+              }
+              &::after {
+                content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.01677 10.5943C1.90328 10.4146 1.84654 10.3248 1.81477 10.1862C1.79091 10.0821 1.79091 9.91794 1.81477 9.81384C1.84654 9.67525 1.90328 9.5854 2.01677 9.40571C2.95461 7.92072 5.74617 4.16669 10.0003 4.16669C14.2545 4.16669 17.0461 7.92072 17.9839 9.4057C18.0974 9.5854 18.1541 9.67525 18.1859 9.81384C18.2098 9.91794 18.2098 10.0821 18.1859 10.1862C18.1541 10.3248 18.0974 10.4146 17.9839 10.5943C17.0461 12.0793 14.2545 15.8334 10.0003 15.8334C5.74617 15.8334 2.95461 12.0793 2.01677 10.5943Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.0003 12.5C11.381 12.5 12.5003 11.3807 12.5003 10C12.5003 8.61931 11.381 7.50002 10.0003 7.50002C8.61962 7.50002 7.50034 8.61931 7.50034 10C7.50034 11.3807 8.61962 12.5 10.0003 12.5Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+                display: block;
+                width: 1.25rem;
+                height: 1.25rem;
               }
             }
           }
+        }
+        .formLinkContainer:last-child {
+          display: none;
+        }
+      }
+      .emailVerification,
+      .codeConfirmation {
+        .formTitle {
+          width: 90%;
+          font-size: 0;
+          &::before {
+            content: 'Código de acesso';
+            position: absolute;
+            left: 0;
+            top: -1.5rem;
+            color: #5a5a66;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 16px;
+            letter-spacing: -0.12px;
+          }
+          &::after {
+            content: 'Receber código de acesso por e-mail';
+            font-size: 20px;
+          }
+        }
+      }
+      .emailVerification {
+        .inputContainerEmail {
+          &::before {
+            content: 'E-mail';
+            color: #3f3f46;
+            font-family: 'Proxima Nova';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: -0.14px;
+            padding-bottom: 8px;
+            display: block;
+          }
+          :global(.vtex-input-prefix__group) {
+            @include input-shared;
+            :global(.vtex-styleguide-9-x-input) {
+              padding: 0;
+              font-family: 'Proxima Nova';
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 24px;
+              letter-spacing: -0.16px;
+            }
+          }
+        }
+      }
+      .emailForm {
+        .formFooter {
+          .sendButton {
+            :global(.vtex-button) {
+              border-radius: 2px;
+              background: #2b2b3a;
+              :global(.vtex-button__label) {
+                @include button-label-shared;
+                &::before {
+                  content: 'Solicitar código';
+                }
+                :global(.t-small) {
+                  font-size: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .codeConfirmation {
+        .inputContainerAccessCode {
+          &::before {
+            content: 'Código';
+            color: #3f3f46;
+            font-family: 'Proxima Nova';
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: -0.14px;
+            padding-bottom: 8px;
+            display: block;
+          }
+          :global(.vtex-input-prefix__group) {
+            @include input-shared;
+            :global(.vtex-styleguide-9-x-input) {
+              padding: 0;
+              font-family: 'Proxima Nova';
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 24px;
+              letter-spacing: -0.16px;
+            }
+          }
+        }
+        .formFooter {
+          .sendButton {
+            :global(.vtex-button) {
+              border-radius: 2px;
+              background: #2b2b3a;
+              :global(.vtex-button__label) {
+                @include button-label-shared;
+                &::before {
+                  content: 'Confirmar';
+                }
+                :global(.t-small) {
+                  font-size: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .formFooter {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        :global(.vtex-button) {
+          height: 3rem;
           :global(.vtex-button__label) {
-            font-size: 0;
-            text-transform: inherit;
-            width: 100%;
-            &::before {
-              content: 'Receber código de acesso por e-mail';
-              display: block;
-              color: #3f3f46;
+            :global(.t-small) {
               font-family: 'Proxima Nova';
               font-size: 16px;
               font-style: normal;
@@ -600,308 +378,117 @@
           }
         }
       }
-    }
-  }
-  .emailPasswordOptionBtn {
-    :global(.vtex-button) {
-      border-radius: 2px;
-      border: 1.25px solid #d4d4d8;
-      background: #fff;
-      height: 3rem;
-      position: relative;
-      text-transform: inherit;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      column-gap: 4px;
-      &:hover {
-        transition: all 0.3s ease-in-out;
-        border: 1.25px solid #ee8146;
-        background: #fdf2ec;
+      .backButton {
         :global(.vtex-button__label) {
+          display: flex;
+          align-items: center;
+          :global(.t-small) {
+            color: #3f3f46;
+          }
           &::before {
-            color: #ff5a00;
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15.8332 10H4.1665M4.1665 10L9.99984 15.8334M4.1665 10L9.99984 4.16669" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            width: 1.25rem;
+            height: 1.25rem;
+          }
+          .arrowBackIcon {
+            display: none;
+          }
+        }
+        :global(.vtex-button) {
+          &:hover {
+            background-color: transparent;
           }
         }
       }
-      :global(.vtex-button__label) {
-        font-size: 0;
-        text-transform: inherit;
-        position: absolute;
-        width: 100%;
-        &::before {
-          content: 'Entrar com e-mail e senha';
-          display: block;
-          color: #3f3f46;
-          font-family: 'Proxima Nova';
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 24px;
-          letter-spacing: -0.16px;
+      .sendButton {
+        :global(.vtex-button) {
+          border-radius: 2px;
+          background: #2b2b3a;
         }
       }
     }
   }
-  .contentFormVisible {
-    width: 100%;
-    max-width: 22.5rem;
-    .emailAndPasswordForm {
-      .formTitle {
-        padding: 0;
-        @include form-title;
-        font-size: 20px;
-        margin: 0 0 1.5rem;
-      }
-      .inputContainerEmail,
-      .inputContainerPassword {
-        :global(.vtex-input-prefix__group) {
-          @include input-shared;
-          :global(.vtex-styleguide-9-x-input) {
-            padding: 0;
-            font-family: 'Proxima Nova';
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: -0.16px;
-          }
-        }
-      }
-      .inputContainerPassword {
-        &::before {
-          content: 'Senha';
-          color: #3f3f46;
-          font-family: 'Proxima Nova';
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 20px;
-          letter-spacing: -0.14px;
-          padding-bottom: 8px;
-          display: block;
-        }
-        :global(.vtex-input__suffix) {
-          padding: 0;
-          :global(.vtex-login-2-x-eyeIcon--visible) {
-            :global(.vtex-login-2-x-eyeSightIcon) {
-              display: none;
-            }
-            &::after {
-              content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8.95245 4.2436C9.29113 4.19353 9.64051 4.16667 10.0003 4.16667C14.2545 4.16667 17.0461 7.9207 17.9839 9.40569C18.0974 9.58542 18.1542 9.67528 18.1859 9.81389C18.2098 9.91799 18.2098 10.0822 18.1859 10.1863C18.1541 10.3249 18.097 10.4154 17.9827 10.5963C17.7328 10.9918 17.3518 11.5476 16.8471 12.1504M5.6036 5.59586C3.80187 6.81808 2.57871 8.51615 2.01759 9.4044C1.90357 9.58489 1.84656 9.67514 1.81478 9.81373C1.79091 9.91783 1.7909 10.082 1.81476 10.1861C1.84652 10.3247 1.90328 10.4146 2.01678 10.5943C2.95462 12.0793 5.74618 15.8333 10.0003 15.8333C11.7157 15.8333 13.1932 15.223 14.4073 14.3972M2.50035 2.5L17.5003 17.5M8.23258 8.23223C7.78017 8.68464 7.50035 9.30964 7.50035 10C7.50035 11.3807 8.61963 12.5 10.0003 12.5C10.6907 12.5 11.3157 12.2202 11.7681 11.7678" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-              display: block;
-              width: 1.25rem;
-              height: 1.25rem;
-            }
-          }
-          :global(.vtex-login-2-x-eyeIcon--invisible) {
-            :global(.vtex-login-2-x-eyeSightIcon) {
-              display: none;
-            }
-            &::after {
-              content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.01677 10.5943C1.90328 10.4146 1.84654 10.3248 1.81477 10.1862C1.79091 10.0821 1.79091 9.91794 1.81477 9.81384C1.84654 9.67525 1.90328 9.5854 2.01677 9.40571C2.95461 7.92072 5.74617 4.16669 10.0003 4.16669C14.2545 4.16669 17.0461 7.92072 17.9839 9.4057C18.0974 9.5854 18.1541 9.67525 18.1859 9.81384C18.2098 9.91794 18.2098 10.0821 18.1859 10.1862C18.1541 10.3248 18.0974 10.4146 17.9839 10.5943C17.0461 12.0793 14.2545 15.8334 10.0003 15.8334C5.74617 15.8334 2.95461 12.0793 2.01677 10.5943Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.0003 12.5C11.381 12.5 12.5003 11.3807 12.5003 10C12.5003 8.61931 11.381 7.50002 10.0003 7.50002C8.61962 7.50002 7.50034 8.61931 7.50034 10C7.50034 11.3807 8.61962 12.5 10.0003 12.5Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-              display: block;
-              width: 1.25rem;
-              height: 1.25rem;
-            }
-          }
-        }
-      }
-      .forgotPasswordLink {
-        color: #2b2b3a;
-        text-align: right;
+  .emailAndPasswordForm {
+    .formTitle {
+      position: relative;
+      padding-top: 1.25rem !important;
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: 'E-mail e senha';
+        color: #5a5a66;
         font-family: 'Proxima Nova';
-        font-size: 14px;
+        font-size: 12px;
         font-style: normal;
-        font-weight: 500;
-        line-height: 20px;
-        letter-spacing: -0.14px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: -0.12px;
       }
-      .formFooter {
-        border: none;
-        margin-top: 1rem;
-        padding: 0;
-        .sendButton {
-          :global(.vtex-button) {
-            border-radius: 2px;
-            background: #2b2b3a;
-            height: 3rem;
-            :global(.vtex-button__label) {
-              :global(.t-small) {
-                font-family: 'Proxima Nova';
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 24px;
-                letter-spacing: -0.16px;
-              }
-            }
-          }
-        }
-      }
-      .formLinkContainer {
-        margin-top: 1.5rem;
-        .dontHaveAccount {
-          color: #5e5e5e;
-          font-family: 'Proxima Nova';
-          font-style: normal;
-          font-size: 0;
-          font-weight: 600;
-          line-height: 24px;
-          letter-spacing: -0.16px;
-          &::before {
-            content: 'Não tem uma conta? ';
-            font-size: 16px;
-          }
-          &::after {
-            content: 'Cadastre-se';
-            color: #353535;
-            font-size: 16px;
-          }
+    }
+    .formFooter {
+      border-top: 1px solid #e4e4e7 !important;
+      padding-top: 1rem !important;
+    }
+    .inputContainerEmail {
+      :global(.vtex-styleguide-9-x-input) {
+        &::placeholder {
+          transform: translateX(-1.5rem);
         }
       }
     }
-    .emailVerification,
-    .codeConfirmation {
-      .formTitle {
-        padding: 0;
-        margin: 0;
-        width: 80%;
-        @include form-title;
+  }
+  .emailForm,
+  .codeConfirmation {
+    .formTitle {
+      width: 80%;
+      position: relative;
+      padding-top: 1.25rem !important;
+      font-size: 0 !important;
+      &::before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: 'Código de acesso';
+        color: #5a5a66;
+        font-family: 'Proxima Nova';
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: -0.12px;
+      }
+      &::after {
+        content: 'Receber código de acesso por e-mail';
         font-size: 20px;
       }
     }
-    .codeConfirmation {
-      .formTitle {
-        &::after {
-          content: 'Receber código de acesso por e-mail';
-          font-size: 20px;
+    .inputContainerEmail {
+      :global(.vtex-styleguide-9-x-input) {
+        &::placeholder {
+          transform: translateX(-1.5rem);
         }
       }
     }
-    .emailVerification {
-      .inputContainerEmail {
-        &::before {
-          content: 'E-mail';
-          color: #3f3f46;
-          font-family: 'Proxima Nova';
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 20px;
-          letter-spacing: -0.14px;
-          padding-bottom: 8px;
-          display: block;
-        }
-        :global(.vtex-input-prefix__group) {
-          @include input-shared;
-
-          :global(.vtex-styleguide-9-x-input) {
-            padding: 0;
-            font-family: 'Proxima Nova';
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: -0.16px;
-          }
-        }
-      }
+    .inputContainerAccessCode {
+      padding: 0;
     }
-    .emailForm {
-      .formFooter {
-        .sendButton {
-          :global(.vtex-button) {
-            border-radius: 2px;
-            background: #2b2b3a;
-            height: 3rem;
-            :global(.vtex-button__label) {
-              @include button-label-shared;
-              &::before {
-                content: 'Solicitar código';
-              }
-              :global(.t-small) {
-                font-size: 0;
-              }
-            }
-          }
-        }
-      }
+    .formFooter {
+      border-top: 1px solid #e4e4e7 !important;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      align-items: center;
     }
-    .codeConfirmation {
-      .inputContainerAccessCode {
-        &::before {
-          content: 'Código';
-          color: #3f3f46;
-          font-family: 'Proxima Nova';
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 20px;
-          letter-spacing: -0.14px;
-          padding-bottom: 8px;
-          display: block;
-        }
-        :global(.vtex-input-prefix__group) {
-          @include input-shared;
-
-          :global(.vtex-styleguide-9-x-input) {
-            padding: 0;
-            font-family: 'Proxima Nova';
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 24px;
-            letter-spacing: -0.16px;
-          }
-        }
-      }
-      .formFooter {
-        border: none;
-        .sendButton {
-          :global(.vtex-button) {
-            border-radius: 2px;
-            background: #2b2b3a;
-            height: 3rem;
-            :global(.vtex-button__label) {
-              @include button-label-shared;
-              &::before {
-                content: 'Confirmar';
-              }
-              :global(.t-small) {
-                font-size: 0;
-              }
-            }
-          }
-        }
-      }
-    }
-    .backButton {
-      :global(.vtex-button__label) {
-        display: flex;
-        align-items: center;
-        :global(.t-small) {
-          color: #3f3f46;
-        }
-        &::before {
-          content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15.8332 10H4.1665M4.1665 10L9.99984 15.8334M4.1665 10L9.99984 4.16669" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-          width: 1.25rem;
-          height: 1.25rem;
-        }
-        .arrowBackIcon {
-          display: none;
-        }
-      }
-      :global(.vtex-button) {
-        &:hover {
-          background-color: transparent;
-        }
-      }
+  }
+  .forgotPasswordForm {
+    .formFooter {
+      border-top: 1px solid #e4e4e7 !important;
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
     }
   }
 }
-
-.optionsListItem .buttonSocial {
+.buttonSocial {
   border-radius: 2px;
   border: 1.25px solid #18181b;
   background: #fff;
@@ -918,17 +505,19 @@
       font-weight: 500;
     }
   }
-  &:hover {
-    border-color: #ff5a00;
-    :global(.vtex-button) {
-      background-color: #fdf2ec;
-    }
-    .oauthLabel {
-      color: #ff5a00;
+  @media screen and (min-width: 48rem) {
+    &:hover {
+      border-color: #ff5a00;
+      :global(.vtex-button) {
+        background-color: #fdf2ec;
+      }
+      .oauthLabel {
+        color: #ff5a00;
+      }
     }
   }
 }
-.optionsListItem .facebookOptionBtn .oauthLabel {
+.facebookOptionBtn .oauthLabel {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -939,38 +528,37 @@
     width: 17px;
   }
 }
-.accessCodeOptionBtn {
+.formTitle {
+  color: #18181b;
+  font-family: 'Proxima Nova';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.2px;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.accessCodeOptionBtn,
+.emailPasswordOptionBtn {
   :global(.vtex-button) {
     border-radius: 2px;
     border: 1.25px solid #18181b;
-    background: #fff;
     height: 3rem;
-    margin-bottom: 2.5rem;
+    margin-bottom: 0;
     position: relative;
     text-transform: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 4px;
-    &:hover {
-      transition: all 0.3s ease-in-out;
-      border: 1.25px solid #ee8146;
-      background: #fdf2ec;
-      :global(.vtex-button__label) {
-        &::before {
-          color: #ff5a00;
-        }
-      }
-    }
     :global(.vtex-button__label) {
       font-size: 0;
       text-transform: inherit;
-      position: absolute;
       width: 100%;
       &::before {
-        content: 'Receber código de acesso';
         display: block;
-        color: #3f3f46;
         font-family: 'Proxima Nova';
         font-size: 16px;
         font-style: normal;
@@ -981,30 +569,509 @@
     }
   }
 }
-.emailPasswordOptionBtn {
+.accessCodeOptionBtn {
   :global(.vtex-button) {
-    border-radius: 2px;
-    border: none;
-    background: #2b2b3a;
-    height: 3rem;
-    position: relative;
-    text-transform: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 4px;
-    &:hover {
-      transition: all 0.3s ease-in-out;
-      background: #424250;
+    background: #fff;
+    @media screen and (min-width: 48rem) {
+      &:hover {
+        transition: all 0.3s ease-in-out;
+        border: 1.25px solid #ee8146;
+        background: #fdf2ec;
+        :global(.vtex-button__label) {
+          &::before {
+            color: #ff5a00;
+          }
+        }
+      }
     }
     :global(.vtex-button__label) {
-      font-size: 0;
-      text-transform: inherit;
-      position: absolute;
-      width: 100%;
+      &::before {
+        color: #3f3f46;
+      }
+    }
+  }
+}
+.accessCodeOptionBtn {
+  :global(.vtex-button) {
+    :global(.vtex-button__label) {
+      &::before {
+        content: 'Receber código de acesso por e-mail';
+      }
+    }
+  }
+}
+.emailPasswordOptionBtn {
+  :global(.vtex-button) {
+    :global(.vtex-button__label) {
       &::before {
         content: 'Entrar com e-mail e senha';
+      }
+    }
+  }
+}
+:global(.vtex-flex-layout-0-x-flexRowContent--login-page) {
+  .content {
+    width: 100%;
+    max-width: 992px;
+    padding: 2.5rem 0;
+    margin: 2.5rem auto;
+    justify-content: space-evenly;
+    gap: 2rem;
+    .loginOptionsContainer {
+      .optionsList {
+        margin: 1.5rem 0 0;
+        display: flex;
+        flex-direction: column;
+        .optionsListItem {
+          .emailPasswordOptionBtn {
+            :global(.vtex-button) {
+              background: #fff;
+              height: 3rem;
+              @media screen and (min-width: 48rem) {
+                &:hover {
+                  transition: all 0.3s ease-in-out;
+                  border: 1.25px solid #ee8146;
+                  background: #fdf2ec;
+                  :global(.vtex-button__label) {
+                    &::before {
+                      color: #ff5a00;
+                    }
+                  }
+                }
+              }
+              :global(.vtex-button__label) {
+                &::before {
+                  color: #3f3f46;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.forgotPasswordLink {
+  color: #2b2b3a;
+  text-align: right;
+  font-family: 'Proxima Nova';
+  font-size: 0;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  &::before {
+    content: 'Esqueci a senha';
+    font-size: 14px;
+  }
+}
+.contentFormVisible {
+  width: 100%;
+  max-width: 22.5rem;
+  .emailAndPasswordForm {
+    .formTitle {
+      font-size: 20px;
+      margin: 0 0 1.5rem;
+    }
+    .inputContainerEmail,
+    .inputContainerPassword {
+      :global(.vtex-input-prefix__group) {
+        @include input-shared;
+        :global(.vtex-styleguide-9-x-input) {
+          padding: 0;
+          font-family: 'Proxima Nova';
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: -0.16px;
+        }
+      }
+    }
+    .inputContainerPassword {
+      &::before {
+        content: 'Senha';
+        color: #3f3f46;
+        font-family: 'Proxima Nova';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+        padding-bottom: 8px;
         display: block;
+      }
+      :global(.vtex-input__suffix) {
+        padding: 0;
+        :global(.vtex-login-2-x-eyeIcon--visible) {
+          :global(.vtex-login-2-x-eyeSightIcon) {
+            display: none;
+          }
+          &::after {
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8.95245 4.2436C9.29113 4.19353 9.64051 4.16667 10.0003 4.16667C14.2545 4.16667 17.0461 7.9207 17.9839 9.40569C18.0974 9.58542 18.1542 9.67528 18.1859 9.81389C18.2098 9.91799 18.2098 10.0822 18.1859 10.1863C18.1541 10.3249 18.097 10.4154 17.9827 10.5963C17.7328 10.9918 17.3518 11.5476 16.8471 12.1504M5.6036 5.59586C3.80187 6.81808 2.57871 8.51615 2.01759 9.4044C1.90357 9.58489 1.84656 9.67514 1.81478 9.81373C1.79091 9.91783 1.7909 10.082 1.81476 10.1861C1.84652 10.3247 1.90328 10.4146 2.01678 10.5943C2.95462 12.0793 5.74618 15.8333 10.0003 15.8333C11.7157 15.8333 13.1932 15.223 14.4073 14.3972M2.50035 2.5L17.5003 17.5M8.23258 8.23223C7.78017 8.68464 7.50035 9.30964 7.50035 10C7.50035 11.3807 8.61963 12.5 10.0003 12.5C10.6907 12.5 11.3157 12.2202 11.7681 11.7678" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            display: block;
+            width: 1.25rem;
+            height: 1.25rem;
+          }
+        }
+        :global(.vtex-login-2-x-eyeIcon--invisible) {
+          :global(.vtex-login-2-x-eyeSightIcon) {
+            display: none;
+          }
+          &::after {
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.01677 10.5943C1.90328 10.4146 1.84654 10.3248 1.81477 10.1862C1.79091 10.0821 1.79091 9.91794 1.81477 9.81384C1.84654 9.67525 1.90328 9.5854 2.01677 9.40571C2.95461 7.92072 5.74617 4.16669 10.0003 4.16669C14.2545 4.16669 17.0461 7.92072 17.9839 9.4057C18.0974 9.5854 18.1541 9.67525 18.1859 9.81384C18.2098 9.91794 18.2098 10.0821 18.1859 10.1862C18.1541 10.3248 18.0974 10.4146 17.9839 10.5943C17.0461 12.0793 14.2545 15.8334 10.0003 15.8334C5.74617 15.8334 2.95461 12.0793 2.01677 10.5943Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.0003 12.5C11.381 12.5 12.5003 11.3807 12.5003 10C12.5003 8.61931 11.381 7.50002 10.0003 7.50002C8.61962 7.50002 7.50034 8.61931 7.50034 10C7.50034 11.3807 8.61962 12.5 10.0003 12.5Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+            display: block;
+            width: 1.25rem;
+            height: 1.25rem;
+          }
+        }
+      }
+    }
+    .formFooter {
+      border: none;
+      margin-top: 1rem;
+      padding: 0;
+      .sendButton {
+        :global(.vtex-button) {
+          border-radius: 2px;
+          background: #2b2b3a;
+          height: 3rem;
+          :global(.vtex-button__label) {
+            :global(.t-small) {
+              font-family: 'Proxima Nova';
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 24px;
+              letter-spacing: -0.16px;
+            }
+          }
+        }
+      }
+    }
+    .formLinkContainer {
+      margin-top: 1rem;
+      .dontHaveAccount {
+        color: #5e5e5e;
+        font-family: 'Proxima Nova';
+        font-style: normal;
+        font-size: 0;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: -0.16px;
+        &::before {
+          content: 'Não tem uma conta? ';
+          font-size: 16px;
+        }
+        &::after {
+          content: 'Cadastre-se';
+          color: #353535;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .emailVerification,
+  .codeConfirmation {
+    .formTitle {
+      padding: 0;
+      margin: 0 0 1.5rem !important;
+      font-size: 20px;
+    }
+  }
+  .codeConfirmation {
+    .formTitle {
+      font-size: 0px;
+
+      &::after {
+        content: 'Receber código de acesso por e-mail';
+        font-size: 20px;
+      }
+    }
+  }
+  .emailVerification {
+    .inputContainerEmail {
+      &::before {
+        content: 'E-mail';
+        color: #3f3f46;
+        font-family: 'Proxima Nova';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+        padding-bottom: 8px;
+        display: block;
+      }
+      :global(.vtex-input-prefix__group) {
+        @include input-shared;
+
+        :global(.vtex-styleguide-9-x-input) {
+          padding: 0;
+          font-family: 'Proxima Nova';
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: -0.16px;
+        }
+      }
+    }
+  }
+  .emailForm {
+    .formFooter {
+      .sendButton {
+        :global(.vtex-button) {
+          border-radius: 2px;
+          background: #2b2b3a;
+          height: 3rem;
+          :global(.vtex-button__label) {
+            @include button-label-shared;
+            &::before {
+              content: 'Solicitar código';
+            }
+            :global(.t-small) {
+              font-size: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .codeConfirmation {
+    .inputContainerAccessCode {
+      &::before {
+        content: 'Código';
+        color: #3f3f46;
+        font-family: 'Proxima Nova';
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: -0.14px;
+        padding-bottom: 8px;
+        display: block;
+      }
+      :global(.vtex-input-prefix__group) {
+        @include input-shared;
+
+        :global(.vtex-styleguide-9-x-input) {
+          padding: 0;
+          font-family: 'Proxima Nova';
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: -0.16px;
+        }
+      }
+    }
+    .formFooter {
+      border: none;
+      .sendButton {
+        :global(.vtex-button) {
+          border-radius: 2px;
+          background: #2b2b3a;
+          height: 3rem;
+          :global(.vtex-button__label) {
+            @include button-label-shared;
+            &::before {
+              content: 'Confirmar';
+            }
+            :global(.t-small) {
+              font-size: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .backButton {
+    :global(.vtex-button__label) {
+      display: flex;
+      align-items: center;
+      :global(.t-small) {
+        color: #3f3f46;
+      }
+      &::before {
+        content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15.8332 10H4.1665M4.1665 10L9.99984 15.8334M4.1665 10L9.99984 4.16669" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+      .arrowBackIcon {
+        display: none;
+      }
+    }
+    :global(.vtex-button) {
+      &:hover {
+        background-color: transparent;
+      }
+    }
+  }
+}
+@media screen and (max-width: 48rem) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) {
+    .loginOptionsContainer {
+      max-width: 100%;
+      .options {
+        min-width: inherit;
+        .accessCodeOptionBtn,
+        .emailPasswordOptionBtn {
+          :global(.vtex-button) {
+            :global(.vtex-button__label) {
+              padding: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+    .content--emailAndPassword.contentAlwaysWithOptions,
+    .content--emailVerification,
+    .content--codeConfirmation,
+    .content--beginCreatePass,
+    .content--recoveryPassword {
+      padding: 1.5rem;
+      flex-direction: column;
+      width: calc(100% - 2rem);
+      gap: 0.75rem;
+      .contentFormVisible {
+        padding: 0.75rem 0 0;
+        border-top: 1px solid #e4e4e7;
+      }
+    }
+    .content--beginCreatePass,
+    .content--recoveryPassword {
+      .loginOptionsContainer {
+        .optionsListItem:nth-child(2) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 48rem) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) {
+    .content--emailVerification {
+      .loginOptionsContainer {
+        .formTitle {
+          font-size: 0;
+          &::before {
+            content: 'Outras opções de login';
+            font-size: 1.125rem;
+          }
+        }
+      }
+    }
+    .contentFormVisible {
+      height: 23.75rem;
+    }
+    .inputContainerAccessCode {
+      padding: 0;
+    }
+    .formFooter {
+      .backButton {
+        display: none;
+      }
+      .sendButton {
+        width: 100%;
+        :global(.vtex-button) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+:global(.vtex-flex-layout-0-x-flexRowContent--login-page) {
+  .formFooter {
+    border: 0;
+  }
+}
+@media screen and (max-width: 48rem) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--login-page) {
+    .emailVerification,
+    .codeConfirmation {
+      .formTitle {
+        max-width: 80%;
+      }
+    }
+    .content--codeConfirmation {
+      .optionsList {
+        .optionsListItem:first-child {
+          display: none;
+        }
+      }
+    }
+    .backButton {
+      :global(.vtex-button) {
+        :global(.vtex-button__label) {
+          display: flex;
+          align-items: center;
+          color: #3f3f46;
+          font-family: 'Proxima Nova';
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          letter-spacing: -0.16px;
+        }
+      }
+    }
+  }
+}
+.forgotPasswordForm {
+  .formTitle {
+    margin-bottom: 1rem;
+  }
+  .formSubtitle {
+    color: #18181b;
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+    opacity: 0.8;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 0.5rem;
+  }
+  .inputContainerPassword {
+    padding: 0.5rem 0 0;
+  }
+  :global(.vtex-input__suffix) {
+    padding: 0 0.5rem 0 0;
+    :global(.vtex-login-2-x-eyeIcon--visible) {
+      :global(.vtex-login-2-x-eyeSightIcon) {
+        display: none;
+      }
+      &::after {
+        content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M8.95245 4.2436C9.29113 4.19353 9.64051 4.16667 10.0003 4.16667C14.2545 4.16667 17.0461 7.9207 17.9839 9.40569C18.0974 9.58542 18.1542 9.67528 18.1859 9.81389C18.2098 9.91799 18.2098 10.0822 18.1859 10.1863C18.1541 10.3249 18.097 10.4154 17.9827 10.5963C17.7328 10.9918 17.3518 11.5476 16.8471 12.1504M5.6036 5.59586C3.80187 6.81808 2.57871 8.51615 2.01759 9.4044C1.90357 9.58489 1.84656 9.67514 1.81478 9.81373C1.79091 9.91783 1.7909 10.082 1.81476 10.1861C1.84652 10.3247 1.90328 10.4146 2.01678 10.5943C2.95462 12.0793 5.74618 15.8333 10.0003 15.8333C11.7157 15.8333 13.1932 15.223 14.4073 14.3972M2.50035 2.5L17.5003 17.5M8.23258 8.23223C7.78017 8.68464 7.50035 9.30964 7.50035 10C7.50035 11.3807 8.61963 12.5 10.0003 12.5C10.6907 12.5 11.3157 12.2202 11.7681 11.7678" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        display: block;
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
+    :global(.vtex-login-2-x-eyeIcon--invisible) {
+      :global(.vtex-login-2-x-eyeSightIcon) {
+        display: none;
+      }
+      &::after {
+        content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M2.01677 10.5943C1.90328 10.4146 1.84654 10.3248 1.81477 10.1862C1.79091 10.0821 1.79091 9.91794 1.81477 9.81384C1.84654 9.67525 1.90328 9.5854 2.01677 9.40571C2.95461 7.92072 5.74617 4.16669 10.0003 4.16669C14.2545 4.16669 17.0461 7.92072 17.9839 9.4057C18.0974 9.5854 18.1541 9.67525 18.1859 9.81384C18.2098 9.91794 18.2098 10.0821 18.1859 10.1862C18.1541 10.3248 18.0974 10.4146 17.9839 10.5943C17.0461 12.0793 14.2545 15.8334 10.0003 15.8334C5.74617 15.8334 2.95461 12.0793 2.01677 10.5943Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.0003 12.5C11.381 12.5 12.5003 11.3807 12.5003 10C12.5003 8.61931 11.381 7.50002 10.0003 7.50002C8.61962 7.50002 7.50034 8.61931 7.50034 10C7.50034 11.3807 8.61962 12.5 10.0003 12.5Z" stroke="%2352525B" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        display: block;
+        width: 1.25rem;
+        height: 1.25rem;
+      }
+    }
+  }
+  :global(.vtex-styleguide-9-x-input) {
+    font-family: 'Proxima Nova';
+  }
+  .formFooter {
+    padding: 0;
+  }
+  .sendButton {
+    :global(.vtex-button) {
+      height: 3rem;
+      border-radius: 2px;
+      background: #2b2b3a;
+      :global(.vtex-button__label) {
         color: #fff;
         font-family: 'Proxima Nova';
         font-size: 16px;
@@ -1013,14 +1080,22 @@
         line-height: 24px;
         letter-spacing: -0.16px;
       }
+      @media screen and (min-width: 48rem) {
+        &:hover {
+          background-color: #424250;
+          transition: all 0.3s ease-in-out;
+        }
+      }
     }
   }
 }
-@media screen and (max-width: 768px) {
-  .content--emailAndPassword.contentAlwaysWithOptions,
-  .content--emailVerification,
-  .content--codeConfirmation {
-    padding: 0 1rem;
-    flex-direction: column;
-  }
+
+.portalContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+.facebookOptionBtn .oauthLabel .oauthProvider {
+  margin: 0;
 }
