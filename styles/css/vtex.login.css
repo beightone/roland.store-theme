@@ -10,8 +10,8 @@
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
 /* Grid breakpoints */
-.container :global(.vtex-button):hover {
-  background-color: transparent;
+.container :global(.vtex-button) {
+  background-color: transparent !important;
 }
 
 .label {
@@ -480,6 +480,9 @@
   height: 18px;
   width: 17px;
 }
+.facebookOptionBtn .oauthLabel .oauthProvider {
+  margin-left: -0.2rem !important;
+}
 
 .formTitle {
   color: #18181b;
@@ -578,6 +581,10 @@
 }
 :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content .loginOptionsContainer .optionsList .optionsListItem .emailPasswordOptionBtn :global(.vtex-button) :global(.vtex-button__label)::before {
   color: #3f3f46;
+}
+:global(.vtex-flex-layout-0-x-flexRowContent--login-page) .content .loginOptionsContainer .optionsList .optionsListItem:nth-child(2) {
+  order: 1;
+  margin: -0.5rem 0 0;
 }
 
 .forgotPasswordLink {
@@ -867,7 +874,7 @@
     font-size: 1.125rem;
   }
   :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .contentFormVisible {
-    height: 23.75rem;
+    min-height: 23.75rem;
   }
   :global(.vtex-flex-layout-0-x-flexRowContent--login-page) .inputContainerAccessCode {
     padding: 0;

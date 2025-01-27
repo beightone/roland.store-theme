@@ -28,9 +28,7 @@
 }
 .container {
   :global(.vtex-button) {
-    &:hover {
-      background-color: transparent;
-    }
+    background-color: transparent !important;
   }
 }
 .label {
@@ -527,6 +525,9 @@
     height: 18px;
     width: 17px;
   }
+  .oauthProvider {
+    margin-left: -0.2rem !important;
+  }
 }
 .formTitle {
   color: #18181b;
@@ -646,6 +647,10 @@
               }
             }
           }
+        }
+        .optionsListItem:nth-child(2) {
+          order: 1;
+          margin: -0.5rem 0 0;
         }
       }
     }
@@ -963,7 +968,7 @@
       }
     }
     .contentFormVisible {
-      height: 23.75rem;
+      min-height: 23.75rem;
     }
     .inputContainerAccessCode {
       padding: 0;
@@ -1089,7 +1094,6 @@
     }
   }
 }
-
 .portalContainer {
   position: fixed;
   width: 100vw;
