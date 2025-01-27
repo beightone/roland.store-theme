@@ -1,0 +1,62 @@
+:global(.vtex-login-2-x-portalContainer) {
+  :global(.vtex-login-2-x-portalWrapper .flex.justify-start) {
+    z-index: 9;
+  }
+  @media screen and (max-width: 105rem) {
+    &::before {
+      content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M14.1668 5.83331L5.8335 14.1666M5.8335 5.83331L14.1668 14.1666" stroke="%23A1A1AA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      height: 1.25rem;
+      width: 1.25rem;
+      position: absolute;
+      z-index: 2147483648;
+      top: 8.5rem;
+      cursor: pointer;
+      left: calc(100vw - 7%);
+    }
+  }
+}
+@media screen and (max-width: 75.625rem) {
+  :global(.vtex-login-2-x-portalContainer) {
+    &::before {
+      left: calc(100vw - 5%);
+    }
+  }
+}
+@media screen and (min-width: 75.625rem) and (max-width: 78.75rem) {
+  :global(.vtex-login-2-x-portalContainer) {
+    &::before {
+      left: calc(100vw - 8%);
+    }
+  }
+}
+@media screen and (min-width: 1260px) and (max-width: 83.125rem) {
+  :global(.vtex-login-2-x-portalContainer) {
+    &::before {
+      left: calc(100vw - 12%);
+    }
+  }
+}
+@media screen and (min-width: 83.125rem) and (max-width: 88.75rem) {
+  :global(.vtex-login-2-x-portalContainer) {
+    &::before {
+      top: 7.5rem;
+      left: calc(100vw - 14%);
+    }
+  }
+}
+@media screen and (min-width: 88.75rem) and (max-width: 93.75rem) {
+  :global(.vtex-login-2-x-portalContainer) {
+    &::before {
+      top: 7.5rem;
+      left: calc(100vw - 16%);
+    }
+  }
+}
+@media screen and (min-width: 93.75rem) {
+  :global(.vtex-login-2-x-portalContainer) {
+    &::before {
+      top: 7.5rem;
+      left: calc(100vw - 20%);
+    }
+  }
+}
