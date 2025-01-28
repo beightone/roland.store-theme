@@ -11,7 +11,7 @@
       "product-instruction-manual",
       "product-content-items",
       "product-video",
-      "buy-together",
+      "flex-layout.row#buyt-together",
       "flex-layout.row#product-shelf",
       "flex-layout.row#product-trustvox-avaliations",
       "flex-layout.row#newsletter"
@@ -21,6 +21,15 @@
       "header": "header",
       "footer": "flex-layout.row#footer-roland"
     }
+  },
+  "flex-layout.row#buyt-together": {
+    "title": "Seção - Compre junto",
+    "props": {
+      "blockClass": "buy-together"
+    },
+    "children": [
+      "buy-together"
+    ]
   },
   "flex-layout.row#product-details": {
     "title": "Seção - Detalhes do produto",
