@@ -17,4 +17,12 @@
   :global(#ot-sdk-btn-floating.ot-floating-button) {
     bottom: 6.5rem !important;
   }
+
+  :global(.vtex-flex-layout-0-x-flexRowContent--product-floating-infos) {
+    :global(.roland-assembly-options-0-x-add-to-cart-button) {
+      width: 171px!important;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }

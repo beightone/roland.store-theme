@@ -9,6 +9,28 @@
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
 /* Grid breakpoints */
+.flexRow--blog-posts {
+  background: #18181B;
+  padding: 48px 0;
+  padding-bottom: 75px;
+}
+@media screen and (max-width: 768px) {
+  .flexRow--blog-posts {
+    padding: 24px 16px;
+    padding-bottom: 54px;
+  }
+}
+
+.flexCol--blog-posts-content {
+  max-width: 1248px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .flexCol--blog-posts-content {
+    margin-right: 0;
+  }
+}
+
 .flexRow--explore-our-categories {
   padding: 48px 0;
 }
@@ -77,28 +99,6 @@
   .flexCol--explore-our-categories-content {
     padding: 0 16px;
     gap: 0;
-  }
-}
-
-.flexRow--blog-posts {
-  background: #18181B;
-  padding: 48px 0;
-  padding-bottom: 75px;
-}
-@media screen and (max-width: 768px) {
-  .flexRow--blog-posts {
-    padding: 24px 16px;
-    padding-bottom: 54px;
-  }
-}
-
-.flexCol--blog-posts-content {
-  max-width: 1248px;
-  margin: 0 auto;
-}
-@media screen and (max-width: 768px) {
-  .flexCol--blog-posts-content {
-    margin-right: 0;
   }
 }
 
@@ -675,6 +675,10 @@
   }
 }
 
+.flexRow--buy-together {
+  background-color: #f4f4f5;
+}
+
 .flexRowContent--list-price-wrapper {
   display: flex;
   gap: 8px;
@@ -705,13 +709,11 @@
   margin-bottom: 20px;
 }
 
-.flexRowContent--product-buy-button,
-:global(.vtex-modal-layout-0-x-paper--buy-button-modal) {
+.flexRowContent--product-buy-button :global(.vtex-modal-layout-0-x-paper--buy-button-modal) {
   margin-top: 20px;
   gap: 20px;
 }
-.flexRowContent--product-buy-button :global(.vtex-button),
-:global(.vtex-modal-layout-0-x-paper--buy-button-modal) :global(.vtex-button) {
+.flexRowContent--product-buy-button :global(.vtex-modal-layout-0-x-paper--buy-button-modal) :global(.vtex-button) {
   border-radius: var(--radius-rounded-sm, 2px);
   background: var(--bg-brand-secondary-bold-base, #ff5a00);
   border: none;
@@ -719,17 +721,16 @@
   max-width: 308px;
   width: 100%;
 }
-.flexRowContent--product-buy-button :global(.vtex-button):hover,
-:global(.vtex-modal-layout-0-x-paper--buy-button-modal) :global(.vtex-button):hover {
+.flexRowContent--product-buy-button :global(.vtex-modal-layout-0-x-paper--buy-button-modal) :global(.vtex-button):hover {
   background: var(--bg-brand-secondary-bold-hover, #2b2b3a);
 }
-.flexRowContent--product-buy-button :global(.vtex-button) :global(.vtex-button__label),
-:global(.vtex-modal-layout-0-x-paper--buy-button-modal) :global(.vtex-button) :global(.vtex-button__label) {
+.flexRowContent--product-buy-button :global(.vtex-modal-layout-0-x-paper--buy-button-modal) :global(.vtex-button) :global(.vtex-button__label) {
   padding: 10px 16px !important;
 }
 
 .flexRowContent--product-buy-button {
   display: flex;
+  gap: 8px;
 }
 .flexRowContent--product-buy-button .stretchChildrenWidth:first-child {
   max-width: 120px;
@@ -831,6 +832,11 @@
   width: min-content;
   min-width: 11rem;
 }
+@media screen and (max-width: 768px) {
+  .flexRow--floating-buy-button .flexRow--product-floating-infos .flexRowContent--product-floating-infos .flexCol--product-floating-prices .flexColChild--product-floating-prices {
+    min-width: unset;
+  }
+}
 .flexRow--floating-buy-button .flexRow--product-floating-infos .flexRowContent--product-floating-infos .flexCol--product-floating-prices .flexColChild--product-floating-prices :global(.vtex-product-price-1-x-newSpotPriceValue--product-spot-price-savings) {
   color: #18181b;
 }
@@ -843,7 +849,7 @@
   line-height: 24px;
   letter-spacing: -0.16px;
 }
-.flexRow--floating-buy-button .flexRow--product-floating-infos .flexRowContent--product-floating-infos :global(.vtex-button) {
+.flexRow--floating-buy-button .flexRow--product-floating-infos .flexRowContent--product-floating-infos :not(:global(.vtex-slider-layout-0-x-sliderLayoutContainer--assembly-options)) :global(.vtex-button) {
   width: 21rem;
   max-width: 100%;
   border-radius: 2px;
@@ -852,10 +858,10 @@
   border: none;
   transition: all 0.2s ease-in-out;
 }
-.flexRow--floating-buy-button .flexRow--product-floating-infos .flexRowContent--product-floating-infos :global(.vtex-button):hover {
+.flexRow--floating-buy-button .flexRow--product-floating-infos .flexRowContent--product-floating-infos :not(:global(.vtex-slider-layout-0-x-sliderLayoutContainer--assembly-options)) :global(.vtex-button):hover {
   background-color: #2b2b3a;
 }
-.flexRow--floating-buy-button .flexRow--product-floating-infos .flexRowContent--product-floating-infos :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText--product-page-add-to-cart) {
+.flexRow--floating-buy-button .flexRow--product-floating-infos .flexRowContent--product-floating-infos :not(:global(.vtex-slider-layout-0-x-sliderLayoutContainer--assembly-options)) :global(.vtex-button) :global(.vtex-add-to-cart-button-0-x-buttonText--product-page-add-to-cart) {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.16px;
@@ -871,10 +877,20 @@
   .flexRow--floating-buy-button .flexRow--product-floating-infos .flexRowContent--product-floating-infos {
     gap: 0.25rem;
   }
+  .flexRow--floating-buy-button .flexRow--product-floating-infos .flexRowContent--product-floating-infos .flexCol--product-floating-prices {
+    justify-content: flex-start;
+  }
   .flexRow--floating-buy-button .flexRow--product-floating-infos .flexRowContent--product-floating-infos .flexCol--product-floating-prices .flexColChild--product-floating-prices {
     width: min-content;
     min-width: 11rem;
   }
+}
+@media screen and (max-width: 48rem) and (max-width: 768px) {
+  .flexRow--floating-buy-button .flexRow--product-floating-infos .flexRowContent--product-floating-infos .flexCol--product-floating-prices .flexColChild--product-floating-prices {
+    min-width: unset;
+  }
+}
+@media screen and (max-width: 48rem) {
   .flexRow--floating-buy-button .flexRow--product-floating-infos .flexRowContent--product-floating-infos .flexCol--product-floating-prices .flexColChild--product-floating-prices :global(.vtex-product-price-1-x-newSpotPriceValue--product-spot-price-savings) {
     font-size: 1.25rem;
     line-height: 1.75rem;

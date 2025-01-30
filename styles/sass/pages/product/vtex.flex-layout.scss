@@ -50,7 +50,7 @@
   }
 }
 
-.flexRowContent--product-buy-button,
+.flexRowContent--product-buy-button
 :global(.vtex-modal-layout-0-x-paper--buy-button-modal) {
   margin-top: 20px;
   gap: 20px;
@@ -75,6 +75,7 @@
 
 .flexRowContent--product-buy-button {
   display: flex;
+  gap: 8px;
 
   .stretchChildrenWidth {
     &:first-child {
@@ -164,6 +165,7 @@
     .flexRowContent--product-floating-infos {
       gap: 3rem;
       align-items: center;
+
       .flexCol--product-floating-prices {
         display: flex;
         flex-direction: row;
@@ -172,6 +174,9 @@
         .flexColChild--product-floating-prices {
           width: min-content;
           min-width: 11rem;
+          @media screen and (max-width: 768px) {
+            min-width: unset;
+          }
           :global(
               .vtex-product-price-1-x-newSpotPriceValue--product-spot-price-savings
             ) {
@@ -188,7 +193,7 @@
           letter-spacing: -0.16px;
         }
       }
-      :global(.vtex-button) {
+      :not(:global(.vtex-slider-layout-0-x-sliderLayoutContainer--assembly-options)) :global(.vtex-button) {
         width: 21rem;
         max-width: 100%;
         border-radius: 2px;
@@ -221,10 +226,16 @@
     .flexRow--product-floating-infos {
       .flexRowContent--product-floating-infos {
         gap: 0.25rem;
+        
         .flexCol--product-floating-prices {
+          justify-content: flex-start;
           .flexColChild--product-floating-prices {
             width: min-content;
             min-width: 11rem;
+
+            @media screen and (max-width: 768px) {
+              min-width: unset;
+            }
             :global(
                 .vtex-product-price-1-x-newSpotPriceValue--product-spot-price-savings
               ) {

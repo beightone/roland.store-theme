@@ -15,7 +15,7 @@
   "custom-buy-button-popup-content": {
     "props": {
       "RichText": "rich-text#buy-button-modal-content",
-      "BuyButton": "add-to-cart-button#product-page"
+      "BuyButton": "add-to-cart-button-trigger"
     }
   },
   "modal-actions.close#buy-button-popup": {

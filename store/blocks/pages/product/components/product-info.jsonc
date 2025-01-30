@@ -72,10 +72,16 @@
         }
       ],
       "Then": "modal-trigger#buy-button",
-      "Else": "add-to-cart-button#product-page"
+      "Else": "add-to-cart-button-trigger"
     }
   },
-
+  "add-to-cart-button-trigger": {
+    "children": ["add-to-cart-button#product-page"],
+    "props": {
+      "blockClass": "add-to-cart-button-trigger"
+    },
+    "blocks": ["list-context.product-list#shelf-list-assembly-options"]
+  },
   "product-quantity#product-page": {
     "props": {
       "blockClass": "product-quantity",
