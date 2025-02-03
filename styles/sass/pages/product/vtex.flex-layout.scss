@@ -193,25 +193,25 @@
           letter-spacing: -0.16px;
         }
       }
-      :not(:global(.vtex-slider-layout-0-x-sliderLayoutContainer--assembly-options)) :global(.vtex-button) {
-        width: 21rem;
-        max-width: 100%;
-        border-radius: 2px;
-        background-color: #ff5a00;
-        height: 3rem;
-        border: none;
-        transition: all 0.2s ease-in-out;
-        &:hover {
-          background-color: #2b2b3a;
-        }
-        :global(
-            .vtex-add-to-cart-button-0-x-buttonText--product-page-add-to-cart
-          ) {
-          font-size: 16px;
-          line-height: 24px;
-          letter-spacing: -0.16px;
-        }
-      }
+      //  :global(.vtex-button) {
+      //   width: 21rem;
+      //   max-width: 100%;
+      //   border-radius: 2px;
+      //   background-color: #ff5a00;
+      //   height: 3rem;
+      //   border: none;
+      //   transition: all 0.2s ease-in-out;
+      //   &:hover {
+      //     background-color: #2b2b3a;
+      //   }
+      //   :global(
+      //       .vtex-add-to-cart-button-0-x-buttonText--product-page-add-to-cart
+      //     ) {
+      //     font-size: 16px;
+      //     line-height: 24px;
+      //     letter-spacing: -0.16px;
+      //   }
+      // }
     }
   }
   @media screen and (max-width: 48rem) {
@@ -224,6 +224,7 @@
     }
 
     .flexRow--product-floating-infos {
+      width: 100%;
       .flexRowContent--product-floating-infos {
         gap: 0.25rem;
         
@@ -248,12 +249,10 @@
             display: none;
           }
         }
-        :global(.vtex-button) {
-          max-width: 48%;
-          height: 2.5rem;
-          white-space: nowrap;
-        }
+        
       }
     }
   }
 }
+
+
