@@ -62,6 +62,7 @@
     transition: all 0.2s ease-in-out;
     max-width: 308px;
     width: 100%;
+    border: none;
 
     &:hover {
       background: var(--bg-brand-secondary-bold-hover, #2b2b3a);
@@ -76,6 +77,13 @@
 .flexRowContent--product-buy-button {
   display: flex;
   gap: 8px;
+
+  :global(.vtex-button) {
+    border: none;
+    border-radius: 2px;
+    transition: all 0.2s ease-in-out;
+
+  }
 
   .stretchChildrenWidth {
     &:first-child {
@@ -165,6 +173,12 @@
     .flexRowContent--product-floating-infos {
       gap: 3rem;
       align-items: center;
+
+      :global(.vtex-button) {
+        border: none;
+        border-radius: 2px;
+        transition: all 0.2s ease-in-out;
+      }
 
       .flexCol--product-floating-prices {
         display: flex;
