@@ -9,85 +9,160 @@
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;600;700;800;900&display=swap");
 /* Grid breakpoints */
-.imageElement--payment-method {
-  width: 48px;
-  height: 34px;
-}
-
-:global(.vtex-store-header-2-x-headerStickyRow) .container {
-  width: 100%;
-  max-width: 100%;
-  padding: 0;
-}
-
-.closeIcon--search-bar {
-  display: none;
-}
-
-.searchBarInnerContainer {
-  border-radius: var(--radius-rounded-sm, 2px);
-  border: 1px solid var(--border-input-base, #D4D4D8);
-  padding: 9px 16px;
-}
-.searchBarInnerContainer--search-bar--opened {
-  border: 1.5px solid var(--border-focus-base, #EE8146);
-}
-
-.searchBarContainer {
-  max-width: 698px;
-  position: relative;
-  width: 100%;
+.infoCardContainer--our-categories-main-image {
+  max-width: 680px;
+  background-color: black;
+  padding: 48px;
   display: flex;
-  height: 40px;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  align-self: stretch;
+  align-items: flex-end;
+  position: relative;
+  flex-direction: column-reverse;
   border-radius: 2px;
-  background: #FFF;
-  margin: unset;
+  height: 100%;
 }
-@media screen and (max-width: 1024px) {
-  .searchBarContainer {
+@media screen and (max-width: 1025px) {
+  .infoCardContainer--our-categories-main-image {
     max-width: 100%;
+    align-items: center;
+    padding: 16px 24px 32px 24px;
+    min-height: 324px;
   }
 }
-.searchBarContainer .searchBarIcon--search-bar {
-  background-image: url("assets/svgs/search-icon.svg");
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  padding-left: 8px;
+.infoCardContainer--our-categories-main-image .infoCardImageContainer--our-categories-main-image {
+  max-width: 584px;
+  max-height: 431px;
+  width: auto;
+  height: auto;
 }
-.searchBarContainer .searchBarIcon--search-bar .searchIcon {
-  display: none;
-}
-.searchBarContainer :global(.vtex-styleguide-9-x-input) {
+.infoCardContainer--our-categories-main-image .infoCardTextContainer--our-categories-main-image,
+.infoCardContainer--our-categories-main-image .infoCardCallActionContainer--our-categories-main-image {
+  margin: 0;
   width: 100%;
-  padding: 0;
-  border-right: 1px solid var(--border-input-base, #D4D4D8);
-  margin-right: 8px;
 }
-.searchBarContainer :global(.vtex-styleguide-9-x-input)::placeholder {
-  color: var(--text-neutral-bold, #18181B);
+.infoCardContainer--our-categories-main-image :global(.vtex-button__label) {
+  padding: 0 !important;
+  margin: 0;
+  color: #FFF;
   font-family: "Proxima Nova";
-  font-size: 14px;
+  font-size: 40px;
   font-style: normal;
   font-weight: 500;
-  line-height: 20px;
-  letter-spacing: -0.14px;
+  line-height: 48px;
+  letter-spacing: -0.4px;
+  text-align: left;
+  width: 61%;
+  text-transform: math-auto;
 }
-.searchBarContainer :global(.vtex-input-prefix__group) {
-  height: 100%;
-  border: none;
-}
-
-@media screen and (max-width: 1025px) {
-  .imageElementLink--logo {
-    max-width: 111px;
-    display: block;
+@media screen and (max-width: 1168px) {
+  .infoCardContainer--our-categories-main-image :global(.vtex-button__label) {
+    width: 77%;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.24px;
   }
 }
+
+.infoCardContainer--our-categories-card {
+  position: relative;
+  border-radius: 2px;
+  background: #F0F0F0;
+  width: 332px;
+  height: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  padding: 0;
+  transition: all 0.1s ease-in-out;
+}
+@media screen and (max-width: 500px) {
+  .infoCardContainer--our-categories-card {
+    height: 160px;
+  }
+}
+.infoCardContainer--our-categories-card:hover {
+  background: #E5E5E5;
+}
+.infoCardContainer--our-categories-card .infoCardTextContainer--our-categories-card {
+  padding: 0;
+  position: absolute;
+  bottom: 40px;
+  width: fit-content;
+}
+@media screen and (max-width: 500px) {
+  .infoCardContainer--our-categories-card .infoCardTextContainer--our-categories-card {
+    bottom: 0;
+  }
+}
+.infoCardContainer--our-categories-card .infoCardTextContainer--our-categories-card .infoCardCallActionContainer--our-categories-card {
+  margin: 0 !important;
+  width: 100%;
+}
+.infoCardContainer--our-categories-card .infoCardTextContainer--our-categories-card .infoCardCallActionContainer--our-categories-card :global(.vtex-button__label) {
+  color: #000;
+  text-align: center;
+  font-family: "Proxima Nova";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.24px;
+  width: 100%;
+  padding: 0 !important;
+  text-transform: math-auto;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .infoCardContainer--our-categories-card .infoCardTextContainer--our-categories-card .infoCardCallActionContainer--our-categories-card :global(.vtex-button__label) {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+  }
+}
+.infoCardContainer--our-categories-card .infoCardImageContainer--our-categories-card {
+  position: absolute;
+  max-width: 176px;
+  max-height: 176px;
+  width: 100%;
+  height: 100%;
+  top: 40px;
+  mix-blend-mode: multiply;
+}
+@media screen and (max-width: 500px) {
+  .infoCardContainer--our-categories-card .infoCardImageContainer--our-categories-card {
+    max-width: 90px;
+    max-height: 90px;
+    top: 19px;
+  }
+}
+.infoCardContainer--our-categories-card .infoCardImageContainer--our-categories-card .infoCardImage--our-categories-card {
+  width: 100%;
+  height: 100%;
+}
+
+.imageElement--newsletter-image {
+  height: fit-content;
+  align-self: center;
+}
+@media screen and (max-width: 768px) {
+  .imageElement--newsletter-image {
+    width: 100%;
+    margin-top: 32px;
+  }
+}
+
+.discountContainer .discountInsideContainer {
+  display: none;
+}
+
+.imageElement--simple-banner-image-1 {
+  margin-right: 24px;
+}
+
+.imageElement--mobile {
+  width: 100%;
+}
+
 .infoCardContainer--info-card-black-friday-benefits {
   border-radius: var(--radius-rounded-sm, 2px);
   background: #121212 !important;
@@ -320,156 +395,217 @@
   }
 }
 
-.infoCardContainer--our-categories-main-image {
-  max-width: 680px;
-  background-color: black;
-  padding: 48px;
-  display: flex;
-  align-items: flex-end;
-  position: relative;
-  flex-direction: column-reverse;
-  border-radius: 2px;
-  height: 100%;
+.productImagesContainer--product-image--carousel .carouselContainer--product-image .carouselGaleryThumbs--product-image {
+  width: fit-content;
 }
-@media screen and (max-width: 1025px) {
-  .infoCardContainer--our-categories-main-image {
-    max-width: 100%;
-    align-items: center;
-    padding: 16px 24px 32px 24px;
-    min-height: 324px;
-  }
+.productImagesContainer--product-image--carousel .productImagesThumbCaret--product-image::after {
+  content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M7.5 15L12.5 10L7.5 5" stroke="%2352525B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+  transform: rotate(90deg);
+  border-radius: var(--radius-rounded-full, 9999px);
+  background: var(--bg-brand-primary-subtlest-base, #fff);
+  padding: 10px 11px;
 }
-.infoCardContainer--our-categories-main-image .infoCardImageContainer--our-categories-main-image {
-  max-width: 584px;
-  max-height: 431px;
-  width: auto;
-  height: auto;
+.productImagesContainer--product-image--carousel .productImagesThumbCaret--product-image .caretIcon {
+  display: none;
 }
-.infoCardContainer--our-categories-main-image .infoCardTextContainer--our-categories-main-image,
-.infoCardContainer--our-categories-main-image .infoCardCallActionContainer--our-categories-main-image {
-  margin: 0;
+.productImagesContainer--product-image--carousel .productImagesThumb--product-image {
+  max-width: 84px;
+  max-height: 84px !important;
   width: 100%;
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.infoCardContainer--our-categories-main-image :global(.vtex-button__label) {
-  padding: 0 !important;
-  margin: 0;
-  color: #FFF;
+.productImagesContainer--product-image--carousel .productImagesThumb--product-image .figure--product-image {
+  border-radius: 2px;
+}
+.productImagesContainer--product-image--carousel .productImagesThumb--product-image .carouselThumbBorder {
+  border-radius: var(--radius-rounded-sm, 2px);
+  border: 2px solid var(--bg-brand-secondary-subtlest-base, #dcdcde);
+}
+.productImagesContainer--product-image--carousel .productImagesThumbActive--product-image .carouselThumbBorder {
+  border: 2px solid var(--text-link-primary-default-base, #ff5a00);
+}
+.productImagesContainer--product-image--carousel .productImage--product-image {
+  max-width: 700px;
+  max-height: 504px;
+}
+.productImagesContainer--product-image--carousel .carouselGaleryCursor {
+  padding: 28px 32px;
+  padding-bottom: 16px;
+}
+.productImagesContainer--product-image--carousel .carouselGaleryCursor .swiperCaretNext--product-image,
+.productImagesContainer--product-image--carousel .carouselGaleryCursor .swiperCaretPrev--product-image {
+  display: none;
+}
+.productImagesContainer--product-image--carousel .gradientBaseBottom,
+.productImagesContainer--product-image--carousel .gradientBaseTop {
+  background-color: #fff;
+  opacity: 1;
+}
+
+.productBrand--product-name {
+  color: var(--Brand-Primary-Darkest, #353535);
   font-family: "Proxima Nova";
-  font-size: 40px;
+  font-size: 32px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 48px;
-  letter-spacing: -0.4px;
-  text-align: left;
-  width: 61%;
-  text-transform: math-auto;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  margin: 0;
+  margin-bottom: 16px;
+  display: block;
 }
-@media screen and (max-width: 1168px) {
-  .infoCardContainer--our-categories-main-image :global(.vtex-button__label) {
-    width: 77%;
+@media screen and (max-width: 768px) {
+  .productBrand--product-name {
     font-size: 24px;
     line-height: 32px;
     letter-spacing: -0.24px;
   }
 }
 
-.infoCardContainer--our-categories-card {
-  position: relative;
-  border-radius: 2px;
-  background: #F0F0F0;
-  width: 332px;
-  height: 320px;
+.shareContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  border-radius: 2px;
-  padding: 0;
-  transition: all 0.1s ease-in-out;
+  gap: 12px;
+  margin: 20px auto 28px auto;
 }
-@media screen and (max-width: 500px) {
-  .infoCardContainer--our-categories-card {
-    height: 160px;
-  }
+.shareContainer .shareButtons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
-.infoCardContainer--our-categories-card:hover {
-  background: #E5E5E5;
-}
-.infoCardContainer--our-categories-card .infoCardTextContainer--our-categories-card {
-  padding: 0;
-  position: absolute;
-  bottom: 40px;
-  width: fit-content;
-}
-@media screen and (max-width: 500px) {
-  .infoCardContainer--our-categories-card .infoCardTextContainer--our-categories-card {
-    bottom: 0;
-  }
-}
-.infoCardContainer--our-categories-card .infoCardTextContainer--our-categories-card .infoCardCallActionContainer--our-categories-card {
-  margin: 0 !important;
-  width: 100%;
-}
-.infoCardContainer--our-categories-card .infoCardTextContainer--our-categories-card .infoCardCallActionContainer--our-categories-card :global(.vtex-button__label) {
-  color: #000;
-  text-align: center;
+.shareContainer .shareLabel {
+  color: var(--Brand-Primary-Darkest, #353535);
   font-family: "Proxima Nova";
-  font-size: 24px;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 32px;
-  letter-spacing: -0.24px;
-  width: 100%;
-  padding: 0 !important;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  margin: 0;
+}
+.shareContainer .shareSocialButton {
+  transition: all 0.2s ease-in-out;
+}
+.shareContainer .shareSocialButton .shareSocialIcon {
+  display: none;
+}
+.shareContainer .shareSocialButton:hover {
+  opacity: 1;
+}
+.shareContainer .shareSocialButton::before {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.shareContainer .shareSocialButton--facebook::before {
+  content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_5934_3604)"><path d="M17.6524 0H2.33994C1.04752 0 -0.0038147 1.05133 -0.0038147 2.34375V17.6562C-0.0038147 18.9487 1.04752 20 2.33994 20H17.6524C18.9449 20 19.9962 18.9487 19.9962 17.6562V2.34375C19.9962 1.05133 18.9449 0 17.6524 0ZM18.4337 17.6562C18.4337 18.087 18.0832 18.4375 17.6524 18.4375H13.0431V12.7344H15.5441L15.8356 10.3125H13.0431V7.69531C13.0431 7.02728 13.5469 6.52344 14.2149 6.52344H15.9727V4.25781C15.5101 4.1925 14.6176 4.10156 14.2149 4.10156C13.3038 4.10156 12.3906 4.48593 11.7094 5.15594C11.0077 5.84625 10.6212 6.75049 10.6212 7.70218V10.3125H8.08212V12.7344H10.6212V18.4375H2.33994C1.90918 18.4375 1.55869 18.087 1.55869 17.6562V2.34375C1.55869 1.91299 1.90918 1.5625 2.33994 1.5625H17.6524C18.0832 1.5625 18.4337 1.91299 18.4337 2.34375V17.6562Z" fill="black"/></g><defs><clipPath id="clip0_5934_3604"><rect width="20" height="20" fill="white" transform="translate(-0.0038147)"/></clipPath></defs></svg>');
+}
+.shareContainer .shareSocialButton--facebook:hover::before {
+  content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_5934_3575)"><path d="M17.6562 0H2.34375C1.05133 0 0 1.05133 0 2.34375V17.6562C0 18.9487 1.05133 20 2.34375 20H17.6562C18.9487 20 20 18.9487 20 17.6562V2.34375C20 1.05133 18.9487 0 17.6562 0ZM18.4375 17.6562C18.4375 18.087 18.087 18.4375 17.6562 18.4375H13.0469V12.7344H15.5479L15.8394 10.3125H13.0469V7.69531C13.0469 7.02728 13.5507 6.52344 14.2188 6.52344H15.9766V4.25781C15.5139 4.1925 14.6214 4.10156 14.2188 4.10156C13.3076 4.10156 12.3944 4.48593 11.7133 5.15594C11.0115 5.84625 10.625 6.75049 10.625 7.70218V10.3125H8.08594V12.7344H10.625V18.4375H2.34375C1.91299 18.4375 1.5625 18.087 1.5625 17.6562V2.34375C1.5625 1.91299 1.91299 1.5625 2.34375 1.5625H17.6562C18.087 1.5625 18.4375 1.91299 18.4375 2.34375V17.6562Z" fill="%23FF5A00"/></g><defs><clipPath id="clip0_5934_3575"><rect width="20" height="20" fill="white"/></clipPath></defs></svg>');
+}
+.shareContainer .shareSocialButton--whatsapp::before {
+  content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_5934_3602)"><path d="M14.5892 11.9226L14.5817 11.9851C12.7492 11.0717 12.5575 10.9501 12.3208 11.3051C12.1567 11.5509 11.6783 12.1084 11.5342 12.2734C11.3883 12.4359 11.2433 12.4484 10.9958 12.3359C10.7458 12.2109 9.94333 11.9484 8.99333 11.0984C8.25333 10.4359 7.75667 9.62339 7.61 9.37339C7.36583 8.95173 7.87667 8.89173 8.34167 8.01173C8.425 7.83673 8.3825 7.69923 8.32083 7.57506C8.25833 7.45006 7.76083 6.22506 7.5525 5.73673C7.3525 5.25006 7.14667 5.31173 6.9925 5.31173C6.5125 5.27006 6.16167 5.27673 5.8525 5.59839C4.5075 7.07673 4.84667 8.60173 5.9975 10.2234C8.25917 13.1834 9.46417 13.7284 11.6675 14.4851C12.2625 14.6742 12.805 14.6476 13.2342 14.5859C13.7125 14.5101 14.7067 13.9851 14.9142 13.3976C15.1267 12.8101 15.1267 12.3226 15.0642 12.2101C15.0025 12.0976 14.8392 12.0351 14.5892 11.9226Z" fill="black"/><path d="M17.1 2.87404C10.6925 -3.32013 0.0883333 1.17237 0.0841667 9.91071C0.0841667 11.6574 0.541667 13.3607 1.41333 14.8649L0 19.9999L5.27917 18.6232C11.8667 22.1815 19.9967 17.4565 20 9.91571C20 7.26904 18.9667 4.77821 17.0875 2.90654L17.1 2.87404ZM18.335 9.88821C18.33 16.249 11.3475 20.2215 5.825 16.9749L5.525 16.7965L2.4 17.609L3.2375 14.5715L3.03833 14.259C-0.398333 8.78821 3.55 1.63821 10.06 1.63821C12.2717 1.63821 14.3475 2.50071 15.9108 4.06321C17.4733 5.61237 18.335 7.68821 18.335 9.88821Z" fill="black"/></g><defs><clipPath id="clip0_5934_3602"><rect width="20" height="20" fill="white"/></clipPath></defs></svg>');
+}
+.shareContainer .shareSocialButton--whatsapp:hover::before {
+  content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_5934_3566)"><path d="M14.5892 11.9226L14.5817 11.9851C12.7492 11.0717 12.5575 10.9501 12.3208 11.3051C12.1567 11.5509 11.6783 12.1084 11.5342 12.2734C11.3883 12.4359 11.2433 12.4484 10.9958 12.3359C10.7458 12.2109 9.94333 11.9484 8.99333 11.0984C8.25333 10.4359 7.75666 9.62339 7.60999 9.37339C7.36583 8.95173 7.87666 8.89173 8.34166 8.01173C8.42499 7.83673 8.38249 7.69923 8.32083 7.57506C8.25833 7.45006 7.76083 6.22506 7.55249 5.73673C7.35249 5.25006 7.14666 5.31173 6.99249 5.31173C6.51249 5.27006 6.16166 5.27673 5.85249 5.59839C4.50749 7.07673 4.84666 8.60173 5.99749 10.2234C8.25916 13.1834 9.46416 13.7284 11.6675 14.4851C12.2625 14.6742 12.805 14.6476 13.2342 14.5859C13.7125 14.5101 14.7067 13.9851 14.9142 13.3976C15.1267 12.8101 15.1267 12.3226 15.0642 12.2101C15.0025 12.0976 14.8392 12.0351 14.5892 11.9226Z" fill="%23FF5A00"/><path d="M17.1 2.87416C10.6925 -3.32001 0.0883333 1.17249 0.0841667 9.91083C0.0841667 11.6575 0.541667 13.3608 1.41333 14.865L0 20L5.27917 18.6233C11.8667 22.1817 19.9967 17.4567 20 9.91583C20 7.26916 18.9667 4.77833 17.0875 2.90666L17.1 2.87416ZM18.335 9.88833C18.33 16.2492 11.3475 20.2217 5.825 16.975L5.525 16.7967L2.4 17.6092L3.2375 14.5717L3.03833 14.2592C-0.398333 8.78833 3.55 1.63833 10.06 1.63833C12.2717 1.63833 14.3475 2.50083 15.9108 4.06333C17.4733 5.61249 18.335 7.68833 18.335 9.88833Z" fill="%23FF5A00"/></g><defs><clipPath id="clip0_5934_3566"><rect width="20" height="20" fill="white"/></clipPath></defs></svg>');
+}
+
+.showMoreButton--product-description {
+  margin: 0;
+  padding: 0;
+  float: left;
+  color: var(--Brand-Primary-Darkest, #353535);
+  font-family: "Proxima Nova";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+  text-decoration-line: underline;
   text-transform: math-auto;
-  text-align: center;
-}
-@media screen and (max-width: 768px) {
-  .infoCardContainer--our-categories-card .infoCardTextContainer--our-categories-card .infoCardCallActionContainer--our-categories-card :global(.vtex-button__label) {
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: -0.14px;
-  }
-}
-.infoCardContainer--our-categories-card .infoCardImageContainer--our-categories-card {
-  position: absolute;
-  max-width: 176px;
-  max-height: 176px;
-  width: 100%;
-  height: 100%;
-  top: 40px;
-  mix-blend-mode: multiply;
-}
-@media screen and (max-width: 500px) {
-  .infoCardContainer--our-categories-card .infoCardImageContainer--our-categories-card {
-    max-width: 90px;
-    max-height: 90px;
-    top: 19px;
-  }
-}
-.infoCardContainer--our-categories-card .infoCardImageContainer--our-categories-card .infoCardImage--our-categories-card {
-  width: 100%;
-  height: 100%;
+  background: none;
+  border: none;
 }
 
-.imageElement--newsletter-image {
-  height: fit-content;
-  align-self: center;
-}
-@media screen and (max-width: 768px) {
-  .imageElement--newsletter-image {
-    width: 100%;
-    margin-top: 32px;
-  }
+.imageElement--payment-method {
+  width: 48px;
+  height: 34px;
 }
 
-.discountContainer .discountInsideContainer {
+:global(.vtex-store-header-2-x-headerStickyRow) .container {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.closeIcon--search-bar {
   display: none;
 }
 
-.imageElement--simple-banner-image-1 {
-  margin-right: 24px;
+.searchBarInnerContainer {
+  border-radius: var(--radius-rounded-sm, 2px);
+  border: 1px solid var(--border-input-base, #D4D4D8);
+  padding: 9px 16px;
+}
+.searchBarInnerContainer--search-bar--opened {
+  border: 1.5px solid var(--border-focus-base, #EE8146);
 }
 
-.imageElement--mobile {
+.searchBarContainer {
+  max-width: 698px;
+  position: relative;
   width: 100%;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+  border-radius: 2px;
+  background: #FFF;
+  margin: unset;
+}
+@media screen and (max-width: 1024px) {
+  .searchBarContainer {
+    max-width: 100%;
+  }
+}
+.searchBarContainer .searchBarIcon--search-bar {
+  background-image: url("assets/svgs/search-icon.svg");
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  padding-left: 8px;
+}
+.searchBarContainer .searchBarIcon--search-bar .searchIcon {
+  display: none;
+}
+.searchBarContainer :global(.vtex-styleguide-9-x-input) {
+  width: 100%;
+  padding: 0;
+  border-right: 1px solid var(--border-input-base, #D4D4D8);
+  margin-right: 8px;
+}
+.searchBarContainer :global(.vtex-styleguide-9-x-input)::placeholder {
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+.searchBarContainer :global(.vtex-input-prefix__group) {
+  height: 100%;
+  border: none;
+}
+
+@media screen and (max-width: 1025px) {
+  .imageElementLink--logo {
+    max-width: 111px;
+    display: block;
+  }
 }

@@ -1,0 +1,12 @@
+{
+  "flex-layout.row#product-anchor-sections": {
+    "title": "Seção - Ancoras",
+    "children": [
+      "anchor-sections"
+    ],
+    "props": {
+      "blockClass": "product-anchor-sections",
+      "fullWidth": true
+    }
+  }
+}

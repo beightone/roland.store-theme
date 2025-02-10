@@ -1,0 +1,83 @@
+.triggerContainer--buy-button-modal-trigger {
+  max-width: 308px;
+  width: 100%;
+}
+
+.paper--buy-button-modal {
+  padding: 20px 24px;
+  border-radius: var(--radius-rounded-sm, 2px);
+  border: 1px solid var(--System-Neutral-Lighter, #C3C3C3);
+  background: var(--Lightgrey-white, #FFF);
+  position: relative;
+
+  @media screen and (max-width: 768px) {
+    margin: 16px;
+  }
+}
+
+.closeButton--buy-button-modal-close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background: transparent;
+  border: none;
+
+  &:hover {
+    background-color: transparent;
+    
+  }
+  
+  .closeButtonLabel {
+    font-size: 0;
+    padding: 0;
+
+    &::before {
+      content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 7L7 17M7 7L17 17" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.paper--product-zoom {
+  max-width: 1440px;
+  max-height: 800px;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeButton--product-zoom-close {
+  position: absolute;
+  bottom: 113px;
+  z-index: 1;
+  background-color: transparent;
+  border: none;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background: #FFF;
+  border-left: 0;
+  border-right: 0;
+  padding: 12px 0;
+  border-radius: 0;
+
+  &:hover {
+    background-color: transparent;
+    border-color: #ECECEC;
+  }
+
+  .closeButtonLabel {
+    font-size: 0;
+    padding: 0;
+
+    &::before {
+      content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M17 7L7 17M7 7L17 17" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

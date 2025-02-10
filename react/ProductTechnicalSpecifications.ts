@@ -1,0 +1,3 @@
+import ProductTechnicalSpecifications from './components/product/ProductTechnicalSpecifications'
+
+export default ProductTechnicalSpecifications

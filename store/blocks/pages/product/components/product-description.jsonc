@@ -1,0 +1,54 @@
+{
+  "flex-layout.row#product-description": {
+    "title": "Seção - Descrição do produto",
+    "props": {
+      "blockClass": "product-description"
+    },
+    "children": ["flex-layout.col#product-description"]
+  },
+  "flex-layout.col#product-description": {
+    "props": {
+      "blockClass": "product-description"
+    },
+    "children": [
+      "product-description-custom",
+      "flex-layout.row#product-description-banners"
+    ]
+  },
+  "flex-layout.row#product-description-banners": {
+    "title": "Banners - Descrição do produto",
+    "props": {
+      "blockClass": "product-description-banners"
+    },
+    "children": ["list-context.image-list#product-description-banners"]
+  },
+  "list-context.image-list#product-description-banners": {
+    "props": {
+      "preload": true,
+      "blockClass": "product-description-banners",
+      "images": [
+        {
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/d373eea0-f436-4526-982a-2b2f46321d0d___7eea7b5976702dbae4f09c32783303c6.png",
+          "description": "Descrição do produto - Banner 1",
+          "blockClass": "product-description-banner"
+        },
+        {
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/20da7607-8ca9-4a53-a737-d54b5a1daa7f___fa3f82acc27c90902d29957e5e0c8e27.png",
+          "blockClass": "product-description-banner"
+        },
+        {
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/8a845fef-6d3d-4b98-8743-c71901d23fae___1d01c5918993b9d6247d256504dcbe2e.png",
+          "blockClass": "product-description-banner"
+        }
+      ]
+    },
+    "children": ["list-context-renderer#product-description-banners"]
+  },
+  "list-context-renderer#product-description-banners": {
+    "props": {
+      "listElement": "div",
+      "itemElement": "div",
+      "blockClass": "product-description-banners"
+    }
+  }
+}

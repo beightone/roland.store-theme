@@ -1,0 +1,121 @@
+.notiferContainer {
+  border-radius: 2px;
+  border: 1px solid #c3c3c3;
+  background: #fff;
+  padding: 1.25rem 1.5rem 0;
+  .title {
+    font-size: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+
+    &::before {
+      content: 'Produto esgotado';
+      font-family: 'Proxima Nova';
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 28px;
+      letter-spacing: -0.18px;
+
+      text-align: left;
+      color: #18181b;
+    }
+    &::after {
+      content: 'Para ser avisado da disponibilidade deste produto, basta preencher os campos abaixo.';
+      max-width: 20.375rem;
+      width: 100%;
+      font-family: 'Proxima Nova';
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+      letter-spacing: -0.14px;
+
+      text-align: left;
+      color: #5e5e5e;
+    }
+  }
+  .notifyLabel {
+    display: none;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  & :global(.vtex-input-prefix__group) {
+    border: none;
+    border-radius: 2px;
+  }
+
+  & :global(.vtex-styleguide-9-x-input) {
+    background: transparent;
+    border: 1px solid #d4d4d8;
+    box-sizing: border-box;
+    border-radius: 2px;
+    font-family: 'Proxima Nova';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.14px;
+    color: #3f3f46;
+  }
+  .submit {
+    :global(.vtex-button):disabled,
+    :global(.vtex-button) {
+      border: none;
+      width: 100%;
+      height: 2.75rem;
+      border-radius: 2px;
+      cursor: pointer;
+      &::before {
+        content: 'Avise-me';
+        font-family: 'Oxygen';
+        width: 100%;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: -0.14px;
+        color: #71717a;
+        text-transform: math-auto;
+      }
+      & :global(.vtex-button__label) {
+        display: none;
+      }
+    }
+    :global(.vtex-button) {
+      transition: all 0.3s ease-in-out;
+      background: #130c0e;
+      :global(.vtex-button__spinner-container) {
+        background-color: #e4e4e7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+      }
+      &::before {
+        color: #fff;
+      }
+    }
+    :global(.vtex-button):disabled {
+      cursor: not-allowed;
+      background: #e4e4e7;
+    }
+  }
+  .success,
+  .error,
+  :global(.vtex-input__error) {
+    font-family: 'Proxima Nova';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px;
+    letter-spacing: -0.12px;
+  }
+}

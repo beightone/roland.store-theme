@@ -1,0 +1,165 @@
+{
+  "flex-layout.col#product-info": {
+    "title": "Seção - Informações do produto",
+    "props": {
+      "blockClass": "product-info",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "vtex.store-components:product-name#product-page",
+      "trust-vox-stars#product",
+      "product-read-more-description",
+      "condition-layout.product#availability-pdp"
+    ]
+  },
+  "trust-vox-stars#product": {
+    "props": {
+      "origin": "product-page"
+    }
+  },
+  "condition-layout.product#availability-pdp": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "isProductAvailable"
+        }
+      ],
+      "Then": "flex-layout.row#product-buy-informations",
+      "Else": "flex-layout.row#product-unavailable"
+    }
+  },
+  "flex-layout.row#product-unavailable": {
+    "props": {
+      "blockClass": "product-unavailable"
+    },
+    "children": ["flex-layout.col#product-unavailable"]
+  },
+  "flex-layout.col#product-unavailable": {
+    "props": {
+      "blockClass": "product-unavailable"
+    },
+    "children": ["flex-layout.col#product-page-price", "availability-notify"]
+  },
+  "flex-layout.row#product-buy-informations": {
+    "props": {
+      "blockClass": "product-buy-informations"
+    },
+    "children": ["flex-layout.col#product-buy-informations"]
+  },
+  "flex-layout.col#product-buy-informations": {
+    "props": {
+      "blockClass": "product-buy-informations"
+    },
+    "children": [
+      "flex-layout.col#product-page-price",
+      "flex-layout.row#product-page-buy-button",
+      "custom-shipping-calculator"
+    ]
+  },
+  "flex-layout.row#product-page-buy-button": {
+    "title": "Botão de Compra",
+    "props": {
+      "blockClass": "product-buy-button"
+    },
+    "children": [
+      "product-quantity#product-page",
+      "condition-layout.product#buy-button"
+    ]
+  },
+  "condition-layout.product#buy-button": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "categoryTree",
+          "arguments": {
+            "id": "156"
+          }
+        }
+      ],
+      "Then": "modal-trigger#buy-button",
+      "Else": "add-to-cart-button#product-page"
+    }
+  },
+
+  "product-quantity#product-page": {
+    "props": {
+      "blockClass": "product-quantity",
+      "showLabel": false
+    }
+  },
+  "add-to-cart-button#product-page": {
+    "props": {
+      "blockClass": "product-page-add-to-cart"
+    }
+  },
+  "add-to-list-btn#product-page": {
+    "props": {
+      "blockClass": "product-page-wishlist"
+    }
+  },
+  "flex-layout.col#product-page-price": {
+    "title": "Preço do Produto",
+    "props": {
+      "blockClass": "product-price",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "flex-layout.row#list-price-wrapper",
+      "product-spot-price-savings#product-page",
+      "product-installments#product-page"
+    ]
+  },
+  "flex-layout.row#list-price-wrapper": {
+    "props": {
+      "blockClass": "list-price-wrapper",
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "product-list-price#product-page",
+      "product-price-savings#product-page"
+    ]
+  },
+  "product-price-savings#product-page": {
+    "props": {
+      "blockClass": "product-price-savings",
+      "message": "{savingsPercentage}"
+    }
+  },
+  "product-list-price#product-page": {
+    "props": {
+      "blockClass": "product-list-price",
+      "message": "De: {listPriceValue}"
+    }
+  },
+  "product-spot-price-savings#product-page": {
+    "props": {
+      "blockClass": "product-spot-price-savings",
+      "message": "{newSpotPriceValue} no pix ou à vista (-10% OFF)"
+    }
+  },
+  "product-installments#product-page": {
+    "props": {
+      "blockClass": "product-installments",
+      "message": "ou {installmentsTotalValue} em até {installmentsNumber}x de {installmentValue} sem juros"
+    }
+  },
+  "vtex.store-components:product-name#product-page": {
+    "props": {
+      "blockClass": "product-name"
+    }
+  },
+  "vtex.store-components:product-description#product-page": {
+    "props": {
+      "showTitle": false,
+      "blockClass": "product-description"
+    }
+  },
+  "link#go-to-product-description": {
+    "title": "Link Leia Mais",
+    "props": {
+      "href": "#description",
+      "label": "Leia Mais",
+      "blockClass": ["link--read-more"]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "flex-layout.row#product-trustvox-avaliations": {
+    "props": {
+      "blockClass": "product-trustvox-avaliations"
+    },
+    "children": ["product-trustvox-avaliations"]
+  }
+}

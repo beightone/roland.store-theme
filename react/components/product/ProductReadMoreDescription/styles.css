@@ -1,0 +1,30 @@
+.productReadMoreDescriptionText {
+  color: #5e5e5e;
+  font-family: 'Proxima Nova';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  margin-top: 16px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  margin: 0 0 0.5rem;
+}
+.productReadMoreDescriptionButton {
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: #353535;
+  font-family: 'Proxima Nova';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+  text-decoration: underline;
+  cursor: pointer;
+}

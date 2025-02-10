@@ -1,0 +1,57 @@
+{
+  "sticky-layout#floating-buy-container": {
+    "props": {
+      "position": "bottom",
+      "blockClass": "buy-button-fixed"
+    },
+    "children": [
+      "flex-layout.row#floating-buy-button",
+      "floating-appearance-controller"
+    ]
+  },
+  "flex-layout.row#floating-buy-button": {
+    "title": "Botão comprar Flutuante",
+    "props": {
+      "blockClass": ["floating-buy-button"],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "vtex.store-components:product-name#buy-box",
+      "flex-layout.row#product-floating-infos"
+    ]
+  },
+  "flex-layout.row#product-floating-infos": {
+    "props": {
+      "blockClass": ["product-floating-infos"],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "flex-layout.col#product-floating-prices",
+      "condition-layout.product#buy-button"
+    ]
+  },
+  "vtex.store-components:product-name#buy-box": {
+    "props": {
+      "tag": "div"
+    }
+  },
+  "flex-layout.col#product-floating-prices": {
+    "props": {
+      "blockClass": ["product-floating-prices"],
+      "verticalAlign": "middle"
+    },
+    "children": [
+      "product-spot-price-savings#product-page",
+      "product-installments#product-page-floating"
+    ]
+  },
+  "product-installments#product-page-floating": {
+    "props": {
+      "blockClass": "product-installments",
+      "message": "ou {installmentsTotalValue} em até \n {installmentsNumber}x de {installmentValue}"
+    }
+  }
+}
