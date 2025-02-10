@@ -5690,9 +5690,9 @@ rimraf@3.0.2, rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
-"roland.store-theme@https://sel3973--roland.myvtex.com/_v/private/typings/linked/v1/roland.store-theme@1.0.32+build1736193354/public/@types/roland.store-theme":
+"roland.store-theme@http://roland.vtexassets.com/_v/public/typings/v1/roland.store-theme@1.0.32/public/@types/roland.store-theme":
   version "1.0.32"
-  resolved "https://sel3973--roland.myvtex.com/_v/private/typings/linked/v1/roland.store-theme@1.0.32+build1736193354/public/@types/roland.store-theme#b36997a6768648fabed76501b4f678aaebf087ac"
+  resolved "http://roland.vtexassets.com/_v/public/typings/v1/roland.store-theme@1.0.32/public/@types/roland.store-theme#824d9ac19aa07d44281ca36d2f7ae592e87c9e3c"
 
 rsvp@^4.8.4:
   version "4.8.5"
@@ -6540,6 +6540,10 @@ vfile@^6.0.0:
   version "0.30.2"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.add-to-cart-button@0.30.2/public/@types/vtex.add-to-cart-button#460e38a0fca759d2eba382ebe6cd92d6c645b0b6"
 
+"vtex.availability-notify@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.availability-notify@1.13.1/public/@types/vtex.availability-notify":
+  version "1.13.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.availability-notify@1.13.1/public/@types/vtex.availability-notify#7ada0839a805336f28ad38e759dbc779eda51d99"
+
 "vtex.breadcrumb@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.breadcrumb@1.9.5/public/@types/vtex.breadcrumb":
   version "1.9.5"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.breadcrumb@1.9.5/public/@types/vtex.breadcrumb#261c73e9840f168c36ce30e687982a227728ab86"
@@ -6624,9 +6628,9 @@ vfile@^6.0.0:
   version "0.12.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.12.0/public/@types/vtex.order-manager#2cf6a9d2a31bc503b783c257695b0d17c09b5696"
 
-"vtex.order-placed@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-placed@2.18.0/public/@types/vtex.order-placed":
-  version "2.18.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-placed@2.18.0/public/@types/vtex.order-placed#e3f5105caf8059e1dcee27c40dc3d52577dd2889"
+"vtex.order-placed@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-placed@2.19.0/public/@types/vtex.order-placed":
+  version "2.19.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-placed@2.19.0/public/@types/vtex.order-placed#277b037e919f0ff1ce75f81a5ae2393788f2cc12"
 
 "vtex.pixel-manager@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.pixel-manager@1.9.0/public/@types/vtex.pixel-manager":
   version "1.9.0"
@@ -6696,13 +6700,13 @@ vfile@^6.0.0:
   version "0.65.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.65.0/public/@types/vtex.search-graphql#5f3d202bb6818842d1be258fa8ca849f5ef386a1"
 
-"vtex.search-result@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-result@3.134.1/public/@types/vtex.search-result":
-  version "3.134.1"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-result@3.134.1/public/@types/vtex.search-result#6a92cf9576f7f1f4923ed284fe19a2990c9bc794"
+"vtex.search-result@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-result@3.136.0/public/@types/vtex.search-result":
+  version "3.136.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-result@3.136.0/public/@types/vtex.search-result#1163d18adfb4059ee80965bb878efe77c7b483b7"
 
-"vtex.search@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search@2.18.1/public/@types/vtex.search":
-  version "2.18.1"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search@2.18.1/public/@types/vtex.search#866c6f3c5f68e16bc0257e691a2487c520a62290"
+"vtex.search@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search@2.18.2/public/@types/vtex.search":
+  version "2.18.2"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search@2.18.2/public/@types/vtex.search#0c673812e408f7085e9ca7add415b845c3795963"
 
 "vtex.shelf@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.shelf@1.49.0/public/@types/vtex.shelf":
   version "1.49.0"
@@ -6724,9 +6728,9 @@ vfile@^6.0.0:
   version "0.3.4"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.sticky-layout@0.3.4/public/@types/vtex.sticky-layout#5b786d6f9ab0a40e4997c955a75885eee32515ef"
 
-"vtex.store-components@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.176.0/public/@types/vtex.store-components":
-  version "3.176.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.176.0/public/@types/vtex.store-components#aab0c7cdf327d537febab2e1c9e2ac49d92f5de7"
+"vtex.store-components@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.176.2/public/@types/vtex.store-components":
+  version "3.176.2"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-components@3.176.2/public/@types/vtex.store-components#12958b81c9050e4698faf68ee37cce74f0848df8"
 
 "vtex.store-drawer@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-drawer@0.18.1/public/@types/vtex.store-drawer":
   version "0.18.1"
@@ -6736,9 +6740,9 @@ vfile@^6.0.0:
   version "2.27.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-footer@2.27.0/public/@types/vtex.store-footer#81c4e23689a6d4e97d6b8b8de930f76c7dfdcbd9"
 
-"vtex.store-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.172.1/public/@types/vtex.store-graphql":
-  version "2.172.1"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.172.1/public/@types/vtex.store-graphql#3285d5b1086a07b8ba9489cee516c163df4a768d"
+"vtex.store-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.173.0/public/@types/vtex.store-graphql":
+  version "2.173.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-graphql@2.173.0/public/@types/vtex.store-graphql#362658f92478790755777fe325c4e3a90afc877d"
 
 "vtex.store-header@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.store-header@2.29.0/public/@types/vtex.store-header":
   version "2.29.0"
