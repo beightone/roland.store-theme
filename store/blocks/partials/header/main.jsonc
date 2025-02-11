@@ -16,7 +16,7 @@
   },
   "header-row#main-mobile": {
     "children": [
-      "menu#mobile-roland",
+      "menu#mobile",
       "sales-channel-trigger-condition#logo",
       "minicart.v2#new"
     ],
@@ -26,7 +26,7 @@
   },
   "header-row#pre-owned-main-mobile": {
     "children": [
-      "menu#mobile-roland",
+      "menu#mobile",
       "sales-channel-trigger-condition#logo",
       "minicart.v2#new"
     ],
