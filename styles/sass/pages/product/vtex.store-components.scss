@@ -177,7 +177,9 @@
   align-items: center;
   justify-content: center;
 }
-
+.skuSelectorSubcontainer {
+  margin: 1.5rem 0 0;
+}
 .skuSelectorItem--selected {
   .frameAround {
     border: 2px solid #cccccc;
@@ -218,4 +220,10 @@
     color: #5e5e5e;
     font-weight: 500;
   }
+  .errorMessage {
+    font-weight: 500;
+  }
+}
+:global(.vtex-styleguide-9-x-popup) {
+  background-color: #18181b;
 }

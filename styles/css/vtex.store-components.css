@@ -541,6 +541,10 @@
   justify-content: center;
 }
 
+.skuSelectorSubcontainer {
+  margin: 1.5rem 0 0;
+}
+
 .skuSelectorItem--selected .frameAround {
   border: 2px solid #cccccc;
   border-radius: 1.25rem;
@@ -581,6 +585,13 @@
 .skuSelectorTextContainer .skuSelectorSelectorImageValue {
   color: #5e5e5e;
   font-weight: 500;
+}
+.skuSelectorTextContainer .errorMessage {
+  font-weight: 500;
+}
+
+:global(.vtex-styleguide-9-x-popup) {
+  background-color: #18181b;
 }
 
 .imageElement--payment-method {

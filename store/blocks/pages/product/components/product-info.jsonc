@@ -8,7 +8,6 @@
     "children": [
       "vtex.store-components:product-name#product-page",
       "trust-vox-stars#product",
-      "sku-selector#product-page",
       "product-read-more-description",
       "condition-layout.product#availability-pdp"
     ]
@@ -62,6 +61,7 @@
       "blockClass": "product-buy-informations"
     },
     "children": [
+      "sku-selector#product-page",
       "flex-layout.col#product-page-price",
       "flex-layout.row#product-page-buy-button",
       "custom-shipping-calculator"
