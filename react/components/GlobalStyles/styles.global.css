@@ -9,7 +9,7 @@
 }
 
 .render-route-store-home-black .vtex-store-header-2-x-headerStickyRow,
-.render-route-store-home-black .roland-store-theme-1-x-menuContainer,
+.render-route-store-home-black .roland-store-theme-2-x-menuContainer,
 .render-route-store-home-black
   .vtex-store-header-2-x-headerRowContentContainer--main-container,
 .render-route-store-home-black
@@ -17,7 +17,7 @@
   background-color: #000;
 }
 @media screen and (min-width: 64rem) {
-  .render-route-store-home-black .roland-store-theme-1-x-menuItem > a,
+  .render-route-store-home-black .roland-store-theme-2-x-menuItem > a,
   .render-route-store-home-black
     .vtex-store-components-3-x-searchBarInnerContainer
     .vtex-styleguide-9-x-input {
@@ -29,7 +29,7 @@
 .render-route-store-home-black
   .vtex-store-header-2-x-headerRowContainer--main-container,
 .render-route-store-home-black .vtex-store-components-3-x-searchBarContainer,
-.render-route-store-home-black .roland-store-theme-1-x-menuContainer,
+.render-route-store-home-black .roland-store-theme-2-x-menuContainer,
 .render-route-store-home-black .vtex-flex-layout-0-x-flexRow--shelf-container,
 .render-route-store-home-black
   .vtex-store-header-2-x-headerStickyRow--search-container,
@@ -46,7 +46,7 @@
   background-color: #000;
 }
 
-.render-route-store-home-black .roland-store-theme-1-x-menuContainer {
+.render-route-store-home-black .roland-store-theme-2-x-menuContainer {
   border-bottom: none;
 }
 .render-route-store-home-black
@@ -72,7 +72,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .render-route-store-home-black .roland-store-theme-1-x-menuItem span,
+  .render-route-store-home-black .roland-store-theme-2-x-menuItem span,
   .render-route-store-home-black .vtex-login-2-x-label,
   .render-route-store-home-black .vtex-styleguide-9-x-input::placeholder,
   .render-route-store-home-black .vtex-store-link-0-x-label--wishlist {
@@ -86,7 +86,7 @@
   display: none;
 }
 
-.render-route-store-home-black.roland-store-theme-1-x-menuContainer {
+.render-route-store-home-black.roland-store-theme-2-x-menuContainer {
   border: none;
 }
 
@@ -107,7 +107,7 @@
 }
 
 .render-route-store-home-black
-  .roland-store-theme-1-x-menuItem
+  .roland-store-theme-2-x-menuItem
   > a
   > span:hover {
   color: #ff5a00 !important;
@@ -131,7 +131,7 @@
     object-position: -75px;
   } */
 
-  .render-route-store-home-black .roland-store-theme-1-x-menuButton {
+  .render-route-store-home-black .roland-store-theme-2-x-menuButton {
     background-image: url('data:image/svg+xml,<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.625 10.5H18.375" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/><path d="M2.625 5.25H18.375" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/><path d="M2.625 15.75H18.375" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/></svg>');
   }
 }

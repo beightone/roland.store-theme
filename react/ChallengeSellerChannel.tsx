@@ -74,7 +74,7 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
       window.location.href = currentUrl.toString()
 
       const elementsToDisable = [
-        '.roland-store-theme-1-x-menuContainer',
+        '.roland-store-theme-2-x-menuContainer',
         '.vtex-breadcrumb-1-x-container',
       ]
 
@@ -85,7 +85,7 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
 
     if (isProductPage && (isPreOwnedProduct || hasScParameter)) {
       const elementsToDisable = [
-        '.roland-store-theme-1-x-menuContainer',
+        '.roland-store-theme-2-x-menuContainer',
         '.vtex-breadcrumb-1-x-container',
       ]
 

@@ -136,9 +136,14 @@
   },
   "flex-layout.row#product-card-stars": {
     "title": "Linha: Estrelas do Produto",
-    "children": ["trust-vox-stars"],
+    "children": ["trust-vox-stars#card"],
     "props": {
       "blockClass": "product-card-stars"
+    }
+  },
+  "trust-vox-stars#card": {
+    "props": {
+      "origin": "product-card"
     }
   },
   "product-summary-image#product-card": {

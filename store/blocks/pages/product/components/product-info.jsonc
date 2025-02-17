@@ -7,10 +7,15 @@
     },
     "children": [
       "vtex.store-components:product-name#product-page",
-      "trust-vox-stars",
+      "trust-vox-stars#product",
       "product-read-more-description",
       "condition-layout.product#availability-pdp"
     ]
+  },
+  "trust-vox-stars#product": {
+    "props": {
+      "origin": "product-page"
+    }
   },
   "condition-layout.product#availability-pdp": {
     "props": {
