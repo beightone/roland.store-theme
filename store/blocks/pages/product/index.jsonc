@@ -1,5 +1,5 @@
 {
-  "flex-layout.row#product-roland-content": {
+  "store.product": {
     "title": "Produto - Roland",
     "children": [
       "flex-layout.row#product-breadcrumb",
@@ -11,15 +11,25 @@
       "product-instruction-manual",
       "product-content-items",
       "product-video",
+      "flex-layout.row#buyt-together",
       "flex-layout.row#product-shelf",
       "flex-layout.row#product-trustvox-avaliations",
       "flex-layout.row#newsletter"
     ],
-    "props": {
-      "blockClass": "product-roland",
-      "fullWidth": "true",
-      "colSizing": "auto"
+    
+    "parent": {
+      "header": "header",
+      "footer": "flex-layout.row#footer-roland"
     }
+  },
+  "flex-layout.row#buyt-together": {
+    "title": "Seção - Compre junto",
+    "props": {
+      "blockClass": "buy-together"
+    },
+    "children": [
+      "buy-together"
+    ]
   },
   "flex-layout.row#product-details": {
     "title": "Seção - Detalhes do produto",

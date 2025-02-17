@@ -11,9 +11,8 @@
     min-height: unset;
     border: none;
 
-    &:hover,
     &:focus {
-      background-color: transparent;
+      background-color: transparent!important;
     }
 
     @media screen and (max-width: 768px) {

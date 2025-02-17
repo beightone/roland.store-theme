@@ -1,0 +1,31 @@
+{
+  "flex-layout.row#shelf-slider-container-assembly-options": {
+    "title": "Linha: Container da Shelf",
+    "children": ["list-context.product-list#shelf-list-assembly-options"],
+    "props": {
+      "blockClass": "shelf-container"
+    }
+  },
+  "list-context.product-list#shelf-list-assembly-options": {
+    "title": "Lista: Shelf de Produtos - Assembly Options",
+    "blocks": ["product-summary.shelf#general"],
+    "children": ["slider-layout#shelf-slider-assembly-options"],
+    "props": {
+      "orderBy": "OrderByReleaseDateDESC",
+      "collection": "162"
+    }
+  },
+  "slider-layout#shelf-slider-assembly-options": {
+    "title": "Slider: Carrosel da Shelf ",
+    "props": {
+      "showPaginationDots": "always",
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 3,
+        "phone": 2
+      },
+      "infinite": false,
+      "blockClass": ["shelf-slider", "assembly-options"]
+    }
+  }
+}

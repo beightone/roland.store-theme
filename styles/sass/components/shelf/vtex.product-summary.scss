@@ -18,6 +18,10 @@
     padding: 12px;
     margin-right: 8px;
     border-color: #e4e4e7;
+    
+  }
+
+  @media screen and (max-width: 400px) {
     max-width: 160px !important;
   }
 }

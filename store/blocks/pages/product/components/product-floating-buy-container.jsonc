@@ -24,7 +24,6 @@
   "flex-layout.row#product-floating-infos": {
     "props": {
       "blockClass": ["product-floating-infos"],
-      "preventHorizontalStretch": true,
       "preventVerticalStretch": true,
       "preserveLayoutOnMobile": true
     },
