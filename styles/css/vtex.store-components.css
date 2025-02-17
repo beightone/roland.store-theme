@@ -530,6 +530,59 @@
   border: none;
 }
 
+.skuSelectorOptionsList {
+  margin: 0;
+}
+
+.skuSelectorItem {
+  border-radius: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skuSelectorItem--selected .frameAround {
+  border: 2px solid #cccccc;
+  border-radius: 1.25rem;
+  margin: 0.125rem;
+}
+
+.skuSelectorInternalBox {
+  border-radius: 1.25rem;
+  width: 88%;
+  height: 88%;
+  border: 2px solid #cccccc;
+}
+.skuSelectorInternalBox .valueWrapper {
+  display: none;
+}
+
+.skuSelectorTextContainer {
+  color: #18181b;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+.skuSelectorTextContainer::before {
+  content: "Selecione uma ";
+}
+.skuSelectorTextContainer .skuSelectorName,
+.skuSelectorTextContainer .skuSelectorNameSeparator {
+  text-transform: lowercase;
+  color: #18181b;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+}
+.skuSelectorTextContainer .skuSelectorSelectorImageValue {
+  color: #5e5e5e;
+  font-weight: 500;
+}
+
 .imageElement--payment-method {
   width: 48px;
   height: 34px;

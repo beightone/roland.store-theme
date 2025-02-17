@@ -8,6 +8,7 @@
     "children": [
       "vtex.store-components:product-name#product-page",
       "trust-vox-stars#product",
+      "sku-selector#product-page",
       "product-read-more-description",
       "condition-layout.product#availability-pdp"
     ]
@@ -15,6 +16,16 @@
   "trust-vox-stars#product": {
     "props": {
       "origin": "product-page"
+    }
+  },
+  "sku-selector#product-page": {
+    "props": {
+      "hideImpossibleCombinations": false,
+      "imageHeight": 24,
+      "imageWidth": 24,
+      "showVariationsLabels": "variationAndItemValue",
+      "showValueForVariation": "all",
+      "initialSelection": "empty"
     }
   },
   "condition-layout.product#availability-pdp": {
