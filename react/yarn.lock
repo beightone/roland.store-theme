@@ -5690,9 +5690,9 @@ rimraf@3.0.2, rimraf@^3.0.0:
   dependencies:
     glob "^7.1.3"
 
-"roland.store-theme@http://roland.vtexassets.com/_v/public/typings/v1/roland.store-theme@2.0.2/public/@types/roland.store-theme":
-  version "2.0.2"
-  resolved "http://roland.vtexassets.com/_v/public/typings/v1/roland.store-theme@2.0.2/public/@types/roland.store-theme#8d5bf85ac7e0d88a3b78f97165e627521d6fdee4"
+"roland.assembly-options@http://roland.vtexassets.com/_v/public/typings/v1/roland.assembly-options@0.0.1/public/@types/roland.assembly-options":
+  version "0.0.1"
+  resolved "http://roland.vtexassets.com/_v/public/typings/v1/roland.assembly-options@0.0.1/public/@types/roland.assembly-options#06aaa6d7dcb92c528ba9f3537ae272f8461999ff"
 
 rsvp@^4.8.4:
   version "4.8.5"
