@@ -564,6 +564,7 @@
 .skuSelectorTextContainer {
   color: #18181b;
   font-size: 14px;
+  font-family: "Proxima Nova";
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
@@ -575,6 +576,7 @@
 .skuSelectorTextContainer .skuSelectorName,
 .skuSelectorTextContainer .skuSelectorNameSeparator {
   text-transform: lowercase;
+  font-family: "Proxima Nova";
   color: #18181b;
   font-size: 14px;
   font-style: normal;
@@ -584,14 +586,19 @@
 }
 .skuSelectorTextContainer .skuSelectorSelectorImageValue {
   color: #5e5e5e;
+  font-family: "Proxima Nova";
   font-weight: 500;
 }
 .skuSelectorTextContainer .errorMessage {
   font-weight: 500;
+  font-family: "Proxima Nova";
 }
 
 :global(.vtex-styleguide-9-x-popup) {
   background-color: #18181b;
+}
+:global(.vtex-styleguide-9-x-popup) :global(.vtex-add-to-cart-button-0-x-tooltipLabelText--product-page-add-to-cart) {
+  font-family: "Proxima Nova";
 }
 
 .imageElement--payment-method {
