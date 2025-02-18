@@ -17,6 +17,16 @@
       "origin": "product-page"
     }
   },
+  "sku-selector#product-page": {
+    "props": {
+      "hideImpossibleCombinations": false,
+      "imageHeight": 24,
+      "imageWidth": 24,
+      "showVariationsLabels": "variationAndItemValue",
+      "showValueForVariation": "all",
+      "initialSelection": "empty"
+    }
+  },
   "condition-layout.product#availability-pdp": {
     "props": {
       "conditions": [
@@ -51,6 +61,7 @@
       "blockClass": "product-buy-informations"
     },
     "children": [
+      "sku-selector#product-page",
       "flex-layout.col#product-page-price",
       "flex-layout.row#product-page-buy-button",
       "custom-shipping-calculator"
