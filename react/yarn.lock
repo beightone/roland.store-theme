@@ -5694,9 +5694,9 @@ rimraf@3.0.2, rimraf@^3.0.0:
   version "0.0.1"
   resolved "http://roland.vtexassets.com/_v/public/typings/v1/roland.assembly-options@0.0.1/public/@types/roland.assembly-options#06aaa6d7dcb92c528ba9f3537ae272f8461999ff"
 
-"roland.buy-together@http://roland.vtexassets.com/_v/public/typings/v1/roland.buy-together@0.0.1/public/@types/roland.buy-together":
-  version "0.0.1"
-  resolved "http://roland.vtexassets.com/_v/public/typings/v1/roland.buy-together@0.0.1/public/@types/roland.buy-together#c5b71e8c64781850d00a12505ed47ae50c58aad2"
+"roland.buy-together@http://roland.vtexassets.com/_v/public/typings/v1/roland.buy-together@0.0.2/public/@types/roland.buy-together":
+  version "0.0.2"
+  resolved "http://roland.vtexassets.com/_v/public/typings/v1/roland.buy-together@0.0.2/public/@types/roland.buy-together#36149d3979a64b6bf0e9a5fabece082a91e20979"
 
 rsvp@^4.8.4:
   version "4.8.5"
