@@ -1,0 +1,40 @@
+:global(.vtex-store-components-3-x-carouselGaleryThumbs--product-image) {
+  :global(.swiper-wrapper) {
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 1024px) {
+  :global(.vtex-flex-layout-0-x-flexRowContent--product-details)
+    > :global(.items-stretch) {
+    &:first-child {
+      flex: 1;
+    }
+    max-width: 64%;
+  }
+
+  :global(.vtex-flex-layout-0-x-flexRowContent--floating-buy-button) :global(.roland-assembly-options-0-x-add-to-cart-button) {
+    width: 250px!important;
+  }
+
+  :global(.roland-assembly-options-0-x-modal-body) {
+    :global(.vtex-product-summary-2-x-container--product-summary-general) {
+      max-height: 527px;
+    }
+
+  }
+}
+
+@media screen and (max-width: 64rem) {
+  :global(#ot-sdk-btn-floating.ot-floating-button) {
+    bottom: 6.5rem !important;
+  }
+
+  :global(.vtex-flex-layout-0-x-flexRowContent--product-floating-infos) {
+    :global(.roland-assembly-options-0-x-add-to-cart-button) {
+      width: 171px!important;
+      padding-left: 0;
+      padding-right: 0;
+      float: right;
+    }
+  }
+}

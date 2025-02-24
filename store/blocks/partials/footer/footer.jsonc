@@ -4,9 +4,7 @@
     "props": {
       "blockClass": "footer"
     },
-    "children": [
-      "flex-layout.col#footer-layout"
-    ]
+    "children": ["flex-layout.col#footer-layout"]
   },
   "flex-layout.col#footer-layout": {
     "title": "Layout do Footer",

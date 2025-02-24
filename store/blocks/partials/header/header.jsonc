@@ -5,14 +5,24 @@
   },
   "header#pre-owned": {
     "title": "ROLAND - Header página seminovos",
-    "blocks": ["header-layout.desktop#pre-owned-page", "header-layout.mobile#pre-owned"]
+    "blocks": [
+      "header-layout.desktop#pre-owned-page",
+      "header-layout.mobile#pre-owned"
+    ]
   },
   "header#pre-owned-product": {
     "title": "ROLAND - Header pagina de produto seminovo",
-    "blocks": ["header-layout.desktop#pre-owned-product", "header-layout.mobile#pre-owned"]
+    "blocks": [
+      "header-layout.desktop#pre-owned-product",
+      "header-layout.mobile#pre-owned"
+    ]
   },
   "flex-layout.row#header-black-friday": {
     "title": "Header Black Friday",
     "children": ["header-layout.desktop#roland", "header-layout.mobile#roland"]
+  },
+  "header#roland": {
+    "title": "ROLAND - Header",
+    "blocks": ["header-layout.desktop#roland", "header-layout.mobile#roland"]
   }
 }

@@ -1,0 +1,44 @@
+.productContentItemsWrapper {
+  background-color: #f4f4f5;
+}
+.productContentItemsContainer {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+.productContentItemsTitle {
+  color: #3f3f46;
+  font-family: 'Proxima Nova';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  margin: 0 0 1.5rem;
+}
+.productContentItemsContentItem {
+  color: #5a5a66;
+  font-family: 'Proxima Nova';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+}
+.productContentItemsContentItem::marker {
+  font-size: 14px;
+}
+.productContentItemsContent {
+  margin: 0;
+  padding-left: 2rem;
+}
+@media screen and (max-width: 64rem) {
+  .productContentItemsContainer {
+    padding: 1.5rem 1rem;
+  }
+  .productContentItemsTitle {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.24px;
+  }
+}
