@@ -328,7 +328,6 @@ function configurePostalCodeInput(postalCodeInput) {
     postalCodeInput.value = value
   }
 
-
   postalCodeInput.addEventListener('keyup', formatPostalCode)
 }
 
@@ -373,6 +372,9 @@ function validatePostalCode() {
       if (postalCodeInput) {
         configurePostalCodeInput(postalCodeInput)
         initObserver(postalCodeInput)
+        if (hash === '#/shipping') {
+          addTriggerIntoChangeShippingInformation()
+        }
       } else {
         setTimeout(waitForPostalCodeInput, 500)
       }
@@ -449,13 +451,102 @@ function fillAddressForm(address) {
     stateSelect.value = uf || ''
   }
 }
+function insertWarningEditAddressPopUp() {
+  if (document.querySelector('#custom-warning-popup')) return
+
+  const modalOverlay = document.createElement('div')
+  modalOverlay.id = 'custom-warning-popup'
+  modalOverlay.classList.add('custom-warning-overlay')
+
+  const modalBox = document.createElement('div')
+  modalBox.classList.add('custom-warning-box')
+  const closeButton = document.createElement('button')
+  closeButton.classList.add('close-warning-button')
+  closeButton.innerHTML = `
+    <svg
+      width="32"
+      height="32"
+      viewBox="0 0 32 32"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M0.5 16C0.5 7.43959 7.43959 0.5 16 0.5C24.5604 0.5 31.5 7.43959 31.5 16C31.5 24.5604 24.5604 31.5 16 31.5C7.43959 31.5 0.5 24.5604 0.5 16Z"
+        stroke="#D4D4D8"
+      />
+      <path
+        d="M20.1663 11.8335L11.833 20.1668M11.833 11.8335L20.1663 20.1668"
+        stroke="#52525B"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  `
+
+  const message = document.createElement('p')
+  message.classList.add('custom-warning-message')
+  message.innerText = 'Você deseja alterar o endereço manualmente, mantendo o CEP informado?'
+
+  const confirmButton = document.createElement('button')
+  confirmButton.classList.add('custom-warning-button', 'confirm-button')
+  confirmButton.innerText = 'Confirmar'
+
+  const cancelButton = document.createElement('button')
+  cancelButton.classList.add('custom-warning-button', 'cancel-button')
+  cancelButton.innerText = 'Cancelar'
+
+  confirmButton.addEventListener('click', () => {
+    const shippingAddressEditElement = document.querySelector(
+      '.vtex-omnishipping-1-x-addressSummary .vtex-omnishipping-1-x-linkEdit'
+    )
+    if (shippingAddressEditElement) {
+      shippingAddressEditElement.click()
+    }
+
+    modalOverlay.remove()
+  })
+  closeButton.addEventListener('click', () => {
+    modalOverlay.remove()
+  })
+  cancelButton.addEventListener('click', () => {
+    modalOverlay.remove()
+  })
+  modalBox.appendChild(closeButton)
+  modalBox.appendChild(message)
+  modalBox.appendChild(confirmButton)
+  modalBox.appendChild(cancelButton)
+  modalOverlay.appendChild(modalBox)
+  document.body.appendChild(modalOverlay)
+}
+
+function addTriggerIntoChangeShippingInformation() {
+  const checkAndAttachListener = setInterval(() => {
+    const shippingAddressEditElement = document.querySelector(
+      '.vtex-omnishipping-1-x-addressSummary .vtex-omnishipping-1-x-linkEdit'
+    )
+
+    if (shippingAddressEditElement) {
+      const cloneChangeAddressButtonExistent = document.querySelector('.clone-change-address-button')
+      if (cloneChangeAddressButtonExistent) {
+        cloneChangeAddressButtonExistent.remove()
+      }
+      const cloneChangeAddressButton = document.createElement('button')
+      cloneChangeAddressButton.classList.add('clone-change-address-button')
+      shippingAddressEditElement.parentNode.appendChild(cloneChangeAddressButton)
+      cloneChangeAddressButton.addEventListener('click', () => {
+        insertWarningEditAddressPopUp()
+      })
+
+      clearInterval(checkAndAttachListener)
+    }
+  }, 750)
+}
 
 function showShippingStep() {
   const { hash } = window.location
 
   const shippingContainer =
     hash === '#/cart' ? document.querySelector('.cart-template') : document.getElementById('shipping-data')
-
   shippingContainer.classList.remove('postal-code-error')
   shippingContainer.classList.add('visible')
 }
@@ -558,9 +649,9 @@ function checkProductPrice() {
 }
 
 function checkSharedCart() {
-  const {hash} = window.location
+  const { hash } = window.location
 
-  if ( hash !== '#/payment') return null
+  if (hash !== '#/payment') return null
 
   const inStoreParams = new URLSearchParams(window.location.search)
   const orderId = inStoreParams.get('orderFormId')
@@ -569,11 +660,10 @@ function checkSharedCart() {
   const isSharedCart = orderId && code
 
   if (isSharedCart) {
-    document.querySelector("body")?.classList?.add('shared-cart')
+    document.querySelector('body')?.classList?.add('shared-cart')
 
     setDefaultPayment()
   }
-
 }
 
 function setDefaultPayment() {
@@ -614,20 +704,16 @@ function observeElement(nodeElement, action) {
 }
 
 async function checkPostalCodeOnLoad() {
-  console.log('checkPostalCodeOnLoad')
   const { hash } = window.location
-
-  if (hash !== '#/cart') return null
-
   const { postalCode } = vtexjs.checkout.orderForm.shippingData.selectedAddresses[0] ?? {}
-
-  if (postalCode) {
+  if (postalCode && hash === '#/cart') {
     await handleVtexAddress(postalCode)
+  } else if (postalCode && hash === '#/shipping') {
+    addTriggerIntoChangeShippingInformation()
   }
 }
 
 const debouncedValidatePostalCode = debounce(validatePostalCode, 300)
-
 
 $(window).on('load', async function () {
   showDeliveryOptions()
