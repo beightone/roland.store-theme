@@ -670,7 +670,7 @@ body a {
 } */
 
 .container {
-  max-width: 1248px;
+  max-width: 1248px !important;
   width: 100%;
   margin: 0 auto;
 }
@@ -2245,6 +2245,7 @@ body .header.new .header-wrapper .seal-safe-environment span {
   .coupon-label
   label::before {
   content: 'Adicionar cupom de desconto';
+  white-space: nowrap;
   font-size: 14px;
 }
 
@@ -4087,6 +4088,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill='white']) {
   .coupon-label
   label::before {
   content: 'Adicionar cupom de desconto';
+  white-space: nowrap;
   font-size: 14px;
 }
 
