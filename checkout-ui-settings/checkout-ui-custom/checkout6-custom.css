@@ -2782,7 +2782,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill='white']) {
 }
 
 .orderform-template-holder #payment-data p.link.link-gift-card,
-.orderform-template-holder #payment-data .payment-group-item {
+.orderform-template-holder #payment-data .payment-group .payment-group-item {
   border-radius: 2px !important;
   border: 1px solid #d4d4d8 !important;
 }
@@ -2833,7 +2833,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill='white']) {
   gap: 8px;
 }
 
-.orderform-template-holder #payment-data .payment-group-item {
+.orderform-template-holder #payment-data .payment-group .payment-group-item {
   width: fit-content !important;
   border-radius: var(--radius-rounded-sm, 2px);
   border: 1.25px solid var(--border-neutral-subtle, #d4d4d8);
@@ -2845,21 +2845,21 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill='white']) {
 }
 
 @media screen and (max-width: 64rem) {
-  .orderform-template-holder #payment-data .payment-group-item {
+  .orderform-template-holder #payment-data .payment-group .payment-group-item {
     width: 100% !important;
   }
 }
 
-.orderform-template-holder #payment-data .payment-group-item:hover {
+.orderform-template-holder #payment-data .payment-group .payment-group-item:hover {
   border: 1.25px solid var(--border-brand-primary-base, #ee8146);
   background: var(--bg-brand-primary-subtlest-hover, #fdf2ec);
 }
 
-.orderform-template-holder #payment-data .payment-group-item:hover span.payment-group-item-text {
+.orderform-template-holder #payment-data .payment-group .payment-group-item:hover span.payment-group-item-text {
   color: #ff5a00;
 }
 
-.orderform-template-holder #payment-data .payment-group-item span.payment-group-item-text {
+.orderform-template-holder #payment-data .payment-group .payment-group-item span.payment-group-item-text {
   color: var(--text-neutral-subtle, #3f3f46);
   font-size: 16px;
   font-style: normal;
@@ -2870,28 +2870,33 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill='white']) {
   padding: 0;
 }
 
-.orderform-template-holder #payment-data .payment-group-item.active {
+.orderform-template-holder #payment-data .payment-group .payment-group-item.active {
   background: var(--bg-brand-secondary-bold-base, #2b2b3a);
   border: 1.25px solid rgba(0, 0, 0, 0);
 }
 
-.orderform-template-holder #payment-data .payment-group-item.active:hover {
+.orderform-template-holder #payment-data .payment-group .payment-group-item.active:hover {
   background: var(--bg-brand-secondary-bold-hover, #424250);
 }
 
-.orderform-template-holder #payment-data .payment-group-item.active span.payment-group-item-text {
+.orderform-template-holder #payment-data .payment-group .payment-group-item.active span.payment-group-item-text {
   color: #fff;
 }
 
-.orderform-template-holder #payment-data .payment-group-item.active span.payment-group-item-text::after {
+.orderform-template-holder #payment-data .payment-group .payment-group-item.active span.payment-group-item-text::after {
   color: #fff !important;
 }
 
 .orderform-template-holder
   #payment-data
+  .payment-group
   .payment-group-item#payment-group-PagalevePixAVistaTransparentePaymentGroup
   span::after,
-.orderform-template-holder #payment-data .payment-group-item#payment-group-bankInvoicePaymentGroup span::after {
+.orderform-template-holder
+  #payment-data
+  .payment-group
+  .payment-group-item#payment-group-bankInvoicePaymentGroup
+  span::after {
   content: ' (10% OFF)';
   color: var(--text-brand-primary-base, #ff5a00);
   font-size: 16px;
@@ -2902,7 +2907,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill='white']) {
 }
 
 @media screen and (max-width: 653px) {
-  .orderform-template-holder #payment-data .payment-group-item {
+  .orderform-template-holder #payment-data .payment-group .payment-group-item {
     width: 100%;
   }
 }
@@ -3968,13 +3973,13 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill='white']) {
 }
 
 @media screen and (min-width: 1024px) {
-  .orderform-template .orderform-template-holder {
+  .checkout-container .orderform-template .orderform-template-holder {
     width: 74.52% !important;
   }
 }
 
 @media screen and (max-width: 1024px) {
-  .orderform-template .orderform-template-holder {
+  .checkout-container .orderform-template .orderform-template-holder {
     width: 100% !important;
   }
 
@@ -3984,7 +3989,7 @@ svg.pkpmodal-pickup-point-best-marker-image path:not([fill='white']) {
   }
 }
 
-.orderform-template .orderform-template-holder {
+.checkout-container .orderform-template .orderform-template-holder {
   max-width: 930px;
   box-sizing: border-box;
   padding: 0 !important;
