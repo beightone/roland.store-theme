@@ -51,10 +51,21 @@
       "blockClass": "product-buy-informations"
     },
     "children": [
+      "sku-selector#product-page",
       "flex-layout.col#product-page-price",
       "flex-layout.row#product-page-buy-button",
       "custom-shipping-calculator"
     ]
+  },
+  "sku-selector#product-page": {
+    "props": {
+      "hideImpossibleCombinations": false,
+      "imageHeight": 24,
+      "imageWidth": 24,
+      "showVariationsLabels": "variationAndItemValue",
+      "showValueForVariation": "all",
+      "initialSelection": "empty"
+    }
   },
   "flex-layout.row#product-page-buy-button": {
     "title": "Botão de Compra",

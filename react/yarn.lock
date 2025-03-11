@@ -5698,6 +5698,10 @@ rimraf@3.0.2, rimraf@^3.0.0:
   version "0.0.2"
   resolved "http://roland.vtexassets.com/_v/public/typings/v1/roland.buy-together@0.0.2/public/@types/roland.buy-together#36149d3979a64b6bf0e9a5fabece082a91e20979"
 
+"roland.store-theme@https://fixreleasev66--roland.myvtex.com/_v/private/typings/linked/v1/roland.store-theme@2.0.13+build1740755567/public/@types/roland.store-theme":
+  version "2.0.13"
+  resolved "https://fixreleasev66--roland.myvtex.com/_v/private/typings/linked/v1/roland.store-theme@2.0.13+build1740755567/public/@types/roland.store-theme#6d808884eb1d6489dafd4c6e1da72b957d0012d7"
+
 rsvp@^4.8.4:
   version "4.8.5"
   resolved "https://registry.yarnpkg.com/rsvp/-/rsvp-4.8.5.tgz#c8f155311d167f68f21e168df71ec5b083113734"
@@ -6704,9 +6708,9 @@ vfile@^6.0.0:
   version "0.65.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-graphql@0.65.0/public/@types/vtex.search-graphql#5f3d202bb6818842d1be258fa8ca849f5ef386a1"
 
-"vtex.search-result@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-result@3.136.0/public/@types/vtex.search-result":
-  version "3.136.0"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-result@3.136.0/public/@types/vtex.search-result#1163d18adfb4059ee80965bb878efe77c7b483b7"
+"vtex.search-result@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-result@3.136.1/public/@types/vtex.search-result":
+  version "3.136.1"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search-result@3.136.1/public/@types/vtex.search-result#bf6cd0c5f2340cd70cc5736f4228f6dad34874c4"
 
 "vtex.search@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.search@2.18.2/public/@types/vtex.search":
   version "2.18.2"

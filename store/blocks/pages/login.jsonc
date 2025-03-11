@@ -1,4 +1,10 @@
 {
+  "store.login": {
+    "blocks": ["flex-layout.row#login-page"],
+    "parent": {
+      "header": "header"
+    }
+  },
   "flex-layout.row#login-page": {
     "props": {
       "blockClass": "login-page",
