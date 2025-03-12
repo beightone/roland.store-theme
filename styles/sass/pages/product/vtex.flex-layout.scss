@@ -82,6 +82,13 @@
     border: none;
     border-radius: 2px;
     transition: all 0.2s ease-in-out;
+    background: var(--bg-brand-secondary-bold-base, #ff5a00);
+
+     &:hover {
+       background: var(--bg-brand-secondary-bold-hover, #2b2b3a);
+     }
+
+
 
   }
 
