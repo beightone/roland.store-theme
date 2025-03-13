@@ -209,7 +209,15 @@
         border: none;
         border-radius: 2px;
         transition: all 0.2s ease-in-out;
-        background: var(--bg-brand-secondary-bold-base, #ff5a00);
+
+        @media screen and (min-width: 768px) {
+          background: var(--bg-brand-secondary-bold-base, #ff5a00);
+        }
+
+        @media screen and (max-width: 768px) {
+          background: #2b2b3a;
+        }
+
         &:hover {
           background-color: #2b2b3a;
         }
