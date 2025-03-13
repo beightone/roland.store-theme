@@ -13,11 +13,16 @@ const ProductReadMoreDescription = () => {
   if (!shortDescription) return null
 
   function ajustingWindowPosition() {
-    const element = document.querySelector('#description') as HTMLElement
+    const element = document.querySelector(
+      '.roland-m3-custom-0-x-productDescriptionContent'
+    ) as HTMLElement
 
     if (!element) return
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY
+    const offset = window.innerHeight / 2
+
     window.scrollTo({
-      top: Number(element.offsetTop) - 100,
+      top: elementPosition - offset,
       behavior: 'smooth',
     })
   }
