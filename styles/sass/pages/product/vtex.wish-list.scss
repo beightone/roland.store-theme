@@ -4,6 +4,11 @@
   right: 0;
   :global(.vtex-button) {
     margin-top: 0.5rem;
+
+    &:hover {
+      background-color: transparent!important;
+    }
+
   }
   :global(.vtex-button),
   :global(.vtex-button__label) {

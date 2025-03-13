@@ -18,12 +18,37 @@
     },
     "children": [
       "vtex.store-components:product-name#buy-box",
-      "flex-layout.row#product-floating-infos"
+      "condition-layout.product#buy-button-brand-color"
     ]
   },
-  "flex-layout.row#product-floating-infos": {
+  "condition-layout.product#buy-button-brand-color": {
     "props": {
-      "blockClass": ["product-floating-infos"],
+      "conditions": [
+        {
+          "subject": "brandId",
+          "args": {
+            "id": "2000004"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#boss-floating-infos",
+      "Else": "flex-layout.row#roland-floating-infos"
+    }
+  },
+  "flex-layout.row#boss-floating-infos": {
+    "props": {
+      "blockClass": ["product-floating-infos", "boss"],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "flex-layout.col#product-floating-prices",
+      "condition-layout.product#buy-button"
+    ]
+  },
+  "flex-layout.row#roland-floating-infos": {
+    "props": {
+      "blockClass": ["product-floating-infos", "roland"],
       "preventVerticalStretch": true,
       "preserveLayoutOnMobile": true
     },

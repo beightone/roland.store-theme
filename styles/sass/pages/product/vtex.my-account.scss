@@ -3,6 +3,23 @@
     align-items: flex-start;
   }
 }
+
+:global(.vtex-flex-layout-0-x-flexRowContent--boss) {
+  :global(.slick-current  .roland-store-theme-2-x-thumb-element) {
+    border-color: #0064FF!important;
+  }
+
+  :global(.vtex-wish-list-1-x-wishlistIconContainer--product-page-wishlist .vtex-wish-list-1-x-wishlistIcon) {
+    &::before {
+      content: url('data:image/svg+xml,<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.426 2.5C16.3612 2.5 18.3334 5.29375 18.3334 7.9C18.3334 13.1781 10.1482 17.5 10.0001 17.5C9.85193 17.5 1.66675 13.1781 1.66675 7.9C1.66675 5.29375 3.63897 2.5 6.57416 2.5C8.25934 2.5 9.36119 3.35312 10.0001 4.10312C10.639 3.35312 11.7408 2.5 13.426 2.5Z" stroke="%230064FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    }
+
+    &:hover::before {
+      content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><rect width="20" height="20" /><path d="M13.4259 2.5C16.3611 2.5 18.3333 5.29375 18.3333 7.9C18.3333 13.1781 10.1481 17.5 9.99999 17.5C9.85184 17.5 1.66666 13.1781 1.66666 7.9C1.66666 5.29375 3.63888 2.5 6.57406 2.5C8.25925 2.5 9.3611 3.35312 9.99999 4.10312C10.6389 3.35312 11.7407 2.5 13.4259 2.5Z" fill="%230064FF" stroke="%230064FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    }
+  }
+}
+
 @media screen and (min-width: 1024px) {
   :global(.vtex-flex-layout-0-x-flexRowContent--product-details)
     > :global(.items-stretch) {

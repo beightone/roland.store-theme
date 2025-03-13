@@ -74,6 +74,24 @@
   }
 }
 
+.flexRowContent--boss {
+  .flexRowContent--product-buy-button {
+    :global(.vtex-button) {
+      background-color: #0064FF;
+    }
+  }
+
+  :global(.vtex-product-price-1-x-savings--product-price-savings) {
+    color: #0064FF;
+    border-color: #0064FF;
+
+    &::before {
+      content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M5.64645 9.35355C5.84171 9.54882 6.15829 9.54882 6.35355 9.35355L9.53553 6.17157C9.7308 5.97631 9.7308 5.65973 9.53553 5.46447C9.34027 5.2692 9.02369 5.2692 8.82843 5.46447L6 8.29289L3.17157 5.46447C2.97631 5.2692 2.65973 5.2692 2.46447 5.46447C2.2692 5.65973 2.2692 5.97631 2.46447 6.17157L5.64645 9.35355ZM5.5 2L5.5 9L6.5 9L6.5 2L5.5 2Z" fill="%230064FF"/></svg>');
+    }
+  }
+
+}
+
 .flexRowContent--product-buy-button {
   display: flex;
   gap: 8px;
@@ -181,10 +199,20 @@
       gap: 3rem;
       align-items: center;
 
+      &.flexRowContent--boss {
+         :global(.vtex-button) {
+           background-color: #0064FF;
+         }
+      }
+
       :global(.vtex-button) {
         border: none;
         border-radius: 2px;
         transition: all 0.2s ease-in-out;
+        background: var(--bg-brand-secondary-bold-base, #ff5a00);
+        &:hover {
+          background-color: #2b2b3a;
+        }
       }
 
       .flexCol--product-floating-prices {

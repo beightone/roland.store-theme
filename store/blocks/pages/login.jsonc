@@ -2,7 +2,8 @@
   "store.login": {
     "blocks": ["flex-layout.row#login-page"],
     "parent": {
-      "header": "header"
+      "header": "header",
+      "footer": "flex-layout.row#footer-roland"
     }
   },
   "flex-layout.row#login-page": {
