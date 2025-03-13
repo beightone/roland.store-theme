@@ -1449,9 +1449,6 @@
 .flexColChild--price-container {
   padding: 0;
 }
-.flexColChild--price-container:first-child {
-  min-height: 0;
-}
 
 .flexColChild--product-summary-list-layout-info {
   padding: 0;
