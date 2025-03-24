@@ -25,9 +25,11 @@ const VTEXClasses = {
 
 const ImageSlider = () => {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0) // Índice da imagem principal
-  const { selectedItem } = useProduct() ?? {}
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0)
+  const { selectedItem, product } = useProduct() ?? {}
   const { isMobile } = useDevice()
+
+  console.log('product', product)
 
   if (!selectedItem || !selectedItem.images?.length) {
     return null
@@ -52,9 +54,14 @@ const ImageSlider = () => {
     beforeChange: (_: any, next: number) => setActiveSlideIndex(next),
   }
 
+  const isBoss = (product?.brandId as unknown as number) === 2000004
+
   return (
-    <div className={styles['image-slider-wrapper']}>
-      {/* Imagem principal */}
+    <div
+      className={`${styles['image-slider-wrapper']} ${
+        isBoss ? styles.boss : ''
+      }`}
+    >
       <div
         className={styles['image-wrapper']}
         style={{ width: '100%' }}
@@ -69,7 +76,6 @@ const ImageSlider = () => {
         />
       </div>
 
-      {/* Slider de thumbnails */}
       <Slider {...settingsThumbsSlider}>
         {selectedItem.images.map((image, index) => (
           <div
@@ -77,7 +83,7 @@ const ImageSlider = () => {
             className={`${styles['thumb-wrapper']} ${
               activeSlideIndex === index ? styles['active-thumb'] : ''
             }`}
-            onClick={() => setActiveSlideIndex(index)} // Alterar imagem principal ao clicar
+            onClick={() => setActiveSlideIndex(index)}
           >
             <img
               src={image.imageUrl}
@@ -88,7 +94,6 @@ const ImageSlider = () => {
         ))}
       </Slider>
 
-      {/* Modal de Zoom */}
       <ModalZoom
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}
@@ -96,6 +101,7 @@ const ImageSlider = () => {
         activeSlideIndex={activeSlideIndex}
         closeModal={closeModal}
         VTEXClasses={VTEXClasses}
+        isBoss={isBoss}
       />
     </div>
   )

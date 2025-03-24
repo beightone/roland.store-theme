@@ -27,7 +27,7 @@
 .image-slider-wrapper .arrow-right,
 .image-slider-wrapper .arrow-left {
   border-radius: var(--radius-rounded-full, 9999px);
-  background: #fff !important;
+  background: #fff;
   transition: all 0.2s ease-in-out;
   width: 40px;
   height: 40px;
@@ -39,9 +39,17 @@
   filter: none;
 }
 
+.boss :where(.arrow-right:hover, .arrow-left:hover) {
+  background: #E2EDF7!important;
+}
+
+.boss :where(.arrow-right:hover svg path, .arrow-left:hover svg path) {
+  stroke: #0064FF!important;
+}
+
 .image-slider-wrapper .arrow-right:hover,
 .image-slider-wrapper .arrow-left:hover {
-  background: var(--bg-brand-primary-subtlest-hover, #fdf2ec);
+  background: var(--bg-brand-primary-subtlest-hover, #FDF2EC);
 }
 
 .image-slider-wrapper .arrow-right:hover svg path,
@@ -232,12 +240,20 @@
   display: block !important;
 }
 
+.boss :where(.modal-prev:hover, .modal-next:hover, .zoom-in:hover, .zoom-out:hover, .reset-transform:hover) {
+  background: #E2EDF7!important;
+}
+
 .modal-prev:hover,
 .modal-next:hover,
 .zoom-in:hover,
 .zoom-out:hover,
 .reset-transform:hover {
   background: var(--bg-brand-primary-subtlest-hover, #fdf2ec);
+}
+
+.boss :where(.modal-prev:hover svg path, .modal-next:hover svg path, .zoom-in:hover svg path, .zoom-out:hover svg path, .reset-transform:hover svg g) {
+  stroke: #0064FF!important;
 }
 
 .modal-prev:hover svg path,

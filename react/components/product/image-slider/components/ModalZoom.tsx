@@ -20,6 +20,7 @@ interface ModalZoomProps {
   setIsModalOpen: (isModalOpen: boolean) => void
   images?: Array<{ imageUrl: string; imageId: string }>
   activeSlideIndex?: number
+  isBoss?: boolean
   closeModal: () => void
   VTEXClasses: {
     ARROW_LEFT_CLASS: string
@@ -33,6 +34,7 @@ const ModalZoom = ({
   images,
   activeSlideIndex = 0,
   VTEXClasses,
+  isBoss,
 }: ModalZoomProps) => {
   const modalSliderRef = useRef<any>(null)
 
@@ -58,7 +60,6 @@ const ModalZoom = ({
     speed: 500,
     slidesToScroll: 1,
     waitForAnimate: false,
-
     className: styles['modal-slider'],
     initialSlide: activeSlideIndex,
     nextArrow: <Arrow cssClass={VTEXClasses.ARROW_RIGHT_CLASS} />,
@@ -70,7 +71,7 @@ const ModalZoom = ({
       isOpen={isModalOpen}
       onRequestClose={closeModal}
       contentLabel="Imagem Ampliada"
-      className={styles['modal-zoom-image']}
+      className={`${styles['modal-zoom-image']} ${isBoss ? styles.boss : ''}`}
       overlayClassName={styles['modal-overlay']}
     >
       <div className={styles['modal-content']}>
