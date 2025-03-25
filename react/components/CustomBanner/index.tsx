@@ -10,7 +10,7 @@ interface BannerProps {
 }
 
 interface ItemProps {
-  initalDate?: string
+  initialDate?: string
   finalDate?: string
   visible: boolean
   image: string
@@ -33,12 +33,10 @@ const CustomBanner: StorefrontFunctionComponent<BannerProps> = ({
       tablet: 1,
       phone: 1,
     },
-
     infinite,
     autoplay: {
       timeout: 5000,
     },
-
     usePagination: true,
     showNavigationArrows: 'never',
     showPaginationDots: 'always',
@@ -48,18 +46,18 @@ const CustomBanner: StorefrontFunctionComponent<BannerProps> = ({
     items?.filter((item) => {
       if (!item.visible) return false
 
-      const initalDate = item.initalDate ? Date.parse(item.initalDate) : null
+      const initialDate = item.initialDate ? Date.parse(item.initialDate) : null
       const finalDate = item.finalDate ? Date.parse(item.finalDate) : null
 
-      if (initalDate && !finalDate) {
-        return actualDate >= initalDate
+      if (initialDate && !finalDate) {
+        return actualDate >= initialDate
       }
 
-      if (initalDate && finalDate) {
-        return actualDate >= initalDate && actualDate < finalDate
+      if (initialDate && finalDate) {
+        return actualDate >= initialDate && actualDate < finalDate
       }
 
-      if (!initalDate && finalDate) {
+      if (!initialDate && finalDate) {
         return actualDate < finalDate
       }
 

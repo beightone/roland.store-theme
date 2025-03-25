@@ -1,0 +1,70 @@
+{
+  "store.product": {
+    "title": "Produto - Roland",
+    "children": [
+      "flex-layout.row#product-breadcrumb",
+      "sticky-layout#floating-buy-container",
+      // "flex-layout.row#product-details",
+      "flex-layout.row#product-anchor-sections",
+      "flex-layout.row#product-description",
+      "product-technical-specifications",
+      "product-instruction-manual",
+      "product-content-items",
+      "product-video",
+      "flex-layout.row#buyt-together",
+      "flex-layout.row#product-shelf",
+      "flex-layout.row#product-trustvox-avaliations",
+      "flex-layout.row#newsletter"
+    ],
+
+    "parent": {
+      "header": "header",
+      "footer": "flex-layout.row#footer-roland"
+    }
+  },
+  "flex-layout.row#buyt-together": {
+    "title": "Seção - Compre junto",
+    "props": {
+      "blockClass": "buy-together"
+    },
+    "children": ["buy-together"]
+  },
+  "flex-layout.row#roland-details": {
+    "title": "Seção - Detalhes do produto",
+    "props": {
+      "blockClass": ["product-details", "roland"],
+      "preventHorizontalStretch": true,
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.row#product-image",
+      "flex-layout.col#product-info"
+    ]
+  },
+  "flex-layout.row#boss-details": {
+    "title": "Seção - Detalhes do produto",
+    "props": {
+      "blockClass": ["product-details", "boss"],
+      "preventHorizontalStretch": true,
+      "colSizing": "auto"
+    },
+    "children": [
+      "flex-layout.row#product-image",
+      "flex-layout.col#product-info"
+    ]
+  },
+  "condition-layout.product#color-condition": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "brandId",
+          "arguments": {
+            "id": "2000004"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#boss-details",
+      "Else": "flex-layout.row#roland-details"
+    }
+  }
+}

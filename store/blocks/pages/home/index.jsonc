@@ -1,5 +1,5 @@
 {
-  "store.home#normal": {
+  "store.home": {
     "blocks": [
       "global-styles",
       "flex-layout.row#main-banner",
@@ -52,7 +52,44 @@
     "children": ["custom-banner#main-banner"]
   },
   "custom-banner#main-banner": {
-    "title": "Configuração"
+    "title": "Configuração",
+    "props": {
+      "items": [
+        {
+          "visible": true,
+          "itemLink": "https://store.roland.com.br/modulo-de-som-e-ritmos-p-6/p?utm_source=Roland_Store&utm_medium=Banner_Principal+&utm_campaign=P-6_10.24",
+          "initialDate": "2024-10-04T13:36:00.000Z",
+          "finalDate": "",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/6e1f2f4b-d899-49c4-a64b-5741ececd666___11915510afd0563d8d7730b394ade9c8.gif",
+          "imageMobile": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/afa7501c-a221-4d85-902a-1b13ae4557ba___a6f3cb55d21ad190d9d3997d6f7f2de8.gif"
+        },
+        {
+          "visible": true,
+          "itemLink": "https://store.roland.com.br/teclado-musical-digital-com-61-teclas-e-x10/p?utm_source=Roland_Store&utm_medium=Banner_Principal&utm_campaign=E-X10_09.24",
+          "initialDate": "2024-11-01T03:01:00.000Z",
+          "finalDate": "",
+          "__editorItemTitle": "E-X10",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/d2efa80b-44c8-43f2-bb62-8ad9ff991d24___46ab1e28f56d14f06f9e36e0af5fe78e.gif",
+          "imageMobile": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/b29b2001-00d9-4db2-a014-918860b2fd8d___98a0265d428280b9154afa44ead6f013.png"
+        },
+        {
+          "visible": true,
+          "itemLink": "https://store.roland.com.br/go%20keys?_q=go+keys&map=ft&utm_source=Roland_Store&utm_medium=Banner_Principal&utm_campaign=GOKeysSeries_06.24",
+          "initialDate": "2024-11-01T03:01:00.000Z",
+          "finalDate": "",
+          "imageMobile": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/eebff3c8-e9a2-4048-8d9c-7c543e950888___649f5bc172c509ec4fc2fbf1d226f32e.gif",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/f2dd5ec2-2f6a-46f8-ab79-b8f31c60b8e6___74e497a6d20c25b6cfa8f9f160096554.gif"
+        },
+        {
+          "visible": true,
+          "itemLink": "https://store.roland.com.br/estilo%20e%20excel%C3%AAncia%20musical%20-%20pianos%20digitais%20roland?utm_source=Roland_Store&utm_medium=Banner_Principal&utm_campaign=LinhaRP%26F_07.24",
+          "initialDate": "2024-07-26T21:18:00.000Z",
+          "finalDate": "2024-08-31T21:18:00.000Z",
+          "image": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/599ca36e-42f6-4afc-9e4f-ff23b719ec32___c0b1b808a87d7be025251954691e0d30.jpg",
+          "imageMobile": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/2ba82ae6-41a2-49fb-b0f1-246cbef4e421___a5d94ffb0097f143e87173d462d1bfbe.jpg"
+        }
+      ]
+    }
   },
   "flex-layout.row#explore-our-categories": {
     "title": "Expore nossas categorias",

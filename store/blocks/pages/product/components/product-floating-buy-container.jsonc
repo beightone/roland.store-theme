@@ -1,0 +1,81 @@
+{
+  "sticky-layout#floating-buy-container": {
+    "props": {
+      "position": "bottom",
+      "blockClass": "buy-button-fixed"
+    },
+    "children": [
+      "flex-layout.row#floating-buy-button",
+      "floating-appearance-controller"
+    ]
+  },
+  "flex-layout.row#floating-buy-button": {
+    "title": "Botão comprar Flutuante",
+    "props": {
+      "blockClass": ["floating-buy-button"],
+      "preventHorizontalStretch": true,
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "vtex.store-components:product-name#buy-box",
+      "condition-layout.product#buy-button-brand-color"
+    ]
+  },
+  "condition-layout.product#buy-button-brand-color": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "brandId",
+          "arguments": {
+            "id": "2000004"
+          }
+        }
+      ],
+      "Then": "flex-layout.row#boss-floating-infos",
+      "Else": "flex-layout.row#roland-floating-infos"
+    }
+  },
+  "flex-layout.row#boss-floating-infos": {
+    "props": {
+      "blockClass": ["product-floating-infos", "boss"],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "flex-layout.col#product-floating-prices",
+      "condition-layout.product#buy-button"
+    ]
+  },
+  "flex-layout.row#roland-floating-infos": {
+    "props": {
+      "blockClass": ["product-floating-infos", "roland"],
+      "preventVerticalStretch": true,
+      "preserveLayoutOnMobile": true
+    },
+    "children": [
+      "flex-layout.col#product-floating-prices",
+      "condition-layout.product#buy-button"
+    ]
+  },
+  "vtex.store-components:product-name#buy-box": {
+    "props": {
+      "tag": "div"
+    }
+  },
+  "flex-layout.col#product-floating-prices": {
+    "props": {
+      "blockClass": ["product-floating-prices"],
+      "verticalAlign": "middle"
+    },
+    "children": [
+      "product-spot-price-savings#product-page",
+      "product-installments#product-page-floating"
+    ]
+  },
+  "product-installments#product-page-floating": {
+    "props": {
+      "blockClass": "product-installments",
+      "message": "ou {installmentsTotalValue} em até \n {installmentsNumber}x de {installmentValue}"
+    }
+  }
+}

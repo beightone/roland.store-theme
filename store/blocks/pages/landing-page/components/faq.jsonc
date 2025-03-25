@@ -1,4 +1,12 @@
 {
+  "flex-layout.row#pre-owned-faq": {
+    "title": "FAQ",
+    "props": {
+      "blockClass": "pre-owned-faq",
+      "fullWidth": true
+    },
+    "children": ["flex-layout.col#pre-owned-faq-content"]
+  },
   "flex-layout.col#pre-owned-faq-content": {
     "title": "Conteúdo",
     "props": {

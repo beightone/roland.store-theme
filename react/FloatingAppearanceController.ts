@@ -1,0 +1,3 @@
+import FloatingAppearanceController from './components/FloatingAppearanceController'
+
+export default FloatingAppearanceController

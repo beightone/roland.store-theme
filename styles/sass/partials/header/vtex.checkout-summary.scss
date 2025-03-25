@@ -1,43 +1,38 @@
 .summarySmallDisclaimer {
-    display: none;
+  display: none;
 }
 
 .summaryItemLabel {
-    color: var(--text-neutral-bold, #18181B);
-    font-family: "Proxima Nova";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: -0.16px;
+  color: var(--text-neutral-bold, #18181b);
+  font-family: 'Proxima Nova';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
 }
 
 .summarySmallContent {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-
-
 .summaryItemContainer--minicart-totalizers:last-child {
-    display: flex;
+  display: flex;
 }
 
 .summarySmallContent .summaryItemContainer {
+  .price {
+    color: var(--text-neutral-bold, #18181b);
+    text-align: right;
 
-
-    .price {
-        color: var(--text-neutral-bold, #18181B);
-        text-align: right;
-
-        font-family: "Proxima Nova";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 24px;
-        /* 150% */
-        letter-spacing: -0.16px;
-    }
+    font-family: 'Proxima Nova';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    /* 150% */
+    letter-spacing: -0.16px;
+  }
 }
-

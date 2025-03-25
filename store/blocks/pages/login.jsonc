@@ -1,0 +1,38 @@
+{
+  "store.login": {
+    "blocks": ["flex-layout.row#login-page"],
+    "parent": {
+      "header": "header",
+      "footer": "flex-layout.row#footer-roland"
+    }
+  },
+  "flex-layout.row#login-page": {
+    "props": {
+      "blockClass": "login-page",
+      "fullWidth": true
+    },
+
+    "children": ["flex-layout.col#login-page"]
+  },
+
+  "flex-layout.col#login-page": {
+    "props": {
+      "preventVerticalStretch": true,
+      "rowGap": 9
+    },
+
+    "children": ["login-content"]
+  },
+  "login-content": {
+    "props": {
+      "isInitialScreenOptionOnly": false,
+      "defaultOption": 1,
+      "optionsTitle": "Escolha uma opção de login",
+      "accessCodeTitle": "Receber código de acesso por e-mail",
+      "emailAndPasswordTitle": "Entrar com e-mail e senha",
+      "emailPlaceholder": "exemplo@mail.com",
+      "passwordPlaceholder": "Digite sua senha",
+      "hideIconLabel": true
+    }
+  }
+}

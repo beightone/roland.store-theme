@@ -35,6 +35,14 @@
   }
 }
 
+:global(.vtex-flex-layout-0-x-flexRow--pre-owned):global(.vtex-flex-layout-0-x-flexRow--pre-owned-product) {
+  .label--link-roland {
+    background-image: url('assets/svgs/roland-button.svg')!important;
+  }
+}
+
+
+
 .link--link {
   &-roland,
   &-boss {

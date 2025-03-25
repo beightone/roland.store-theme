@@ -2,57 +2,65 @@
   :global(.bg-base),
   :global(.vtex-store-header-2-x-headerRowContainer--main-container),
   :global(.vtex-store-components-3-x-searchBarContainer),
-  :global(.roland-store-theme-1-x-menuContainer),
+  :global(.roland-store-theme-2-x-menuContainer),
   :global(.vtex-flex-layout-0-x-flexRow--shelf-container),
-  :global(.vtex-store-header-2-x-headerStickyRow--search-container)
-   {
+  :global(.vtex-store-header-2-x-headerStickyRow--search-container) {
     background-color: #000;
   }
 
-  :global(.vtex-store-newsletter-1-x-newsletterForm--newsletter-form .vtex-styleguide-9-x-input) {
-    background-color: #FFF;
+  :global(
+      .vtex-store-newsletter-1-x-newsletterForm--newsletter-form
+        .vtex-styleguide-9-x-input
+    ) {
+    background-color: #fff;
   }
 
-  :global(.vtex-store-components-3-x-searchBarContainer .vtex-store-components-3-x-searchBarIcon--search-bar) {
+  :global(
+      .vtex-store-components-3-x-searchBarContainer
+        .vtex-store-components-3-x-searchBarIcon--search-bar
+    ) {
     filter: invert(1);
   }
 
-  :global(.vtex-store-newsletter-1-x-newsletterForm--newsletter-form .vtex-styleguide-9-x-input)::placeholder {
-    color: #000!important;
+  :global(
+      .vtex-store-newsletter-1-x-newsletterForm--newsletter-form
+        .vtex-styleguide-9-x-input
+    )::placeholder {
+    color: #000 !important;
   }
 
   :global(.vtex-login-2-x-label),
   :global(.vtex-styleguide-9-x-input)::placeholder,
   :global(.vtex-store-link-0-x-label--wishlist),
-  :global(.vtex-store-components-3-x-searchBarInnerContainer .vtex-styleguide-9-x-input) {
-    color: #FFF!important;
+  :global(
+      .vtex-store-components-3-x-searchBarInnerContainer
+        .vtex-styleguide-9-x-input
+    ) {
+    color: #fff !important;
   }
 
   :global(.vtex-flex-layout-0-x-flexRow--shelf-title-container) {
     display: none;
   }
 
-  :global(.roland-store-theme-1-x-menuContainer) {
+  :global(.roland-store-theme-2-x-menuContainer) {
     border: none;
   }
 
-  :global(.vtex-minicart-2-x-openIconContainer ) {
+  :global(.vtex-minicart-2-x-openIconContainer) {
     &::before {
       content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5.00014 14H18.1359C19.1487 14 19.6551 14 20.0582 13.8112C20.4134 13.6448 20.7118 13.3777 20.9163 13.0432C21.1485 12.6633 21.2044 12.16 21.3163 11.1534L21.9013 5.88835C21.9355 5.58088 21.9525 5.42715 21.9031 5.30816C21.8597 5.20366 21.7821 5.11697 21.683 5.06228C21.5702 5 21.4155 5 21.1062 5H4.50014M2 2H3.24844C3.51306 2 3.64537 2 3.74889 2.05032C3.84002 2.09463 3.91554 2.16557 3.96544 2.25376C4.02212 2.35394 4.03037 2.48599 4.04688 2.7501L4.95312 17.2499C4.96963 17.514 4.97788 17.6461 5.03456 17.7462C5.08446 17.8344 5.15998 17.9054 5.25111 17.9497C5.35463 18 5.48694 18 5.75156 18H19M7.5 21.5H7.51M16.5 21.5H16.51M8 21.5C8 21.7761 7.77614 22 7.5 22C7.22386 22 7 21.7761 7 21.5C7 21.2239 7.22386 21 7.5 21C7.77614 21 8 21.2239 8 21.5ZM17 21.5C17 21.7761 16.7761 22 16.5 22C16.2239 22 16 21.7761 16 21.5C16 21.2239 16.2239 21 16.5 21C16.7761 21 17 21.2239 17 21.5Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-          position: relative;
-          top: 7px;
+      position: relative;
+      top: 7px;
     }
 
     :global(.vtex-store-components-3-x-imageElement) {
       display: none;
     }
-
-    
-    
   }
 
-  :global(.roland-store-theme-1-x-menuItem >a >span):hover {
-    color: #FF5A00!important;
+  :global(.roland-store-theme-2-x-menuItem > a > span):hover {
+    color: #ff5a00 !important;
   }
 
   :global(.vtex-login-2-x-container .vtex-button):hover {
@@ -64,10 +72,9 @@
       display: none !important;
     }
 
-      :global(.roland-store-theme-1-x-menuItem span) {
-    color: #FFF !important;
-
-      }
+    :global(.roland-store-theme-2-x-menuItem span) {
+      color: #fff !important;
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -78,9 +85,7 @@
       object-position: -75px;
     }
 
-    
-
-    :global(.roland-store-theme-1-x-menuButton) {
+    :global(.roland-store-theme-2-x-menuButton) {
       background-image: url('data:image/svg+xml,<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.625 10.5H18.375" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/><path d="M2.625 5.25H18.375" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/><path d="M2.625 15.75H18.375" stroke="white" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/></svg>');
     }
   }

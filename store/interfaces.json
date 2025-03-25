@@ -33,6 +33,15 @@
   "custom-banner": {
     "component": "CustomBanner"
   },
+  "custom-shipping-calculator": {
+    "component": "ShippingCalculator"
+  },
+  "custom-buy-button-popup-content": {
+    "component": "BuyButtonPopupContent"
+  },
+  "custom-image-slider": {
+    "component": "ImageSlider"
+  },
   "collapsible-content": {
     "component": "CollapsibleContent",
     "composition": "children"
@@ -54,6 +63,9 @@
   "pre-owned-flag": {
     "component": "PreOwnedCartFlag"
   },
+  "price-per-commercial-policy": {
+    "component": "PricePerCommercialPolicy"
+  },
   "custom-infocard": {
     "component": "CustomInfoCard"
   },
@@ -71,5 +83,35 @@
   "custom-flag-discount": {
     "component": "CustomFlagDiscount",
     "composition": "children"
+  },
+  "product-link-share": {
+    "component": "ProductLinkShare"
+  },
+  "anchor-sections": {
+    "component": "AnchorSections"
+  },
+  "product-description-custom": {
+    "component": "ProductDescriptionCustom"
+  },
+  "product-trustvox-avaliations": {
+    "component": "ProductTrustvoxAvaliations"
+  },
+  "product-technical-specifications": {
+    "component": "ProductTechnicalSpecifications"
+  },
+  "product-instruction-manual": {
+    "component": "ProductInstructionManual"
+  },
+  "product-content-items": {
+    "component": "ProductContentItems"
+  },
+  "product-video": {
+    "component": "ProductVideo"
+  },
+  "product-read-more-description": {
+    "component": "ProductReadMoreDescription"
+  },
+  "floating-appearance-controller": {
+    "component": "FloatingAppearanceController"
   }
 }

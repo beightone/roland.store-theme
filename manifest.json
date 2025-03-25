@@ -1,7 +1,7 @@
 {
   "vendor": "roland",
   "name": "store-theme",
-  "version": "1.0.26",
+  "version": "2.0.23",
   "builders": {
     "styles": "2.x",
     "store": "0.x",
@@ -71,11 +71,14 @@
     "vtex.modal-layout": "0.x",
     "vtex.condition-layout": "2.x",
     "vtex.product-highlights": "2.x",
-    "vtex.catalog-graphql": "1.x"
+    "vtex.catalog-graphql": "1.x",
+    "roland.buy-together": "0.x",
+    "roland.assembly-options": "0.x"
   },
   "peerDependencies": {
     "vtex.wish-list": "1.x",
-    "vtex.wordpress-integration": "2.x"
+    "vtex.wordpress-integration": "2.x",
+    "vtex.availability-notify": "1.x"
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }

@@ -275,6 +275,10 @@
   background-image: url("assets/svgs/roland-inactive.svg") !important;
 }
 
+:global(.vtex-flex-layout-0-x-flexRow--pre-owned):global(.vtex-flex-layout-0-x-flexRow--pre-owned-product) .label--link-roland {
+  background-image: url("assets/svgs/roland-button.svg") !important;
+}
+
 .link--link-roland .label, .link--link-boss .label {
   width: 48px;
   height: 24px;
