@@ -1,0 +1,13 @@
+{
+  "flex-layout.row#black-friday-shelf-offer": {
+    "title": "Vitrine Black Friday",
+    "props": {
+      "blockClass": [
+        "shelf-container-black-friday",
+        "centered-wrapper",
+        "black-friday-shelf-offer"
+      ]
+    },
+    "children": ["flex-layout.col#shelf-container-1"]
+  }
+}

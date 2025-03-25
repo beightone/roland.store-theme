@@ -1,0 +1,56 @@
+{
+  "flex-layout.row#simple-banner-collection": {
+    "title": "Banner Simples",
+    "props": {
+      "blockClass": ["simple-banner", "simple-banner-collection"]
+    },
+    "children": ["flex-layout.col#simple-banner-collection"]
+  },
+  "flex-layout.col#simple-banner-collection": {
+    "props": {
+      "blockClass": ["simple-banner-collection"]
+    },
+    "children": [
+      "responsive-layout.desktop#image-simple-banner-collection",
+      "responsive-layout.mobile#image-simple-banner-collection"
+    ]
+  },
+  "responsive-layout.desktop#image-simple-banner-collection": {
+    "title": "Desktop: Banner",
+    "children": ["image#simple-banner-collection"]
+  },
+  "image#simple-banner-collection": {
+    "title": "Imagem",
+    "props": {
+      "width": "100%",
+      "maxHeight": "400",
+      "src": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/bc9cccbc-cf93-48ae-b54a-145a1f90a803___d3ec8f24c8b46917e0b5856925bd2250.png",
+      "alt": "Homem tocando teclado Roland",
+      "link": {
+        "attributeNofollow": false,
+        "newTab": false,
+        "url": "/#"
+      },
+      "blockClass": "simple-banner-collection"
+    }
+  },
+  "responsive-layout.mobile#image-simple-banner-collection": {
+    "title": "Mobile: Banner",
+    "children": ["image#simple-banner-collection-mobile"]
+  },
+  "image#simple-banner-collection-mobile": {
+    "title": "Imagem",
+    "props": {
+      "width": "100%",
+      "maxHeight": "400",
+      "src": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/aaaf41cb-3fb1-4e80-a38f-1e4491a15de3___adfa204427a2ff63ee5f03c4bb6998ed.png",
+      "link": {
+        "attributeNofollow": false,
+        "newTab": false,
+        "url": "/#"
+      },
+      "alt": "Homem tocando teclado Roland",
+      "blockClass": "simple-banner-collection"
+    }
+  }
+}

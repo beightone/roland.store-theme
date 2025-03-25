@@ -1,0 +1,37 @@
+{
+  "flex-layout.row#simple-double-banner-collection": {
+    "title": "Banner Duplo",
+    "props": {
+      "blockClass": ["simple-double-banner", "simple-double-banner-collection"],
+      "fullWidth": true,
+      "preventHorizontalStretch": true
+    },
+    "children": [
+      "image#simple-double-banner-collection-1",
+      "image#simple-double-banner-collection-2"
+    ]
+  },
+
+  "image#simple-double-banner-collection-1": {
+    "title": "Imagem 1",
+    "props": {
+      "src": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/f165d610-2a53-4e26-82b7-ba9afb4891c6___4d2af79b1bdbdc1e771549a7ab813167.png",
+      "alt": "Banner simples 1",
+      "maxHeight": "400",
+      "width": "100%",
+      "link": "#",
+      "blockClass": ["simple-banner-image-1"]
+    }
+  },
+  "image#simple-double-banner-collection-2": {
+    "title": "Imagem 2",
+    "props": {
+      "src": "https://roland.vtexassets.com/assets/vtex.file-manager-graphql/images/bab7b8c6-50ce-4c08-a2b0-1beddf8abbba___50f95bc8bca0aaf24833ae76cb08e7b1.png",
+      "alt": "Banner simples 2",
+      "maxHeight": "400",
+      "width": "100%",
+      "link": "#",
+      "blockClass": ["simple-banner-image-2"]
+    }
+  }
+}

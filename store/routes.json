@@ -4,6 +4,8 @@
   },
   "store.custom#black-friday": {
     "path": "/black-friday"
+  },
+  "store.custom#collection-roland": {
+    "path": "/colecao-teclados"
   }
-  
 }

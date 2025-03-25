@@ -108,6 +108,32 @@
     margin: 0 16px;
   }
 }
+.link--collection-category-cards-see-all {
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  border: 1.25px solid #18181b;
+  background: #fff;
+  color: #3f3f46;
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  width: fit-content;
+  margin-top: 2.375rem;
+  text-decoration: none;
+}
+.link--collection-category-cards-see-all:hover {
+  border-color: #ee8146;
+  background: #fdf2ec;
+  color: #ff5a00;
+  transition: all 0.3s ease-in-out;
+}
+
 .link--home-black-friday-banner-link {
   border-radius: var(--radius-rounded-sm, 2px);
   background: var(--Gray-Scale-White, #FFF);
@@ -228,7 +254,7 @@
   top: 4px;
 }
 .link--help-center .label--help-center {
-  color: #FFF;
+  color: #fff;
   font-family: "Proxima Nova";
   font-size: 0.875rem;
   font-style: normal;
@@ -260,12 +286,12 @@
 }
 .link--link-pre-owned {
   border-radius: var(--radius-rounded-sm, 2px) var(--radius-rounded-sm, 2px) var(--radius-rounded-none, 0px) var(--radius-rounded-none, 0px);
-  background: var(--icon-feedback-information-base, #FFF);
+  background: var(--icon-feedback-information-base, #fff);
   padding: 0 16px;
   text-decoration: none;
 }
 .link--link-pre-owned .label--link-pre-owned {
-  color: var(--text-neutral-bold, #18181B);
+  color: var(--text-neutral-bold, #18181b);
   font-family: "Proxima Nova";
   font-size: 16px;
   font-style: normal;
@@ -325,7 +351,7 @@
   margin-right: 8px;
 }
 .link--breadcrumb--home .label {
-  color: var(--text-neutral-subtlest, #71717A);
+  color: var(--text-neutral-subtlest, #71717a);
   font-family: "Proxima Nova";
   font-size: 12px;
   font-style: normal;
@@ -338,7 +364,7 @@
   text-decoration: none;
 }
 .link--breadcrumb--pre-owned .label {
-  color: var(--text-neutral-subtle, #3F3F46);
+  color: var(--text-neutral-subtle, #3f3f46);
   font-family: "Proxima Nova";
   font-size: 12px;
   font-style: normal;

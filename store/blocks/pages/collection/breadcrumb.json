@@ -1,0 +1,28 @@
+{
+  "flex-layout.row#breadcrumb.collection": {
+    "title": "Breadcrumb - Coleção/Departamento",
+    "props": {
+      "blockClass": ["breadcrumb--pre-owned"],
+      "preventVerticalStretch": true,
+      "preventHorizontalStretch": true,
+      "preserveLayoutOnMobile": true
+    },
+    "children": ["link#breadcrumb.home", "link#breadcrumb.collection"]
+  },
+  "link#breadcrumb.home": {
+    "title": "Link para Home",
+    "props": {
+      "href": "/",
+      "label": "Home",
+      "blockClass": ["breadcrumb--home"]
+    }
+  },
+  "link#breadcrumb.collection": {
+    "title": "Link para Coleção/Departamento",
+    "props": {
+      "href": "/colecao-teclados",
+      "label": "Teclados",
+      "blockClass": ["breadcrumb--pre-owned"]
+    }
+  }
+}
