@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 // Styles
 import styles from './styles.css'
+import { useProduct } from 'vtex.product-context'
 
 const ProductLinkShare = () => {
   const [isCopied, setIsCopied] = useState(false)
+  const { product } = useProduct() ?? {}
+
+  const isBoss = (product?.brandId as unknown as number) === 2000004
 
   const handleButtonClick = async () => {
     if (isCopied === true) {
@@ -54,14 +58,14 @@ const ProductLinkShare = () => {
         >
           <path
             d="M13.3033 5.03C14.4542 3.87916 16.3192 3.87916 17.47 5.03V5.03C18.6208 6.18083 18.6208 8.04583 17.47 9.19666L12.5708 14.0958C11.42 15.2467 9.555 15.2467 8.40417 14.0958V14.0958C7.25334 12.945 7.25334 11.08 8.40417 9.92916L9.13667 9.19666"
-            stroke="#FF5A00"
+            stroke={isBoss ? '#0064FF' : '#FF5A00'}
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
             d="M6.69666 15.8033C5.54583 16.9542 3.68083 16.9542 2.53 15.8033V15.8033C1.37916 14.6525 1.37916 12.7875 2.53 11.6367L7.42916 6.73751C8.58 5.58668 10.445 5.58668 11.5958 6.73751V6.73751C12.7467 7.88835 12.7467 9.75335 11.5958 10.9042L10.8333 11.6667"
-            stroke="#FF5A00"
+            stroke={isBoss ? '#0064FF' : '#FF5A00'}
             strokeWidth="1.5"
             strokeLinecap="round"
             strokeLinejoin="round"

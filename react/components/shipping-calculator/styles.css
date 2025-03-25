@@ -48,6 +48,12 @@
   letter-spacing: -0.14px;
 }
 
+.boss .shipping-calculator-input:focus,
+.boss .shipping-calculator-input:focus-visible {
+  border: 1.5px solid #0064FF !important;
+  outline: 1.5px solid #0064FF !important;
+}
+
 .shipping-calculator-input:focus,
 .shipping-calculator-input:focus-visible {
   border: 1.5px solid #ee8146 !important;
@@ -71,6 +77,12 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   margin-top: 16px;
+}
+
+.boss .shipping-calculator-button:hover {
+  border-color: #0064FF;
+  background: var(--bg-brand-primary-subtlest-hover, #E2EDF7);
+  color: #0064FF;
 }
 
 .shipping-calculator-button:hover {

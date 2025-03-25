@@ -18,7 +18,9 @@ import GET_SHIPPING_ESTIMATE from '../../graphql/queries/getShippingEstimate.gra
 import type { ShippingData, ShippingEstimateVariables, SLA } from './types'
 
 const ShippingCalculator: React.FC = () => {
-  const { selectedItem, selectedQuantity } = useProduct() ?? {}
+  const { selectedItem, selectedQuantity, product } = useProduct() ?? {}
+
+  const isBoss = (product?.brandId as unknown as number) === 2000004
 
   const [getShippingEstimate, { data, loading }] = useLazyQuery<
     { shipping: ShippingData },
@@ -51,6 +53,7 @@ const ShippingCalculator: React.FC = () => {
     () => data?.shipping?.logisticsInfo[0]?.slas ?? [],
     [data?.shipping?.logisticsInfo]
   )
+
   const cheapestOption: SLA | undefined = useMemo(() => {
     return shippingOptions.reduce((prev, curr) => {
       return curr.price < prev.price ? curr : prev
@@ -67,7 +70,11 @@ const ShippingCalculator: React.FC = () => {
   }, [shippingOptions])
 
   return (
-    <div className={styles['shipping-calculator-container']}>
+    <div
+      className={`${styles['shipping-calculator-container']} ${
+        isBoss ? styles.boss : ''
+      }`}
+    >
       <form
         className={styles['shipping-calculator-form']}
         onSubmit={handleSubmit}

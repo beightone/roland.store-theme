@@ -3,7 +3,6 @@
     "title": "Produto - Roland",
     "children": [
       "flex-layout.row#product-breadcrumb",
-      "sticky-layout#floating-buy-container",
       // "flex-layout.row#product-details",
       "flex-layout.row#product-anchor-sections",
       "flex-layout.row#product-description",
