@@ -2,7 +2,7 @@
   "flex-layout.row#collection-category-cards": {
     "title": "Seção - Categorias",
     "props": {
-      "blockClass": ["category-cards-collection"],
+      "blockClass": ["category-cards-collection", "roland-category-cards"],
       "fullWidth": true
     },
     "children": ["flex-layout.col#collection-category-cards"]
@@ -102,7 +102,11 @@
         "phone": 3
       },
       "infinite": true,
-      "blockClass": ["shelf-slider", "category-cards-collection"]
+      "blockClass": [
+        "shelf-slider",
+        "category-cards-collection",
+        "roland-category-cards"
+      ]
     }
   },
   "link#collection-category-cards-see-all": {
