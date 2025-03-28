@@ -435,6 +435,10 @@
     row-gap: 1rem;
   }
 }
+.flexRow--login-page {
+  background-color: #f4f4f5;
+}
+
 .flexRowContent--home-content-container {
   max-width: 1440px;
   margin: 0 auto;
@@ -536,10 +540,6 @@
 
 .flexRow--black-friday-banner-with-shelf {
   margin-top: 0 !important;
-}
-
-.flexRow--login-page {
-  background-color: #f4f4f5;
 }
 
 .flexRowContent--confirmationButtons {
