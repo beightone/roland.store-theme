@@ -1,4 +1,11 @@
 {
+  "display-condition#collection-category-cards": {
+    "title": "Condição de exibição Categorias",
+    "children": ["flex-layout.row#collection-category-cards"],
+    "props": {
+      "isActive": true
+    }
+  },
   "flex-layout.row#collection-category-cards": {
     "title": "Seção - Categorias",
     "props": {

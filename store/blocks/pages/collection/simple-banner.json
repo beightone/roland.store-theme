@@ -1,4 +1,11 @@
 {
+  "display-condition#simple-banner-collection": {
+    "title": "Condição de exibição Banner Simples",
+    "children": ["flex-layout.row#simple-banner-collection"],
+    "props": {
+      "isActive": true
+    }
+  },
   "flex-layout.row#simple-banner-collection": {
     "title": "Banner Simples",
     "props": {

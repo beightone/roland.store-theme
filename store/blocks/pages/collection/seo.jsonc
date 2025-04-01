@@ -1,4 +1,11 @@
 {
+  "display-condition#collection-seo-one": {
+    "title": "Condição de exibição SEO Superior",
+    "children": ["collapsible-content#collection-seo-one"],
+    "props": {
+      "isActive": true
+    }
+  },
   "collapsible-content#collection-seo-one": {
     "children": ["rich-text#collection-seo-one"],
     "props": {
@@ -11,6 +18,14 @@
     "props": {
       "text": "### Teclados \n\nDescubra nossa incrível linha de produtos, projetada para atender a todas as fases da sua jornada musical. Com a melhor qualidade do mercado, oferecemos opções para cada necessidade e estilo. Nossos teclados digitais, disponíveis em diferentes tamanhos e categorias, são perfeitos para qualquer objetivo musical. Seja qual for o seu estilo, temos o teclado ideal para você alcançar seu potencial!",
       "blockClass": "collection-seo-text--content"
+    }
+  },
+
+  "display-condition#collection-seo": {
+    "title": "Condição de exibição SEO",
+    "children": ["collapsible-content#collection-seo"],
+    "props": {
+      "isActive": true
     }
   },
   "collapsible-content#collection-seo": {

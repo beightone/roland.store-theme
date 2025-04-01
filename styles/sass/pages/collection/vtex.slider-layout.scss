@@ -1,17 +1,17 @@
-.infoCardContainer--category-cards-collection {
+.infoCardContainer--roland-category-cards {
   flex-direction: column-reverse;
   padding: 2rem;
   gap: 1rem;
   border: 1px solid transparent;
   box-sizing: border-box;
-  &:hover {
-    transition: all 0.3s ease-in-out;
-    border-color: #e95c24;
-    .infoCardTextContainer--category-cards-collection {
-      .infoCardCallActionContainer--category-cards-collection {
-        :global(.vtex-button) {
-          :global(.vtex-button__label) {
-            @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1024px) {
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      border-color: #e95c24;
+      .infoCardTextContainer--category-cards-collection {
+        .infoCardCallActionContainer--category-cards-collection {
+          :global(.vtex-button) {
+            :global(.vtex-button__label) {
               color: #2b2b3a;
               font-weight: 600;
             }

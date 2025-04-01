@@ -1,4 +1,11 @@
 {
+  "display-condition#simple-shelf-container-new": {
+    "title": "Condição de exibição Vitrine 1",
+    "children": ["flex-layout.row#simple-shelf-container-new"],
+    "props": {
+      "isActive": true
+    }
+  },
   "flex-layout.row#simple-shelf-container-new": {
     "title": "Vitrine Simples 1",
     "children": ["flex-layout.col#shelf-container-new"],

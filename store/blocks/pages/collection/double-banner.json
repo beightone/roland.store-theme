@@ -1,4 +1,11 @@
 {
+  "display-condition#simple-double-banner-collection": {
+    "title": "Condição de exibição da seção Banner Duplo",
+    "children": ["flex-layout.row#simple-double-banner-collection"],
+    "props": {
+      "isActive": true
+    }
+  },
   "flex-layout.row#simple-double-banner-collection": {
     "title": "Banner Duplo",
     "props": {

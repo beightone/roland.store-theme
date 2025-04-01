@@ -6,6 +6,13 @@
       "blockClass": ["shelf-container", "home-content-container"]
     }
   },
+  "display-condition#simple-shelf-container-2": {
+    "title": "Condição de exibição da seção Vitrine 2",
+    "children": ["flex-layout.row#simple-shelf-container-2"],
+    "props": {
+      "isActive": true
+    }
+  },
   "flex-layout.row#simple-shelf-container-2": {
     "title": "Vitrine Simples 2",
     "children": ["flex-layout.col#shelf-container-1"],

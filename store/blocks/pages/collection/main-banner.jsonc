@@ -1,4 +1,11 @@
 {
+  "display-condition#main-banner-collection": {
+    "title": "Condição de exibição Banner Principal",
+    "children": ["flex-layout.row#main-banner-collection"],
+    "props": {
+      "isActive": true
+    }
+  },
   "flex-layout.row#main-banner-collection": {
     "title": "Banner Principal",
     "props": {
