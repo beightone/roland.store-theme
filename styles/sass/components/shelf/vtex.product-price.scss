@@ -14,8 +14,8 @@
 }
 
 .spotPriceSavings--product-summary-price {
-  color:  #3F3F46;
-  font-family: "Proxima Nova";
+  color: #3f3f46;
+  font-family: 'Proxima Nova';
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -30,16 +30,15 @@
     flex-wrap: wrap;
     gap: 0;
     flex-direction: row;
+    align-items: flex-start;
   }
 }
 
-
-
 .sellingPrice--summary .sellingPriceValue--summary .currencyContainer--summary {
   overflow: hidden;
-  color: var(--text-neutral-subtlest, #71717A);
+  color: var(--text-neutral-subtlest, #71717a);
   text-overflow: ellipsis;
-  font-family: "Proxima Nova";
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -54,7 +53,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
-  color: #18181B;
+  color: #18181b;
   letter-spacing: -0.2px;
 
   @media screen and (max-width: 768px) {
@@ -67,9 +66,9 @@
 
 .listPrice--product-card-list-price {
   overflow: hidden;
-  color: #71717A;
+  color: #71717a;
   text-overflow: ellipsis;
-  font-family: "Proxima Nova";
+  font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -81,15 +80,15 @@
 }
 
 .spotPriceSavingsPercentage--product-summary-price {
-  color: #FF5A00;
+  color: #ff5a00;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 600;
   font-size: 0;
   line-height: 16px;
   padding: 2px 8px;
-  border-radius:  2px;
-  border: 2px solid  #FF5A00;
+  border-radius: 2px;
+  border: 2px solid #ff5a00;
   max-width: 43px;
   display: flex;
   align-items: center;
@@ -99,7 +98,6 @@
   &::before {
     content: '-10%';
     font-size: 12px;
-
   }
 
   @media screen and (max-width: 768px) {
@@ -110,8 +108,8 @@
 }
 
 .installments--product-card-installments {
-  color:  #18181B;
-  font-family: "Proxima Nova";
+  color: #18181b;
+  font-family: 'Proxima Nova';
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -138,6 +136,6 @@
 
 .installmentsNumber--product-card-installments {
   &::after {
-    content: 'x'!important;
+    content: 'x' !important;
   }
 }
