@@ -7,7 +7,6 @@
     "children": [
       "responsive-layout.desktop#pre-owned-section",
       "responsive-layout.phone#pre-owned-section"
-      
     ]
   },
   "responsive-layout.desktop#pre-owned-section": {
@@ -53,12 +52,13 @@
       "blockClass": "pre-owned-text",
       "preventVerticalStretch": true
     },
-    "children": ["rich-text#pre-owned-home-banner", "sales-channel-trigger-condition"]
+    "children": [
+      "rich-text#pre-owned-home-banner",
+      "sales-channel-trigger-condition"
+    ]
   },
   "sales-channel-trigger-condition": {
-    "children": [
-      "rich-text#trigger-button"
-    ]
+    "children": ["rich-text#trigger-button"]
   },
   "rich-text#trigger-button": {
     "props": {
@@ -99,7 +99,7 @@
         "phone": 2
       },
       "infinite": true,
-      "blockClass": "shelf-slider"
+      "blockClass": ["shelf-slider", "shelf-slider-roland"]
     }
   }
 }

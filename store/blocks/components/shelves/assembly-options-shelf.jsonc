@@ -25,7 +25,7 @@
         "phone": 2
       },
       "infinite": false,
-      "blockClass": ["shelf-slider", "assembly-options"]
+      "blockClass": ["shelf-slider", "assembly-options", "shelf-slider-roland"]
     }
   }
 }

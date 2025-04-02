@@ -93,7 +93,7 @@
         "phone": 2
       },
       "infinite": false,
-      "blockClass": "shelf-slider"
+      "blockClass": ["shelf-slider", "shelf-slider-roland"]
     }
   }
 }
