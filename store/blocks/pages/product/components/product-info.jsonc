@@ -52,7 +52,7 @@
     },
     "children": [
       "sku-selector#product-page",
-      "flex-layout.col#product-page-price",
+      "condition-layout.product#product-page-price",
       "flex-layout.row#product-page-buy-button",
       "custom-shipping-calculator"
     ]
@@ -112,6 +112,44 @@
   "add-to-list-btn#product-page": {
     "props": {
       "blockClass": "product-page-wishlist"
+    }
+  },
+  "condition-layout.product#product-page-price": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "productClusters",
+          "arguments": {
+            "id": "174"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#product-page-price-without-pix",
+      "Else": "flex-layout.col#product-page-price"
+    }
+  },
+  "flex-layout.col#product-page-price-without-pix": {
+    "title": "Preço do Produto",
+    "props": {
+      "blockClass": "product-price",
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "product-selling-price#product-page",
+      "product-installments#product-page-without-pix"
+    ]
+  },
+  "product-installments#product-page-without-pix": {
+    "props": {
+      "blockClass": "product-installments",
+      "message": "em até {installmentsNumber}x de {installmentValue} sem juros"
+    }
+  },
+  "product-selling-price#product-page": {
+    "props": {
+      "markers": ["highlight"],
+      "blockClass": "product-page-new",
+      "message": "{sellingPriceValue}"
     }
   },
   "flex-layout.col#product-page-price": {
