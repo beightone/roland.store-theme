@@ -45,22 +45,16 @@ const AnchorSections = () => {
   const { isMobile } = useDevice()
 
   const handleAnchorClick = (anchor: (typeof initialAnchors)[0]) => {
-    console.log('here anchor', anchor)
-
     ajustingWindowPosition(anchor.id)
     setSelectedAnchor(anchor)
     setIsOpen(false)
   }
   function ajustingWindowPosition(itemId: string) {
-    console.log('ajustingWindowPosition, here', itemId)
     const element = document.getElementById(itemId) as HTMLElement
-    console.log('here element', element)
     if (!element) return
     const deslocationToCentralize = -50
-    console.log('here deslocationToCentralize', deslocationToCentralize)
 
     const quantityToScroll = Number(element.offsetTop) + deslocationToCentralize
-    console.log('here quantityToScroll', quantityToScroll)
 
     window.scrollTo({
       top: quantityToScroll,

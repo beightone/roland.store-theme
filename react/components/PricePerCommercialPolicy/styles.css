@@ -1,8 +1,87 @@
-.priceWrapperProductSummary >span {
+.priceWrapperProductSummary {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.priceWrapperProductSummary__listPrice {
+  overflow: hidden;
+  color: #71717a;
+  text-overflow: ellipsis;
+  font-family: 'Proxima Nova';
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.14px;
+  text-decoration: line-through;
+  width: 100%;
+  text-align: left;
+}
+.priceWrapperProductSummary__spotPrice {
   font-size: 20px;
+  font-family: 'Proxima Nova';
   font-style: normal;
   font-weight: 600;
   line-height: 28px;
-  color: #18181B;
+  color: #18181b;
   letter-spacing: -0.2px;
+  display: inline-flex;
+  margin: 0;
+  column-gap: 4px;
+  flex-wrap: wrap;
+}
+.priceWrapperProductSummary__spotPrice > span {
+  color: #3f3f46;
+  font-family: 'Proxima Nova';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 2px;
+}
+.priceWrapperProductSummary__spotPrice
+  > span.priceWrapperProductSummary__spotPricePercentage {
+  color: #ff5a00;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px;
+  padding: 2px 8px;
+  border-radius: 2px;
+  border: 2px solid #ff5a00;
+  max-width: 43px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.priceWrapperProductSummary__installments {
+  color: #18181b;
+  font-family: 'Proxima Nova';
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: -0.12px;
+  margin: 0;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .priceWrapperProductSummary__spotPrice {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.16px;
+    position: relative;
+  }
+  .priceWrapperProductSummary__spotPrice
+    > span.priceWrapperProductSummary__spotPricePercentage {
+    position: absolute;
+    right: 0;
+    margin-top: 21px;
+  }
 }

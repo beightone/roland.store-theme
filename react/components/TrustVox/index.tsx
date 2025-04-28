@@ -6,7 +6,6 @@ interface TrustVoxStarsProps {
   origin: string
 }
 const TrustVoxStars = ({ origin }: TrustVoxStarsProps) => {
-  console.log('origin 3', origin)
   const { product } = useProduct() ?? {}
 
   // @ts-ignore
