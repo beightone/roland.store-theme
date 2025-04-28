@@ -67,7 +67,6 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
 
     const currentUrl = new URL(window.location.href)
     const hasScParameter = currentUrl.searchParams.has('sc')
-    const hasRefreshed = currentUrl.searchParams.has('refreshed')
 
     if (isProductPage && isPreOwnedProduct && !hasScParameter) {
       currentUrl.searchParams.set('sc', '2')
@@ -121,13 +120,6 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
       return
     }
 
-    if (isPreOwnedPage && !hasRefreshed) {
-      currentUrl.searchParams.set('refreshed', 'true')
-      window.location.href = currentUrl.toString()
-
-      return
-    }
-
     if (orderFormItems.length > 0) {
       if (isPreOwnedPage && !hasPreOwnedProductInCart) {
         setShowPopupAlert(true)
@@ -167,7 +159,6 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
           modalIsOpen
           orderFormId={data?.orderForm.id}
           orderFormItems={orderFormItems}
-          isChallenge
         />
       )}
     </Fragment>

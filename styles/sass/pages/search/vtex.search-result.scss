@@ -264,10 +264,11 @@
 .gallery--grid {
   padding: 0;
   margin: 0;
-  gap: 16px;
+  gap: 0px;
 
   @media screen and (max-width: 768px) {
     gap: 8px;
+    justify-content: center;
   }
 }
 
@@ -304,7 +305,6 @@
     display: none;
   }
 }
-
 
 .filter__container--clearAllFilters,
 .filter__container--selectedFilters {
