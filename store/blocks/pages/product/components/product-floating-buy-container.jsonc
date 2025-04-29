@@ -42,7 +42,7 @@
       "preserveLayoutOnMobile": true
     },
     "children": [
-      "flex-layout.col#product-floating-prices",
+      "condition-layout.product#product-floating-price",
       "condition-layout.product#buy-button"
     ]
   },
@@ -53,7 +53,7 @@
       "preserveLayoutOnMobile": true
     },
     "children": [
-      "flex-layout.col#product-floating-prices",
+      "condition-layout.product#product-floating-price",
       "condition-layout.product#buy-button"
     ]
   },
@@ -61,6 +61,30 @@
     "props": {
       "tag": "div"
     }
+  },
+  "condition-layout.product#product-floating-price": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "productClusters",
+          "arguments": {
+            "id": "174"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#product-floating-price-without-pix",
+      "Else": "flex-layout.col#product-floating-prices"
+    }
+  },
+  "flex-layout.col#product-floating-price-without-pix": {
+    "props": {
+      "blockClass": ["product-floating-prices"],
+      "verticalAlign": "middle"
+    },
+    "children": [
+      "product-selling-price#product-page",
+      "product-installments#product-page-without-pix"
+    ]
   },
   "flex-layout.col#product-floating-prices": {
     "props": {
