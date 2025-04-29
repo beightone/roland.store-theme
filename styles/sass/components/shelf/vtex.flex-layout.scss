@@ -57,3 +57,25 @@
     gap: 8px;
   }
 }
+.flexColChild--price-container-without-pix {
+  :global(.vtex-product-price-1-x-sellingPrice--summary) {
+    width: 100%;
+    display: block;
+    text-align: left;
+    @media screen and (max-width: 768px) {
+      height: 2.5rem;
+      margin-top: 1.5rem;
+    }
+    :global(.vtex-product-price-1-x-sellingPriceValue--summary) {
+      :global(.vtex-product-price-1-x-currencyContainer--summary) {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 28px;
+        color: #18181b;
+        letter-spacing: -0.2px;
+        text-decoration: none;
+      }
+    }
+  }
+}

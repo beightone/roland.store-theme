@@ -186,9 +186,40 @@
   },
   "flex-layout.row#product-card-price": {
     "title": "Linha: Preço do Produto",
-    "children": ["flex-layout.col#price-container"],
+    "children": ["condition-layout.product#product-card-price"],
     "props": {
       "blockClass": "product-card-price"
+    }
+  },
+  "condition-layout.product#product-card-price": {
+    "props": {
+      "conditions": [
+        {
+          "subject": "productClusters",
+          "arguments": {
+            "id": "174"
+          }
+        }
+      ],
+      "Then": "flex-layout.col#product-card-price-without-pix",
+      "Else": "flex-layout.col#price-container"
+    }
+  },
+  "flex-layout.col#product-card-price-without-pix": {
+    "title": "Coluna: Container de Preço",
+    "props": {
+      "blockClass": ["price-container", "price-container-without-pix"]
+    },
+    "children": [
+      "product-selling-price#product-card",
+      "product-installments#product-card-without-pix"
+    ]
+  },
+  "product-installments#product-card-without-pix": {
+    "props": {
+      "blockClass": "product-card-installments",
+      "message": "em até {installmentsNumber} de {installmentValue} sem juros",
+      "alwaysShow": true
     }
   },
   "flex-layout.col#price-container": {
