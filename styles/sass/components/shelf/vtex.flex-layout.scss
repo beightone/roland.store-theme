@@ -79,3 +79,9 @@
     }
   }
 }
+.flexColChild--price-container-without-pix {
+  display: contents;
+}
+.flexCol--price-container-without-pix {
+  justify-content: flex-end;
+}

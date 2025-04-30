@@ -108,6 +108,21 @@
     margin: 0 16px;
   }
 }
+.link--home-black-friday-banner-link {
+  border-radius: var(--radius-rounded-sm, 2px);
+  background: var(--Gray-Scale-White, #FFF);
+  padding: 6px 16px;
+  color: var(--text-neutral-bold, #18181B);
+  font-family: "Proxima Nova";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.14px;
+  text-decoration: none;
+  width: 77px;
+}
+
 .link--collection-category-cards-see-all {
   display: flex;
   padding: 12px 20px;
@@ -132,21 +147,6 @@
   background: #fdf2ec !important;
   color: #ff5a00 !important;
   transition: all 0.3s ease-in-out;
-}
-
-.link--home-black-friday-banner-link {
-  border-radius: var(--radius-rounded-sm, 2px);
-  background: var(--Gray-Scale-White, #FFF);
-  padding: 6px 16px;
-  color: var(--text-neutral-bold, #18181B);
-  font-family: "Proxima Nova";
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: -0.14px;
-  text-decoration: none;
-  width: 77px;
 }
 
 .link--myOrders,
