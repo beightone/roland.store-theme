@@ -4,9 +4,7 @@
   align-items: flex-start;
 }
 .priceWrapperProductSummary__listPrice {
-  overflow: hidden;
   color: #71717a;
-  text-overflow: ellipsis;
   font-family: 'Proxima Nova';
   font-size: 14px;
   font-style: normal;
@@ -83,5 +81,14 @@
     position: absolute;
     right: 0;
     margin-top: 21px;
+  }
+  .priceWrapperProductSummary__installments {
+    min-height: 48px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
   }
 }
