@@ -19,7 +19,7 @@
   padding: 16px 32px;
   margin: 0 auto;
   align-items: center;
-  background: #FFF;
+  background: #fff;
   justify-content: space-between;
 }
 
@@ -30,13 +30,13 @@
 .headerStickyRow--desktop {
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 995;
 }
 
 .headerStickyRow--main-container {
   position: sticky;
   top: 0;
-  z-index: 998;
+  z-index: 993 !important;
 }
 
 .headerStickyRow--search-container {
