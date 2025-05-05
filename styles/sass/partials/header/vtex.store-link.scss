@@ -6,7 +6,7 @@
   justify-content: center;
   text-decoration: none;
   gap: 8px;
-  z-index: 999;
+  z-index: 995;
   top: 4px;
 
   .label--help-center {
@@ -35,13 +35,13 @@
   }
 }
 
-:global(.vtex-flex-layout-0-x-flexRow--pre-owned):global(.vtex-flex-layout-0-x-flexRow--pre-owned-product) {
+:global(.vtex-flex-layout-0-x-flexRow--pre-owned):global(
+    .vtex-flex-layout-0-x-flexRow--pre-owned-product
+  ) {
   .label--link-roland {
-    background-image: url('assets/svgs/roland-button.svg')!important;
+    background-image: url('assets/svgs/roland-button.svg') !important;
   }
 }
-
-
 
 .link--link {
   &-roland,

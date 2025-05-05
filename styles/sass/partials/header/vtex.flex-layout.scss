@@ -23,7 +23,7 @@
   gap: 4px;
 
   @media screen and (max-width: 768px) {
-   margin-right: 63px;
+    margin-right: 63px;
   }
 }
 
@@ -31,14 +31,14 @@
   align-items: center;
   position: relative;
   :global(.vtex-button__label) {
-    padding: 10px 16px!important;
+    padding: 10px 16px !important;
     height: 16px;
     width: 28px;
   }
 
   :global(.vtex-button) {
     border-radius: var(--radius-rounded-sm, 2px);
-    background: var(--bg-brand-secondary-bold-base, #2B2B3A);
+    background: var(--bg-brand-secondary-bold-base, #2b2b3a);
     width: 60px;
     position: absolute;
     right: 0;
@@ -53,7 +53,7 @@
     &:hover {
       background-color: #424250;
     }
-  };
+  }
 
   :global(.vtex-rich-text-0-x-container--product-card-unavailable) {
     width: fit-content;
@@ -70,22 +70,20 @@
 
 .flexRow--topbar-wrapper {
   @media screen and (max-width: 1024px) {
-   width: 100%;
+    width: 100%;
   }
-  
 }
 
 .flexRow--brand-switcher-container {
   position: absolute;
   left: 32px;
   bottom: 0;
-  z-index: 999;
+  z-index: 995;
 
   .flexRowContent--brand-switcher-container {
     display: flex;
     gap: 4px;
   }
-
 }
 
 .flexRowContent--main-header {
@@ -113,31 +111,26 @@
 }
 
 .flexCol--minicart-footer {
-  border-top: 1px solid var(--border-neutral-subtlest, #E4E4E7);
-  background: var(--bg-neutral-subtlest-base, #FFF);
-  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.10);
+  border-top: 1px solid var(--border-neutral-subtlest, #e4e4e7);
+  background: var(--bg-neutral-subtlest-base, #fff);
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1);
 
-  padding: var(--spacing-5, 20px) var(--spacing-6, 24px) var(--spacing-6, 24px) var(--spacing-6, 24px);
-
-  
+  padding: var(--spacing-5, 20px) var(--spacing-6, 24px) var(--spacing-6, 24px)
+    var(--spacing-6, 24px);
 }
-
-
 
 .flexRow--product {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px 24px;
-  border-bottom: 1px solid var(--border-neutral-subtlest, #E4E4E7);
+  border-bottom: 1px solid var(--border-neutral-subtlest, #e4e4e7);
   min-height: 148px;
   position: relative;
 
   &:last-child:not(:first-child) {
     border-bottom: none;
   }
-
-  
 }
 
 .flexRowContent--product {
@@ -257,7 +250,7 @@
 //MINICART
 .flexRow--minicart-footer {
   :global(.vtex-store-components-3-x-container) {
-    padding: 0 !important
+    padding: 0 !important;
   }
 }
 
@@ -271,7 +264,6 @@
   align-items: center;
   justify-content: center;
 }
-
 
 .flexRow--navigation-row {
   box-shadow: 0 0 1em #222;
@@ -325,8 +317,8 @@
 
 .flexRow--breadcrumb--pre-owned {
   display: flex;
-  max-width: 1440px!important;
-  
+  max-width: 1440px !important;
+
   padding: 16px 32px;
 
   margin: 0 auto;
@@ -337,11 +329,10 @@
   }
 }
 
-
-
 .flexRow--pre-owned-tab {
-  border-radius: var(--radius-rounded-sm, 2px) var(--radius-rounded-sm, 2px) var(--radius-rounded-none, 0px) var(--radius-rounded-none, 0px);
-  background: var(--icon-feedback-information-base, #FFF);
+  border-radius: var(--radius-rounded-sm, 2px) var(--radius-rounded-sm, 2px)
+    var(--radius-rounded-none, 0px) var(--radius-rounded-none, 0px);
+  background: var(--icon-feedback-information-base, #fff);
   padding: 0 16px;
 
   .flexRowContent--pre-owned-tab {

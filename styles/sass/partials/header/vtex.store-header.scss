@@ -8,7 +8,7 @@
   padding: 16px 32px;
   margin: 0 auto;
   align-items: center;
-  background: #FFF;
+  background: #fff;
   justify-content: space-between;
 }
 
@@ -19,19 +19,19 @@
 .headerStickyRow--desktop {
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 995;
 }
 
 .headerStickyRow--main-container {
   position: sticky;
   top: 0;
-  z-index: 998;
+  z-index: 993 !important;
 }
 
-.headerStickyRow--search-container{
-     position: sticky;
-     top: 49.39px;
-     z-index: 99;
+.headerStickyRow--search-container {
+  position: sticky;
+  top: 49.39px;
+  z-index: 99;
 }
 
 @media screen and (max-width: 1025px) {
@@ -46,5 +46,4 @@
     gap: 16px;
     height: 49.39px;
   }
-
 }

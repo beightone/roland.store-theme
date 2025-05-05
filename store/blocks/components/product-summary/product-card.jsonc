@@ -49,6 +49,8 @@
     },
     "children": [
       "vtex.product-highlights@2.x:product-highlights#pre-owned",
+      "custom-flag-discount",
+      "add-to-list-btn#product-card",
       "product-summary-image#product-card",
       "product-summary-brand#product-card",
       "product-summary-name#product-card",
