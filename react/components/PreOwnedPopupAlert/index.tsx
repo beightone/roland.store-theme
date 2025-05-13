@@ -26,7 +26,6 @@ interface PreOwnedPopupAlertProps {
   modalIsOpen?: boolean
   orderFormId?: string
   orderFormItems?: any
-  isChallenge?: boolean
 }
 
 const PreOwnedPopupAlert: FC<PreOwnedPopupAlertProps> = ({
@@ -35,7 +34,6 @@ const PreOwnedPopupAlert: FC<PreOwnedPopupAlertProps> = ({
   modalIsOpen,
   orderFormId,
   orderFormItems,
-  isChallenge,
 }) => {
   const { orderForm } = useOrderForm()
   const runtime = useRuntime()
@@ -49,24 +47,15 @@ const PreOwnedPopupAlert: FC<PreOwnedPopupAlertProps> = ({
 
   const [removeAllProductsFromCart] = useMutation(REMOVE_ALL_PRODUCTS_MUTATION)
   const handleDecline = () => {
-    if (isChallenge) {
-      if (runtime.page === 'store.home' && hasPreOwnedProductsOnCart) {
-        window.location.href = '/seminovos?sc=2'
-      } else {
-        window.location.href = '/?sc=1'
-      }
-
+    if (runtime.page === 'store.home') {
       setIsModalOpen(false)
-      action(false)
-    } else if (runtime.page === 'store.home') {
-      setIsModalOpen(false)
-      action(false)
+      if (typeof action === 'function') action(false)
     } else if (hasPreOwnedProductsOnCart) {
       setIsModalOpen(false)
-      action(false)
+      if (typeof action === 'function') action(false)
     } else if (runtime.page === 'store.custom#pre-owned') {
       setIsModalOpen(false)
-      action(false)
+      if (typeof action === 'function') action(false)
       window.location.href = '/?sc=1'
     }
   }
@@ -89,22 +78,20 @@ const PreOwnedPopupAlert: FC<PreOwnedPopupAlertProps> = ({
       })
       setIsLoading(false)
       setIsModalOpen(false)
-      action(false)
+      if (typeof action === 'function') action(false)
 
-      if (isChallenge) {
-        if (
-          runtime.page === 'store.custom#pre-owned' &&
-          items.length > 0 &&
-          !hasPreOwnedProductsOnCart
-        ) {
-          window.location.reload()
-        } else if (
-          runtime.page === 'store.home' &&
-          items.length > 0 &&
-          hasPreOwnedProductsOnCart
-        ) {
-          window.location.reload()
-        }
+      if (
+        runtime.page === 'store.custom#pre-owned' &&
+        items.length > 0 &&
+        !hasPreOwnedProductsOnCart
+      ) {
+        window.location.reload()
+      } else if (
+        runtime.page === 'store.home' &&
+        items.length > 0 &&
+        hasPreOwnedProductsOnCart
+      ) {
+        window.location.reload()
       } else if (runtime.page === 'store.home') {
         window.location.href = '/seminovos?sc=2'
       } else {
