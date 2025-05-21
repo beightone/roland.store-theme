@@ -6,13 +6,15 @@
     ],
     "props": {
       "pagination": "show-more",
+      "defautGalleryLayout": "grid",
       "preventRouteChange": true
     }
   },
   "search-result-layout.mobile#pre-owned": {
     "props": {
       "pagination": "show-more",
-      "preventRouteChange": true
+      "preventRouteChange": true,
+      "defautGalleryLayout": "grid"
     },
     "children": [
       "flex-layout.row#search-info",

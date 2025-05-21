@@ -27,7 +27,7 @@
   "flex-layout.row#shelf-with-banner": {
     "title": "Prateleira com banner",
     "props": {
-      "blockClass": "shelf-with-banner",
+      "blockClass": ["shelf-with-banner", "pre-owned-shelf"],
       "fullWidth": true
     },
     "children": [
@@ -38,7 +38,7 @@
   "flex-layout.row#pre-owned-banner.content": {
     "title": "Conteúdo do Banner",
     "props": {
-      "blockClass": "pre-owned-banner",
+      "blockClass": ["pre-owned-banner", "pre-owned-banner-home"],
       "preventHorizontalStretch": true
     },
     "children": [
@@ -58,11 +58,13 @@
     ]
   },
   "sales-channel-trigger-condition": {
-    "children": ["rich-text#trigger-button"]
+    "children": ["link#trigger-button"]
   },
-  "rich-text#trigger-button": {
+  "link#trigger-button": {
+    "title": "Veja mais",
     "props": {
-      "text": "Veja mais",
+      "href": "/seminovos",
+      "label": "Veja mais",
       "blockClass": "pre-owned-button-trigger"
     }
   },

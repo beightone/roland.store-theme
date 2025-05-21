@@ -5,6 +5,7 @@
       "header-row#topbar-mobile",
       "header-row#main-mobile",
       "header-row#search-mobile",
+      "flex-layout.row#breadcrumb.pre-owned",
       "add-to-cart-event"
     ]
   },
@@ -14,6 +15,7 @@
       "header-row#topbar-mobile",
       "header-row#pre-owned-main-mobile",
       "header-row#search-mobile",
+      "flex-layout.row#breadcrumb.pre-owned",
       "add-to-cart-event"
     ]
   },

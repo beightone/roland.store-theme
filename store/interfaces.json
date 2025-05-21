@@ -113,5 +113,8 @@
   },
   "floating-appearance-controller": {
     "component": "FloatingAppearanceController"
+  },
+  "custom-flag-seminovos": {
+    "component": "CustomFlagSeminovos"
   }
 }

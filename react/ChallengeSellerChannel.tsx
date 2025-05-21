@@ -67,6 +67,16 @@ const ChallengeSellerChannel = ({ children }: { children: ReactNode }) => {
 
     const currentUrl = new URL(window.location.href)
     const hasScParameter = currentUrl.searchParams.has('sc')
+    const hasRefreshed = currentUrl.searchParams.has('refreshed')
+
+    if (isPreOwnedPage && !hasRefreshed) {
+      currentUrl.searchParams.set('sc', '2')
+      currentUrl.searchParams.set('refreshed', 'true')
+
+      setTimeout(() => {
+        window.location.href = currentUrl.toString()
+      }, 4000)
+    }
 
     if (isProductPage && isPreOwnedProduct && !hasScParameter) {
       currentUrl.searchParams.set('sc', '2')

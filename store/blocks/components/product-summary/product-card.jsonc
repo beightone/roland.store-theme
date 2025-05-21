@@ -49,8 +49,7 @@
     },
     "children": [
       "vtex.product-highlights@2.x:product-highlights#pre-owned",
-      "custom-flag-discount",
-      "add-to-list-btn#product-card",
+      "add-to-list-btn#product-card2",
       "product-summary-image#product-card",
       "product-summary-brand#product-card",
       "product-summary-name#product-card",
@@ -68,7 +67,7 @@
   "product-summary.shelf#pre-owned-preview": {
     "title": "Card: Sumário de Produto",
     "props": {
-      "blockClass": "product-summary-general",
+      "blockClass":[ "product-summary-general"],
       "href": "/seminovos?sc=2"
     },
     "children": [
@@ -289,7 +288,13 @@
   "add-to-list-btn#product-card": {
     "title": "Botão: Adicionar à Lista",
     "props": {
-      "blockClass": "wishlist-product-card"
+      "blockClass": ["wishlist-product-card"]
+    }
+  },
+  "add-to-list-btn#product-card2": {
+    "title": "Botão: Adicionar à Lista",
+    "props": {
+      "blockClass": ["wishlist-product-card"]
     }
   }
 }
