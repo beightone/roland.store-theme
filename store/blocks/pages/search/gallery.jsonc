@@ -97,19 +97,14 @@
     "props": {
       "maxItemsDepartment": 12,
       "maxItemsCategory": 12,
-      "maxItemsPerRow": {
-        "desktop": 4,
-        "tablet": 2,
-        "phone": 2
-      },
       "layouts": [
         {
           "name": "grid",
           "component": "GridSummary",
           "itemsPerRow": {
-            "(min-width:1008px)": 3,
-            "(min-width:623px) and (max-width:1007px)": 2,
-            "(max-width:622px)": 2
+            "desktop": 3,
+            "tablet": 2,
+            "phone": 2
           }
         },
         {

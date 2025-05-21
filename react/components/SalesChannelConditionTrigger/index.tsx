@@ -66,6 +66,8 @@ const SalesChannelriggerCondition = ({ children }: { children: ReactNode }) => {
 
       const link = ref.current?.querySelector('a')?.getAttribute('href')
 
+      console.log(link)
+
       if (hasPreOwnedProductsOnCart) {
         setShowPopupAlert(true)
       } else {
@@ -77,6 +79,8 @@ const SalesChannelriggerCondition = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     const link = ref.current?.children?.[0] as HTMLAnchorElement
+
+    console.log(link)
 
     link.addEventListener('click', handleClick)
 

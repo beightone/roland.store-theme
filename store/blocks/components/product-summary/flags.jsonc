@@ -4,7 +4,7 @@
       "type": "collection",
       "filter": {
         "type": "show",
-        "highlightNames": ["Semi novos"]
+        "highlightNames": ["Seminovos"]
       }
     },
     "children": ["product-highlight-text#pre-owned"]
